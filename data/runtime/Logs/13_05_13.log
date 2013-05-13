@@ -1,0 +1,125 @@
+[ 2013-05-13T17:06:48+08:00 ] ERR: (ThinkException) 无法加载模块:index
+[ 2013-05-13T17:06:49+08:00 ] ERR: (ThinkException) 无法加载模块:index
+[ 2013-05-13T17:07:09+08:00 ] ERR: (ThinkException) 无法加载模块:index
+[ 2013-05-13T17:07:10+08:00 ] ERR: (ThinkException) 无法加载模块:index
+[ 2013-05-13T17:07:10+08:00 ] ERR: (ThinkException) 无法加载模块:index
+[ 2013-05-13T17:07:10+08:00 ] ERR: (ThinkException) 无法加载模块:index
+[ 2013-05-13T17:07:10+08:00 ] ERR: (ThinkException) 无法加载模块:index
+[ 2013-05-13T17:07:10+08:00 ] ERR: (ThinkException) 无法加载模块:index
+[ 2013-05-13T17:07:24+08:00 ] ERR: (ThinkException) 无法加载模块:index
+[ 2013-05-13T17:07:24+08:00 ] ERR: (ThinkException) 无法加载模块:index
+[ 2013-05-13T17:07:25+08:00 ] ERR: (ThinkException) 无法加载模块:index
+[ 2013-05-13T17:07:25+08:00 ] ERR: (ThinkException) 无法加载模块:index
+[ 2013-05-13T17:07:25+08:00 ] ERR: (ThinkException) 无法加载模块:index
+[ 2013-05-13T17:07:25+08:00 ] ERR: (ThinkException) 无法加载模块:index
+[ 2013-05-13T17:07:29+08:00 ] ERR: (ThinkException) 无法加载模块:index
+[ 2013-05-13T17:07:30+08:00 ] ERR: (ThinkException) 无法加载模块:index
+[ 2013-05-13T17:07:30+08:00 ] ERR: (ThinkException) 无法加载模块:index
+[ 2013-05-13T17:07:30+08:00 ] ERR: (ThinkException) 无法加载模块:index
+[ 2013-05-13T17:08:30+08:00 ] ERR: (ThinkException) 无法加载模块:index
+[ 2013-05-13T17:08:31+08:00 ] ERR: (ThinkException) 无法加载模块:index
+[ 2013-05-13T17:08:31+08:00 ] ERR: (ThinkException) 无法加载模块:index
+[ 2013-05-13T17:08:31+08:00 ] ERR: (ThinkException) 无法加载模块:index
+[ 2013-05-13T17:08:39+08:00 ] ERR: (ThinkException) Model:setting_cache您所请求的方法不存在！
+[ 2013-05-13T17:08:58+08:00 ] ERR: (ThinkException) Model:setting_cache您所请求的方法不存在！
+[ 2013-05-13T17:08:59+08:00 ] ERR: (ThinkException) Model:setting_cache您所请求的方法不存在！
+[ 2013-05-13T17:08:59+08:00 ] ERR: (ThinkException) Model:setting_cache您所请求的方法不存在！
+[ 2013-05-13T17:08:59+08:00 ] ERR: (ThinkException) Model:setting_cache您所请求的方法不存在！
+[ 2013-05-13T17:08:59+08:00 ] ERR: (ThinkException) Model:setting_cache您所请求的方法不存在！
+[ 2013-05-13T17:08:59+08:00 ] ERR: (ThinkException) Model:setting_cache您所请求的方法不存在！
+[ 2013-05-13T17:09:02+08:00 ] ERR: (ThinkException) Model:setting_cache您所请求的方法不存在！
+[ 2013-05-13T17:09:03+08:00 ] ERR: (ThinkException) Model:setting_cache您所请求的方法不存在！
+[ 2013-05-13T17:12:12+08:00 ] 127.0.0.1 /cscchina/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000884s ]
+INFO: Run load_lang Behavior [ RunTime:0.002568s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003669s ]
+SQL: SHOW COLUMNS FROM `ik_setting` [ RunTime:0.004105s ]
+SQL: SELECT `name`,`data` FROM `ik_setting`  [ RunTime:0.001178s ]
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 9 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 27 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 26 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 15 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 15 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 4 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 37 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 4 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 1 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 1 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 1 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 5 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 7 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 19 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 16 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 4 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 12 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `ik_message` [ RunTime:0.003775s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ik_message`
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1   [ RunTime:0.013856s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1368435432 [ RunTime:0.000551s ]
+ERR: Table 'cscchina.ik_user_online' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1368435432
+
+[ 2013-05-13T17:12:13+08:00 ] 127.0.0.1 /cscchina/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000379s ]
+INFO: Run load_lang Behavior [ RunTime:0.002489s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003114s ]
+SQL: SHOW COLUMNS FROM `ik_message` [ RunTime:0.003573s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ik_message`
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1   [ RunTime:0.001172s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1368435433 [ RunTime:0.000542s ]
+ERR: Table 'cscchina.ik_user_online' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1368435433
+
+[ 2013-05-13T17:12:23+08:00 ] 127.0.0.1 /cscchina/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000396s ]
+INFO: Run load_lang Behavior [ RunTime:0.002603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003229s ]
+SQL: SHOW COLUMNS FROM `ik_message` [ RunTime:0.003671s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ik_message`
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1   [ RunTime:0.001138s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1368435443 [ RunTime:0.000542s ]
+ERR: Table 'cscchina.ik_user_online' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1368435443
+
+[ 2013-05-13T17:12:32+08:00 ] 127.0.0.1 /cscchina/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000408s ]
+INFO: Run load_lang Behavior [ RunTime:0.002835s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003480s ]
+SQL: SHOW COLUMNS FROM `ik_message` [ RunTime:0.003594s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ik_message`
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1   [ RunTime:0.001102s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1368435452 [ RunTime:0.000536s ]
+ERR: Table 'cscchina.ik_user_online' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1368435452
+
+[ 2013-05-13T17:12:46+08:00 ] 127.0.0.1 /cscchina/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000408s ]
+INFO: Run load_lang Behavior [ RunTime:0.002648s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003271s ]
+SQL: SHOW COLUMNS FROM `ik_message` [ RunTime:0.003562s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ik_message`
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1   [ RunTime:0.001182s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1368435466 [ RunTime:0.000523s ]
+ERR: Table 'cscchina.ik_user_online' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1368435466
+
