@@ -119,24 +119,6 @@ class frontendAction extends baseAction {
 			return $arrNav;
 		}		
 	}
-	// 导航logo
-	protected  function _navlogo($module_name){
-		if (! empty ( $module_name )) {
-			$arrLogo = array ();
-			switch ($module_name) {
-				case "group" :
-					$arrLogo = array('name'=>'小组', 'url'=>U('group/index'), 'style'=>'site_logo nav_logo');
-					break;
-						
-				case "article" :
-					$arrLogo = array('name'=>'阅读', 'url'=>U('article/index'), 'style'=>'site_logo nav_logo');
-					break;
-				default:
-					$arrLogo = array('name'=>'爱客开源', 'url'=>C('ik_site_url'), 'style'=>'site_logo');
-					break;
-			}
-			return $arrLogo;
-		}
-	}
+
   
 }

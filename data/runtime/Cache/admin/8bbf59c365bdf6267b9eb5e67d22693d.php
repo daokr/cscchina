@@ -1,0 +1,55 @@
+<?php if (!defined('THINK_PATH')) exit(); if($ik == 'index'): ?><li class="treemenu_on">
+    <a style="outline:none;" hidefocus="true" href="javascript:void(0)" class="actuator">系统首页</a>
+    <ul class="submenu" style="display: block;">
+        <li><a style="outline:none;" hidefocus="true" class="submenuB" href="<?php echo U('index/main');?>" target="MainIframe">首页</a></li>
+        <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('cache/index');?>" target="MainIframe">缓存管理</a></li>
+        <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('system/manage');?>" target="MainIframe">系统管理员</a></li>
+    </ul>   
+</li>
+<li class="treemenu_on">
+    <a style="outline:none;" hidefocus="true" href="javascript:void(0)" class="actuator">前台管理</a>
+    <ul class="submenu" style="display: block;">
+        <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('home/page');?>" target="MainIframe">单页管理</a></li>
+    </ul> 
+</li><?php endif; ?>
+<?php if($ik == 'setting'): ?><li class="treemenu_on">
+    <a style="outline:none;" hidefocus="true" href="javascript:void(0)" class="actuator">全局配置</a>
+    <ul class="submenu" style="display: block;">
+<li><a style="outline:none;" hidefocus="true" class="submenuB" href="<?php echo U('setting/index');?>" target="MainIframe">站点设置</a></li>
+<li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('setting/url');?>" target="MainIframe">链接形式</a></li>
+<li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('area/manage');?>" target="MainIframe">区域管理</a></li>
+     </ul>
+</li> 
+<!--
+<li class="treemenu_on">
+    <a style="outline:none;" hidefocus="true" href="javascript:void(0)" class="actuator">前台界面</a>
+    <ul class="submenu" style="display: block;">
+        <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('nav/index');?>" target="MainIframe">导航设置</a></li>
+        <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('setting/theme');?>" target="MainIframe">前台风格</a></li>        
+     </ul>
+</li>
+--><?php endif; ?>
+<?php if($ik == 'user'): ?><li class="treemenu_on">
+    <a style="outline:none;" hidefocus="true" href="javascript:void(0)" class="actuator">报名管理</a>
+    <ul class="submenu" style="display: block;">
+     <li><a style="outline:none;" hidefocus="true" class="submenuB" href="<?php echo U('user/manage',array('type'=>'0'));?>" target="MainIframe">国内报名</a></li>
+     <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('user/manage',array('type'=>'1'));?>" target="MainIframe">国外报名</a></li>
+    </ul>
+</li><?php endif; ?>
+
+<?php if($ik == 'article'): ?><li class="treemenu_on">
+    <a style="outline:none;" hidefocus="true" href="javascript:void(0)" class="actuator">文章管理</a>
+    <ul class="submenu" style="display: block;">
+    <li><a style="outline:none;" hidefocus="true" class="submenuB" href="<?php echo U('article/index');?>" target="MainIframe">文章管理</a></li>
+    <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('article/channel');?>" target="MainIframe">文章频道</a></li>
+    <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('article/cate');?>" target="MainIframe">文章分类</a></li>
+    </ul>
+</li><?php endif; ?>
+
+<?php if($ik == 'group'): ?><li class="treemenu_on">
+    <a style="outline:none;" hidefocus="true" href="javascript:void(0)" class="actuator">论坛管理</a>
+    <ul class="submenu" style="display: block;">
+    <li><a style="outline:none;" hidefocus="true" class="submenuB" href="<?php echo U('group/setting');?>" target="MainIframe">小组配置</a></li>
+    <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('group/manage');?>" target="MainIframe">批量管理</a></li>
+    </ul>
+</li><?php endif; ?>

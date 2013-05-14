@@ -13,7 +13,7 @@ class backendAction extends baseAction
         $this->check_login();
         $this->assign('acname',strtolower($this->_name));
         //网站后台seo
-        $this->assign('site_title','IKPHP网站管理');
+        $this->assign('site_title','网站管理');
         $ik_soft_info = array(
         		'ikphp_version' => IKPHP_VERSION,
         		'ikphp_year' => IKPHP_YEAR,
