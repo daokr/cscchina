@@ -8,11 +8,6 @@
 define ( 'IN_IK', true );
 //载入版本号
 require_once('version.php');
-if (!is_file('./data/install.lock')) {
-	header('Location: ./install.php');
-	exit;
-}
-
 /* 应用名称*/
 define('APP_NAME', 'app');
 /* 应用目录*/

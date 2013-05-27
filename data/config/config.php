@@ -18,7 +18,7 @@ return array(
 
 	'APP_DEBUG'=>true,
 	'DB_FIELD_CACHE'=>false,
-	'HTML_CACHE_ON'=>false,
+
 
 			
 );
