@@ -52,7 +52,7 @@ class imagesModel extends Model {
 	// 根据type typeid 获取图
 	public function getImagesByTypeid($type, $typeid){
 		$where = array('type'=>$type, 'typeid'=> $typeid);
-		$arrImages = $this->where($where)->order('seqid asc')->select();
+		$arrImages = $this->where($where)->order('addtime desc')->select();
 		foreach($arrImages as $item){
 			$result[] = $this->getImageById($item['id']);
 		}

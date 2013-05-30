@@ -78,6 +78,51 @@ class articleAction extends backendAction {
 		
 		$this->display('article_list');
 	}
+	//添加文章
+	public function addarticle(){
+		$nameid = $this->_get('nameid','trim');
+		$arrCatename = $this->cate_mod->getCateByNameid ( $nameid );
+		if(IS_POST){
+			$userid = $_SESSION['admin']['userid'];
+			if($userid>0){
+				
+				$item ['userid'] = $userid;
+				$item ['cateid'] = $this->_post ( 'cateid', 'intval',0);
+				$item ['title'] = $this->_post ( 'title', 'trim' );
+				$item ['addtime'] = time ();
+					
+				$data ['content'] = $this->_post ( 'content');
+				$data ['postip'] = get_client_ip ();
+				$data ['newsauthor'] = $this->_post('newsauthor','trim','');
+				
+				if($item ['cateid'] == 0){
+					$this->error('分类必须选择！');
+				}
+				if (false !== $this->item_mod->create ( $item )) {
+		           	$itemid = $data ['itemid'] = $this->item_mod->add ();
+					if (false === $this->mod->create ($data)) {
+						$this->error ( $this->mod->getError () );
+					}
+					// 保存当前数据对象
+					$aid = $this->mod->add (); 
+					if ($aid !== false) { // 保存成功
+						//更新图片
+						$map['typeid'] = $aid;
+						D('images')->updateImage($map,array('type'=>'article','typeid'=>0));
+						$this->success ( '新增成功!' );
+					} else {
+						// 失败提示
+						$this->error ( '新增失败!' );
+					}
+		        }
+		       
+			}
+		}else{
+			$this->assign('arrCate',$arrCatename);
+			$this->title ( '添加文章' );
+			$this->display();		
+		}
+	}
 	//单个审核
 	public function article_isaudit($nameid){
 		$itemid = $this->_get('itemid','intval');

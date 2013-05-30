@@ -4,20 +4,30 @@
 * @Email:160780470@qq.com
 */
 class articleModel extends Model {
+	// 自动验证设置
+	protected $_validate	 =	 array(
+			array('itemid','require','分类必须填写'),
+			array('content','require','内容必须填写'),
+			
+	);
+	
+ 
 	
 	public function getOneArticle($id){
 		$where['aid'] = $id;
-		$strArticle = $this->where($where)->find();
+		$strArticle = $this->where($where)->find(); 
 		if(is_array($strArticle)){
 			$articleItem = D('article_item')->where(array('itemid'=>$strArticle['itemid']))->find();
 			//array_merge() 函数把两个或多个数组合并为一个数组
 			$result = array_merge($articleItem, $strArticle);
 			$result['user'] = D('user')->getOneUser($articleItem['userid']);
 			//获取 主图
-			if($articleItem['isphoto']){
+/*			if($articleItem['isphoto']){
 				$result ['photo'] = ikhtml_img('article', $articleItem['itemid'], $result ['content']);
-			}
-			$result ['content'] = nl2br ( ikhtml('article',$id,$result['content'],1));
+			}*/
+			//$result ['content'] = nl2br ( ikhtml('article',$id,$result['content'],1));
+			
+			$result ['content'] =  htmlspecialchars_decode($result['content']);
 
 			return $result;
 		}

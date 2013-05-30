@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+*{ padding:0px; margin:0px;font-size:12px}
+ul{ display:block; overflow-y:scroll; list-style-type:none;}
+li{ width:100px; height:180px; float:left; margin:10px; overflow:hidden; text-align:center}
+</style>
+<script>function insertEdit(x){callback(x);}</script>
+
+</head>
+
+<body>
+<ul>
+<foreach name="list" item="item">
+<li>
+<a href="javascript:void(0)" onclick="insertEdit('{$item[bimg]}');">
+<img src="{$item[simg]}" title="点击插入" width="120" height="120"/></a>
+<div align="center"><input type="radio" value="1" name="topimg"> 设为主图</div>
+</li>
+</foreach>
+</ul>
+</ul>
+</div>
+
+</body>
+</html>

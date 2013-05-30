@@ -18,8 +18,7 @@ class frontendAction extends baseAction {
         //网站导航选中
         //$this->assign('nav_curr', '');
         //网站导航
-        $this->assign('arrNav',$this->_nav($this->module_name));
-        $this->assign('logo',$this->_navlogo($this->module_name));
+
     }
     /**
      * 初始化访问者
@@ -80,45 +79,7 @@ class frontendAction extends baseAction {
     	$pager->setConfig('theme', '%upPage% %first% %linkPage% %end% %downPage%');
     	return $pager;
     } 
-	// 网站导航
-	protected  function _nav($module_name){
-		if (! empty ( $module_name )) {
-			$arrNav = array ();
-			switch ($module_name) {
-				case "group" :
-					// 小组导航
-					if($this->visitor->info['userid']){
-						$arrNav['index'] = array('name'=>'我的小组', 'url'=>U('group/index'));
-					}
-					$arrNav['explore'] = array('name'=>'发现小组', 'url'=>U('group/explore'));
-					$arrNav['explore_topic'] = array('name'=>'发现话题', 'url'=>U('group/explore_topic'));
-					$arrNav['nearby'] = array('name'=>'北京话题', 'url'=>U('group/nearby'));
-					break;
-					
-				case "article" :
-					// 文章
-				    $arrChannel = D('article_channel')->getAllChannel(array('isnav'=>'0'));
-				    foreach($arrChannel as $item){
-				    	$arrNav[$item['nameid']] = array('name'=>$item['name'], 'url'=>U('article/channel',array('nameid'=>$item['nameid'])));
-				    }
-					break;
-				case "site" :
-					// 小站
-					$arrNav['index'] = array('name'=>'小站首页', 'url'=>U('site/index'));
-					if($this->visitor->info['userid']){
-						$arrNav['mysite'] = array('name'=>'我的小站', 'url'=>U('site/mysite'));
-					}
-					$arrNav['explore'] = array('name'=>'发现小站', 'url'=>U('site/explore'));
-					break;										
-				default:
-					$arrNav['index'] = array('name'=>'首页', 'url'=>C('ik_site_url'));
-					$arrNav['group'] = array('name'=>'小组', 'url'=>U('group/index'));
-					$arrNav['article'] = array('name'=>'阅读', 'url'=>U('article/index'));
-					break;
-			}
-			return $arrNav;
-		}		
-	}
+
 
   
 }

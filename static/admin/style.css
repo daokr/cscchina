@@ -181,7 +181,7 @@ cursor:pointer; display:block; float:left}
 .midder table tr.odd td {
 	background: none repeat scroll 0 0 #FBFBFB;
 }
-.midder table tr.oddover td{ background-color:#fdf4ef}
+.midder table tr.oddover td{ }
 
 /*分页*/
 .page {

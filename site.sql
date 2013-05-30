@@ -388,3 +388,21 @@ CREATE TABLE `ik_article_channel` (
   PRIMARY KEY (`nameid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='文章频道';
 
+
+DROP TABLE IF EXISTS `ik_images`;
+CREATE TABLE `ik_images` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id',
+  `seqid` int(11) NOT NULL DEFAULT '0' COMMENT 'seqid',
+  `typeid` int(11) NOT NULL DEFAULT '0' COMMENT '日记ID或帖子id',
+  `type` char(64) NOT NULL DEFAULT '0' COMMENT '日记或帖子或其他组件',
+  `userid` int(11) NOT NULL DEFAULT '0' COMMENT '用户id',
+  `name` char(64) NOT NULL DEFAULT '' COMMENT '文件名',
+  `path` char(32) NOT NULL DEFAULT '' COMMENT '源文件路径',
+  `size` char(32) NOT NULL DEFAULT '',
+  `title` char(120) NOT NULL DEFAULT '' COMMENT '图片描述',
+  `align` char(32) NOT NULL DEFAULT 'C' COMMENT '图片对齐方式',
+  `addtime` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `typeid` (`typeid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+

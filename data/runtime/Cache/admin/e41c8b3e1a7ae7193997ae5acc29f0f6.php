@@ -6,13 +6,28 @@
 <meta name="Copyright" content="<?php echo ($ikphp["ikphp_site_name"]); ?>" />
 <title><?php echo ($title); ?> - <?php echo ($site_title); ?></title>
 <link rel="stylesheet" type="text/css" href="__STATIC__/admin/style.css" />
+<!--[if gte IE 7]><!-->
+    <link href="__STATIC__/admin/js/dialog/skins5/idialog.css" rel="stylesheet" />
+<!--<![endif]-->
+<!--[if lt IE 7]>
+    <link href="__STATIC__/admin/js/dialog/skins5/idialog.css" rel="stylesheet" />
+<![endif]-->
 <script src="__STATIC__/admin/js/jquery.js" type="text/javascript"></script>
 <script src="__STATIC__/admin/js/common.js" type="text/javascript"></script>
+<script>
+var siteUrl = "<?php echo C('ik_site_url');?>";
+</script>
+<script src="__STATIC__/admin/js/dialog/jquery.artDialog.min5.js" type="text/javascript"></script> 
+<script language="javascript">
+function tips(c){ $.dialog({content: '<font style="font-size:14px;">'+c+'</font>',fixed: true, width:300, time:1500});}
+function succ(c){ $.dialog({icon: 'succeed',content: '<font  style="font-size:14px;">'+c+'</font>' , time:2000});}
+function error(c){$.dialog({icon: 'error',content: '<font  style="font-size:14px;">'+c+'</font>' , time:2000});}
+</script>
 </head>
 <body>
 <!--main-->
 <div class="midder">
-<h2><?php echo ($title); ?></h2>  
+<h2><span><a href="<?php echo U('article/addarticle',array('nameid'=>$nameid));?>">+添加文章</a></span><?php echo ($title); ?></h2>  
 <div class="tabnav">
 <ul>
 <?php if(is_array($arrChannel)): foreach($arrChannel as $key=>$item): if($item[nameid] == $nameid): ?><li class="select"><a href="<?php echo U('article/index',array('ik'=>'list','nameid'=>$item[nameid],'isaudit'=>'0'));?>"><?php echo ($item[name]); ?></a></li>

@@ -6,10 +6,16 @@
 class indexAction extends frontendAction {
 	public function _initialize() {
 		parent::_initialize ();
-
+		$this->article_mod = D('article');
 	}
 	public function index() {
-		echo "welcome IKPHP";
+		
+				//获取最新的 8文章
+		$arrNewArticle = $this->article_mod->getNewArticleItem(8);
+		
+		$this->assign ( 'arrNewArticle', $arrNewArticle );
+		
+		$this->display();
 	}
 	
 
