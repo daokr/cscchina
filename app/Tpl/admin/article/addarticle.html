@@ -11,17 +11,12 @@
 <table cellpadding="0" cellspacing="0">
 	<tr>
 		<th>标题：</th>
-		<td><input name="title" value="" style="width:300px"/></td>
+		<td><input name="title" value="" style="width:400px"/></td>
 	</tr> 
 	<tr>
 		<th>所属分类：</th>
 		<td>
-        <select name="cateid">
-        	<option value="0">选择分类</option>
-            <volist name="arrCate" id="vo">
-            	<option value="{$vo.cateid}">{$vo.catename}</option>
-            </volist>
-        </select>
+			{$strCate[catename]}<input type="hidden" value="{$cateid}"  name="cateid"/>
         </td>
 	</tr> 
 	<tr>

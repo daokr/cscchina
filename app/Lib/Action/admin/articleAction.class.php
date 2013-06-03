@@ -13,47 +13,36 @@ class articleAction extends backendAction {
 	}
 	public function index() {
 		$ik = $this->_get ( 'ik', 'trim' ,'list');
-		$nameid = $this->_get ( 'nameid', 'trim');
-		//获取全部频道
-		$arrChannel = $this->channel_mod->getAllChannel();
-		if(empty($nameid)){
-			$nameid = $arrChannel[0]['nameid'];
+		$cateid = $this->_get ( 'cateid', 'trim');
+		$arrCate = $this->cate_mod->getAllCate();
+		if(empty($cateid)){
+			$cateid = $arrCate[0]['cateid'];
 		}
-		$this->assign('nameid',$nameid);
-		$this->assign('arrChannel',$arrChannel);
+		$this->assign('cateid',$cateid);
+		$this->assign ( 'arrCate', $arrCate );
 		$this->assign('ik',$ik);
 		$this->title ( '文章管理' );
 		switch ($ik) {
 			case "isaudit" :
-				$this->article_isaudit($nameid);
+				$this->article_isaudit($cateid);
 				break;
 			case "istop" :
-				$this->article_istop($nameid);
+				$this->article_istop($cateid);
 				break;
 			case "isdigest" :
-				$this->article_isdigest($nameid);
+				$this->article_isdigest($cateid);
 				break;
 			case "list" :
-				$this->article_list($nameid);
+				$this->article_list($cateid);
 				break;
 		}
 	}
 	// 文章列表
-	public function article_list($nameid){
+	public function article_list($cateid){
 		$isaudit = $this->_get('isaudit','intval','0');
-		$strChannel = $this->channel_mod->where(array('nameid'=>$nameid))->find();
-		!$strChannel && $this->error ( '呃...你想要的东西不在这儿' );
-		// 获取分类
-		$arrCate = $this->cate_mod->getAllCate($nameid);
-		
-		if(is_array($arrCate)){
-			foreach($arrCate as $item){
-				$arrCates[] = $item['cateid'];
-			}
-		}
-		$strCates = implode(',',$arrCates);
+
 		//查询条件 是否审核
-		$map['cateid'] = array('exp',' IN ('.$strCates.') ');
+		$map['cateid'] = $cateid;
 		$map['isaudit'] = $isaudit;
 		//显示列表
 		$pagesize = 20;
@@ -80,8 +69,8 @@ class articleAction extends backendAction {
 	}
 	//添加文章
 	public function addarticle(){
-		$nameid = $this->_get('nameid','trim');
-		$arrCatename = $this->cate_mod->getCateByNameid ( $nameid );
+		$cateid = $this->_get('cateid','trim');
+		$strCate = $this->cate_mod->getOneCate ( $cateid );
 		if(IS_POST){
 			$userid = $_SESSION['admin']['userid'];
 			if($userid>0){
@@ -92,6 +81,7 @@ class articleAction extends backendAction {
 				$item ['addtime'] = time ();
 					
 				$data ['content'] = $this->_post ( 'content');
+
 				$data ['postip'] = get_client_ip ();
 				$data ['newsauthor'] = $this->_post('newsauthor','trim','');
 				
@@ -114,48 +104,83 @@ class articleAction extends backendAction {
 						// 失败提示
 						$this->error ( '新增失败!' );
 					}
+		        }else{
+		        	    $this->error ($this->item_mod->getError () );
 		        }
 		       
 			}
 		}else{
-			$this->assign('arrCate',$arrCatename);
+			$this->assign('strCate',$strCate);
+			$this->assign('cateid',$cateid);
 			$this->title ( '添加文章' );
 			$this->display();		
 		}
 	}
+	// 编辑文章
+	public function editarticle(){
+		if(IS_POST){
+			$itemid = $this->_post('itemid','trim,intval');
+			
+			$item ['cateid'] = $this->_post ( 'cateid', 'intval',0);
+			$item ['title'] = $this->_post ( 'title', 'trim' );
+			$item ['uptime'] = time ();
+					
+			$data ['content'] = $this->_post ( 'content');
+			$data ['newsauthor'] = $this->_post('newsauthor','trim','');
+			
+			if($item ['cateid'] == 0){
+				$this->error('分类必须选择！');
+			}
+			//开始更新
+			$this->item_mod->where(array('itemid'=>$itemid))->save($item);
+			$this->mod->where(array('aid'=>$itemid))->save($data);
+			$this->success('保存更新成功！');
+		}else{
+			$itemid = $this->_get('itemid','trim,intval');
+			!empty($itemid) && $strArt = $this->mod->getOneArticle($itemid);
+			
+			$strCate = $this->cate_mod->getOneCate($strArt['cateid']);
+
+			
+			$this->assign('strArt',$strArt);
+			$this->assign('strCate',$strCate);
+			$this->display();			
+		}
+
+	}
 	//单个审核
-	public function article_isaudit($nameid){
+	public function article_isaudit($cateid){
 		$itemid = $this->_get('itemid','intval');
 		$isaudit = $this->_get('isaudit','intval','0');
 		$strItem = $this->mod->getOneArticleItem($itemid);
 		if($strItem){
 			$this->item_mod->where(array('itemid'=>$itemid))->setField(array('isaudit'=>$isaudit));
 			$isaudit = $isaudit == 0? 1 : 0;
-			$this->redirect ( 'article/index',array('ik'=>'list','nameid'=>$nameid,'isaudit'=>$isaudit));
+			$this->redirect ( 'article/index',array('ik'=>'list','cateid'=>$cateid,'isaudit'=>$isaudit));
 		}else{
 			$this->error('文章不存在或已被删除！');
 		}
 	}
 	//单个置顶
-	public function article_istop($nameid){
+	public function article_istop($cateid){
 		$itemid = $this->_get('itemid','intval');
 		$istop = $this->_get('istop','intval','0');
 		$strItem = $this->mod->getOneArticleItem($itemid);
 		if($strItem){
 			$this->item_mod->where(array('itemid'=>$itemid))->setField(array('istop'=>$istop));
-			$this->redirect ( 'article/index',array('ik'=>'list','nameid'=>$nameid,'isaudit'=>$strItem['isaudit']));
+			$this->redirect ( 'article/index',array('ik'=>'list','cateid'=>$cateid,'isaudit'=>$strItem['isaudit']));
 		}else{
 			$this->error('文章不存在或已被删除！');
 		}
 	}	
 	//单个头条精华
-	public function article_isdigest($nameid){
+	public function article_isdigest($cateid){
 		$itemid = $this->_get('itemid','intval');
 		$isdigest = $this->_get('isdigest','intval','0'); 
 		$strItem = $this->mod->getOneArticleItem($itemid);
 		if($strItem){
 			$this->item_mod->where(array('itemid'=>$itemid))->setField(array('isdigest'=>$isdigest));
-			$this->redirect ( 'article/index',array('ik'=>'list','nameid'=>$nameid,'isaudit'=>$strItem['isaudit']));
+			$this->redirect ( 'article/index',array('ik'=>'list','cateid'=>$cateid,'isaudit'=>$strItem['isaudit']));
 		}else{
 			$this->error('文章不存在或已被删除！');
 		}
@@ -181,6 +206,15 @@ class articleAction extends backendAction {
 				break;
 		}
 	}
+	//删除单个文章
+	public function delarticle(){
+		$id = $this->_get ( 'itemid' , 'intval'); //文章id
+		// 根据id获取内容
+		$strArticle = $this->mod->getOneArticle($id);
+		// 执行删除
+		$this->mod->delOneArticle($id);
+		$this->success('删除成功！',U('article/index'));
+	}
 	//ajax删除数据
 	public function ajax_delete(){
 		$itemid = $this->_post('itemid');
@@ -201,119 +235,12 @@ class articleAction extends backendAction {
 	
 		}
 	}
-	public function channel() {
-		$ik = $this->_get ( 'ik', 'trim' ,'list');
-		$menu = array(
-				'list' => array('text'=>'频道设置', 'url'=>U('article/channel',array('ik'=>'list'))),
-				'add' => array('text'=>'新建频道', 'url'=>U('article/channel',array('ik'=>'add'))),
-		);
-		$this->assign('menu',$menu);
-		$this->assign('ik',$ik);
-		$this->title ( '频道管理' );
-		switch ($ik) {
-				case "edit" :
-					$this->channel_edit();
-					break;
-				case "add" :
-					$this->channel_add();
-					break;	
-				case "list" :
-					$this->channel_list();
-					break;	
-				case "isnav" :
-					$this->channel_nav();
-					break;
-		}
-	}
-	// 取消或设置为导航
-	public function channel_nav(){
-		$isnav  = $this->_get('isnav','intval','0');
-		$nameid = $this->_get('nameid','trim');
-		if(!empty($nameid)){
-			$this->channel_mod->where(array('nameid'=>$nameid))->setField(array('isnav'=>$isnav));
-			$this->redirect ( 'article/channel',array('ik'=>'list'));
-		}
-		
-	}
-	public function channel_list(){
-		//获取全部频道
-		$arrChannel = $this->channel_mod->getAllChannel();
-		$this->assign('arrChannel',$arrChannel);
-		$this->display('channel_list');
-	}
-	public function channel_edit(){
-		$nameid = $this->_get('nameid');
-		$strChannel = $this->channel_mod->getOneChannel($nameid);
-		if($strChannel){
-			$this->assign('strChannel',$strChannel);
-		}else{
-			$this->error('频道不存在！');
-		}
-		if(IS_POST){
-			$name = $this->_post('name','trim');
-			if(!empty($name)){
-				$this->channel_mod->where(array('nameid'=>$nameid))->setField(array('name'=>$name));
-				$this->redirect ( 'article/channel',array('ik'=>'list'));
-			}
-		}
-		$this->display('channel_edit');
-	}
-	public function channel_add(){
-		
-		if(IS_POST){
-			$nameid = $this->_post('nameid','trim');
-			$name = $this->_post('name','trim');
-			$cate = $this->_post('catename','trim','');
-			if(empty($nameid) || empty($name)){
-				$this->error('英文名和名称必须填写！');
-			}
-			if(!preg_match('/^[a-zA-Z]+$/', $nameid)) {
-				$this->error('指定的频道英文ID包含非英文字母，请返回检查');
-			}
-			// 是否已经存在nameid
-			$ishave = $this->channel_mod->where(array('nameid'=>$nameid))->find();
-			if($ishave){
-				$this->error('指定的频道英文ID已经存在，请换一个吧');
-			}
-			// 添加
-			$arrdata = array(
-					'name' => strtolower($name),
-					'nameid' => $nameid,
-			);
-			if($this->channel_mod->create($arrdata)){
-				$this->channel_mod->add();
-				// 添加分类
-				if(!empty($cate)){
-					$cates = explode("\n", $cate);
-					foreach($cates as $value) {
-						$value = t(trim($value));
-						if($value) {
-							$data['catename'] = $value;
-							$data['nameid']	  = $nameid;
-							if($this->cate_mod->create($data)){
-								$this->cate_mod->add();
-							}
-						}
-					}
 
-				}
-				$this->redirect ( 'article/channel',array('ik'=>'list'));
-			}
-		}
-				
-		$this->display('channel_add');
-	}
+
+	
 	// 分类管理
 	public function cate() {
 		$ik = $this->_get ( 'ik', 'trim' ,'list');
-		$nameid = $this->_get ( 'nameid', 'trim');
-		//获取全部频道
-		$arrChannel = $this->channel_mod->getAllChannel();
-		if(empty($nameid)){
-			$nameid = $arrChannel[0]['nameid'];
-		}
-		$this->assign('nameid',$nameid);
-		$this->assign('arrChannel',$arrChannel);
 		$this->assign('ik',$ik);
 		$this->title ( '分类管理' );
 		switch ($ik) {
@@ -321,10 +248,10 @@ class articleAction extends backendAction {
 				$this->cate_edit();
 				break;
 			case "add" :
-				$this->cate_add($nameid);
+				$this->cate_add();
 				break;
 			case "list" :
-				$this->cate_list($nameid);
+				$this->cate_list();
 				break;
 			case "delete" :
 				$this->cate_delete();
@@ -332,20 +259,20 @@ class articleAction extends backendAction {
 		}
 	}
 	// 单个频道的分类列表
-	public function cate_list($nameid){
-		$arrCate = $this->cate_mod->getCateByNameid($nameid);
+	public function cate_list(){
+		$arrCate = $this->cate_mod->getAllCate();
 		$this->assign('arrCate',$arrCate);
 		$this->display('cate_list');
 	}
-	public function cate_add($nameid){
+	public function cate_add(){
 		if(IS_POST){
-			$nameid = $this->_post('nameid');
+
 			$catename = $this->_post('catename','trim');
-			if(!empty($nameid) && !empty($catename)){
+			if(!empty($catename)){
 				//执行添加
-				if(!false == $this->cate_mod->create(array('catename'=>$catename,'nameid'=>$nameid))){
+				if(!false == $this->cate_mod->create()){
 					$this->cate_mod->add();
-					$this->redirect ( 'article/cate',array('ik'=>'list','nameid'=>$nameid));
+					$this->redirect ( 'article/cate',array('ik'=>'list'));
 				}
 			}else{
 				$this->error('添加失败，分类名称不能为空');
@@ -362,7 +289,7 @@ class articleAction extends backendAction {
 			if(IS_POST){
 				$catename =  $this->_post('catename','trim');
 				$this->cate_mod->where(array('cateid'=>$cateid))->setField(array('catename'=>$catename));
-				$this->redirect ( 'article/cate',array('ik'=>'list','nameid'=>$strCate['nameid']));
+				$this->redirect ( 'article/cate',array('ik'=>'list'));
 			}else{
 				$this->assign('strCate',$strCate);
 				$this->display('cate_edit');
@@ -384,23 +311,17 @@ class articleAction extends backendAction {
 				// 新的分类
 				$newCate =$this->cate_mod->getOneCate($newcateid); 
 				
-				$this->redirect ( 'article/cate',array('ik'=>'list','nameid'=>$newCate['nameid']));
+				$this->redirect ( 'article/cate',array('ik'=>'list'));
 			}else{
 
-				// 获取资讯分类
-				$arrChannel = $this->channel_mod->getAllChannel();
 				$arrCate = ''; // 初始化下拉列表
-				$arrCatename = array ();
-				foreach ( $arrChannel as $key => $item ) {
-					$arrCatename = $this->cate_mod->getCateByNameid ( $item ['nameid'] );
-					$arrCate .= '<optgroup label="' . $item ['name'] . '">';
-					foreach ( $arrCatename as $key1 => $item1 ) {
-						if($strCate['cateid']!=$item1 ['cateid']){
-							$arrCate .= '<option  value="' . $item1 ['cateid'] . '" >' . $item1 ['catename'] . '</option>';
-						}
+				$arrCatename = $this->cate_mod->getAllCate ( );
+				foreach ( $arrCatename as $key1 => $item1 ) {
+					if($strCate['cateid']!=$item1 ['cateid']){
+						$arrCate .= '<option  value="' . $item1 ['cateid'] . '" >' . $item1 ['catename'] . '</option>';
 					}
-					$arrCate .= '</optgroup>';
 				}
+
 				$this->assign('strCate',$strCate);
 				$this->assign ( 'arrCate', $arrCate );				
 				$this->display('cate_delete');

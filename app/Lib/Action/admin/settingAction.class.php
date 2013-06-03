@@ -7,6 +7,7 @@ class settingAction extends backendAction {
 	public function _initialize() {
 		parent::_initialize ();
 		$this->_mod = D ( 'setting' );
+		$this->nav_mod = D('nav');
 	}
 	public function index() {
 		$arrTime = $this->getZone();
@@ -37,6 +38,36 @@ class settingAction extends backendAction {
 			$this->display();
 		}	
 	}
+	public function navlist(){
+		$arrNav = $this->nav_mod->select();
+		$this->assign('list',$arrNav);
+		$this->title ( '网站导航设置' );
+		$this->display();		
+	}
+	public function setnav(){
+		$ik = $this->_get('ik');
+		if($ik == 'add'){
+			//添加
+			if (IS_POST) {
+					if (false === $this->nav_mod->create ()) {
+						$this->error ( $this->nav_mod->getError () );
+					}
+					// 保存当前数据对象
+					$aid = $this->nav_mod->add (); 
+					if ($aid !== false) { // 保存成功
+						$this->redirect(U('setting/navlist'));
+					}else{
+						$this->error ( '新增失败!' );
+					} 
+					
+			} else {
+				$this->title ( '添加网站导航' );
+				$this->display();
+			}
+		}
+		
+
+	}	
 	public function edit() {
 		$setting = $this->_post('setting', ',');
 		foreach ($setting as $key => $val) {

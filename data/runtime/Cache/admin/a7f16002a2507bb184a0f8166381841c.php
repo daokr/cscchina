@@ -5,14 +5,21 @@
 <title>无标题文档</title>
 <style>
 *{ padding:0px; margin:0px; font-size:12px}
-ul{ display:block; overflow-y:scroll; list-style-type:none;}
-li{ width:100px; height:180px; float:left; margin:10px; overflow:hidden; text-align:center}
+body{ padding:10px}
+ul{ display:block;list-style-type:none;}
+li{ width:100px;  float:left; margin:10px; overflow:hidden; text-align:center}
+.line{ display:block; line-height:1px; margin:10px 0px; height:1px; font-size:0px; display:block; border:#ddd dotted 1px;}
 </style>
 <script>function insertEdit(x){callback(x);}</script>
 <script src="__STATIC__/admin/js/jquery.js" type="text/javascript"></script>
 <script language="javascript">
-function ajaxsetimg(id){
-	alert(id);
+function ajaxsetimg(id,obj){
+	var url = '<?php echo U("images/sethead");?>';
+	var type = $(obj).attr('types');
+	var typeid = $(obj).attr('typeid');
+	$.post(url,{itemid:id,type:type,typeid:typeid},function(res){
+		if(res==1) {alert('设置成功!')}else{ alert("设置失败！")};
+	})
 }
 </script>
 </head>
@@ -23,13 +30,15 @@ function ajaxsetimg(id){
 <input type="hidden" name="typeid" value="<?php echo ($typeid); ?>">
 <input name="file" type="file" id="file"> <input type="submit" value="开始上传" >
 </form>
-<hr>
+
+<div class="line"></div>
+<?php if(!empty($list)): ?><h3>点击图片插入到编辑框</h3>
+<ul>
 <?php if(is_array($list)): foreach($list as $key=>$item): ?><li>
 <a href="javascript:void(0)" onclick="insertEdit('<?php echo ($item[bimg]); ?>');">
-<img src="<?php echo ($item[simg]); ?>" title="点击插入" width="120" height="120"/></a>
-<div align="center"><label><input type="radio" value="1" name="topimg" onClick="ajaxsetimg(<?php echo ($item[id]); ?>)"> 设为主图</label></div>
+<img src="<?php echo ($item[simg]); ?>" title="点击插入" width="120" height="120" border="0"/></a>
+<div align="center"><label><input type="radio" <?php if(($item["ishead"]) == "1"): ?>checked<?php endif; ?> value="1" name="topimg" onClick="ajaxsetimg(<?php echo ($item[id]); ?>,this)" typeid="<?php echo ($item[typeid]); ?>" types="<?php echo ($item[type]); ?>"> 设为主图</label></div>
 </li><?php endforeach; endif; ?>
-</ul>
-
+</ul><?php endif; ?>
 </body>
 </html>

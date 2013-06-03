@@ -369,24 +369,12 @@ DROP TABLE IF EXISTS `ik_article_cate`;
 CREATE TABLE `ik_article_cate` (
   `cateid` int(11) NOT NULL AUTO_INCREMENT COMMENT '分类ID',
   `catename` char(32) NOT NULL DEFAULT '' COMMENT '分类名称',
-  `nameid` char(30) NOT NULL DEFAULT '' COMMENT '频道id',  
   `orderid` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`cateid`),
-  KEY `nameid` (`nameid`)
+  PRIMARY KEY (`cateid`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
---
--- 表的结构 `ik_article_channel`
---
-DROP TABLE IF EXISTS `ik_article_channel`;
-CREATE TABLE `ik_article_channel` (
-  `nameid` char(30) NOT NULL DEFAULT '' COMMENT '频道英文名称',
-  `name` char(50) NOT NULL DEFAULT '' COMMENT '频道名',
-  `isnav` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否开启导航',  
-  PRIMARY KEY (`nameid`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='文章频道';
 
 
 DROP TABLE IF EXISTS `ik_images`;
@@ -401,8 +389,31 @@ CREATE TABLE `ik_images` (
   `size` char(32) NOT NULL DEFAULT '',
   `title` char(120) NOT NULL DEFAULT '' COMMENT '图片描述',
   `align` char(32) NOT NULL DEFAULT 'C' COMMENT '图片对齐方式',
+  `ishead` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否是主图 0:否 1是',    
   `addtime` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `typeid` (`typeid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
+DROP TABLE IF EXISTS `ik_award_cate`;
+CREATE TABLE `ik_award_cate` (
+  `cateid` int(11) NOT NULL AUTO_INCREMENT COMMENT '分类ID',
+  `catename` char(32) NOT NULL DEFAULT '' COMMENT '分类名称',
+  `orderid` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`cateid`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- 表的结构 `ik_nav`
+--
+
+DROP TABLE IF EXISTS `ik_nav`;
+CREATE TABLE `ik_nav` (
+  `id` smallint(4) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `link` varchar(255) NOT NULL,
+  `target` tinyint(1) NOT NULL DEFAULT '1',
+  `ordid` tinyint(3) unsigned NOT NULL DEFAULT '255',
+  `status` tinyint(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8;

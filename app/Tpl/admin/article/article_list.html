@@ -46,8 +46,10 @@
 </td>
 <td><span class="tdedit" data-id="{$item[itemid]}" data-field="orderid" data-tdtype="edit" data-action="{:U('article/ajax_setting',array('ik'=>'order','id'=>$item[itemid]))}">{$item[orderid]}</span></td>
 <td>
-<a href="#">[编辑]</a> 
-<a href="#">[删除]</a> 
+<a href="{:U('article/editarticle',array('itemid'=>$item[itemid]))}">[编辑]</a> 
+
+<a href="{:U('article/delarticle',array('itemid'=>$item[itemid]))}" onClick="return confirm('确定要执行删除操作吗？')">[删除]</a> 
+
 <if condition="$item[isaudit] eq 0">
 <a href="{:U('article/index',array('ik'=>'isaudit','itemid'=>$item[itemid],'isaudit'=>'1'))}">[取消审核]</a> 
 <else/>

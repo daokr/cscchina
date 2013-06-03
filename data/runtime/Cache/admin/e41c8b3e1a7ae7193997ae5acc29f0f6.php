@@ -27,23 +27,22 @@ function error(c){$.dialog({icon: 'error',content: '<font  style="font-size:14px
 <body>
 <!--main-->
 <div class="midder">
-<h2><span><a href="<?php echo U('article/addarticle',array('nameid'=>$nameid));?>">+添加文章</a></span><?php echo ($title); ?></h2>  
+<h2><span><a href="<?php echo U('article/addarticle',array('cateid'=>$cateid));?>">+添加文章</a></span><?php echo ($title); ?></h2>  
 <div class="tabnav">
 <ul>
-<?php if(is_array($arrChannel)): foreach($arrChannel as $key=>$item): if($item[nameid] == $nameid): ?><li class="select"><a href="<?php echo U('article/index',array('ik'=>'list','nameid'=>$item[nameid],'isaudit'=>'0'));?>"><?php echo ($item[name]); ?></a></li>
+<?php if(is_array($arrCate)): foreach($arrCate as $key=>$item): if($item[cateid] == $cateid): ?><li class="select"><a href="<?php echo U('article/index',array('ik'=>'list','cateid'=>$item[cateid],'isaudit'=>'0'));?>"><?php echo ($item[catename]); ?></a></li>
     <?php else: ?>
-    <li><a href="<?php echo U('article/index',array('ik'=>'list','nameid'=>$item[nameid],'isaudit'=>'0'));?>"><?php echo ($item[name]); ?></a></li><?php endif; endforeach; endif; ?>
+    <li><a href="<?php echo U('article/index',array('ik'=>'list','cateid'=>$item[cateid],'isaudit'=>'0'));?>"><?php echo ($item[catename]); ?></a></li><?php endif; endforeach; endif; ?>
 </ul>
 </div>
-
 <div class="tabnav">
 <ul>
-	<?php if($isaudit == 0): ?><li class="select"><a href="<?php echo U('article/index',array('ik'=>'list','nameid'=>$nameid,'isaudit'=>'0'));?>">已审核的</a></li>
+	<?php if($isaudit == 0): ?><li class="select"><a href="<?php echo U('article/index',array('ik'=>'list','cateid'=>$cateid,'isaudit'=>'0'));?>">已审核的</a></li>
 	<?php else: ?>
-   		 <li><a href="<?php echo U('article/index',array('ik'=>'list','nameid'=>$nameid,'isaudit'=>'0'));?>">已审核的</a></li><?php endif; ?>
-    <?php if($isaudit == 1): ?><li class="select"><a href="<?php echo U('article/index',array('ik'=>'list','nameid'=>$nameid,'isaudit'=>'1'));?>">未审核的 <font style="color:red;">(<?php echo ($count_isaudit); ?>)</font></a></li>   
+   		 <li><a href="<?php echo U('article/index',array('ik'=>'list','cateid'=>$cateid,'isaudit'=>'0'));?>">已审核的</a></li><?php endif; ?>
+    <?php if($isaudit == 1): ?><li class="select"><a href="<?php echo U('article/index',array('ik'=>'list','cateid'=>$cateid,'isaudit'=>'1'));?>">未审核的 <font style="color:red;">(<?php echo ($count_isaudit); ?>)</font></a></li>   
     <?php else: ?>
- 		<li><a href="<?php echo U('article/index',array('ik'=>'list','nameid'=>$nameid,'isaudit'=>'1'));?>">未审核的 <font style="color:red;">(<?php echo ($count_isaudit); ?>)</font></a></li><?php endif; ?>
+ 		<li><a href="<?php echo U('article/index',array('ik'=>'list','cateid'=>$cateid,'isaudit'=>'1'));?>">未审核的 <font style="color:red;">(<?php echo ($count_isaudit); ?>)</font></a></li><?php endif; ?>
     
 </ul>
 </div>
@@ -51,7 +50,7 @@ function error(c){$.dialog({icon: 'error',content: '<font  style="font-size:14px
 <a class="btn_a" href="javascript:;" data-url="<?php echo U('article/ajax_delete',array('ik'=>'article'));?>" onclick="Delete(this)">
 <span>删除选中</span>
 </a>
-
+<!--
 <a class="btn_a" href="javascript:;" data-url="<?php echo U('article/ajax_setting',array('ik'=>'istop','type'=>1));?>" onclick="Audit(this)">
 <span>置顶</span>
 </a>  
@@ -73,7 +72,7 @@ function error(c){$.dialog({icon: 'error',content: '<font  style="font-size:14px
 <a class="btn_a" href="javascript:;" data-url="<?php echo U('article/ajax_setting',array('ik'=>'isaudit','type'=>1));?>" onclick="Audit(this)">
 <span>取消审核</span>
 </a>
-
+-->
   
 </div>
 <table  cellpadding="0" cellspacing="0">
@@ -107,8 +106,10 @@ function error(c){$.dialog({icon: 'error',content: '<font  style="font-size:14px
 </td>
 <td><span class="tdedit" data-id="<?php echo ($item[itemid]); ?>" data-field="orderid" data-tdtype="edit" data-action="<?php echo U('article/ajax_setting',array('ik'=>'order','id'=>$item[itemid]));?>"><?php echo ($item[orderid]); ?></span></td>
 <td>
-<a href="#">[编辑]</a> 
-<a href="#">[删除]</a> 
+<a href="<?php echo U('article/editarticle',array('itemid'=>$item[itemid]));?>">[编辑]</a> 
+
+<a href="<?php echo U('article/delarticle',array('itemid'=>$item[itemid]));?>" onClick="return confirm('确定要执行删除操作吗？')">[删除]</a> 
+
 <?php if($item[isaudit] == 0): ?><a href="<?php echo U('article/index',array('ik'=>'isaudit','itemid'=>$item[itemid],'isaudit'=>'1'));?>">[取消审核]</a> 
 <?php else: ?>
 <a href="<?php echo U('article/index',array('ik'=>'isaudit','itemid'=>$item[itemid],'isaudit'=>'0'));?>">[审核]</a><?php endif; ?>

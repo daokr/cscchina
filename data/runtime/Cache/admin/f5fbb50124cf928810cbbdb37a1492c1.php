@@ -32,15 +32,12 @@ function error(c){$.dialog({icon: 'error',content: '<font  style="font-size:14px
 <table cellpadding="0" cellspacing="0">
 	<tr>
 		<th>标题：</th>
-		<td><input name="title" value="" style="width:300px"/></td>
+		<td><input name="title" value="" style="width:400px"/></td>
 	</tr> 
 	<tr>
 		<th>所属分类：</th>
 		<td>
-        <select name="cateid">
-        	<option value="0">选择分类</option>
-            <?php if(is_array($arrCate)): $i = 0; $__LIST__ = $arrCate;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["cateid"]); ?>"><?php echo ($vo["catename"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
-        </select>
+			<?php echo ($strCate[catename]); ?><input type="hidden" value="<?php echo ($cateid); ?>"  name="cateid"/>
         </td>
 	</tr> 
 	<tr>

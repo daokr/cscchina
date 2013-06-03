@@ -7,6 +7,7 @@ class userAction extends backendAction {
 	public function _initialize() {
 		parent::_initialize ();
 		$this->mod = D ( 'user' );
+		$this->award_cate = D ('award_cate');
 	}
 	//会员管理
 	public function manage(){
@@ -76,6 +77,75 @@ class userAction extends backendAction {
 					break;
 			}
 	
+		}
+	}
+	
+	//报名管理奖设置
+	// 分类管理
+	public function cate() {
+		$ik = $this->_get ( 'ik', 'trim' ,'list');
+
+		$this->assign('ik',$ik);
+		$this->title ( '奖项分类管理' );
+		switch ($ik) {
+			case "edit" :
+				$this->cate_edit();
+				break;
+			case "add" :
+				$this->cate_add();
+				break;
+			case "list" :
+				$this->cate_list();
+				break;
+			case "delete" :
+				$this->cate_delete();
+				break;
+		}
+	}
+	// 单个分类列表
+	public function cate_list(){
+		$arrCate = $this->award_cate->where('')->order('cateid desc')->select();
+		$this->assign('arrCate',$arrCate);
+		$this->display('cate_list');
+	}
+	public function cate_add($nameid){
+		if(IS_POST){
+			$catename = $this->_post('catename','trim');
+			if(!empty($catename)){
+				//执行添加
+				if (false === $this->award_cate->create ()) {
+					$this->error ( $this->award_cate->getError () );
+				}
+				// 保存当前数据对象
+				$cateid = $this->award_cate->add ();
+				if($cateid>0){
+					$this->success ( '添加成功!' );
+				}else{
+					$this->error ( '添加失败!' );
+				}
+				
+			}else{
+				$this->error('添加失败，分类名称不能为空');
+			}
+				
+		}else{
+			$this->display('cate_add');
+		}
+	}
+	public function cate_edit(){
+		$cateid = $this->_get('cateid','intval');
+		$strCate = $this->award_cate->where(array('cateid'=>$cateid))->find();
+		if($strCate){
+			if(IS_POST){
+				$catename =  $this->_post('catename','trim');
+				$this->award_cate->where(array('cateid'=>$cateid))->setField(array('catename'=>$catename));
+				$this->redirect ( 'user/cate',array('ik'=>'list'));
+			}else{
+				$this->assign('strCate',$strCate);
+				$this->display('cate_edit');
+			}
+		}else{
+			$this->error('错误操作');
 		}
 	}
 	

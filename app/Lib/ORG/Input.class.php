@@ -138,6 +138,7 @@ class Input {
      */
     static public function noGPC() {
         if ( get_magic_quotes_gpc() ) {
+          
            $_POST = stripslashes_deep($_POST);
            $_GET = stripslashes_deep($_GET);
            $_COOKIE = stripslashes_deep($_COOKIE);

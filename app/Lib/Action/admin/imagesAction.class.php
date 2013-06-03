@@ -6,7 +6,8 @@
 class imagesAction extends backendAction {
 	public function _initialize() {
 		parent::_initialize ();
-		$this->_mod = D('images');		
+		$this->_mod = D('images');	
+		$this->userid = $_SESSION['admin']['userid'];	
 	}
 	public function add() { 
 		$typeid  = $this->_post('typeid','intval','0');
@@ -77,6 +78,18 @@ class imagesAction extends backendAction {
 		$this->assign('typeid',$typeid);
 		$this->assign('type',$type);
 		$this->display();
+	}
+	//设置主图
+	public function sethead(){
+		$type = $this->_post('type','trim');
+		$typeid = $this->_post('typeid','trim');
+		$id = $this->_post('itemid','trim,intval');
+		if($id>0){
+			$this->_mod->where(array('type'=>$type,'typeid'=>$typeid))->setField('ishead',0);
+			$this->_mod->where(array('id'=>$id))->setField('ishead',1);
+			$this->ajaxReturn(1);
+		}
+		
 	}
 
 }

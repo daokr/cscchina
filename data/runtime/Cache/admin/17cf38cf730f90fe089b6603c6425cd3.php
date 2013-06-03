@@ -28,15 +28,9 @@ function error(c){$.dialog({icon: 'error',content: '<font  style="font-size:14px
 <!--main-->
 <div class="midder">
 <h2><?php echo ($title); ?></h2>  
-<div class="tabnav">
-<ul>
-<?php if(is_array($arrChannel)): foreach($arrChannel as $key=>$item): if($item[nameid] == $nameid): ?><li class="select"><a href="<?php echo U('article/cate',array('ik'=>'list','nameid'=>$item[nameid]));?>"><?php echo ($item[name]); ?></a></li>
-    <?php else: ?>
-    <li><a href="<?php echo U('article/cate',array('ik'=>'list','nameid'=>$item[nameid]));?>"><?php echo ($item[name]); ?></a></li><?php endif; endforeach; endif; ?>
-</ul>
-</div>
+
 <div class="Toolbar_inbox">
-	<a class="btn_a" href="<?php echo U('article/cate',array('ik'=>'add','nameid'=>$nameid));?>"><span>添加分类</span></a>
+	<a class="btn_a" href="<?php echo U('article/cate',array('ik'=>'add'));?>"><span>添加分类</span></a>
 </div>
 <table  cellpadding="0" cellspacing="0">
 <tr class="old">

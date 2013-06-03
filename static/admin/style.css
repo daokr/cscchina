@@ -168,7 +168,6 @@ cursor:pointer; display:block; float:left}
 	vertical-align: top;
 	margin: 0;
 	outline: 0 none;
-	font-size:12px
 }
 
 .midder table tr.old td {
@@ -181,8 +180,8 @@ cursor:pointer; display:block; float:left}
 .midder table tr.odd td {
 	background: none repeat scroll 0 0 #FBFBFB;
 }
-.midder table tr.oddover td{ }
-
+.midder table tr.oddover td{ background-color:#fdf4ef}
+.midder .tdedit{ background: url("images/tdedit.gif") no-repeat scroll right 1px transparent; padding-right: 14px;}
 /*分页*/
 .page {
 	margin: 0;

@@ -8,6 +8,7 @@ class articleModel extends Model {
 	protected $_validate	 =	 array(
 			array('itemid','require','分类必须填写'),
 			array('content','require','内容必须填写'),
+			array('title','','标题已经存在',0,'unique',self::MODEL_INSERT),
 			
 	);
 	

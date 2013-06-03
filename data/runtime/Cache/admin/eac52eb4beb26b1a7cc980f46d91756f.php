@@ -92,10 +92,10 @@ function refresh() {
     <ul class="nav" id="topnav">	
 		<li class="on"><a style="outline:none;" hidefocus="true" data-id="index" href="javascript:;">首页</a></li>
 <li><a style="outline:none;" hidefocus="true" data-id="setting" href="javascript:;">全局配置</a></li>
+<li><a style="outline:none;" hidefocus="true" data-id="article" href="javascript:;">行业管理</a></li>
 <li><a style="outline:none;" hidefocus="true" data-id="user" href="javascript:;">报名管理</a></li>
 <li><a style="outline:none;" hidefocus="true" data-id="prize" href="javascript:;">评奖管理</a></li>
 <li><a style="outline:none;" hidefocus="true" data-id="forum" href="javascript:;">论坛管理</a></li>
-<li><a style="outline:none;" hidefocus="true" data-id="article" href="javascript:;">文章管理</a></li>
     </ul>                   
 </div>
 <div class="LeftMenu">
