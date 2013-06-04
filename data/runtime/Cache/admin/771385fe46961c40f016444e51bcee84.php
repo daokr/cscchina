@@ -45,7 +45,8 @@ function error(c){$.dialog({icon: 'error',content: '<font  style="font-size:14px
 <td><?php echo ($item[link]); ?></td>
 <td><?php echo ($item[ordid]); ?></td>
 <td>
-<a href="<?php echo U('setting/setnav',array('ik'=>'edit','id'=>$item[id]));?>">[编辑]</a> <a href="<?php echo U('setting/setnav',array('ik'=>'add','id'=>$item[id]));?>">[删除]</a>
+<a href="<?php echo U('setting/setnav',array('ik'=>'edit','id'=>$item[id]));?>">[编辑]</a>&nbsp;&nbsp;
+<a href="<?php echo U('setting/setnav',array('ik'=>'del','id'=>$item[id]));?>">[删除]</a>
 </td>
 <tr><?php endforeach; endif; ?>
 </table>

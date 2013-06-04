@@ -13,6 +13,7 @@
     <link href="__STATIC__/admin/js/dialog/skins5/idialog.css" rel="stylesheet" />
 <![endif]-->
 <script src="__STATIC__/admin/js/jquery.js" type="text/javascript"></script>
+<script src="__STATIC__/admin/js/ajaxfileupload.js" type="text/javascript"></script>
 <script src="__STATIC__/admin/js/common.js" type="text/javascript"></script>
 <script>
 var siteUrl = "<?php echo C('ik_site_url');?>";
@@ -50,6 +51,10 @@ function error(c){$.dialog({icon: 'error',content: '<font  style="font-size:14px
 <a class="btn_a" href="javascript:;" data-url="<?php echo U('article/ajax_delete',array('ik'=>'article'));?>" onclick="Delete(this)">
 <span>删除选中</span>
 </a>
+
+<a class="btn_a" href="<?php echo U('article/addarticle',array('cateid'=>$cateid));?>"  onclick="Audit(this)">
+<span>+添加文章</span>
+</a>  
 <!--
 <a class="btn_a" href="javascript:;" data-url="<?php echo U('article/ajax_setting',array('ik'=>'istop','type'=>1));?>" onclick="Audit(this)">
 <span>置顶</span>

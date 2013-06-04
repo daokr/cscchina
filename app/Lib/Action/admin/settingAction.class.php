@@ -49,21 +49,43 @@ class settingAction extends backendAction {
 		if($ik == 'add'){
 			//添加
 			if (IS_POST) {
+				$id = $this->_post('id','trim','0');
+				if(empty($id)){
 					if (false === $this->nav_mod->create ()) {
 						$this->error ( $this->nav_mod->getError () );
 					}
 					// 保存当前数据对象
-					$aid = $this->nav_mod->add (); 
+					$aid = $this->nav_mod->add ();
 					if ($aid !== false) { // 保存成功
 						$this->redirect(U('setting/navlist'));
 					}else{
 						$this->error ( '新增失败!' );
-					} 
+					}
+				}else{
+					if (false === $this->nav_mod->create ()) {
+						$this->error ( $this->nav_mod->getError () );
+					}
+					 $this->nav_mod->where(array('id'=>$id))->save();
+					 $this->redirect(U('setting/navlist'));
+				}
+
 					
 			} else {
 				$this->title ( '添加网站导航' );
 				$this->display();
 			}
+		}
+		if($ik == 'edit'){
+			$id = $this->_get('id');
+			$strNav = $this->nav_mod->where(array('id'=>$id))->find();
+			$this->assign('strNav',$strNav);
+			$this->title ( '编辑网站导航' );
+			$this->display();
+		}
+		if($ik == 'del'){
+			$id = $this->_get('id');
+			$strNav = $this->nav_mod->where(array('id'=>$id))->delete();
+			$this->redirect(U('setting/navlist'));
 		}
 		
 

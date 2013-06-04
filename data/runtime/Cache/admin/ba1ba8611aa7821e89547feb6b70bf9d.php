@@ -29,21 +29,22 @@ function error(c){$.dialog({icon: 'error',content: '<font  style="font-size:14px
 <div class="midder">
 <h2><?php echo ($title); ?></h2> 
 <form method="POST" action="<?php echo U('setting/setnav',array('ik'=>'add'));?>" id="formMini" >
+<input type="hidden" value="<?php echo ($strNav[id]); ?>" name="id"/>
 <table cellpadding="0" cellspacing="0">
 	<tr>
 		<th>导航名称：</th>
-		<td><input name="name" value="" style="width:200px"/></td>
+		<td><input name="name" value="<?php echo ($strNav[name]); ?>" style="width:200px"/></td>
 	</tr> 
 	<tr>
 		<th>链接地址：</th>
 		<td>
-			<input name="link" value="" style="width:400px"/> 请填写http://地址
+			<input name="link" value="<?php echo ($strNav[link]); ?>" style="width:400px"/> 请填写http://地址
         </td>
 	</tr> 
 	<tr>
 		<th>排序：</th>
 		<td>
-        <input name="ordid" value="" style="width:100px"/> 请填写数字；提示：值越大越在前面
+        <input name="ordid" value="<?php echo ($strNav[ordid]); ?>" style="width:100px"/> 请填写数字；提示：值越大越在前面
         </td>
 	</tr>               
 </table>

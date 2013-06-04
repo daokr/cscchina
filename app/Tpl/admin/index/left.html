@@ -44,6 +44,27 @@
 </li>    
 </if>
 
+<if condition="$ik eq 'ad'">
+<li class="treemenu_on">
+    <a style="outline:none;" hidefocus="true" href="javascript:void(0)" class="actuator">广告管理</a>
+    <ul class="submenu" style="display: block;">
+      <li><a style="outline:none;" hidefocus="true" class="submenuB" href="{:U('ad/adlist')}" target="MainIframe">广告列表</a></li>
+      <li><a style="outline:none;" hidefocus="true" class="submenuA" href="{:U('ad/manage',array('ik'=>'add'))}" target="MainIframe">添加新广告</a></li>
+    </ul>
+</li>    
+</if>
+
+
+<if condition="$ik eq 'history'">
+<li class="treemenu_on">
+    <a style="outline:none;" hidefocus="true" href="javascript:void(0)" class="actuator">往届回顾</a>
+    <ul class="submenu" style="display: block;">
+      <li><a style="outline:none;" hidefocus="true" class="submenuB" href="{:U('history/hislist')}" target="MainIframe">往届回顾列表</a></li>
+      <li><a style="outline:none;" hidefocus="true" class="submenuA" href="{:U('history/cate',array('ik'=>'add'))}" target="MainIframe">添加年份</a></li>
+    </ul>
+</li>    
+</if>
+
 <if condition="$ik eq 'article'">
 <li class="treemenu_on">
     <a style="outline:none;" hidefocus="true" href="javascript:void(0)" class="actuator">行业管理</a>

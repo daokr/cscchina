@@ -417,3 +417,49 @@ CREATE TABLE `ik_nav` (
   `status` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `ik_ad`;
+CREATE TABLE `ik_ad` (
+  `id` smallint(4) unsigned NOT NULL AUTO_INCREMENT,
+  `posid` tinyint(1) NOT NULL DEFAULT '1' COMMENT '首页位置1 首页位置2',    
+  `name` varchar(50) NOT NULL,
+  `link` varchar(255) NOT NULL,
+  `path` char(255) NOT NULL DEFAULT '' COMMENT '广告图片',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `ik_history_cate`;
+CREATE TABLE `ik_history_cate` (
+  `cateid` int(11) NOT NULL AUTO_INCREMENT COMMENT '分类ID',
+  `catename` char(32) NOT NULL DEFAULT '' COMMENT '分类名称',
+  PRIMARY KEY (`cateid`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+
+
+--
+-- 表的结构 `ik_article_item`
+--
+DROP TABLE IF EXISTS `ik_history`;
+CREATE TABLE `ik_history` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '文章ID',
+  `typeid` int(11) NOT NULL DEFAULT '0' COMMENT '分类ID',
+  `cateid` int(11) NOT NULL DEFAULT '0' COMMENT '年份id',
+  `title` char(64) NOT NULL DEFAULT '' COMMENT '标题',
+  `content` text NOT NULL COMMENT '内容',  
+  `count_comment` int(11) NOT NULL DEFAULT '0' COMMENT '回复统计',
+  `count_view` int(11) NOT NULL DEFAULT '0' COMMENT '展示数',
+  `photoid` int(11) NOT NULL DEFAULT '0' COMMENT '文章主图id',
+  `orderid` int(11) NOT NULL DEFAULT '0' COMMENT '排序id',  
+  `isphoto` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否有图片',
+  `isvideo` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否有视频',  
+  `istop` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否置顶',
+  `isshow` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否显示',
+  `iscomment` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否允许评论',
+  `isdigest` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否精华帖子',
+  `isaudit` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否审核', 
+  `addtime` int(11) NOT NULL DEFAULT '0' COMMENT '发布时间',
+  `uptime` int(11) NOT NULL DEFAULT '0' COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  KEY `cateid` (`cateid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;

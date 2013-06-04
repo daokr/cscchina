@@ -7,7 +7,8 @@
 <!--main-->
 <div class="midder">
 <h2>{$title}</h2>
-<form method="POST" action="{:U('article/addarticle')}" id="formMini" onsubmit="return miniSubmit(this)">
+<form method="POST" action="{:U('history/add')}" id="formMini" onsubmit="return miniSubmit(this)">
+<input name="cateid" value="{$cateid}" type="hidden"/>
 <table cellpadding="0" cellspacing="0">
 	<tr>
 		<th>标题：</th>
@@ -16,13 +17,9 @@
 	<tr>
 		<th>所属分类：</th>
 		<td>
-            <select name="cateid">
-            <foreach name="arrCate" item="item">
-            	<if condition="$item[cateid] eq $cateid">
-            	<option value="{$item[cateid]}" selected="selected">{$item[catename]}</option>
-                <else/>
-                <option value="{$item[cateid]}">{$item[catename]}</option>
-                </if>
+            <select name="typeid">
+            <foreach name="arrType" item="item">
+                <option value="{$item[value]}">{$item[name]}</option>
             </foreach>    
             </select>
         </td>
@@ -32,11 +29,7 @@
 		<td>
 <textarea style="width:100%;" id="editor_mini" name="content" class="txt"   placeholder="请填写内容"></textarea>        
         </td>
-	</tr> 
-	<tr>
-		<th>作者：</th>
-		<td><input name="newsauthor" value="" style="width:300px"/></td>
-	</tr>               
+	</tr>              
 </table>
 <div class="page_btn"><input type="submit" value="提 交" class="submit" /></div>
 
@@ -45,7 +38,7 @@
 <script src="__STATIC__/public/js/editor/xheditor/xheditor.js" type="text/javascript"></script>
 <script src="__STATIC__/public/js/editor/xheditor/loadeditor.js" type="text/javascript"></script>
 <script>
-	var type = 'article';
+	var type = 'history';
 	var typeid = 0;
 </script>
 

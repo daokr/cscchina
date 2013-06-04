@@ -1,4 +1,17 @@
 var isConfirmed = false;
+var paras = function(s){
+    var o = {};
+    if(s.indexOf('?') == -1) return {};
+    var vs = s.split('?')[1].split('&');
+    for(var i=0;i<vs.length;i++){
+        if(vs[i].indexOf('=') != -1){
+            var k = vs[i].split('=');
+            o[k[0]+''] = k[1] + '';
+        }
+    }
+    return o;
+}
+
 function ToggleCheck(source)
 {
     $('input[type=checkbox]').each(function(){this.checked=source.checked;});

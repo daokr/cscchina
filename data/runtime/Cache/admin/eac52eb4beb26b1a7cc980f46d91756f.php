@@ -96,6 +96,8 @@ function refresh() {
 <li><a style="outline:none;" hidefocus="true" data-id="user" href="javascript:;">报名管理</a></li>
 <li><a style="outline:none;" hidefocus="true" data-id="prize" href="javascript:;">评奖管理</a></li>
 <li><a style="outline:none;" hidefocus="true" data-id="forum" href="javascript:;">论坛管理</a></li>
+<li><a style="outline:none;" hidefocus="true" data-id="ad" href="javascript:;">广告管理</a></li>
+<li><a style="outline:none;" hidefocus="true" data-id="history" href="javascript:;">往届回顾</a></li>
     </ul>                   
 </div>
 <div class="LeftMenu">

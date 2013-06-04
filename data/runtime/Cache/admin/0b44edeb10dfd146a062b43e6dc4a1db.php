@@ -25,30 +25,23 @@ function succ(c){ $.dialog({icon: 'succeed',content: '<font  style="font-size:14
 function error(c){$.dialog({icon: 'error',content: '<font  style="font-size:14px;">'+c+'</font>' , time:2000});}
 </script>
 </head>
-
 <body>
-<div style="margin:150px auto; width:350px;">
-  <img src="__STATIC__/public/images/ik_error.gif" style="float:left;">
-  <ul style="margin-left:10px; list-style-type:none; list-style-image: none; list-style-position:outside;">
-    <li style="font-size:14px; line-height: 32px; padding-left:30px"><?php echo ($message); ?></li>
-    <li style="color:#666;line-height: 10px;">&nbsp;</li>
+<!--main-->
+<div class="midder">
+<h2><?php echo ($title); ?></h2> 
+<form method="POST" action="<?php echo U('history/cate',array('ik'=>'add'));?>" id="formMini" >
+<input type="hidden" value="<?php echo ($form[cateid]); ?>" name="cateid"/>
+<table cellpadding="0" cellspacing="0">
+	<tr>
+		<th>年份：</th>
+		<td><input name="catename" value="<?php echo ($form[catename]); ?>" style="width:200px"/> 如：2012</td>
+	</tr>   
+             
+</table>
+<div class="page_btn"><input type="submit" value="提 交" class="submit" /></div>
 
-    <li style="color:#666;"> 
-        &gt; <span id="f3s">3</span>秒后 <a href="<?php echo ($jumpUrl); ?>">点击返回</a>
-        <script type="text/javascript">
-            (function(){
-                var secs=3,si=setInterval(function(){
-                    if(--secs){
-                        document.getElementById('f3s').innerHTML = secs;
-                    }
-                    else{
-                        location.href="<?php echo ($jumpUrl); ?>";clearInterval(si);
-                    }
-            }, 1000)})();
-        </script>
- 	</li>
+</form>
 
-  </ul>
 </div>
 </body>
 </html>

@@ -8,14 +8,15 @@
 <div class="midder">
 <h2>{$title}</h2> 
 <div class="Toolbar_inbox">
-	<a class="btn_a" href="{:U('setting/setnav',array('ik'=>'add'))}"><span>添加导航</span></a>
+	<a class="btn_a" href="{:U('ad/manage',array('ik'=>'add'))}"><span>添加新广告</span></a>
 </div>
 <table  cellpadding="0" cellspacing="0">
 <tr class="old">
 <td>ID</td>
-<td>导航名称</td>
+<td>名称</td>
 <td>链接地址</td>
-<td>排序</td>
+<td>广告所在位置</td>
+<td>广告图片</td>
 <td width="200">操作</td>
 </tr>
 <foreach name="list" item="item">
@@ -23,10 +24,11 @@
 <td>{$item[id]}</td>
 <td>{$item[name]}</td>
 <td>{$item[link]}</td>
-<td>{$item[ordid]}</td>
+<td>{$item[posid]}</td>
+<td><img src="{$item[path]}" width="100" height="100"></td>
 <td>
-<a href="{:U('setting/setnav',array('ik'=>'edit','id'=>$item[id]))}">[编辑]</a>&nbsp;&nbsp;
-<a href="{:U('setting/setnav',array('ik'=>'del','id'=>$item[id]))}">[删除]</a>
+<a href="{:U('ad/manage',array('ik'=>'edit','id'=>$item[id]))}">[编辑]</a>&nbsp;&nbsp;
+<a href="{:U('ad/manage',array('ik'=>'del','id'=>$item[id]))}">[删除]</a>
 </td>
 <tr>
 </foreach>

@@ -13,6 +13,7 @@
     <link href="__STATIC__/admin/js/dialog/skins5/idialog.css" rel="stylesheet" />
 <![endif]-->
 <script src="__STATIC__/admin/js/jquery.js" type="text/javascript"></script>
+<script src="__STATIC__/admin/js/ajaxfileupload.js" type="text/javascript"></script>
 <script src="__STATIC__/admin/js/common.js" type="text/javascript"></script>
 <script>
 var siteUrl = "<?php echo C('ik_site_url');?>";
@@ -37,7 +38,11 @@ function error(c){$.dialog({icon: 'error',content: '<font  style="font-size:14px
 	<tr>
 		<th>所属分类：</th>
 		<td>
-			<?php echo ($strCate[catename]); ?><input type="hidden" value="<?php echo ($cateid); ?>"  name="cateid"/>
+            <select name="cateid">
+            <?php if(is_array($arrCate)): foreach($arrCate as $key=>$item): if($item[cateid] == $cateid): ?><option value="<?php echo ($item[cateid]); ?>" selected="selected"><?php echo ($item[catename]); ?></option>
+                <?php else: ?>
+                <option value="<?php echo ($item[cateid]); ?>"><?php echo ($item[catename]); ?></option><?php endif; endforeach; endif; ?>    
+            </select>
         </td>
 	</tr> 
 	<tr>

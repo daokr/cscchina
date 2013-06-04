@@ -71,6 +71,7 @@ class articleAction extends backendAction {
 	public function addarticle(){
 		$cateid = $this->_get('cateid','trim');
 		$strCate = $this->cate_mod->getOneCate ( $cateid );
+		$arrCate = $this->cate_mod->getAllCate();
 		if(IS_POST){
 			$userid = $_SESSION['admin']['userid'];
 			if($userid>0){
@@ -99,7 +100,7 @@ class articleAction extends backendAction {
 						//更新图片
 						$map['typeid'] = $aid;
 						D('images')->updateImage($map,array('type'=>'article','typeid'=>0));
-						$this->success ( '新增成功!' );
+						$this->success ( '新增成功!',U('article/index',array('ik'=>'list','cateid'=>$item ['cateid'])));
 					} else {
 						// 失败提示
 						$this->error ( '新增失败!' );
@@ -111,6 +112,7 @@ class articleAction extends backendAction {
 			}
 		}else{
 			$this->assign('strCate',$strCate);
+			$this->assign('arrCate',$arrCate);
 			$this->assign('cateid',$cateid);
 			$this->title ( '添加文章' );
 			$this->display();		
@@ -118,6 +120,7 @@ class articleAction extends backendAction {
 	}
 	// 编辑文章
 	public function editarticle(){
+		
 		if(IS_POST){
 			$itemid = $this->_post('itemid','trim,intval');
 			
@@ -134,16 +137,17 @@ class articleAction extends backendAction {
 			//开始更新
 			$this->item_mod->where(array('itemid'=>$itemid))->save($item);
 			$this->mod->where(array('aid'=>$itemid))->save($data);
-			$this->success('保存更新成功！');
+			$this->success('保存更新成功！', U('article/index',array('ik'=>'list','cateid'=>$item ['cateid'])));
 		}else{
 			$itemid = $this->_get('itemid','trim,intval');
 			!empty($itemid) && $strArt = $this->mod->getOneArticle($itemid);
 			
 			$strCate = $this->cate_mod->getOneCate($strArt['cateid']);
-
+			$arrCate = $this->cate_mod->getAllCate();
 			
 			$this->assign('strArt',$strArt);
 			$this->assign('strCate',$strCate);
+			$this->assign('arrCate',$arrCate);
 			$this->display();			
 		}
 

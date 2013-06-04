@@ -15,8 +15,16 @@
 	</tr> 
 	<tr>
 		<th>所属分类：</th>
-		<td>
-			{$strCate[catename]}<input type="hidden" value="{$strCate[cateid]}"  name="cateid"/>
+		<td>{$cateid}
+            <select name="cateid">
+            <foreach name="arrCate" item="item">
+            	<if condition="$item[cateid] eq $strArt[cateid]">
+            	<option value="{$item[cateid]}" selected="selected">{$item[catename]}</option>
+                <else/>
+                <option value="{$item[cateid]}">{$item[catename]}</option>
+                </if>
+            </foreach>    
+            </select>
         </td>
 	</tr> 
 	<tr>

@@ -38,6 +38,23 @@
     </ul>
 </li><?php endif; ?>
 
+<?php if($ik == 'ad'): ?><li class="treemenu_on">
+    <a style="outline:none;" hidefocus="true" href="javascript:void(0)" class="actuator">广告管理</a>
+    <ul class="submenu" style="display: block;">
+      <li><a style="outline:none;" hidefocus="true" class="submenuB" href="<?php echo U('ad/adlist');?>" target="MainIframe">广告列表</a></li>
+      <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('ad/manage',array('ik'=>'add'));?>" target="MainIframe">添加新广告</a></li>
+    </ul>
+</li><?php endif; ?>
+
+
+<?php if($ik == 'history'): ?><li class="treemenu_on">
+    <a style="outline:none;" hidefocus="true" href="javascript:void(0)" class="actuator">往届回顾</a>
+    <ul class="submenu" style="display: block;">
+      <li><a style="outline:none;" hidefocus="true" class="submenuB" href="<?php echo U('history/hislist');?>" target="MainIframe">往届回顾列表</a></li>
+      <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('history/cate',array('ik'=>'add'));?>" target="MainIframe">添加年份</a></li>
+    </ul>
+</li><?php endif; ?>
+
 <?php if($ik == 'article'): ?><li class="treemenu_on">
     <a style="outline:none;" hidefocus="true" href="javascript:void(0)" class="actuator">行业管理</a>
     <ul class="submenu" style="display: block;">

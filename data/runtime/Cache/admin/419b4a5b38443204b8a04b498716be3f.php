@@ -25,30 +25,36 @@ function succ(c){ $.dialog({icon: 'succeed',content: '<font  style="font-size:14
 function error(c){$.dialog({icon: 'error',content: '<font  style="font-size:14px;">'+c+'</font>' , time:2000});}
 </script>
 </head>
-
 <body>
-<div style="margin:150px auto; width:350px;">
-  <img src="__STATIC__/public/images/ik_error.gif" style="float:left;">
-  <ul style="margin-left:10px; list-style-type:none; list-style-image: none; list-style-position:outside;">
-    <li style="font-size:14px; line-height: 32px; padding-left:30px"><?php echo ($message); ?></li>
-    <li style="color:#666;line-height: 10px;">&nbsp;</li>
+<!--main-->
+<div class="midder">
+<h2><?php echo ($title); ?></h2> 
+<div class="Toolbar_inbox">
+	<a class="btn_a" href="<?php echo U('ad/manage',array('ik'=>'add'));?>"><span>添加新广告</span></a>
+</div>
+<table  cellpadding="0" cellspacing="0">
+<tr class="old">
+<td>ID</td>
+<td>名称</td>
+<td>链接地址</td>
+<td>广告所在位置</td>
+<td>广告图片</td>
+<td width="200">操作</td>
+</tr>
+<?php if(is_array($list)): foreach($list as $key=>$item): ?><tr class="odd">
+<td><?php echo ($item[id]); ?></td>
+<td><?php echo ($item[name]); ?></td>
+<td><?php echo ($item[link]); ?></td>
+<td><?php echo ($item[posid]); ?></td>
+<td><img src="<?php echo ($item[path]); ?>" width="100" height="100"></td>
+<td>
+<a href="<?php echo U('ad/manage',array('ik'=>'edit','id'=>$item[id]));?>">[编辑]</a>&nbsp;&nbsp;
+<a href="<?php echo U('ad/manage',array('ik'=>'del','id'=>$item[id]));?>">[删除]</a>
+</td>
+<tr><?php endforeach; endif; ?>
+</table>
 
-    <li style="color:#666;"> 
-        &gt; <span id="f3s">3</span>秒后 <a href="<?php echo ($jumpUrl); ?>">点击返回</a>
-        <script type="text/javascript">
-            (function(){
-                var secs=3,si=setInterval(function(){
-                    if(--secs){
-                        document.getElementById('f3s').innerHTML = secs;
-                    }
-                    else{
-                        location.href="<?php echo ($jumpUrl); ?>";clearInterval(si);
-                    }
-            }, 1000)})();
-        </script>
- 	</li>
 
-  </ul>
 </div>
 </body>
 </html>

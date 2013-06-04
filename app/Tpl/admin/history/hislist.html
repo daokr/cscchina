@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<include file="public:head" />
+</head>
+<body>
+<!--main-->
+<div class="midder">
+<h2>{$title}</h2> 
+<div class="tabnav">
+<ul>
+<foreach name="arrCate" key="key" item="item">
+    <if condition="$item[cateid] eq $cateid">
+    <li class="select"><a href="{:U('history/hislist',array('ik'=>'list','cateid'=>$item[cateid],'isaudit'=>'0'))}">{$item[catename]}</a></li>
+    <else />
+    <li><a href="{:U('history/hislist',array('ik'=>'list','cateid'=>$item[cateid],'isaudit'=>'0'))}">{$item[catename]}</a></li>
+    </if>
+</foreach>
+</ul>
+</div>
+<div class="Toolbar_inbox">
+	<a class="btn_a" href="{:U('history/manage',array('ik'=>'add','cateid'=>$cateid))}"><span>添加内容</span></a>
+</div>
+<table  cellpadding="0" cellspacing="0">
+<tr class="old">
+<td>ID</td>
+<td>标题</td>
+<td>所属类别</td>
+<td>状态</td>
+<td>排序</td>
+<td width="200">操作</td>
+</tr>
+<foreach name="list" item="item">
+<tr class="odd">
+<td>{$item[id]}</td>
+<td>{$item[title]}</td>
+<td>
+	<if condition="$item[typeid] eq 1">科技评奖</if>
+    <if condition="$item[typeid] eq 2">创新论坛</if>
+</td>
+<td>
+<if condition="$item[istop] eq 1">
+<font color="green">顶</font>&nbsp;
+</if>
+<if condition="$item[isdigest] eq 1">
+<font color="blue">头</font>
+</if>
+</td>
+<td><span class="tdedit" data-id="{$item[id]}" data-field="orderid" data-tdtype="edit" data-action="{:U('history/ajax_setting',array('ik'=>'order','id'=>$item[id]))}">{$item[orderid]}</span></td>
+
+<td>
+<a href="{:U('history/manage',array('ik'=>'edit','id'=>$item[id]))}">[编辑]</a>&nbsp;&nbsp;
+<a href="{:U('history/manage',array('ik'=>'del','id'=>$item[id]))}">[删除]</a>
+
+<if condition="$item[istop] eq 0">
+<a href="{:U('history/manage',array('ik'=>'istop','id'=>$item[id],'istop'=>'1'))}">[置顶]</a> 
+<else/>
+<a href="{:U('history/manage',array('ik'=>'istop','id'=>$item[id],'istop'=>'0'))}">[取消置顶]</a> 
+</if>
+
+<if condition="$item[isdigest] eq 0">
+<a href="{:U('history/manage',array('ik'=>'isdigest','id'=>$item[id],'isdigest'=>'1'))}">[头条]</a> 
+<else/>
+<a href="{:U('history/manage',array('ik'=>'isdigest','id'=>$item[id],'isdigest'=>'0'))}">[取消头条]</a> 
+</if>
+</td>
+<tr>
+</foreach>
+</table>
+
+<div class="pagebar">{$pageUrl}</div>
+
+</div>
+</body>
+</html>

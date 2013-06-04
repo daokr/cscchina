@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<include file="public:head" />
+</head>
+<body>
+<!--main-->
+<div class="midder">
+<h2>{$title}</h2> 
+<form method="POST" action="{:U('ad/manage',array('ik'=>'add'))}" id="formMini" >
+<input type="hidden" value="{$strAd[id]}" name="id"/>
+<table cellpadding="0" cellspacing="0">
+	<tr>
+		<th>广告名称：</th>
+		<td><input name="name" value="{$strAd[name]}" style="width:200px"/></td>
+	</tr> 
+	<tr>
+		<th>广告位置：</th>
+		<td>
+        	<select name="posid">
+            	<option value="1">首页位置1</option>
+                <option value="2">首页位置2</option>
+            </select>
+        </td>
+	</tr>     
+	<tr>
+		<th>链接地址：</th>
+		<td>
+			<input name="link" value="{$strAd[link]}" style="width:400px"/> 请填写http://地址
+        </td>
+	</tr> 
+	<tr>
+		<th>广告图片：</th>
+		<td>
+        	<input name="picfile" type="file" id="picfile">
+            <input name="path" value="{$strAd[path]}" type="hidden" id="path">
+            <div style="padding:10px 0px" id="img">{$strAd[path]}</div><div id="imgfile"></div>
+        </td>
+	</tr>               
+</table>
+<div class="page_btn"><input type="submit" value="提 交" class="submit" /></div>
+
+</form>
+<script language="javascript">
+$(function(){
+	$('input[name=picfile]').bind('change',function(){
+		if($(this).val() !=''){
+			var ajaxurl = '{:U("ad/ajax_upload_img")}'
+		$.ajaxFileUpload(
+            {
+                url : ajaxurl,
+                fileElementId : 'picfile',
+                dataType : 'json',
+                allowType : 'jpg|png|gif|jpeg',
+                begin : function(){
+                    $('#imgfile').show();
+					$('#imgfile').html('上传中。。。。')
+                },
+                complete : function(){
+                 	$('#imgfile').hide();
+					$('#imgfile').html('上传中。。。。')
+                },
+                success : function(data, status){
+                    if(data.r == 0){
+                        //console.log(data.err_msg);
+                        alert(data.html);
+                    }else{
+						$('#path').val(data.html);
+						$('#img').html('<img src="'+data.html+'">');
+                    }
+                },
+                error : function(data, status, e){
+                    // console.log(e);
+                }
+            }
+       ); 
+		 return false;
+	    }
+	})
+})
+</script>
+
+</div>
+</body>
+</html>
