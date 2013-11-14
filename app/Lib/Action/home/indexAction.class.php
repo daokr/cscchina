@@ -10,10 +10,11 @@ class indexAction extends frontendAction {
 	}
 	public function index() {
 		
-				//获取最新的 8文章
+		//获取最新的 8文章
 		$arrNewArticle = $this->article_mod->getNewArticleItem(8);
 		
 		$this->assign ( 'arrNewArticle', $arrNewArticle );
+		
 		
 		$this->display();
 	}

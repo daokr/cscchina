@@ -17,7 +17,7 @@ address, caption, cite, code, dfn, em, i, th, var, optgroup {
     font-style: normal;
     font-weight: normal;
 }
-body{ color:#333; font:12px/1.5  Arial,Helvetica,sans-serif,Microsoft YaHei; direction:ltr; background-color:#fff}
+body{ color:#333; font:12px/1.5  Arial,Helvetica,sans-serif,Microsoft YaHei; direction:ltr; background-color:#F8F8F8}
 /**节日
 body{
 -moz-transform: rotate(-10deg); 
@@ -41,8 +41,8 @@ h1 {
     word-wrap: break-word;
 }
 h2 {
-    color: #006600;
-    font: 14px/150% Arial,Helvetica,sans-serif;
+    color: #000;
+    font: 16px/150% Arial,Helvetica,sans-serif;
 	margin:8px 0px;
 	letter-spacing: 2px;
 }
@@ -204,7 +204,8 @@ a.bn-post:hover span{background-color:#63AB1A; border: 1px solid #50950E;}
 .top_nav a:active, .top_nav a:hover {color:#fff;background-color:transparent}
 
 /**导航样式**/
-#header {width:100%; margin:0px auto;margin-bottom:40px; background-color:#F8F8F8; overflow:hidden}
+#header {width:100%; margin:0px auto;margin-bottom:40px;  overflow:hidden}
+#header .site_top{ width:980px; margin:0 auto;}
 #header .site_nav { width:980px; margin:0 auto; padding-top:18px; padding-bottom:10px}
 #header .site_nav .site_logo{ float:left; width:165px; height:40px; background:url(logo.png) no-repeat 0px 0px;}
 #header .site_nav .site_logo a{ display: block;height: 100%; line-height: 100em; overflow: hidden;width: 100%;}
@@ -731,12 +732,10 @@ a.lnk-flat:active {
 	zoom:1;
 	width:45px;
 	height:24px;
-	overflow:hidden;
 	margin:0;
-	line-height:20em;
 	outline:0;
 	vertical-align:middle;
-	background:transparent url(nav.png) no-repeat 100% 100%
+
 }
 .hd-wrap .top-nav-items li .lnk-home {
 	background-position:-5px 0

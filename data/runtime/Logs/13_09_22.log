@@ -1,0 +1,454 @@
+[ 2013-09-22T11:01:09+08:00 ] 127.0.0.1 /cscchina/index.php?g=admin&m=index&a=login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.026475s ]
+INFO: Run load_lang Behavior [ RunTime:0.068167s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.094885s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.053520s ]
+INFO: [ view_template ] --END-- [ RunTime:0.053649s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.144378s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.144503s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.029458s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.020894s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.016595s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.005284s ]
+INFO: Run content_replace Behavior [ RunTime:0.047501s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.120145s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.028817s ]
+INFO: [ view_end ] --END-- [ RunTime:0.028924s ]
+
+[ 2013-09-22T11:01:16+08:00 ] 127.0.0.1 /cscchina/index.php?g=admin&m=index&a=login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000887s ]
+INFO: Run load_lang Behavior [ RunTime:0.002353s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003456s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001590s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001711s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.018806s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018933s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000965s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000866s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000808s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000875s ]
+INFO: Run content_replace Behavior [ RunTime:0.002266s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006128s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000875s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000969s ]
+
+[ 2013-09-22T11:01:20+08:00 ] 127.0.0.1 /cscchina/index.php?g=admin&m=index&a=login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000410s ]
+INFO: Run load_lang Behavior [ RunTime:0.001625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002275s ]
+SQL: SHOW COLUMNS FROM `ik_admin` [ RunTime:0.002856s ]
+SQL: SELECT * FROM `ik_admin` WHERE ( `email` = 'admin@admin.com' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000409s ]
+SQL: UPDATE `ik_admin` SET `last_time`=1379818880,`last_ip`='127.0.0.1' WHERE ( `userid` = 1 ) [ RunTime:0.100640s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001226s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001336s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\93455158fc92285fa549de1f195e0dc9.php 第 7 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.058297s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058409s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000452s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000363s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000274s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000348s ]
+INFO: Run content_replace Behavior [ RunTime:0.001268s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003024s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000362s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000452s ]
+
+[ 2013-09-22T11:01:22+08:00 ] 127.0.0.1 /cscchina/index.php?g=admin&m=index&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000399s ]
+INFO: Run load_lang Behavior [ RunTime:0.001543s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002172s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002047s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002181s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: admin D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\eac52eb4beb26b1a7cc980f46d91756f.php 第 88 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.081928s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.082037s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000494s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000370s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000293s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000356s ]
+INFO: Run content_replace Behavior [ RunTime:0.001260s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003101s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000389s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000478s ]
+
+[ 2013-09-22T11:01:22+08:00 ] 127.0.0.1 /cscchina/index.php?g=admin&m=index&a=main
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000406s ]
+INFO: Run load_lang Behavior [ RunTime:0.001796s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002422s ]
+NOTIC: [8] Use of undefined constant gd_info - assumed 'gd_info' D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Action\admin\indexAction.class.php 第 52 行.
+NOTIC: [2] mysql_get_server_info() [<a href='function.mysql-get-server-info'>function.mysql-get-server-info</a>]: Access denied for user 'ODBC'@'localhost' (using password: NO) D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Action\admin\indexAction.class.php 第 63 行.
+NOTIC: [2] mysql_get_server_info() [<a href='function.mysql-get-server-info'>function.mysql-get-server-info</a>]: A link to the server could not be established D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Action\admin\indexAction.class.php 第 63 行.
+NOTIC: [8] Use of undefined constant HTTP_ACCEPT_LANGUAGE - assumed 'HTTP_ACCEPT_LANGUAGE' D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Action\admin\indexAction.class.php 第 64 行.
+NOTIC: [8] Use of undefined constant DOCUMENT_ROOT - assumed 'DOCUMENT_ROOT' D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Action\admin\indexAction.class.php 第 66 行.
+NOTIC: [8] Use of undefined constant HTTP_ACCEPT_ENCODING - assumed 'HTTP_ACCEPT_ENCODING' D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Action\admin\indexAction.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001551s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001666s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\4d2596d1501116a415c5b5a06782a433.php 第 7 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.113965s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.114087s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000449s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000337s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000263s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000361s ]
+INFO: Run content_replace Behavior [ RunTime:0.001218s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002943s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000392s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000482s ]
+
+[ 2013-09-22T11:01:23+08:00 ] 127.0.0.1 /cscchina/index.php?g=admin&m=index&a=left
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000909s ]
+INFO: Run load_lang Behavior [ RunTime:0.002432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003585s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.011149s ]
+INFO: [ view_template ] --END-- [ RunTime:0.011283s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.167755s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.167867s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000966s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000825s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000780s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000845s ]
+INFO: Run content_replace Behavior [ RunTime:0.002164s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005905s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000823s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000908s ]
+
+[ 2013-09-22T11:01:24+08:00 ] 127.0.0.1 /cscchina/index.php?g=admin&m=index&a=left&ik=setting
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000392s ]
+INFO: Run load_lang Behavior [ RunTime:0.001519s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002122s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000990s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001101s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.041496s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041616s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000492s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000339s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000300s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000349s ]
+INFO: Run content_replace Behavior [ RunTime:0.001207s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002983s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000409s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000490s ]
+
+[ 2013-09-22T11:01:25+08:00 ] 127.0.0.1 /cscchina/index.php?g=admin&m=setting&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000386s ]
+INFO: Run load_lang Behavior [ RunTime:0.001676s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002272s ]
+SQL: SHOW COLUMNS FROM `ik_setting` [ RunTime:0.037045s ]
+SQL: SHOW COLUMNS FROM `ik_nav` [ RunTime:0.037798s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.009356s ]
+INFO: [ view_template ] --END-- [ RunTime:0.009474s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.030634s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030760s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000464s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000361s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000268s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000343s ]
+INFO: Run content_replace Behavior [ RunTime:0.001481s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003237s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000360s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000446s ]
+
+[ 2013-09-22T11:01:26+08:00 ] 127.0.0.1 /cscchina/index.php?g=admin&m=index&a=left&ik=article
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000404s ]
+INFO: Run load_lang Behavior [ RunTime:0.001506s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002100s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000413s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000530s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.015652s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015776s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000437s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000518s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000296s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000366s ]
+INFO: Run content_replace Behavior [ RunTime:0.001205s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003139s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000383s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000465s ]
+
+[ 2013-09-22T11:01:26+08:00 ] 127.0.0.1 /cscchina/index.php?g=admin&m=article&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000402s ]
+INFO: Run load_lang Behavior [ RunTime:0.001494s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002096s ]
+SQL: SHOW COLUMNS FROM `ik_article` [ RunTime:0.007779s ]
+SQL: SHOW COLUMNS FROM `ik_article_cate` [ RunTime:0.008133s ]
+SQL: SHOW COLUMNS FROM `ik_article_item` [ RunTime:0.018479s ]
+SQL: SHOW COLUMNS FROM `ik_article_channel` [ RunTime:0.002558s ]
+ERR: Table 'cscchina.ik_article_channel' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ik_article_channel`
+SQL: SELECT * FROM `ik_article_cate` ORDER BY orderid asc  [ RunTime:0.006714s ]
+SQL: SELECT COUNT(itemid) AS tp_count FROM `ik_article_item` WHERE ( `cateid` = 4 ) AND ( `isaudit` = 0 ) ORDER BY addtime desc LIMIT 1   [ RunTime:0.037609s ]
+SQL: SELECT * FROM `ik_article_item` WHERE ( `cateid` = 4 ) AND ( `isaudit` = 0 ) ORDER BY addtime desc LIMIT 0,20   [ RunTime:0.007428s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Action\admin\articleAction.class.php 第 52 行.
+SQL: SELECT COUNT(itemid) AS tp_count FROM `ik_article_item` WHERE ( `isaudit` = 1 ) LIMIT 1   [ RunTime:0.006534s ]
+NOTIC: [8] Undefined variable: arrArticle D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Action\admin\articleAction.class.php 第 63 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.008072s ]
+INFO: [ view_template ] --END-- [ RunTime:0.008192s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant cateid - assumed 'cateid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\e41c8b3e1a7ae7193997ae5acc29f0f6.php 第 34 行.
+NOTIC: [8] Use of undefined constant cateid - assumed 'cateid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\e41c8b3e1a7ae7193997ae5acc29f0f6.php 第 34 行.
+NOTIC: [8] Use of undefined constant catename - assumed 'catename' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\e41c8b3e1a7ae7193997ae5acc29f0f6.php 第 34 行.
+NOTIC: [8] Use of undefined constant cateid - assumed 'cateid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\e41c8b3e1a7ae7193997ae5acc29f0f6.php 第 34 行.
+NOTIC: [8] Use of undefined constant cateid - assumed 'cateid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\e41c8b3e1a7ae7193997ae5acc29f0f6.php 第 36 行.
+NOTIC: [8] Use of undefined constant catename - assumed 'catename' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\e41c8b3e1a7ae7193997ae5acc29f0f6.php 第 36 行.
+NOTIC: [8] Use of undefined constant cateid - assumed 'cateid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\e41c8b3e1a7ae7193997ae5acc29f0f6.php 第 34 行.
+NOTIC: [8] Use of undefined constant cateid - assumed 'cateid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\e41c8b3e1a7ae7193997ae5acc29f0f6.php 第 36 行.
+NOTIC: [8] Use of undefined constant catename - assumed 'catename' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\e41c8b3e1a7ae7193997ae5acc29f0f6.php 第 36 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.099254s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.099382s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000458s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000362s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000268s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000365s ]
+INFO: Run content_replace Behavior [ RunTime:0.040095s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.042008s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000376s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000482s ]
+
+[ 2013-09-22T11:01:27+08:00 ] 127.0.0.1 /cscchina/index.php?g=admin&m=index&a=left&ik=user
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000408s ]
+INFO: Run load_lang Behavior [ RunTime:0.001473s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002062s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000418s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000530s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.040979s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041091s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000427s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000348s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000272s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000342s ]
+INFO: Run content_replace Behavior [ RunTime:0.001244s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002926s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000364s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000442s ]
+
+[ 2013-09-22T11:01:27+08:00 ] 127.0.0.1 /cscchina/index.php?g=admin&m=user&a=cate
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000411s ]
+INFO: Run load_lang Behavior [ RunTime:0.001560s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002171s ]
+SQL: SHOW COLUMNS FROM `ik_user` [ RunTime:0.014655s ]
+SQL: SHOW COLUMNS FROM `ik_award_cate` [ RunTime:0.027976s ]
+SQL: SELECT * FROM `ik_award_cate` ORDER BY cateid desc  [ RunTime:0.000827s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.011160s ]
+INFO: [ view_template ] --END-- [ RunTime:0.011279s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant cateid - assumed 'cateid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\ad19e7662b3eb460ebaf6bde69018478.php 第 42 行.
+NOTIC: [8] Use of undefined constant catename - assumed 'catename' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\ad19e7662b3eb460ebaf6bde69018478.php 第 43 行.
+NOTIC: [8] Use of undefined constant cateid - assumed 'cateid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\ad19e7662b3eb460ebaf6bde69018478.php 第 45 行.
+NOTIC: [8] Use of undefined constant cateid - assumed 'cateid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\ad19e7662b3eb460ebaf6bde69018478.php 第 42 行.
+NOTIC: [8] Use of undefined constant catename - assumed 'catename' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\ad19e7662b3eb460ebaf6bde69018478.php 第 43 行.
+NOTIC: [8] Use of undefined constant cateid - assumed 'cateid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\ad19e7662b3eb460ebaf6bde69018478.php 第 45 行.
+NOTIC: [8] Use of undefined constant cateid - assumed 'cateid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\ad19e7662b3eb460ebaf6bde69018478.php 第 42 行.
+NOTIC: [8] Use of undefined constant catename - assumed 'catename' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\ad19e7662b3eb460ebaf6bde69018478.php 第 43 行.
+NOTIC: [8] Use of undefined constant cateid - assumed 'cateid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\ad19e7662b3eb460ebaf6bde69018478.php 第 45 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.029045s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029151s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000439s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000339s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000276s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000335s ]
+INFO: Run content_replace Behavior [ RunTime:0.020614s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.022323s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000390s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000480s ]
+
+[ 2013-09-22T11:01:28+08:00 ] 127.0.0.1 /cscchina/index.php?g=admin&m=index&a=left&ik=prize
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000373s ]
+INFO: Run load_lang Behavior [ RunTime:0.001504s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002067s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000406s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000505s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.015060s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015190s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000413s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000334s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000301s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000337s ]
+INFO: Run content_replace Behavior [ RunTime:0.001254s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003018s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000358s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000446s ]
+
+[ 2013-09-22T11:01:28+08:00 ] 127.0.0.1 /cscchina/index.php?g=admin&m=index&a=left&ik=user
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000391s ]
+INFO: Run load_lang Behavior [ RunTime:0.001469s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002034s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000408s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000501s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.012041s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012143s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000400s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000320s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000256s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000351s ]
+INFO: Run content_replace Behavior [ RunTime:0.001198s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002805s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000343s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000437s ]
+
+[ 2013-09-22T11:01:28+08:00 ] 127.0.0.1 /cscchina/index.php?g=admin&m=user&a=cate
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000372s ]
+INFO: Run load_lang Behavior [ RunTime:0.001473s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002033s ]
+SQL: SHOW COLUMNS FROM `ik_user` [ RunTime:0.003331s ]
+SQL: SHOW COLUMNS FROM `ik_award_cate` [ RunTime:0.002714s ]
+SQL: SELECT * FROM `ik_award_cate` ORDER BY cateid desc  [ RunTime:0.000746s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001418s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001521s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant cateid - assumed 'cateid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\ad19e7662b3eb460ebaf6bde69018478.php 第 42 行.
+NOTIC: [8] Use of undefined constant catename - assumed 'catename' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\ad19e7662b3eb460ebaf6bde69018478.php 第 43 行.
+NOTIC: [8] Use of undefined constant cateid - assumed 'cateid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\ad19e7662b3eb460ebaf6bde69018478.php 第 45 行.
+NOTIC: [8] Use of undefined constant cateid - assumed 'cateid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\ad19e7662b3eb460ebaf6bde69018478.php 第 42 行.
+NOTIC: [8] Use of undefined constant catename - assumed 'catename' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\ad19e7662b3eb460ebaf6bde69018478.php 第 43 行.
+NOTIC: [8] Use of undefined constant cateid - assumed 'cateid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\ad19e7662b3eb460ebaf6bde69018478.php 第 45 行.
+NOTIC: [8] Use of undefined constant cateid - assumed 'cateid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\ad19e7662b3eb460ebaf6bde69018478.php 第 42 行.
+NOTIC: [8] Use of undefined constant catename - assumed 'catename' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\ad19e7662b3eb460ebaf6bde69018478.php 第 43 行.
+NOTIC: [8] Use of undefined constant cateid - assumed 'cateid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\ad19e7662b3eb460ebaf6bde69018478.php 第 45 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.013160s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013264s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000435s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000333s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000258s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000413s ]
+INFO: Run content_replace Behavior [ RunTime:0.001619s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003425s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000356s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000444s ]
+
+[ 2013-09-22T11:01:29+08:00 ] 127.0.0.1 /cscchina/index.php?g=admin&m=index&a=left&ik=article
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000376s ]
+INFO: Run load_lang Behavior [ RunTime:0.001758s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002344s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000416s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000515s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.015352s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015464s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000425s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000322s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000277s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000333s ]
+INFO: Run content_replace Behavior [ RunTime:0.001196s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002839s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000349s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000450s ]
+
+[ 2013-09-22T11:01:29+08:00 ] 127.0.0.1 /cscchina/index.php?g=admin&m=article&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000381s ]
+INFO: Run load_lang Behavior [ RunTime:0.001475s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002044s ]
+SQL: SHOW COLUMNS FROM `ik_article` [ RunTime:0.002955s ]
+SQL: SHOW COLUMNS FROM `ik_article_cate` [ RunTime:0.002732s ]
+SQL: SHOW COLUMNS FROM `ik_article_item` [ RunTime:0.002972s ]
+SQL: SHOW COLUMNS FROM `ik_article_channel` [ RunTime:0.002510s ]
+ERR: Table 'cscchina.ik_article_channel' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ik_article_channel`
+SQL: SELECT * FROM `ik_article_cate` ORDER BY orderid asc  [ RunTime:0.000548s ]
+SQL: SELECT COUNT(itemid) AS tp_count FROM `ik_article_item` WHERE ( `cateid` = 4 ) AND ( `isaudit` = 0 ) ORDER BY addtime desc LIMIT 1   [ RunTime:0.000411s ]
+SQL: SELECT * FROM `ik_article_item` WHERE ( `cateid` = 4 ) AND ( `isaudit` = 0 ) ORDER BY addtime desc LIMIT 0,20   [ RunTime:0.000434s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Action\admin\articleAction.class.php 第 52 行.
+SQL: SELECT COUNT(itemid) AS tp_count FROM `ik_article_item` WHERE ( `isaudit` = 1 ) LIMIT 1   [ RunTime:0.000397s ]
+NOTIC: [8] Undefined variable: arrArticle D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Action\admin\articleAction.class.php 第 63 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001438s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001546s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant cateid - assumed 'cateid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\e41c8b3e1a7ae7193997ae5acc29f0f6.php 第 34 行.
+NOTIC: [8] Use of undefined constant cateid - assumed 'cateid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\e41c8b3e1a7ae7193997ae5acc29f0f6.php 第 34 行.
+NOTIC: [8] Use of undefined constant catename - assumed 'catename' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\e41c8b3e1a7ae7193997ae5acc29f0f6.php 第 34 行.
+NOTIC: [8] Use of undefined constant cateid - assumed 'cateid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\e41c8b3e1a7ae7193997ae5acc29f0f6.php 第 34 行.
+NOTIC: [8] Use of undefined constant cateid - assumed 'cateid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\e41c8b3e1a7ae7193997ae5acc29f0f6.php 第 36 行.
+NOTIC: [8] Use of undefined constant catename - assumed 'catename' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\e41c8b3e1a7ae7193997ae5acc29f0f6.php 第 36 行.
+NOTIC: [8] Use of undefined constant cateid - assumed 'cateid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\e41c8b3e1a7ae7193997ae5acc29f0f6.php 第 34 行.
+NOTIC: [8] Use of undefined constant cateid - assumed 'cateid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\e41c8b3e1a7ae7193997ae5acc29f0f6.php 第 36 行.
+NOTIC: [8] Use of undefined constant catename - assumed 'catename' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\e41c8b3e1a7ae7193997ae5acc29f0f6.php 第 36 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.029804s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029914s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000465s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000353s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000278s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000373s ]
+INFO: Run content_replace Behavior [ RunTime:0.001564s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003373s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000379s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000473s ]
+
