@@ -1,0 +1,173 @@
+@charset "utf-8";
+#hometopbanner{ height:75px; margin-bottom:15px; text-align:center}
+.midbd{ padding:15px}
+#hometopbanner img{ width:298px; height:74px}
+.hbt1{ border-right:#cdcdcd solid 1px; width:300px; height:75px; float:left; padding-right:12px;}
+.hbt2{ border-right:#cdcdcd solid 1px; width:300px; height:75px; float:left; padding-left:12px; padding-right:12px}
+.hbt3{ width:300px; height:75px; float:left; padding-left:12px}
+
+.inboxbd1{}
+.inboxbd1 .leftbd{ width:270px; float:left;box-shadow: 0px 1px 2px rgba(0,0,0,0.2);}
+.inboxbd1  h2{ display:block; height:36px; overflow:hidden;background:url(../images/layout/tit_bg.jpg) repeat-x 0px bottom; padding-left:10px; padding-right:10px}
+.inboxbd1  h2 span{display:inline-block; height:36px; overflow:hidden; line-height:999px;}
+.inboxbd1  h2 em{ background:url(../images/layout/more1.jpg) no-repeat 0px bottom; width:37px; height:36px; display:block; float:right; overflow:hidden}
+.inboxbd1  h2 em a{ display:block; line-height:900px;}
+.inboxbd1  .bd{ padding:10px;background-color:#f5f5f4;}
+.inboxbd1 .leftbd dl{ display:block;}
+.inboxbd1 .leftbd dl dt{ display:block; float:left; width:95px; padding-top:5px}
+.inboxbd1 .leftbd dl dd{ display:block; float:left; width:145px; padding-left:10px}
+.inboxbd1 .leftbd dl dd h3{ display:block; height:26px; font-size:14px;}
+.inboxbd1 .leftbd dl dd p{ color:#5c5c5c}
+.cxrw{background:url(../images/layout/tit_19.jpg) no-repeat 0px bottom;  width:98px;}
+.cxsj{background:url(../images/layout/tit_21.jpg) no-repeat 0px bottom;  width:102px;}
+.cxjs{background:url(../images/layout/tit_26.jpg) no-repeat 0px bottom;  width:102px;}
+.cxyy{background:url(../images/layout/tit_27.jpg) no-repeat 0px bottom;  width:102px;}
+.cxdg{background:url(../images/layout/tit_28.jpg) no-repeat 0px bottom;  width:102px;}
+.mtbd{background:url(../images/layout/mtbd_tit_bg.jpg) no-repeat 0px bottom;  width:115px;}
+.ltjb{background:url(../images/layout/tit_34.jpg) no-repeat 0px bottom;  width:111px;}
+
+.inboxbd1 .inmidbd{ width:460px; float:left; background-color:#dfdfdf; margin-left:15px; display:block;box-shadow: 0px 1px 2px rgba(0,0,0,0.2);}
+.inboxbd1 .inmidbd .bd{ padding:10px}
+.inboxbd1 .inmidbd dl{ display:block;}
+.inboxbd1 .inmidbd dl dt{ display:block; float:left; width:240px; padding-top:5px}
+.inboxbd1 .inmidbd dl dd{ display:block;  margin-left:250px;}
+.inboxbd1 .inmidbd dl dd h3{ display:block; height:34px; font-size:20px;}
+.inboxbd1 .inmidbd dl dd h3 a{ color:#813722}
+.inboxbd1 .inmidbd dl dd p{ color:#5c5c5c}
+
+.inboxbd1 .rightbd{ display:block; float:right; width:190px;box-shadow: 0px 1px 2px rgba(0,0,0,0.2);}
+.inboxbd1 .rightbd h2{ position:relative; overflow:visible}
+.inboxbd1 .rightbd h2 i{ position:absolute; right:-15px; top:-3px; width:52px; height:68px; 
+display:block; background:url(../images/layout/new_icon.png) no-repeat 0px 0px;  }
+.inboxbd1 .rightbd .bd li{ display:block; line-height:22px; height:22px; overflow:hidden; white-space:nowrap;}
+
+.inboxbd1 .itembd{ width:305px; float:left; margin-right:15px; display:block; box-shadow: 0px 1px 2px rgba(0,0,0,0.2);}
+.inboxbd1 .lastitembd{ width:310px; margin-right:0px}
+.inboxbd1 .itembd dl{ display:block;}
+.inboxbd1 .itembd dl dt{ display:block; float:left; width:130px; padding-top:5px; overflow:hidden}
+.inboxbd1 .itembd dl dd{ display:block; margin-left:140px; }
+.inboxbd1 .itembd dl dd h3{ display:block; height:26px; font-size:14px;}
+.inboxbd1 .itembd dl dd p{ color:#5c5c5c}
+.inboxbd1 .defUL{ display:block; clear:both; margin-top:5px}
+.inboxbd1 .defUL li a{ display:block; clear:both; line-height:22px; white-space:nowrap; word-spacing:normal; height:24px; overflow:hidden;}
+.inboxbd1 .defUL li a:hover{background-color:#cacaca}
+
+#defSearch{ display:block; height:34px; background:url(../images/layout/home_search_1.jpg) repeat-x 0px 0px; padding:0px 0px}
+#defSearch ul{ display:block; padding-top:4px;}
+#defSearch li{ display:inline-block; border-radius:3px; float:left; margin:0px 10px; background-color:#050607; color:#fff; font-size:12px; padding:2px 5px 2px 5px}
+#defSearch li span{ margin-right:8px}
+#defSearch .defsBar{ background:none; width:172px; margin:0px; padding:0px; padding-left:5px}
+#defSearch .skeybar{ width:95px; display:block; float:left;background:url(../images/layout/home_search_2.jpg) no-repeat 0px 0px; height:28px}
+#defSearch .skeybar .skey{ width:70px; margin-left:22px; height:18px; margin-top:5px; border:none; background-color:#505050; color:#fff;}
+#defSearch .sbtnbar{width:71px; display:block; float:left;}
+#defSearch .sbtnbar .btnsech{ cursor:pointer; border:none; background:url(../images/layout/home_search_2.jpg) no-repeat -101px 0px; height:28px;width:71px; text-indent:-900px}
+#defSearch .sbtnbar .btnsech:hover{ opacity:0.8;filter:alpha(opacity=80);}
+.defMenu{ height:38px;}
+.defMenu li{ display:inline-block; margin:0px; padding:0px; float:left;}
+.defMenu li a:hover img{  opacity:0.8;filter:alpha(opacity=80);}
+
+.mod2Box{ padding:15px; background:url(../images/layout/bd_bg.png) no-repeat 0px 0px; overflow:hidden}
+
+#pjxwBar{ background:url(../images/layout/pjxw_bg.gif) no-repeat 0px 0px; width:313px; height:285px; float:left;
+}
+#pjxwBar h2{ display:block; height:55px; line-height:999px; overflow:hidden}
+#pjxwBar h2 span{ float:right; overflow:hidden; display:block; width:65px; height:25px; margin-right:75px; margin-top:27px}
+#pjxwBar h2 span a{ display:block; }
+#pjxwBar .bd{ padding-top:11px;}
+#pjxwBar .bd li{ line-height:37px; font-size:14px; display:block; background:url(../images/layout/pjxw_li_bg.gif) no-repeat 0px center; padding:0px 8px}
+
+.modR1{ float:right; width:630px; overflow:hidden; padding-top:7px}
+
+.mainfocus{ position:relative; height:250px; float:left; width:365px}
+.mainfocus #focus-li{height:25px; position:absolute; right:20px; bottom:10px; background-image:none}
+.mainfocus #focus-li li{ text-align:center; line-height:20px; height:20px; width:20px; float:left; margin-right:5px; background-image:none}
+.mainfocus #focus-li a{background-color:#0a4c83; color:#fff; display:block; height:20px; width:20px; border-radius:10px}
+.mainfocus #focus-li .on{background-color:#8c1914;font-size:12px}
+.mainfocus #focus-li a:hover{ text-decoration:none}
+
+.mainfocus #focus-info{overflow:hidden;width:365px; height:250px;}
+.mainfocus #focus-info ul{ display:block; height:250px; overflow:hidden}
+.mainfocus #focus-info li{ display:block; height:250px;}
+.mainfocus #focus-info li img{ width:365px; height:250px;}
+
+.modRag{ display:block; clear:both; padding-top:15px}
+.modLag{ display:block; clear:both; margin-top:10px}
+a.comein{  background:url(../images/layout/comein.jpg) no-repeat 0px 0px; width:294px; height:56px; line-height:999px; overflow:hidden; display:block;}
+a.comein:hover{ background-position:0px -56px}
+
+.zsBox{ float:right; width:250px;}
+.zsBox .filebox{ width:185px; margin:10px auto; padding:10px; background-color:#fff; overflow:hidden;box-shadow: 0px 4px 5px rgba(0,0,0,0.2);}
+.zsBox .hudongbox{ display:block; margin-top:0px}
+.zsBox .hudongbox li{ display:block; float:left; width:80px; height:80px; float:left;
+ border:#2386c3 solid 1px; background-color:#edeeee; margin-left:30px;box-shadow: 0px 1px 2px rgba(0,0,0,0.2);}
+.winningBar{ width:630px; float:left;  display:block;}
+.winningBar .bd{ background-color:#f5f5f4; height:302px; display:block;box-shadow: 0px 1px 2px rgba(0,0,0,0.2);}
+.winningBar .bd .gongsi{ display:block; float:left; width:570px; height:302px; overflow:hidden}
+.winningBar .bd .gongsi li{ display:block; height:45px; line-height:45px;background:url(../images/layout/winning_bg.jpg) no-repeat 0px 0px; margin:10px 0px}
+.winningBar .bd h3{ display:block; width:60px; height:302px; float:right; text-indent:-999px; overflow:hidden;
+background:url(../images/layout/winning_tit.jpg) no-repeat 0px 0px;}
+.mtbdBar{ width:300px; float:right; background:url(../images/layout/mtbd_bg.gif) no-repeat 0px 0px; height:393px;box-shadow: 0px 1px 2px rgba(0,0,0,0.2);}
+
+.mtbdInfo{}
+.mtbdInfo  h2{ display:block; height:36px; overflow:hidden;background:url(../images/layout/tit_bg.jpg) repeat-x 0px bottom; padding-right:10px}
+.mtbdInfo  h2 span{display:inline-block; height:36px; overflow:hidden; line-height:999px;}
+.mtbdInfo  h2 em{ background:url(../images/layout/more1.jpg) no-repeat 0px bottom; width:37px; height:36px; display:block; float:right; overflow:hidden}
+.mtbdInfo  h2 em a{ display:block; line-height:900px;}
+.mtbdInfo .bd{ display:block;}
+.mtbdInfo .bd li{ display:block; margin:7px 0px;}
+.mtbdInfo .bd li a{ display:block; clear:both; line-height:22px;
+ white-space:nowrap; word-spacing:normal; height:24px; overflow:hidden; background-color:#dedede; padding:0px 10px}
+.mtbdInfo .bd li a:hover{background-color:#cacaca}
+
+.hezuoInfo{ padding-top:2px}
+.hezuoInfo h2{ display:block; width:68px; height:18px; line-height:999px; overflow:hidden; margin:10px auto; background:url(../images/layout/hezuo_tit.png) no-repeat 0px 0px;}
+.hezuoInfo .bd{ height:150px; overflow:hidden}
+.hezuoInfo .bd a{ display:block; float:left; width:90px; height:45px; text-align:center; overflow:hidden; margin:3px 5px;}
+
+
+.hezuoqiyeBar{ width:300px; float:left; background:url(../images/layout/mtbd_bg.gif) no-repeat 0px 0px; height:235px;box-shadow: 0px 1px 2px rgba(0,0,0,0.2);}
+.hezuoqiyeBar h2{ display:block; width:68px; height:18px; line-height:999px; overflow:hidden; margin:20px auto; background:url(../images/layout/hezuo_tit.png) no-repeat 0px 0px;}
+.hezuoqiyeBar .bd{ height:150px; overflow:hidden}
+.hezuoqiyeBar .bd a{ display:block; float:left; width:90px; height:45px; text-align:center; overflow:hidden; margin:3px 5px;}
+
+.clubBar{ float:right; width:610px; background-color:#eaeaea; padding:10px;box-shadow: 0px 1px 2px rgba(0,0,0,0.2);}
+.clubBar dl{ display:block; overflow:hidden}
+.clubBar dt{ display:block; float:left; width:315px; overflow:hidden}
+.clubBar dd{ display:block; float:right; width:280px;}
+.clubBar dd h2 a{ color:#813722; font-size:20px; line-height:34px; display:block; text-align:center}
+.clubBar dd p{ font-size:14px; color:#5C5C5C}
+
+.clubMembers{ background:url(../images/layout/club_bg.gif) no-repeat 0px bottom #e2e1de; padding-bottom:49px;}
+.clubMembers .mbd{ overflow:hidden; padding:0px 0px 0px 10px}
+.clubMembers  h2{ display:block; height:36px; overflow:hidden;background:url(../images/layout/tit_bg.jpg) repeat-x 0px bottom; padding-left:0px; padding-right:10px}
+.clubMembers  h2 span{display:inline-block; height:36px; overflow:hidden; line-height:999px;}
+.clubMembers  h2 em{ background:url(../images/layout/more1.jpg) no-repeat 0px bottom; width:37px; height:36px; display:block; float:right; overflow:hidden}
+.clubMembers  h2 em a{ display:block; line-height:900px;}
+
+.clubMembers .mitem .bd{ padding:10px;background-color:#f5f5f4;box-shadow: 0px 1px 2px rgba(0,0,0,0.2);}
+.clubMembers .mitem{ width:290px; display:block; float:left; margin:20px 0px 0px 22px}
+.clubMembers .mitem dl{ display:block;}
+.clubMembers .mitem dl dt{ display:block; float:left; width:95px; padding-top:5px}
+.clubMembers .mitem dl dd{ display:block; float:left; width:145px; padding-left:10px}
+.clubMembers .mitem dl dd h3{ display:block; height:26px; font-size:14px;}
+.clubMembers .mitem dl dd p{ color:#5c5c5c}
+
+.historyBar{ background-color:#e2e1de; padding-bottom:10px;}
+.historyBar .bd{ padding:10px; background-color:#f7f6f3; height:145px; overflow:hidden; position:relative;}
+.historyBar .bd ul{ display:block; width:90000px;height:145px; position:absolute; left:0px; top:10px}
+.historyBar .bd li{ display:inline-block; float:left; padding-right:10px; width:210px;}
+.historyBar .bd li img{ display:block; margin:0px; padding:0px; box-shadow: 0px 2px 3px rgba(0,0,0,0.5);}
+
+
+.frendlinkBar{ background-color:#711323; overflow:hidden;	
+	background-image:-webkit-gradient(linear,left top,left bottom,from(#ae1b30),to(#4d0d1e));
+	background-image:-webkit-linear-gradient(top,#ae1b30,#4d0d1e);
+	background-image:-moz-linear-gradient(top,#ae1b30,#4d0d1e);
+	background-image:-ms-linear-gradient(top,#ae1b30,#4d0d1e);
+	background-image:-o-linear-gradient(top,#ae1b30,#4d0d1e);
+	background-image:linear-gradient(top,#ae1b30,#4d0d1e);
+}
+.frendlinkBar .bd{ padding:20px 10px;  height:85px; overflow:hidden; position:relative;}
+.frendlinkBar .bd ul{ display:block; width:90000px;height:145px;position:absolute; left:0px; top:20px}
+.frendlinkBar .bd li{ display:inline-block; float:left; padding-right:10px; width:115px;}
+.frendlinkBar .bd li img{ display:block; margin:0px; padding:0px;box-shadow: 0px 2px 3px rgba(0,0,0,0.5);}

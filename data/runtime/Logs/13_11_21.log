@@ -1,0 +1,1382 @@
+[ 2013-11-21T17:10:52+08:00 ] 127.0.0.1 /cscchina/index.php
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.035227s ]
+INFO: Run load_lang Behavior [ RunTime:0.036798s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.072281s ]
+SQL: SHOW COLUMNS FROM `ik_message` [ RunTime:0.028624s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ik_message`
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1   [ RunTime:0.016057s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385024152 [ RunTime:0.000602s ]
+ERR: Table 'cscchina.ik_user_online' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385024152
+SQL: SHOW COLUMNS FROM `ik_article` [ RunTime:0.047838s ]
+SQL: SHOW COLUMNS FROM `ik_article_item` [ RunTime:0.013046s ]
+SQL: SELECT * FROM `ik_article_item` WHERE ( `isaudit` = 0 ) ORDER BY addtime desc LIMIT 8   [ RunTime:0.023988s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.046685s ]
+INFO: [ view_template ] --END-- [ RunTime:0.046810s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 5 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 5 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 6 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 7 行.
+NOTIC: [8] Use of undefined constant itemid - assumed 'itemid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 38 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 38 行.
+NOTIC: [8] Use of undefined constant itemid - assumed 'itemid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 38 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 38 行.
+NOTIC: [8] Use of undefined constant itemid - assumed 'itemid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 38 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 38 行.
+NOTIC: [8] Use of undefined constant itemid - assumed 'itemid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 38 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 38 行.
+NOTIC: [8] Use of undefined constant itemid - assumed 'itemid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 38 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 38 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.213326s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.213448s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.015131s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.010682s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.011399s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.038157s ]
+INFO: Run content_replace Behavior [ RunTime:0.049040s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.124858s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.013467s ]
+INFO: [ view_end ] --END-- [ RunTime:0.013577s ]
+
+[ 2013-11-21T17:26:58+08:00 ] 127.0.0.1 /cscchina/index.php
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000944s ]
+INFO: Run load_lang Behavior [ RunTime:0.002586s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003759s ]
+SQL: SHOW COLUMNS FROM `ik_message` [ RunTime:0.003842s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ik_message`
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1   [ RunTime:0.001199s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385025118 [ RunTime:0.000534s ]
+ERR: Table 'cscchina.ik_user_online' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385025118
+SQL: SHOW COLUMNS FROM `ik_article` [ RunTime:0.004108s ]
+SQL: SHOW COLUMNS FROM `ik_article_item` [ RunTime:0.004182s ]
+SQL: SELECT * FROM `ik_article_item` WHERE ( `isaudit` = 0 ) ORDER BY addtime desc LIMIT 8   [ RunTime:0.001326s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001627s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001733s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 5 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 5 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 6 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 7 行.
+NOTIC: [8] Use of undefined constant itemid - assumed 'itemid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant itemid - assumed 'itemid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant itemid - assumed 'itemid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant itemid - assumed 'itemid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant itemid - assumed 'itemid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.028628s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028770s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001020s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000904s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000842s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000929s ]
+INFO: Run content_replace Behavior [ RunTime:0.002593s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006677s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000940s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001043s ]
+
+[ 2013-11-21T17:27:01+08:00 ] 127.0.0.1 /cscchina/index.php
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000400s ]
+INFO: Run load_lang Behavior [ RunTime:0.001701s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002312s ]
+SQL: SHOW COLUMNS FROM `ik_message` [ RunTime:0.003819s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ik_message`
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1   [ RunTime:0.001280s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385025121 [ RunTime:0.000497s ]
+ERR: Table 'cscchina.ik_user_online' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385025121
+SQL: SHOW COLUMNS FROM `ik_article` [ RunTime:0.004026s ]
+SQL: SHOW COLUMNS FROM `ik_article_item` [ RunTime:0.004861s ]
+SQL: SELECT * FROM `ik_article_item` WHERE ( `isaudit` = 0 ) ORDER BY addtime desc LIMIT 8   [ RunTime:0.001464s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000496s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000596s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 5 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 5 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 6 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 7 行.
+NOTIC: [8] Use of undefined constant itemid - assumed 'itemid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant itemid - assumed 'itemid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant itemid - assumed 'itemid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant itemid - assumed 'itemid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant itemid - assumed 'itemid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.016486s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016613s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000482s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000354s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000341s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000362s ]
+INFO: Run content_replace Behavior [ RunTime:0.001335s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003211s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000411s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000501s ]
+
+[ 2013-11-21T17:27:03+08:00 ] 127.0.0.1 /cscchina/index.php
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000906s ]
+INFO: Run load_lang Behavior [ RunTime:0.002157s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003274s ]
+SQL: SHOW COLUMNS FROM `ik_message` [ RunTime:0.003858s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ik_message`
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1   [ RunTime:0.001341s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385025123 [ RunTime:0.000529s ]
+ERR: Table 'cscchina.ik_user_online' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385025123
+SQL: SHOW COLUMNS FROM `ik_article` [ RunTime:0.004013s ]
+SQL: SHOW COLUMNS FROM `ik_article_item` [ RunTime:0.004424s ]
+SQL: SELECT * FROM `ik_article_item` WHERE ( `isaudit` = 0 ) ORDER BY addtime desc LIMIT 8   [ RunTime:0.001581s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001578s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001683s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 5 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 5 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 6 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 7 行.
+NOTIC: [8] Use of undefined constant itemid - assumed 'itemid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant itemid - assumed 'itemid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant itemid - assumed 'itemid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant itemid - assumed 'itemid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant itemid - assumed 'itemid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.020282s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020405s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001025s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001294s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000867s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000899s ]
+INFO: Run content_replace Behavior [ RunTime:0.002280s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006739s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000894s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000990s ]
+
+[ 2013-11-21T17:28:44+08:00 ] 127.0.0.1 /cscchina/index.php
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000908s ]
+INFO: Run load_lang Behavior [ RunTime:0.002266s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003395s ]
+SQL: SHOW COLUMNS FROM `ik_message` [ RunTime:0.003987s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ik_message`
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1   [ RunTime:0.000924s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385025224 [ RunTime:0.000494s ]
+ERR: Table 'cscchina.ik_user_online' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385025224
+SQL: SHOW COLUMNS FROM `ik_article` [ RunTime:0.004108s ]
+SQL: SHOW COLUMNS FROM `ik_article_item` [ RunTime:0.004347s ]
+SQL: SELECT * FROM `ik_article_item` WHERE ( `isaudit` = 0 ) ORDER BY addtime desc LIMIT 8   [ RunTime:0.001696s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001579s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001687s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 5 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 5 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 6 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 7 行.
+NOTIC: [8] Use of undefined constant itemid - assumed 'itemid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant itemid - assumed 'itemid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant itemid - assumed 'itemid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant itemid - assumed 'itemid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant itemid - assumed 'itemid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.028348s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028470s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001082s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000915s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000825s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000895s ]
+INFO: Run content_replace Behavior [ RunTime:0.020551s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.024636s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000919s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001022s ]
+
+[ 2013-11-21T17:29:15+08:00 ] 127.0.0.1 /cscchina/index.php
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000886s ]
+INFO: Run load_lang Behavior [ RunTime:0.002121s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003217s ]
+SQL: SHOW COLUMNS FROM `ik_message` [ RunTime:0.003843s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ik_message`
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1   [ RunTime:0.001270s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385025255 [ RunTime:0.000510s ]
+ERR: Table 'cscchina.ik_user_online' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385025255
+SQL: SHOW COLUMNS FROM `ik_article` [ RunTime:0.004318s ]
+SQL: SHOW COLUMNS FROM `ik_article_item` [ RunTime:0.004414s ]
+SQL: SELECT * FROM `ik_article_item` WHERE ( `isaudit` = 0 ) ORDER BY addtime desc LIMIT 8   [ RunTime:0.001503s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001611s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001713s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 5 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 5 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 6 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 7 行.
+NOTIC: [8] Use of undefined constant itemid - assumed 'itemid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant itemid - assumed 'itemid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant itemid - assumed 'itemid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant itemid - assumed 'itemid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant itemid - assumed 'itemid' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 63 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.020388s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020513s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001040s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000895s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000837s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000916s ]
+INFO: Run content_replace Behavior [ RunTime:0.002367s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006403s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000907s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2013-11-21T17:30:09+08:00 ] 127.0.0.1 /cscchina/index.php
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000882s ]
+INFO: Run load_lang Behavior [ RunTime:0.002458s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003590s ]
+SQL: SHOW COLUMNS FROM `ik_message` [ RunTime:0.003913s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ik_message`
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1   [ RunTime:0.001015s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385025308 [ RunTime:0.000582s ]
+ERR: Table 'cscchina.ik_user_online' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385025308
+SQL: SHOW COLUMNS FROM `ik_article` [ RunTime:0.004386s ]
+SQL: SHOW COLUMNS FROM `ik_article_item` [ RunTime:0.004550s ]
+SQL: SELECT * FROM `ik_article_item` WHERE ( `isaudit` = 0 ) ORDER BY addtime desc LIMIT 8   [ RunTime:0.001575s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001561s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001665s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 5 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 5 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 6 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 7 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.024800s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024926s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001005s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000876s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000815s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000890s ]
+INFO: Run content_replace Behavior [ RunTime:0.002314s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006245s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000914s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001010s ]
+
+[ 2013-11-21T17:34:22+08:00 ] 127.0.0.1 /cscchina/index.php
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000957s ]
+INFO: Run load_lang Behavior [ RunTime:0.002177s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003352s ]
+SQL: SHOW COLUMNS FROM `ik_message` [ RunTime:0.003785s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ik_message`
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1   [ RunTime:0.001265s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385025562 [ RunTime:0.000500s ]
+ERR: Table 'cscchina.ik_user_online' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385025562
+SQL: SHOW COLUMNS FROM `ik_article` [ RunTime:0.004050s ]
+SQL: SHOW COLUMNS FROM `ik_article_item` [ RunTime:0.004346s ]
+SQL: SELECT * FROM `ik_article_item` WHERE ( `isaudit` = 0 ) ORDER BY addtime desc LIMIT 8   [ RunTime:0.001468s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001581s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001688s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 5 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 5 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 6 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 7 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.017365s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017489s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001007s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001074s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000842s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000915s ]
+INFO: Run content_replace Behavior [ RunTime:0.006527s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010753s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000923s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001019s ]
+
+[ 2013-11-21T17:34:30+08:00 ] 127.0.0.1 /cscchina/index.php
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001150s ]
+INFO: Run load_lang Behavior [ RunTime:0.002510s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003957s ]
+SQL: SHOW COLUMNS FROM `ik_message` [ RunTime:0.003789s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ik_message`
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1   [ RunTime:0.000882s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385025570 [ RunTime:0.000537s ]
+ERR: Table 'cscchina.ik_user_online' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385025570
+SQL: SHOW COLUMNS FROM `ik_article` [ RunTime:0.003975s ]
+SQL: SHOW COLUMNS FROM `ik_article_item` [ RunTime:0.004309s ]
+SQL: SELECT * FROM `ik_article_item` WHERE ( `isaudit` = 0 ) ORDER BY addtime desc LIMIT 8   [ RunTime:0.001536s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001566s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001690s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 5 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 5 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 6 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 7 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.025963s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026088s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001026s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000936s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000841s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001079s ]
+INFO: Run content_replace Behavior [ RunTime:0.002052s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006301s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000891s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000986s ]
+
+[ 2013-11-21T17:36:24+08:00 ] 127.0.0.1 /cscchina/index.php
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000415s ]
+INFO: Run load_lang Behavior [ RunTime:0.001684s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002314s ]
+SQL: SHOW COLUMNS FROM `ik_message` [ RunTime:0.004009s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ik_message`
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1   [ RunTime:0.001344s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385025684 [ RunTime:0.000526s ]
+ERR: Table 'cscchina.ik_user_online' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385025684
+SQL: SHOW COLUMNS FROM `ik_article` [ RunTime:0.004065s ]
+SQL: SHOW COLUMNS FROM `ik_article_item` [ RunTime:0.005005s ]
+SQL: SELECT * FROM `ik_article_item` WHERE ( `isaudit` = 0 ) ORDER BY addtime desc LIMIT 8   [ RunTime:0.001418s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000480s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000579s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 5 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 5 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 6 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 7 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.013760s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013888s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000451s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000376s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000278s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000375s ]
+INFO: Run content_replace Behavior [ RunTime:0.001259s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003060s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000391s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000499s ]
+
+[ 2013-11-21T17:36:26+08:00 ] 127.0.0.1 /cscchina/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000392s ]
+INFO: Run load_lang Behavior [ RunTime:0.001679s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002277s ]
+SQL: SHOW COLUMNS FROM `ik_message` [ RunTime:0.003816s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ik_message`
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1   [ RunTime:0.001376s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385025686 [ RunTime:0.000615s ]
+ERR: Table 'cscchina.ik_user_online' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385025686
+SQL: SHOW COLUMNS FROM `ik_article` [ RunTime:0.004088s ]
+SQL: SHOW COLUMNS FROM `ik_article_item` [ RunTime:0.004719s ]
+SQL: SELECT * FROM `ik_article_item` WHERE ( `isaudit` = 0 ) ORDER BY addtime desc LIMIT 8   [ RunTime:0.001508s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000438s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000532s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 5 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 5 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 6 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 7 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014126s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000462s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000393s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000279s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000353s ]
+INFO: Run content_replace Behavior [ RunTime:0.001252s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003074s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000367s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000455s ]
+
+[ 2013-11-21T17:38:52+08:00 ] 127.0.0.1 /cscchina/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000910s ]
+INFO: Run load_lang Behavior [ RunTime:0.002175s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003307s ]
+SQL: SHOW COLUMNS FROM `ik_message` [ RunTime:0.003902s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ik_message`
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1   [ RunTime:0.001258s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385025832 [ RunTime:0.000501s ]
+ERR: Table 'cscchina.ik_user_online' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385025832
+SQL: SHOW COLUMNS FROM `ik_article` [ RunTime:0.003959s ]
+SQL: SHOW COLUMNS FROM `ik_article_item` [ RunTime:0.004328s ]
+SQL: SELECT * FROM `ik_article_item` WHERE ( `isaudit` = 0 ) ORDER BY addtime desc LIMIT 8   [ RunTime:0.001428s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001761s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001918s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 5 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 5 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 6 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\home\682e2dd8e7fd602bdd164c4b500dcc16.php 第 7 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.017607s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017770s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001014s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000897s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000819s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000903s ]
+INFO: Run content_replace Behavior [ RunTime:0.002045s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006029s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000922s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001021s ]
+
+[ 2013-11-21T17:42:42+08:00 ] 127.0.0.1 /cscchina/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000966s ]
+INFO: Run load_lang Behavior [ RunTime:0.002398s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003619s ]
+SQL: SHOW COLUMNS FROM `ik_message` [ RunTime:0.003933s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ik_message`
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1   [ RunTime:0.001314s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385026062 [ RunTime:0.000579s ]
+ERR: Table 'cscchina.ik_user_online' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385026062
+SQL: SHOW COLUMNS FROM `ik_article` [ RunTime:0.005137s ]
+SQL: SHOW COLUMNS FROM `ik_article_item` [ RunTime:0.005548s ]
+SQL: SELECT * FROM `ik_article_item` WHERE ( `isaudit` = 0 ) ORDER BY addtime desc LIMIT 8   [ RunTime:0.001661s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001555s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001669s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.017640s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017771s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000995s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000885s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001398s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000926s ]
+INFO: Run content_replace Behavior [ RunTime:0.002026s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006606s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000900s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000995s ]
+
+[ 2013-11-21T17:42:56+08:00 ] 127.0.0.1 /cscchina/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000894s ]
+INFO: Run load_lang Behavior [ RunTime:0.002152s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003259s ]
+SQL: SHOW COLUMNS FROM `ik_message` [ RunTime:0.003761s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ik_message`
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1   [ RunTime:0.001308s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385026076 [ RunTime:0.000581s ]
+ERR: Table 'cscchina.ik_user_online' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385026076
+SQL: SHOW COLUMNS FROM `ik_article` [ RunTime:0.004119s ]
+SQL: SHOW COLUMNS FROM `ik_article_item` [ RunTime:0.004360s ]
+SQL: SELECT * FROM `ik_article_item` WHERE ( `isaudit` = 0 ) ORDER BY addtime desc LIMIT 8   [ RunTime:0.001411s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001650s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001772s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.017507s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017659s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001012s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000902s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000815s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000892s ]
+INFO: Run content_replace Behavior [ RunTime:0.002153s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006135s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000907s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001002s ]
+
+[ 2013-11-21T17:43:47+08:00 ] 127.0.0.1 /cscchina/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000907s ]
+INFO: Run load_lang Behavior [ RunTime:0.002144s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003271s ]
+SQL: SHOW COLUMNS FROM `ik_message` [ RunTime:0.003805s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ik_message`
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1   [ RunTime:0.001261s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385026127 [ RunTime:0.000526s ]
+ERR: Table 'cscchina.ik_user_online' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385026127
+SQL: SHOW COLUMNS FROM `ik_article` [ RunTime:0.003992s ]
+SQL: SHOW COLUMNS FROM `ik_article_item` [ RunTime:0.004117s ]
+SQL: SELECT * FROM `ik_article_item` WHERE ( `isaudit` = 0 ) ORDER BY addtime desc LIMIT 8   [ RunTime:0.001472s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001938s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002068s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.017752s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017893s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001060s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000931s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000822s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000884s ]
+INFO: Run content_replace Behavior [ RunTime:0.002008s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006056s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000924s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001019s ]
+
+[ 2013-11-21T17:44:17+08:00 ] 127.0.0.1 /cscchina/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000431s ]
+INFO: Run load_lang Behavior [ RunTime:0.001742s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002415s ]
+SQL: SHOW COLUMNS FROM `ik_message` [ RunTime:0.003831s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ik_message`
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1   [ RunTime:0.001282s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385026157 [ RunTime:0.000532s ]
+ERR: Table 'cscchina.ik_user_online' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385026157
+SQL: SHOW COLUMNS FROM `ik_article` [ RunTime:0.004322s ]
+SQL: SHOW COLUMNS FROM `ik_article_item` [ RunTime:0.004771s ]
+SQL: SELECT * FROM `ik_article_item` WHERE ( `isaudit` = 0 ) ORDER BY addtime desc LIMIT 8   [ RunTime:0.001440s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000468s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000562s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.014791s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014927s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000488s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000417s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000289s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000400s ]
+INFO: Run content_replace Behavior [ RunTime:0.001268s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003204s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000393s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000485s ]
+
+[ 2013-11-21T17:46:48+08:00 ] 127.0.0.1 /cscchina/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000960s ]
+INFO: Run load_lang Behavior [ RunTime:0.002423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003609s ]
+SQL: SHOW COLUMNS FROM `ik_message` [ RunTime:0.005655s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ik_message`
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1   [ RunTime:0.001402s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385026308 [ RunTime:0.000523s ]
+ERR: Table 'cscchina.ik_user_online' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385026308
+SQL: SHOW COLUMNS FROM `ik_article` [ RunTime:0.004090s ]
+SQL: SHOW COLUMNS FROM `ik_article_item` [ RunTime:0.004136s ]
+SQL: SELECT * FROM `ik_article_item` WHERE ( `isaudit` = 0 ) ORDER BY addtime desc LIMIT 8   [ RunTime:0.001430s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001796s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001908s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.017725s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017861s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001039s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000896s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000817s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001141s ]
+INFO: Run content_replace Behavior [ RunTime:0.002026s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006304s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000911s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001011s ]
+
+[ 2013-11-21T17:47:20+08:00 ] 127.0.0.1 /cscchina/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001856s ]
+INFO: Run load_lang Behavior [ RunTime:0.002264s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004382s ]
+SQL: SHOW COLUMNS FROM `ik_message` [ RunTime:0.003979s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ik_message`
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1   [ RunTime:0.001537s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385026340 [ RunTime:0.000565s ]
+ERR: Table 'cscchina.ik_user_online' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385026340
+SQL: SHOW COLUMNS FROM `ik_article` [ RunTime:0.003997s ]
+SQL: SHOW COLUMNS FROM `ik_article_item` [ RunTime:0.004450s ]
+SQL: SELECT * FROM `ik_article_item` WHERE ( `isaudit` = 0 ) ORDER BY addtime desc LIMIT 8   [ RunTime:0.001377s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001566s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001665s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.018195s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018357s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001075s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000926s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000876s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000892s ]
+INFO: Run content_replace Behavior [ RunTime:0.002005s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006143s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000908s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001003s ]
+
+[ 2013-11-21T17:47:22+08:00 ] 127.0.0.1 /cscchina/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000440s ]
+INFO: Run load_lang Behavior [ RunTime:0.001779s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002456s ]
+SQL: SHOW COLUMNS FROM `ik_message` [ RunTime:0.003975s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ik_message`
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1   [ RunTime:0.001340s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385026342 [ RunTime:0.000563s ]
+ERR: Table 'cscchina.ik_user_online' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385026342
+SQL: SHOW COLUMNS FROM `ik_article` [ RunTime:0.004088s ]
+SQL: SHOW COLUMNS FROM `ik_article_item` [ RunTime:0.004788s ]
+SQL: SELECT * FROM `ik_article_item` WHERE ( `isaudit` = 0 ) ORDER BY addtime desc LIMIT 8   [ RunTime:0.001536s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000477s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000592s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.014188s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014362s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000468s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000542s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000308s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000391s ]
+INFO: Run content_replace Behavior [ RunTime:0.001242s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003298s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000406s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000495s ]
+
+[ 2013-11-21T17:47:43+08:00 ] 127.0.0.1 /cscchina/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000962s ]
+INFO: Run load_lang Behavior [ RunTime:0.002220s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003450s ]
+SQL: SHOW COLUMNS FROM `ik_message` [ RunTime:0.004328s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ik_message`
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1   [ RunTime:0.001037s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385026363 [ RunTime:0.000553s ]
+ERR: Table 'cscchina.ik_user_online' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385026363
+SQL: SHOW COLUMNS FROM `ik_article` [ RunTime:0.004196s ]
+SQL: SHOW COLUMNS FROM `ik_article_item` [ RunTime:0.004747s ]
+SQL: SELECT * FROM `ik_article_item` WHERE ( `isaudit` = 0 ) ORDER BY addtime desc LIMIT 8   [ RunTime:0.001307s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001571s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001673s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.026623s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026753s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001183s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000902s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000871s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000892s ]
+INFO: Run content_replace Behavior [ RunTime:0.001989s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006197s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001200s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001305s ]
+
+[ 2013-11-21T17:51:07+08:00 ] 127.0.0.1 /cscchina/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000927s ]
+INFO: Run load_lang Behavior [ RunTime:0.002454s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003642s ]
+SQL: SHOW COLUMNS FROM `ik_message` [ RunTime:0.003978s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ik_message`
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1   [ RunTime:0.001297s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385026567 [ RunTime:0.000510s ]
+ERR: Table 'cscchina.ik_user_online' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385026567
+SQL: SHOW COLUMNS FROM `ik_article` [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `ik_article_item` [ RunTime:0.004311s ]
+SQL: SELECT * FROM `ik_article_item` WHERE ( `isaudit` = 0 ) ORDER BY addtime desc LIMIT 8   [ RunTime:0.001475s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001972s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002100s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.047370s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047527s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001169s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000962s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000846s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000944s ]
+INFO: Run content_replace Behavior [ RunTime:0.002774s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007079s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000956s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001056s ]
+
+[ 2013-11-21T17:52:02+08:00 ] 127.0.0.1 /cscchina/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000960s ]
+INFO: Run load_lang Behavior [ RunTime:0.002569s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003767s ]
+SQL: SHOW COLUMNS FROM `ik_message` [ RunTime:0.003908s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ik_message`
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1   [ RunTime:0.000984s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385026622 [ RunTime:0.000520s ]
+ERR: Table 'cscchina.ik_user_online' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385026622
+SQL: SHOW COLUMNS FROM `ik_article` [ RunTime:0.004057s ]
+SQL: SHOW COLUMNS FROM `ik_article_item` [ RunTime:0.004201s ]
+SQL: SELECT * FROM `ik_article_item` WHERE ( `isaudit` = 0 ) ORDER BY addtime desc LIMIT 8   [ RunTime:0.001420s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001561s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001664s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.055412s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055555s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001234s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000861s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000980s ]
+INFO: Run content_replace Behavior [ RunTime:0.002222s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006678s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000934s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001032s ]
+
+[ 2013-11-21T17:52:08+08:00 ] ERR: (ThinkException) 无法加载模块:help
+[ 2013-11-21T17:52:53+08:00 ] 127.0.0.1 /cscchina/index.php?g=admin&m=index&a=login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000392s ]
+INFO: Run load_lang Behavior [ RunTime:0.018843s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.019458s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001522s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001637s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.045928s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046053s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001134s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000919s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000820s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000901s ]
+INFO: Run content_replace Behavior [ RunTime:0.002059s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006238s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000908s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001005s ]
+
+[ 2013-11-21T17:52:56+08:00 ] 127.0.0.1 /cscchina/index.php?g=admin&m=index&a=login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000432s ]
+INFO: Run load_lang Behavior [ RunTime:0.001600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002239s ]
+SQL: SHOW COLUMNS FROM `ik_admin` [ RunTime:0.115368s ]
+SQL: SELECT * FROM `ik_admin` WHERE ( `email` = 'admin@admin.com' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.001231s ]
+SQL: UPDATE `ik_admin` SET `last_time`=1385027576,`last_ip`='127.0.0.1' WHERE ( `userid` = 1 ) [ RunTime:0.110207s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001224s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001323s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\93455158fc92285fa549de1f195e0dc9.php 第 7 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.037419s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037535s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000474s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000374s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000288s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000388s ]
+INFO: Run content_replace Behavior [ RunTime:0.001280s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003133s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000377s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000466s ]
+
+[ 2013-11-21T17:52:59+08:00 ] 127.0.0.1 /cscchina/index.php?g=admin&m=index&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000922s ]
+INFO: Run load_lang Behavior [ RunTime:0.002334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003496s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001522s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001640s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: admin D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\eac52eb4beb26b1a7cc980f46d91756f.php 第 88 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.046077s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046187s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001041s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000905s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000825s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000923s ]
+INFO: Run content_replace Behavior [ RunTime:0.002024s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006068s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000899s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000993s ]
+
+[ 2013-11-21T17:53:00+08:00 ] 127.0.0.1 /cscchina/index.php?g=admin&m=index&a=main
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000405s ]
+INFO: Run load_lang Behavior [ RunTime:0.001915s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002550s ]
+NOTIC: [8] Use of undefined constant gd_info - assumed 'gd_info' D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Action\admin\indexAction.class.php 第 52 行.
+NOTIC: [2] mysql_get_server_info() [<a href='function.mysql-get-server-info'>function.mysql-get-server-info</a>]: Access denied for user 'ODBC'@'localhost' (using password: NO) D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Action\admin\indexAction.class.php 第 63 行.
+NOTIC: [2] mysql_get_server_info() [<a href='function.mysql-get-server-info'>function.mysql-get-server-info</a>]: A link to the server could not be established D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Action\admin\indexAction.class.php 第 63 行.
+NOTIC: [8] Use of undefined constant HTTP_ACCEPT_LANGUAGE - assumed 'HTTP_ACCEPT_LANGUAGE' D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Action\admin\indexAction.class.php 第 64 行.
+NOTIC: [8] Use of undefined constant DOCUMENT_ROOT - assumed 'DOCUMENT_ROOT' D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Action\admin\indexAction.class.php 第 66 行.
+NOTIC: [8] Use of undefined constant HTTP_ACCEPT_ENCODING - assumed 'HTTP_ACCEPT_ENCODING' D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Action\admin\indexAction.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001035s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001140s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\4d2596d1501116a415c5b5a06782a433.php 第 7 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.049072s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049193s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000429s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000342s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000280s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000371s ]
+INFO: Run content_replace Behavior [ RunTime:0.001245s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002989s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000387s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000475s ]
+
+[ 2013-11-21T17:53:00+08:00 ] 127.0.0.1 /cscchina/index.php?g=admin&m=index&a=left
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000430s ]
+INFO: Run load_lang Behavior [ RunTime:0.001727s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002352s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001609s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001731s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.069918s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.070062s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000438s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000346s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000273s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000345s ]
+INFO: Run content_replace Behavior [ RunTime:0.001303s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003009s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000358s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000437s ]
+
+[ 2013-11-21T17:53:06+08:00 ] 127.0.0.1 /cscchina/index.php?g=admin&m=index&a=main
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000415s ]
+INFO: Run load_lang Behavior [ RunTime:0.001899s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002539s ]
+NOTIC: [8] Use of undefined constant gd_info - assumed 'gd_info' D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Action\admin\indexAction.class.php 第 52 行.
+NOTIC: [2] mysql_get_server_info() [<a href='function.mysql-get-server-info'>function.mysql-get-server-info</a>]: Access denied for user 'ODBC'@'localhost' (using password: NO) D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Action\admin\indexAction.class.php 第 63 行.
+NOTIC: [2] mysql_get_server_info() [<a href='function.mysql-get-server-info'>function.mysql-get-server-info</a>]: A link to the server could not be established D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Action\admin\indexAction.class.php 第 63 行.
+NOTIC: [8] Use of undefined constant HTTP_ACCEPT_LANGUAGE - assumed 'HTTP_ACCEPT_LANGUAGE' D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Action\admin\indexAction.class.php 第 64 行.
+NOTIC: [8] Use of undefined constant DOCUMENT_ROOT - assumed 'DOCUMENT_ROOT' D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Action\admin\indexAction.class.php 第 66 行.
+NOTIC: [8] Use of undefined constant HTTP_ACCEPT_ENCODING - assumed 'HTTP_ACCEPT_ENCODING' D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Action\admin\indexAction.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001157s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001271s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\4d2596d1501116a415c5b5a06782a433.php 第 7 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.020956s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021069s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000415s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000349s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000309s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000356s ]
+INFO: Run content_replace Behavior [ RunTime:0.001236s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003008s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000367s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000456s ]
+
+[ 2013-11-21T17:53:07+08:00 ] 127.0.0.1 /cscchina/index.php?g=admin&m=index&a=left&ik=setting
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000424s ]
+INFO: Run load_lang Behavior [ RunTime:0.001614s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002271s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001320s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001431s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.018098s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018213s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000467s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000347s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000283s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000366s ]
+INFO: Run content_replace Behavior [ RunTime:0.001251s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003024s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000377s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000460s ]
+
+[ 2013-11-21T17:53:07+08:00 ] 127.0.0.1 /cscchina/index.php?g=admin&m=setting&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000375s ]
+INFO: Run load_lang Behavior [ RunTime:0.001568s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002131s ]
+SQL: SHOW COLUMNS FROM `ik_setting` [ RunTime:0.028637s ]
+SQL: SHOW COLUMNS FROM `ik_nav` [ RunTime:0.046054s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001540s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001645s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.075251s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.075372s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000466s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000372s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000273s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000350s ]
+INFO: Run content_replace Behavior [ RunTime:0.001263s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003048s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000356s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000443s ]
+
+[ 2013-11-21T17:53:24+08:00 ] 127.0.0.1 /cscchina/index.php?g=admin&m=setting&a=edit
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000911s ]
+INFO: Run load_lang Behavior [ RunTime:0.002061s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003221s ]
+SQL: SHOW COLUMNS FROM `ik_setting` [ RunTime:0.004038s ]
+SQL: SHOW COLUMNS FROM `ik_nav` [ RunTime:0.004026s ]
+NOTIC: [2] Missing argument 2 for settingModel::_before_write(), called in D:\APMServ5.2.6\www\htdocs\cscchina\core\Lib\Core\Model.class.php on line 283 and defined D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 25 行.
+SQL: UPDATE `ik_setting` SET `data`='广播电视科技创新网' WHERE ( `name` = 'site_title' ) [ RunTime:0.021888s ]
+NOTIC: [2] Missing argument 2 for settingModel::_before_write(), called in D:\APMServ5.2.6\www\htdocs\cscchina\core\Lib\Core\Model.class.php on line 283 and defined D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 25 行.
+NOTIC: [2] unlink(./data/runtime/Data/setting.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\APMServ5.2.6\www\htdocs\cscchina\core\Common\functions.php 第 423 行.
+SQL: UPDATE `ik_setting` SET `data`='' WHERE ( `name` = 'site_subtitle' ) [ RunTime:0.000438s ]
+NOTIC: [2] Missing argument 2 for settingModel::_before_write(), called in D:\APMServ5.2.6\www\htdocs\cscchina\core\Lib\Core\Model.class.php on line 283 and defined D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 25 行.
+NOTIC: [2] unlink(./data/runtime/Data/setting.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\APMServ5.2.6\www\htdocs\cscchina\core\Common\functions.php 第 423 行.
+SQL: UPDATE `ik_setting` SET `data`='12ik' WHERE ( `name` = 'site_keywords' ) [ RunTime:0.038666s ]
+NOTIC: [2] Missing argument 2 for settingModel::_before_write(), called in D:\APMServ5.2.6\www\htdocs\cscchina\core\Lib\Core\Model.class.php on line 283 and defined D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 25 行.
+NOTIC: [2] unlink(./data/runtime/Data/setting.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\APMServ5.2.6\www\htdocs\cscchina\core\Common\functions.php 第 423 行.
+SQL: UPDATE `ik_setting` SET `data`='广播电视科技创新网' WHERE ( `name` = 'site_desc' ) [ RunTime:0.000445s ]
+NOTIC: [2] Missing argument 2 for settingModel::_before_write(), called in D:\APMServ5.2.6\www\htdocs\cscchina\core\Lib\Core\Model.class.php on line 283 and defined D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 25 行.
+NOTIC: [2] unlink(./data/runtime/Data/setting.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\APMServ5.2.6\www\htdocs\cscchina\core\Common\functions.php 第 423 行.
+SQL: UPDATE `ik_setting` SET `data`='http://127.0.0.1/cscchina/' WHERE ( `name` = 'site_url' ) [ RunTime:0.000446s ]
+NOTIC: [2] Missing argument 2 for settingModel::_before_write(), called in D:\APMServ5.2.6\www\htdocs\cscchina\core\Lib\Core\Model.class.php on line 283 and defined D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 25 行.
+NOTIC: [2] unlink(./data/runtime/Data/setting.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\APMServ5.2.6\www\htdocs\cscchina\core\Common\functions.php 第 423 行.
+SQL: UPDATE `ik_setting` SET `data`='admin@admin.com' WHERE ( `name` = 'site_email' ) [ RunTime:0.000435s ]
+NOTIC: [2] Missing argument 2 for settingModel::_before_write(), called in D:\APMServ5.2.6\www\htdocs\cscchina\core\Lib\Core\Model.class.php on line 283 and defined D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 25 行.
+NOTIC: [2] unlink(./data/runtime/Data/setting.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\APMServ5.2.6\www\htdocs\cscchina\core\Common\functions.php 第 423 行.
+SQL: UPDATE `ik_setting` SET `data`='正在备案中' WHERE ( `name` = 'site_icp' ) [ RunTime:0.000476s ]
+NOTIC: [2] Missing argument 2 for settingModel::_before_write(), called in D:\APMServ5.2.6\www\htdocs\cscchina\core\Lib\Core\Model.class.php on line 283 and defined D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 25 行.
+NOTIC: [2] unlink(./data/runtime/Data/setting.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\APMServ5.2.6\www\htdocs\cscchina\core\Common\functions.php 第 423 行.
+SQL: UPDATE `ik_setting` SET `data`='0' WHERE ( `name` = 'isinvite' ) [ RunTime:0.000410s ]
+NOTIC: [2] Missing argument 2 for settingModel::_before_write(), called in D:\APMServ5.2.6\www\htdocs\cscchina\core\Lib\Core\Model.class.php on line 283 and defined D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 25 行.
+NOTIC: [2] unlink(./data/runtime/Data/setting.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\APMServ5.2.6\www\htdocs\cscchina\core\Common\functions.php 第 423 行.
+SQL: UPDATE `ik_setting` SET `data`='0' WHERE ( `name` = 'isgzip' ) [ RunTime:0.000405s ]
+NOTIC: [2] Missing argument 2 for settingModel::_before_write(), called in D:\APMServ5.2.6\www\htdocs\cscchina\core\Lib\Core\Model.class.php on line 283 and defined D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 25 行.
+NOTIC: [2] unlink(./data/runtime/Data/setting.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\APMServ5.2.6\www\htdocs\cscchina\core\Common\functions.php 第 423 行.
+SQL: UPDATE `ik_setting` SET `data`='8' WHERE ( `name` = 'timezone' ) [ RunTime:0.000426s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001942s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002055s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\93455158fc92285fa549de1f195e0dc9.php 第 7 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.013877s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013991s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001157s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000883s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000855s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000886s ]
+INFO: Run content_replace Behavior [ RunTime:0.001986s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006126s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000912s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001009s ]
+
+[ 2013-11-21T17:53:25+08:00 ] 127.0.0.1 /cscchina/index.php?g=admin&m=setting&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000897s ]
+INFO: Run load_lang Behavior [ RunTime:0.002341s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003452s ]
+SQL: SHOW COLUMNS FROM `ik_setting` [ RunTime:0.004135s ]
+SQL: SELECT `name`,`data` FROM `ik_setting`  [ RunTime:0.001585s ]
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 27 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 26 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 15 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 15 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 4 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 27 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 4 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 1 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 1 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 1 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 5 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 7 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 19 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 16 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 4 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 12 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `ik_nav` [ RunTime:0.004188s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001336s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001497s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.019199s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019330s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000490s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000360s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000279s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000402s ]
+INFO: Run content_replace Behavior [ RunTime:0.001423s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003287s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000404s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000494s ]
+
+[ 2013-11-21T17:53:28+08:00 ] 127.0.0.1 /cscchina/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000413s ]
+INFO: Run load_lang Behavior [ RunTime:0.001737s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002350s ]
+SQL: SHOW COLUMNS FROM `ik_message` [ RunTime:0.003891s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ik_message`
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1   [ RunTime:0.001444s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385026708 [ RunTime:0.000573s ]
+ERR: Table 'cscchina.ik_user_online' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385026708
+SQL: SHOW COLUMNS FROM `ik_article` [ RunTime:0.004161s ]
+SQL: SHOW COLUMNS FROM `ik_article_item` [ RunTime:0.004704s ]
+SQL: SELECT * FROM `ik_article_item` WHERE ( `isaudit` = 0 ) ORDER BY addtime desc LIMIT 8   [ RunTime:0.001639s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001365s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001474s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.047167s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047356s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000750s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000522s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000343s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000544s ]
+INFO: Run content_replace Behavior [ RunTime:0.001690s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004237s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000422s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000559s ]
+
+[ 2013-11-21T17:53:48+08:00 ] 127.0.0.1 /cscchina/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000606s ]
+INFO: Run load_lang Behavior [ RunTime:0.001752s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002587s ]
+SQL: SHOW COLUMNS FROM `ik_message` [ RunTime:0.003794s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ik_message`
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1   [ RunTime:0.001280s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385026728 [ RunTime:0.000514s ]
+ERR: Table 'cscchina.ik_user_online' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385026728
+SQL: SHOW COLUMNS FROM `ik_article` [ RunTime:0.003949s ]
+SQL: SHOW COLUMNS FROM `ik_article_item` [ RunTime:0.004414s ]
+SQL: SELECT * FROM `ik_article_item` WHERE ( `isaudit` = 0 ) ORDER BY addtime desc LIMIT 8   [ RunTime:0.001600s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001316s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001445s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.046095s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046233s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000682s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000435s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000319s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000406s ]
+INFO: Run content_replace Behavior [ RunTime:0.001474s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003679s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000417s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000513s ]
+
+[ 2013-11-21T17:58:16+08:00 ] 127.0.0.1 /cscchina/index.php?g=admin&m=setting&a=edit
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000913s ]
+INFO: Run load_lang Behavior [ RunTime:0.002681s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003821s ]
+SQL: SHOW COLUMNS FROM `ik_setting` [ RunTime:0.004253s ]
+SQL: SHOW COLUMNS FROM `ik_nav` [ RunTime:0.004007s ]
+NOTIC: [2] Missing argument 2 for settingModel::_before_write(), called in D:\APMServ5.2.6\www\htdocs\cscchina\core\Lib\Core\Model.class.php on line 283 and defined D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 25 行.
+SQL: UPDATE `ik_setting` SET `data`='广播电视科技创新网' WHERE ( `name` = 'site_title' ) [ RunTime:0.000456s ]
+NOTIC: [2] Missing argument 2 for settingModel::_before_write(), called in D:\APMServ5.2.6\www\htdocs\cscchina\core\Lib\Core\Model.class.php on line 283 and defined D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 25 行.
+NOTIC: [2] unlink(./data/runtime/Data/setting.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\APMServ5.2.6\www\htdocs\cscchina\core\Common\functions.php 第 423 行.
+SQL: UPDATE `ik_setting` SET `data`='为你最新的最精彩的的科技创新内容！' WHERE ( `name` = 'site_subtitle' ) [ RunTime:0.000450s ]
+NOTIC: [2] Missing argument 2 for settingModel::_before_write(), called in D:\APMServ5.2.6\www\htdocs\cscchina\core\Lib\Core\Model.class.php on line 283 and defined D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 25 行.
+NOTIC: [2] unlink(./data/runtime/Data/setting.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\APMServ5.2.6\www\htdocs\cscchina\core\Common\functions.php 第 423 行.
+SQL: UPDATE `ik_setting` SET `data`='12ik' WHERE ( `name` = 'site_keywords' ) [ RunTime:0.000407s ]
+NOTIC: [2] Missing argument 2 for settingModel::_before_write(), called in D:\APMServ5.2.6\www\htdocs\cscchina\core\Lib\Core\Model.class.php on line 283 and defined D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 25 行.
+NOTIC: [2] unlink(./data/runtime/Data/setting.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\APMServ5.2.6\www\htdocs\cscchina\core\Common\functions.php 第 423 行.
+SQL: UPDATE `ik_setting` SET `data`='广播电视科技创新网' WHERE ( `name` = 'site_desc' ) [ RunTime:0.000429s ]
+NOTIC: [2] Missing argument 2 for settingModel::_before_write(), called in D:\APMServ5.2.6\www\htdocs\cscchina\core\Lib\Core\Model.class.php on line 283 and defined D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 25 行.
+NOTIC: [2] unlink(./data/runtime/Data/setting.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\APMServ5.2.6\www\htdocs\cscchina\core\Common\functions.php 第 423 行.
+SQL: UPDATE `ik_setting` SET `data`='http://127.0.0.1/cscchina/' WHERE ( `name` = 'site_url' ) [ RunTime:0.000430s ]
+NOTIC: [2] Missing argument 2 for settingModel::_before_write(), called in D:\APMServ5.2.6\www\htdocs\cscchina\core\Lib\Core\Model.class.php on line 283 and defined D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 25 行.
+NOTIC: [2] unlink(./data/runtime/Data/setting.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\APMServ5.2.6\www\htdocs\cscchina\core\Common\functions.php 第 423 行.
+SQL: UPDATE `ik_setting` SET `data`='admin@admin.com' WHERE ( `name` = 'site_email' ) [ RunTime:0.000464s ]
+NOTIC: [2] Missing argument 2 for settingModel::_before_write(), called in D:\APMServ5.2.6\www\htdocs\cscchina\core\Lib\Core\Model.class.php on line 283 and defined D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 25 行.
+NOTIC: [2] unlink(./data/runtime/Data/setting.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\APMServ5.2.6\www\htdocs\cscchina\core\Common\functions.php 第 423 行.
+SQL: UPDATE `ik_setting` SET `data`='正在备案中' WHERE ( `name` = 'site_icp' ) [ RunTime:0.000404s ]
+NOTIC: [2] Missing argument 2 for settingModel::_before_write(), called in D:\APMServ5.2.6\www\htdocs\cscchina\core\Lib\Core\Model.class.php on line 283 and defined D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 25 行.
+NOTIC: [2] unlink(./data/runtime/Data/setting.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\APMServ5.2.6\www\htdocs\cscchina\core\Common\functions.php 第 423 行.
+SQL: UPDATE `ik_setting` SET `data`='0' WHERE ( `name` = 'isinvite' ) [ RunTime:0.000485s ]
+NOTIC: [2] Missing argument 2 for settingModel::_before_write(), called in D:\APMServ5.2.6\www\htdocs\cscchina\core\Lib\Core\Model.class.php on line 283 and defined D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 25 行.
+NOTIC: [2] unlink(./data/runtime/Data/setting.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\APMServ5.2.6\www\htdocs\cscchina\core\Common\functions.php 第 423 行.
+SQL: UPDATE `ik_setting` SET `data`='0' WHERE ( `name` = 'isgzip' ) [ RunTime:0.000404s ]
+NOTIC: [2] Missing argument 2 for settingModel::_before_write(), called in D:\APMServ5.2.6\www\htdocs\cscchina\core\Lib\Core\Model.class.php on line 283 and defined D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 25 行.
+NOTIC: [2] unlink(./data/runtime/Data/setting.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\APMServ5.2.6\www\htdocs\cscchina\core\Common\functions.php 第 423 行.
+SQL: UPDATE `ik_setting` SET `data`='8' WHERE ( `name` = 'timezone' ) [ RunTime:0.000416s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001744s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001845s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\cscchina\data\runtime\Cache\admin\93455158fc92285fa549de1f195e0dc9.php 第 7 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.014057s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014168s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001016s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000898s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000838s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000903s ]
+INFO: Run content_replace Behavior [ RunTime:0.002029s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006029s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000896s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000991s ]
+
+[ 2013-11-21T17:58:17+08:00 ] 127.0.0.1 /cscchina/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000879s ]
+INFO: Run load_lang Behavior [ RunTime:0.002237s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003364s ]
+SQL: SHOW COLUMNS FROM `ik_setting` [ RunTime:0.003903s ]
+SQL: SELECT `name`,`data` FROM `ik_setting`  [ RunTime:0.001615s ]
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 27 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 51 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 26 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 15 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 15 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 4 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 27 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 4 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 1 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 1 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 1 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 5 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 7 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 19 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 16 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 4 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+NOTIC: [8] unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 12 bytes D:\APMServ5.2.6\www\htdocs\cscchina\app\Lib\Model\settingModel.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `ik_message` [ RunTime:0.003956s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ik_message`
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1   [ RunTime:0.001298s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385026997 [ RunTime:0.000531s ]
+ERR: Table 'cscchina.ik_user_online' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385026997
+SQL: SHOW COLUMNS FROM `ik_article` [ RunTime:0.004182s ]
+SQL: SHOW COLUMNS FROM `ik_article_item` [ RunTime:0.004274s ]
+SQL: SELECT * FROM `ik_article_item` WHERE ( `isaudit` = 0 ) ORDER BY addtime desc LIMIT 8   [ RunTime:0.001526s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001084s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001194s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.045411s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045536s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000706s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000436s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000356s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000425s ]
+INFO: Run content_replace Behavior [ RunTime:0.001499s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003801s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000409s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000503s ]
+
+[ 2013-11-21T17:58:19+08:00 ] 127.0.0.1 /cscchina/index.php?g=admin&m=setting&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000414s ]
+INFO: Run load_lang Behavior [ RunTime:0.002189s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002802s ]
+SQL: SHOW COLUMNS FROM `ik_setting` [ RunTime:0.003824s ]
+SQL: SHOW COLUMNS FROM `ik_nav` [ RunTime:0.003949s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001541s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001661s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.020491s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020610s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000496s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000360s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000306s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000374s ]
+INFO: Run content_replace Behavior [ RunTime:0.001275s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003135s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000392s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000479s ]
+
+[ 2013-11-21T17:58:58+08:00 ] 127.0.0.1 /cscchina/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000394s ]
+INFO: Run load_lang Behavior [ RunTime:0.001939s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002552s ]
+SQL: SHOW COLUMNS FROM `ik_message` [ RunTime:0.003873s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ik_message`
+SQL: SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1   [ RunTime:0.001292s ]
+ERR: Table 'cscchina.ik_message' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `ik_message` WHERE ( `touserid` = null ) AND ( `isread` = 0 ) AND ( `isinbox` = 0 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385027038 [ RunTime:0.000587s ]
+ERR: Table 'cscchina.ik_user_online' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS count FROM ik_user_online WHERE `ctime` > 1385027038
+SQL: SHOW COLUMNS FROM `ik_article` [ RunTime:0.004192s ]
+SQL: SHOW COLUMNS FROM `ik_article_item` [ RunTime:0.004730s ]
+SQL: SELECT * FROM `ik_article_item` WHERE ( `isaudit` = 0 ) ORDER BY addtime desc LIMIT 8   [ RunTime:0.001987s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000451s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000563s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.044058s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044192s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000691s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000438s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000346s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000412s ]
+INFO: Run content_replace Behavior [ RunTime:0.001521s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003778s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000434s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000528s ]
+

@@ -15,7 +15,7 @@ class indexAction extends frontendAction {
 		
 		$this->assign ( 'arrNewArticle', $arrNewArticle );
 		
-		
+		$this->_config_seo ();
 		$this->display();
 	}
 	

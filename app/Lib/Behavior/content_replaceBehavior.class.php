@@ -24,15 +24,12 @@ class content_replaceBehavior extends Behavior {
         //网站地址 带 / 如：http://www.12ik.com/
         $replace['__SITE_URL__'] = C('ik_site_url');
         //网站基本风格
-        $basecss = 'static/theme/'.C('ik_site_theme').'/base.css';
+        $basecss = 'static/theme/'.C('ik_site_theme').'/css/base.css';
+        $stylecss = 'static/theme/'.C('ik_site_theme').'/css/style.css';
         //APP风格样式
-        $appcss = 'static/theme/'.C('ik_site_theme').'/'.strtolower(MODULE_NAME).'/images/style.css';
         $appextendjs = 'static/theme/'.C('ik_site_theme').'/'.strtolower(MODULE_NAME).'/js/extend.func.js';
         if(is_file($basecss)){
-        	$sitecss = '@import url('.C('ik_site_url').$basecss.');';
-        }
-        if(is_file($appcss)){
-        	$sitecss .= '@import url('.C('ik_site_url').$appcss.');';
+        	$sitecss = '@import url('.C('ik_site_url').$basecss.');@import url('.C('ik_site_url').$stylecss.');';
         }
         //开始替换css
         $replace['__SITE_THEME_CSS__'] = $sitecss;
