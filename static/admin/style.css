@@ -36,8 +36,9 @@ h2 span {
 }
 
 h2 span a {
-	color: #FF0000;
-	text-decoration: underline;
+	color: #FFF;
+	text-decoration:none; background-color:#4478b1; padding:2px 10px; font-size:14px; border-radius:3px;
+	
 }
 
 a {

@@ -28,7 +28,7 @@ function error(c){$.dialog({icon: 'error',content: '<font  style="font-size:14px
 <body>
 <!--main-->
 <div class="midder">
-<h2><?php echo ($title); ?></h2> 
+<h2><span><a href="<?php echo U('history/cate',array('ik'=>'add'));?>">+添加年份</a></span><?php echo ($title); ?></h2> 
 <div class="tabnav">
 <ul>
 <?php if(is_array($arrCate)): foreach($arrCate as $key=>$item): if($item[cateid] == $cateid): ?><li class="select"><a href="<?php echo U('history/hislist',array('ik'=>'list','cateid'=>$item[cateid],'isaudit'=>'0'));?>"><?php echo ($item[catename]); ?></a></li>
