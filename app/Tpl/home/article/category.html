@@ -19,17 +19,7 @@
 					</foreach>
 				</ul>
 			</section>
-			<section class="personal-publish">
-				<div class="hd">
-					<h3>作品投稿</h3>
-				</div>
-				<div class="bd">
-					<p>个人作者可以在爱客上直接发布作品。 内容领域不限，唯一要求是保证质量优秀。 发表后，作者可直接从中获得分成。</p>
-					<p class="entrance">
-						<a href="{:U('article/add')}" class="btn btn-large">去投稿<i class="arrow-right"></i></a>
-					</p>
-				</div>
-			</section>
+
 		</aside>
 		<article class="w770 fr">
 			<section>
@@ -42,13 +32,9 @@
 						<foreach name="arrArticle" item="item">
 						<li class="item" id="article-407582">
 							<div class="title">
-								<a href="{:U('article/show',array('id'=>$item[aid]))}">{$item[title]} 
-                                <if condition="$item[isphoto]">
-                                [图文]
-                                </if>
-                                </a>
+								<a href="{:U('article/show',array('id'=>$item[aid]))}">{$item[title]}</a>
 							</div>
-                           <if condition="$item[isphoto]">
+                           <if condition="$item[photo]">
 							<div class="cover">
                                 <a class="pic" href="{:U('article/show',array('id'=>$item[aid]))}">
 									<img src="{$item[photo][simg]}" />
@@ -61,7 +47,7 @@
                                     <a href="{:U('article/show',array('id'=>$item[aid]))}">（更多）</a>
 								</div>
 							</div>
-							<a href="{:U('people/index',array('id'=>$item[user][doname]))}">{$item[user][username]}</a> <span class="time">发表于 <php>echo date('Y-m-d H:i',$item[addtime])</php> 评论 {$item[count_comment]} | 浏览 {$item[count_view]}</span> 
+							<a href="{:U('people/index',array('id'=>$item[user][doname]))}">{$item[user][username]}</a> <span class="time">发表于 <php>echo date('Y-m-d H:i',$item[addtime])</php>  | 浏览 {$item[count_view]}</span> 
 						</li>
 						</foreach>
 

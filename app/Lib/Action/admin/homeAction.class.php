@@ -15,9 +15,7 @@ class homeAction extends backendAction {
 		$strInfo = $this->mod->where($where)->find();
 		$arrMenu = array(
 				'about' => array('text'=>'关于我们', 'url'=>U('home/page',array('infokey'=>'about'))),
-				'contact' => array('text'=>'联系我们', 'url'=>U('home/page',array('infokey'=>'contact'))),
-				'agreement' => array('text'=>'用户条款', 'url'=>U('home/page',array('infokey'=>'agreement'))),
-				'privacy' => array('text'=>'隐私声明', 'url'=>U('home/page',array('infokey'=>'privacy'))),
+				'contact' => array('text'=>'联系我们', 'url'=>U('home/page',array('infokey'=>'contact')))
 		);
 		if(IS_POST){
 			$data = $this->_post('infocontent'); 

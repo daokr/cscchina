@@ -54,31 +54,7 @@ function error(c){$.dialog({icon: 'error',content: '<font  style="font-size:14px
 
 <a class="btn_a" href="<?php echo U('article/addarticle',array('cateid'=>$cateid));?>"  onclick="Audit(this)">
 <span>+添加文章</span>
-</a>  
-<!--
-<a class="btn_a" href="javascript:;" data-url="<?php echo U('article/ajax_setting',array('ik'=>'istop','type'=>1));?>" onclick="Audit(this)">
-<span>置顶</span>
-</a>  
-
-<a class="btn_a" href="javascript:;" data-url="<?php echo U('article/ajax_setting',array('ik'=>'isdigest','type'=>1));?>" onclick="Audit(this)">
-<span>头条</span>
-</a> 
-
-<a class="btn_a" href="javascript:;" data-url="<?php echo U('article/ajax_setting',array('ik'=>'isaudit','type'=>0));?>" onclick="Audit(this)">
-<span>通过审核</span>
-</a>  
-&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-<a class="btn_a" href="javascript:;" data-url="<?php echo U('article/ajax_setting',array('ik'=>'istop','type'=>0));?>" onclick="Audit(this)">
-<span>取消置顶</span>
-</a> 
-<a class="btn_a" href="javascript:;" data-url="<?php echo U('article/ajax_setting',array('ik'=>'isdigest','type'=>0));?>" onclick="Audit(this)">
-<span>取消头条</span>
-</a> 
-<a class="btn_a" href="javascript:;" data-url="<?php echo U('article/ajax_setting',array('ik'=>'isaudit','type'=>1));?>" onclick="Audit(this)">
-<span>取消审核</span>
-</a>
--->
-  
+</a>    
 </div>
 <table  cellpadding="0" cellspacing="0">
 <tr class="old">
@@ -93,7 +69,7 @@ function error(c){$.dialog({icon: 'error',content: '<font  style="font-size:14px
 <td>排序</td>
 <td width="280">操作</td>
 </tr>
-<?php if(is_array($arrArticle)): foreach($arrArticle as $key=>$item): ?><tr class="odd">
+<?php if(is_array($arrArticles)): foreach($arrArticles as $key=>$item): ?><tr class="odd">
 <td><input type="checkbox" value="<?php echo ($item[itemid]); ?>" name="itemid"></td>
 <td><?php echo ($item[itemid]); ?></td>
 <td><a href="index.php?m=article&a=show&id=<?php echo ($item[itemid]); ?>" target="_blank"><?php echo ($item[title]); ?></a></td>
@@ -115,21 +91,22 @@ function error(c){$.dialog({icon: 'error',content: '<font  style="font-size:14px
 
 <a href="<?php echo U('article/delarticle',array('itemid'=>$item[itemid]));?>" onClick="return confirm('确定要执行删除操作吗？')">[删除]</a> 
 
-<?php if($item[isaudit] == 0): ?><a href="<?php echo U('article/index',array('ik'=>'isaudit','itemid'=>$item[itemid],'isaudit'=>'1'));?>">[取消审核]</a> 
+<?php if($item[isaudit] == 0): ?><a href="<?php echo U('article/index',array('ik'=>'isaudit','cateid'=>$item[cateid],'itemid'=>$item[itemid],'isaudit'=>'1'));?>">[取消审核]</a> 
 <?php else: ?>
-<a href="<?php echo U('article/index',array('ik'=>'isaudit','itemid'=>$item[itemid],'isaudit'=>'0'));?>">[审核]</a><?php endif; ?>
+<a href="<?php echo U('article/index',array('ik'=>'isaudit','cateid'=>$item[cateid],'itemid'=>$item[itemid],'isaudit'=>'0'));?>">[审核]</a><?php endif; ?>
 
-<?php if($item[istop] == 0): ?><a href="<?php echo U('article/index',array('ik'=>'istop','itemid'=>$item[itemid],'istop'=>'1'));?>">[置顶]</a> 
+<?php if($item[istop] == 0): ?><a href="<?php echo U('article/index',array('ik'=>'istop','cateid'=>$item[cateid],'itemid'=>$item[itemid],'istop'=>'1'));?>">[置顶]</a> 
 <?php else: ?>
-<a href="<?php echo U('article/index',array('ik'=>'istop','itemid'=>$item[itemid],'istop'=>'0'));?>">[取消置顶]</a><?php endif; ?>
+<a href="<?php echo U('article/index',array('ik'=>'istop','cateid'=>$item[cateid],'itemid'=>$item[itemid],'istop'=>'0'));?>">[取消置顶]</a><?php endif; ?>
 
-<?php if($item[isdigest] == 0): ?><a href="<?php echo U('article/index',array('ik'=>'isdigest','itemid'=>$item[itemid],'isdigest'=>'1'));?>">[头条]</a> 
+<?php if($item[isdigest] == 0): ?><a href="<?php echo U('article/index',array('ik'=>'isdigest','cateid'=>$item[cateid],'itemid'=>$item[itemid],'isdigest'=>'1'));?>">[头条]</a> 
 <?php else: ?>
-<a href="<?php echo U('article/index',array('ik'=>'isdigest','itemid'=>$item[itemid],'isdigest'=>'0'));?>">[取消头条]</a><?php endif; ?>
+<a href="<?php echo U('article/index',array('ik'=>'isdigest','cateid'=>$item[cateid],'itemid'=>$item[itemid],'isdigest'=>'0'));?>">[取消头条]</a><?php endif; ?>
 
 </td>
 <tr><?php endforeach; endif; ?>
 </table>
+
 <div class="pagebar"><?php echo ($pageUrl); ?></div>
 </div>
 </body>

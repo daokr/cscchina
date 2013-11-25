@@ -201,11 +201,11 @@ a.bn-post:hover span{background-color:#63AB1A; border: 1px solid #50950E;}
 /*中部*/
 .midder{width:980px;margin:0 auto;padding:0;overflow:hidden;height:auto !important; min-height:400px; margin-top:0px; }
 .midder{ background-color:#d4d4d3}
-.midder .mc{overflow:hidden;display: block;}
-.midder .mc .cleft{float: left;padding-right: 10px; width: 640px;background-color:#fff; }
-.midder .mc .cright{float: right;width: 310px;background-color:#fff; }
-.w190{width:190px}
-.w770{width:770px}
+.midder .mc{overflow:hidden;display: block; padding:10px}
+.midder .mc .cleft{float: left;width: 640px;background-color:#F5F5F4;box-shadow: 0px 1px 2px rgba(0,0,0,0.2); }
+.midder .mc .cright{float: right;width: 310px;background-color:#F5F5F4;box-shadow: 0px 2px 2px rgba(0,0,0,0.2); }
+.w190{width:160px; background-color:#F5F5F4;box-shadow: 0px 1px 2px rgba(0,0,0,0.2); padding:10px;}
+.w770{width:740px; background-color:#F5F5F4;box-shadow: 0px 1px 2px rgba(0,0,0,0.2); padding:10px; }
 .midder .mc .w250{ width:250px}
 .midder .mc .w700{ width:700px}
 

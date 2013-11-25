@@ -44,7 +44,7 @@ function error(c){$.dialog({icon: 'error',content: '<font  style="font-size:14px
 <td><?php echo ($item[orderid]); ?></td>
 <td>
 <a href="<?php echo U('article/cate',array('ik'=>'edit','cateid'=>$item[cateid]));?>">[编辑]</a> 
-<a href="<?php echo U('article/cate',array('ik'=>'delete','cateid'=>$item[cateid]));?>">[合并/删除]</a> 
+<!-- <a href="<?php echo U('article/cate',array('ik'=>'delete','cateid'=>$item[cateid]));?>">[合并/删除]</a>  -->
 <a href="index.php?m=article&a=category&cateid=<?php echo ($item[cateid]); ?>" target="_blank">[访问]</a> 
 </td>
 <tr><?php endforeach; endif; ?>

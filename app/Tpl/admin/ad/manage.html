@@ -18,8 +18,13 @@
 		<th>广告位置：</th>
 		<td>
         	<select name="posid">
-            	<option value="1">首页位置1</option>
-                <option value="2">首页位置2</option>
+            	<option  value="1" <if condition="$strAd[posid] eq 1"> selected</if> >首页位置1 298x74</option>
+                <option value="2" <if condition="$strAd[posid] eq 2"> selected</if>>首页位置2 298x74</option>
+                <option value="3" <if condition="$strAd[posid] eq 3"> selected</if>>首页位置3 298x74</option>
+                <option value="4" <if condition="$strAd[posid] eq 4"> selected</if>>首页位置4 980x130</option>
+                <option value="5" <if condition="$strAd[posid] eq 5"> selected</if>>首页位置5 980x130</option>
+                <option value="6" <if condition="$strAd[posid] eq 6"> selected</if>>首页位置6 620x80</option>
+                <option value="7" <if condition="$strAd[posid] eq 7"> selected</if>>首页位置7 620x80</option>
             </select>
         </td>
 	</tr>     

@@ -280,7 +280,7 @@ class articleAction extends frontendAction {
 		$map['cateid'] = $cateid;
 		$map['isaudit'] = 0;
 		//显示列表
-		$pagesize = 30;
+		$pagesize = 20;
 		$count = $this->item_mod->where($map)->order('orderid desc')->count('itemid');
 		$pager = $this->_pager($count, $pagesize);
 		$arrItemid =  $this->item_mod->field('itemid')->where($map)->order('orderid desc')->limit($pager->firstRow.','.$pager->listRows)->select();
@@ -289,11 +289,11 @@ class articleAction extends frontendAction {
 		}
 		$this->assign('pageUrl', $pager->fshow());
 		$this->assign ( 'arrArticle', $arrArticle );
+		$this->assign ( 'cateid', $cateid );
 		///////////////////////////////
 				
 		$this->_config_seo ( array (
-				'title' => $strChannel['name'].'&nbsp;-&nbsp;'.$strCate['catename'],
-				'subtitle' => '阅读'
+				'title' => $strCate['catename'],
 		) );
 		$this->assign ( 'arrCate', $arrCate );
 		$this->display ();

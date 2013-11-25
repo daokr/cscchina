@@ -26,7 +26,42 @@ __EXTENDS_JS__
 <!--头部开始-->
 <header>
 <div id="header">
-	<div class="site_top"><img src="__STATIC__/theme/blue/head.jpg"></div>
+	<div class="site_top">
+    	<a href="<?php echo C('ik_site_url');?>" class="site_logo" title="<?php echo C('ik_site_title');?>"><?php echo C('ik_site_title');?></a>
+        <div class="searchBox">
+	        <form action="" target="_blank">
+	        	<div class="keyBar"><input type="text" value="" class="keytext"></div>
+	            <div class="searchBtn"><a href="javascript:;">搜索</a></div>
+	        </form>    
+        </div>
+    </div>
+    <div class="bannerBar">
+    	<div><img src="__STATIC__/theme/blue/images/layout/home_4.jpg" width="980" height="242" style="display:block"></div>
+        <div class="bannerBom"></div>
+    </div>
+    <div class="navBar">
+    	<ul>
+<li><a href="#"><img src="__STATIC__/theme/blue/images/layout/home_6.jpg"></a></li>
+
+<?php if($action_name == 'index'): ?><li class="on"><a href="<?php echo C('ik_site_url');?>"><img src="__STATIC__/theme/blue/images/layout/home_7.jpg"></a></li>
+<?php else: ?>
+<li><a href="<?php echo C('ik_site_url');?>"><img src="__STATIC__/theme/blue/images/layout/home_7.jpg"></a></li><?php endif; ?>
+
+<li><a href="#"><img src="__STATIC__/theme/blue/images/layout/home_8.jpg"></a></li>
+<li><a href="#"><img src="__STATIC__/theme/blue/images/layout/home_9.jpg"></a></li>
+
+<?php if($cateid == 6): ?><li class="on"><a href="<?php echo U('article/category',array('cateid'=>6));?>"><img src="__STATIC__/theme/blue/images/layout/home_10.jpg"></a></li>
+<?php else: ?>
+<li class=""><a href="<?php echo U('article/category',array('cateid'=>6));?>"><img src="__STATIC__/theme/blue/images/layout/home_10.jpg"></a></li><?php endif; ?>
+
+<li><a href="#"><img src="__STATIC__/theme/blue/images/layout/home_11.jpg"></a></li>
+<li><a href="#"><img src="__STATIC__/theme/blue/images/layout/home_12.jpg"></a></li>
+<li><a href="#"><img src="__STATIC__/theme/blue/images/layout/home_13.jpg"></a></li>
+<?php if($action_name == 'contact'): ?><li class="on"><a href="<?php echo U('help/contact');?>"><img src="__STATIC__/theme/blue/images/layout/home_14.jpg"></a></li>
+<?php else: ?>
+<li><a href="<?php echo U('help/contact');?>"><img src="__STATIC__/theme/blue/images/layout/home_14.jpg"></a></li><?php endif; ?>
+        </ul>
+    </div>
 </div>
 </header>
 
@@ -36,16 +71,13 @@ __EXTENDS_JS__
         <div class="art-body">
             <h1 class="title"><?php echo ($strArticle[title]); ?></h1>
             <div class="art-info">
-            作者：<a href="<?php echo U('people/index',array('id'=>$strArticle[user][doname]));?>"><?php echo ($strArticle[newsauthor]); ?></a>&nbsp;&nbsp;<?php echo date('Y-m-d H:i',$strArticle[addtime]) ?>&nbsp;&nbsp;<a href="#comments"><?php echo ($strArticle[count_comment]); ?>条回复</a>&nbsp;&nbsp;浏览<?php echo ($strArticle[count_view]); ?>次&nbsp;&nbsp;<a href="#formMini">我要回复</a> 
+            作者：<a href="<?php echo U('people/index',array('id'=>$strArticle[user][doname]));?>"><?php echo ($strArticle[newsauthor]); ?></a>&nbsp;&nbsp;<?php echo date('Y-m-d H:i',$strArticle[addtime]) ?>&nbsp;&nbsp; 浏览<?php echo ($strArticle[count_view]); ?>次&nbsp;&nbsp;
             </div>
         
             <div class="art-text">
                 <?php echo ($strArticle[content]); ?>
             </div>
             <div class="control-btns">
-            <?php if($visitor[userid] == $strArticle[userid]): ?><a href="<?php echo U('article/edit',array('id'=>$strArticle['aid']));?>">编辑</a>&nbsp; &gt;&nbsp; <a href="<?php echo U('article/delete',array('id'=>$strArticle['aid']));?>" onclick="return confirm('确定删除?')">删除</a><?php endif; ?>
-            <br/>
-            本文由<a href="<?php echo U('people/index',array('id'=>$strArticle[user][doname]));?>"><?php echo ($strArticle[user][username]); ?></a>授权（爱客网）发表，文章著作权为原作者所有
             </div>
             
       	  <div class="clear"></div>
@@ -62,30 +94,11 @@ __EXTENDS_JS__
 
     <div class="cright">
     
-        <div class="mod" id="g-user-profile">
-
-    <div class="usercard">
-      <div class="pic">
-            <a href="<?php echo U('people/index',array('id'=>$strUser[doname]));?>"><img alt="<?php echo ($strUser[username]); ?>" src="<?php echo ($strUser[face]); ?>"></a>
-      </div>
-      <div class="info">
-           <div class="name">
-               <a href="<?php echo U('people/index',array('id'=>$strUser[doname]));?>"><?php echo ($strUser[username]); ?></a>
-           </div>
-                <?php if($strUser[area] != ''): echo ($strUser[area][areaname]); else: ?>火星<?php endif; ?>                        
-                <br>
-       </div>
-    </div>
-               
-  
-             
+        <div class="mod">
+         
 </div> 
          
-<div class="mod">
-    <?php if($visitor): ?><div class="create-group">
-    <a href="<?php echo U('article/add');?>"><i>+</i>去投稿</a>
-    </div><?php endif; ?>
-</div>
+
         
     </div>
 
@@ -103,8 +116,6 @@ __EXTENDS_JS__
         <span class="fr">
             <a href="<?php echo U('help/about');?>">关于我们</a>
             · <a href="<?php echo U('help/contact');?>">联系我们</a>
-            · <a href="<?php echo U('help/agreement');?>">用户条款</a>
-            · <a href="<?php echo U('help/privacy');?>">隐私申明</a>
         </span> 
     </div>
 </div>

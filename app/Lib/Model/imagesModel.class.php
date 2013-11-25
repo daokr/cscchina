@@ -58,6 +58,13 @@ class imagesModel extends Model {
 		}
 		return $result;
 	}
+	// 根据type typeid 获取图
+	public function getTheImageByTypeid($type, $typeid){
+		$where = array('type'=>$type, 'typeid'=> $typeid,'ishead'=>1);
+		$resid = $this->where($where)->find();
+		$result = $this->getImageById($resid['id']);
+		return $result;
+	}	
 	// 更新图片信息
 	public function updateImage($data,$where){
 		$result = $this->where ( $where )->save ( $data );

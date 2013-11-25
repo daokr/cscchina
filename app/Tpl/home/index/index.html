@@ -9,9 +9,9 @@
 <div class="midder">
 	<div class="midbd">
 		<div id="hometopbanner">
-	    	<div class="hbt1"><a href="#"><img src="__STATIC__/theme/blue/images/temp/home_15.jpg"></a></div>
-	        <div class="hbt2"><a href="#"><img src="__STATIC__/theme/blue/images/temp/home_16.jpg"></a></div>
-	        <div class="hbt3"><a href="#"><img src="__STATIC__/theme/blue/images/temp/home_17.jpg"></a></div>
+	    	<div class="hbt1"><if condition="$adList[0] neq null"><a href="{$adList[0][link]}" target="_blank"><img src="{$adList[0][path]}"></a></if></div>
+	        <div class="hbt2"><if condition="$adList[1] neq null"><a href="{$adList[1][link]}" target="_blank"><img src="{$adList[1][path]}"></a></if></div>
+	        <div class="hbt3"><if condition="$adList[2] neq null"><a href="{$adList[2][link]}" target="_blank"><img src="{$adList[2][path]}"></a></if></div>
      	</div>
         <div class="inbox">
         	  <div class="inboxbd1">
@@ -19,10 +19,10 @@
                     	<h2><span class="cxrw">创新·人物</span></h2>
                         <div class="bd">
                         	<dl>
-                            <dt><a href="#"><img src="__STATIC__/theme/blue/images/temp/home_20.jpg"></a></dt>
+                            <dt><a href="{:U('article/show',array('id'=>$strcxrw['aid']))}"><img src="{$strcxrw[photo][simg]}"></a></dt>
                             <dd>
-                            	<h3><a href="#">全面深化改革决定</a></h3>
-                                <p>一是主题全面。这次会议确定的主题是全面深化改革，这与十一届三中全会以来的前6次s持全面改革，才能继续深化改革化改革化改革改革化改革化改革</p>
+                            	<h3><a href="{:U('article/show',array('id'=>$strcxrw['aid']))}">{$strcxrw[title]}</a></h3>
+                                <p><php> echo getsubstrutf8(t($strcxrw[content]),0,50);</php>...</p>
                             </dd>
                             </dl>
                             <div class="cl"></div>
@@ -31,25 +31,22 @@
                     <div class="inmidbd">
                         <div class="bd">
                         	<dl>
-                            <dt><a href="#"><img src="__STATIC__/theme/blue/images/temp/home_19.jpg"></a></dt>
+                            <dt><a href="{:U('article/show',array('id'=>$cxjd['aid']))}"><img src="{$cxjd[photo][simg]}"></a></dt>
                             <dd>
-                            	<h3><a href="#">全面深化改革决定</a></h3>
-                                <p>一是主题全面。这次会议确定的主题是全面深化改革，这与十一届三中全会以来的前6次s持全面改革，才能继续深化改革化改革化改革改革化改革化改一是主题全面。这次会议确定的主题是全面深化改革，</p>
+                            	<h3><a href="{:U('article/show',array('id'=>$cxjd['aid']))}">{$cxjd[title]}</a></h3>
+                                <p><php> echo getsubstrutf8(t($cxjd[content]),0,90);</php>...</p>
                             </dd>
                             </dl>
                             <div class="cl"></div>
                         </div>                    
                     </div>
                     <div class="rightbd">
-                    	<h2><em style="margin-right:30px"><a href="#">more</a></em><span class="cxsj">创新·事件</span><i></i></h2>
+                    	<h2><em style="margin-right:30px"><a href="{:U('article/category',array('cateid'=>7))}">more</a></em><span class="cxsj">创新·事件</span><i></i></h2>
                         <div class="bd">
                         	<ul>
-                            	<li><a href="#">一是主题全面。这次会议确定的主</a></li>
-                                <li><a href="#">一是主题全面。这次会议确定的主</a></li>
-                                <li><a href="#">一是主题全面。这次会议确定的主</a></li>
-                                <li><a href="#">一是主题全面。这次会议确定的主</a></li>
-                                <li><a href="#">一是主题全面。这次会议确定的主</a></li>
-                                 <li><a href="#">一是主题全面。这次会议确定的主</a></li>
+                            <foreach name="cxsj" item="item">
+                            	<li><a href="{:U('article/show',array('id'=>$item['aid']))}" title="{$item[title]}">{$item[title]}</a></li>
+                            </foreach>
                             </ul>
                         </div>
                     </div>
@@ -59,64 +56,58 @@
               <div class="inboxbd1">
 
               		<div class="itembd">
-                    	<h2><em><a href="#">more</a></em><span class="cxjs">创新·技术</span></h2>
+                    	<h2><em><a href="{:U('article/category',array('cateid'=>4))}">more</a></em><span class="cxjs">创新·技术</span></h2>
                         <div class="bd">
                         	<dl>
-                            <dt><a href="#"><img src="__STATIC__/theme/blue/images/temp/130x90.jpg"></a></dt>
+                            <dt><a href="{:U('article/show',array('id'=>$item['aid']))}"><img src="{$cxjstop[photo][simg]}"></a></dt>
                             <dd>
-                            	<h3><a href="#">全面深化改革决定</a></h3>
-                                <p>一是主题全面。这次会议确定的主题是全面深化改革，这与十一届三中全会以的的神色</p>
+                            	<h3><a href="{:U('article/show',array('id'=>$item['aid']))}" title="{$cxjstop[title]}">{$cxjstop[title]}</a></h3>
+                                <p><php> echo getsubstrutf8(t($cxjstop[content]),0,30);</php>...</p>
                             </dd>
                             </dl>
                             <div class="cl"></div>
                             <ul class="defUL">
-                            	<li><a href="#">环保部官员：8年前反映灰霾越来越重 未引起重视</a></li>
-                            	<li><a href="#">国资委深化国企改革方案 央企红利上缴比例或至30%</a></li>
-                            	<li><a href="#">专家：养老双轨制并轨职工或还是吃亏</a></li>
-                            	<li><a href="#">菲灾后救援吃力 政府称不可能每个人都获救援</a></li>
-                            	<li><a href="#">知情人：季建业在上百人面前像骂儿子一样骂下属</a></li>
+                             <foreach name="cxjs" item="item" key="ck">
+                            	<li><a href="{:U('article/show',array('id'=>$item['aid']))}" title="{$item[title]}">{$item[title]}</a></li>
+                             </foreach>
                             </ul>
                         </div>
                     </div>
               		<div class="itembd">
-                    	<h2><em><a href="#">more</a></em><span class="cxyy">创新·应用</span></h2>
+                    	<h2><em><a href="{:U('article/category',array('cateid'=>5))}">more</a></em><span class="cxyy">创新·应用</span></h2>
                         <div class="bd">
                         	<dl>
-                            <dt><a href="#"><img src="__STATIC__/theme/blue/images/temp/130x90.jpg"></a></dt>
+                            <dt><a href="{:U('article/show',array('id'=>$cxyytop['aid']))}"><img src="{$cxyytop[photo][simg]}"></a></dt>
                             <dd>
-                            	<h3><a href="#">全面深化改革决定</a></h3>
-                                 <p>一是主题全面。这次会议确定的主题是全面深化改革，这与十一届三中全会以的的神色</p>
+                            <h3><a href="{:U('article/show',array('id'=>$cxyytop['aid']))}" title="{$cxyytop[title]}">{$cxyytop[title]}</a></h3>
+                                <p><php> echo getsubstrutf8(t($cxyytop[content]),0,30);</php>...</p>
                             </dd>
                             </dl>
                             <div class="cl"></div>
                             <ul class="defUL">
-                            	<li><a href="#">环保部官员：8年前反映灰霾越来越重 未引起重视</a></li>
-                            	<li><a href="#">国资委深化国企改革方案 央企红利上缴比例或至30%</a></li>
-                            	<li><a href="#">专家：养老双轨制并轨职工或还是吃亏</a></li>
-                            	<li><a href="#">菲灾后救援吃力 政府称不可能每个人都获救援</a></li>
-                            	<li><a href="#">知情人：季建业在上百人面前像骂儿子一样骂下属</a></li>
-                            </ul>                            
+                             <foreach name="cxyy" item="item" key="ck">
+                            	<li><a href="{:U('article/show',array('id'=>$item['aid']))}" title="{$item[title]}">{$item[title]}</a></li>
+                             </foreach>
+                            </ul>                           
                         </div>
                     </div>
               		<div class="itembd lastitembd">
-                    	<h2><em><a href="#">more</a></em><span class="cxdg">创新·导购</span></h2>
+                    	<h2><em><a href="{:U('article/category',array('cateid'=>6))}">more</a></em><span class="cxdg">创新·导购</span></h2>
                         <div class="bd">
                         	<dl>
-                            <dt><a href="#"><img src="__STATIC__/theme/blue/images/temp/130x90.jpg"></a></dt>
+                            <dt><a href="{:U('article/show',array('id'=>$cxdgtop['aid']))}"><img src="{$cxdgtop[photo][simg]}"></a></dt>
                             <dd>
-                            	<h3><a href="#">全面深化改革决定</a></h3>
-                                  <p>一是主题全面。这次会议确定的主题是全面深化改革，这与十一届三中全会以的的神色</p>
+                            	<h3><a href="{:U('article/show',array('id'=>$cxdgtop['aid']))}" title="{$cxdgtop[title]}">{$cxdgtop[title]}</a></h3>
+                                <p><php> echo getsubstrutf8(t($cxdgtop[content]),0,30);</php>...</p>
                             </dd>
                             </dl>
                             <div class="cl"></div>
                             <ul class="defUL">
-                            	<li><a href="#">环保部官员：8年前反映灰霾越来越重 未引起重视</a></li>
-                            	<li><a href="#">国资委深化国企改革方案 央企红利上缴比例或至30%</a></li>
-                            	<li><a href="#">专家：养老双轨制并轨职工或还是吃亏</a></li>
-                            	<li><a href="#">菲灾后救援吃力 政府称不可能每个人都获救援</a></li>
-                            	<li><a href="#">知情人：季建业在上百人面前像骂儿子一样骂下属</a></li>
+                             <foreach name="cxdg" item="item" key="ck">
+                            	<li><a href="{:U('article/show',array('id'=>$item['aid']))}" title="{$item[title]}">{$item[title]}</a></li>
+                             </foreach>
                             </ul>
-                        </div>
+                        </div>                        
                     </div>                                        
        
               </div>
@@ -124,7 +115,7 @@
         <div class="cl"></div>        
     </div>
         <div class="blank15"></div>
-        <div><a href="#"><img src="__STATIC__/theme/blue/images/temp/tit_31.jpg" width="980" height="130" style="display:block"></a></div>
+        <div><if condition="$adList[3] neq null"><a href="{$adList[3][link]}" target="_blank"><img src="{$adList[3][path]}"></a></if></div>
         <div class="blank10"></div>
         <div id="defSearch">
         	<form action="" target="">
@@ -140,7 +131,7 @@
             </form>
         </div>
         <div class="blank10"></div>
-        <div><a href="#"><img src="__STATIC__/theme/blue/images/temp/tit_33.jpg" width="980" height="130" style="display:block"></a></div>
+        <div><if condition="$adList[4] neq null"><a href="{$adList[4][link]}" target="_blank"><img src="{$adList[4][path]}"></a></if></div>
         <div class="blank15"></div>
     	<div class="defMenu">
         	<ul>
@@ -189,7 +180,9 @@
                   		<div class="filebox"><img src="__STATIC__/theme/blue/images/temp/file.jpg"/></div>
                         <ul  class="hudongbox"><li>CCBN互换区</li><li>二维码</li></ul>
                     </div>
-                    <div class="modRag"><img src="__STATIC__/theme/blue/images/temp/620x80.jpg" width="620" height="80"></div>
+                    <div class="modRag">
+                    <if condition="$adList[5] neq null"><a href="{$adList[5][link]}" target="_blank"><img src="{$adList[5][path]}"></a></if>
+                    </div>
                 </div>
                 <div class="blank15"></div>
                 <div class="winningBar">
@@ -204,7 +197,9 @@
                         </ul>
                         <h3>获奖公室</h3>
                     </div>
-					<div style="margin-top:10px"><img src="__STATIC__/theme/blue/images/temp/620x80.jpg" width="630" height="80"></div>
+					<div style="margin-top:10px">
+                    <if condition="$adList[6] neq null"><a href="{$adList[6][link]}" target="_blank"><img src="{$adList[6][path]}"></a></if>
+                    </div>
                 </div>
                 <div class="mtbdBar">
                 	<div class="mtbdInfo">

@@ -11,9 +11,7 @@ class articleModel extends Model {
 			array('title','','标题已经存在',0,'unique',self::MODEL_INSERT),
 			
 	);
-	
- 
-	
+
 	public function getOneArticle($id){
 		$where['aid'] = $id;
 		$strArticle = $this->where($where)->find(); 
@@ -23,9 +21,11 @@ class articleModel extends Model {
 			$result = array_merge($articleItem, $strArticle);
 			$result['user'] = D('user')->getOneUser($articleItem['userid']);
 			//获取 主图
-/*			if($articleItem['isphoto']){
-				$result ['photo'] = ikhtml_img('article', $articleItem['itemid'], $result ['content']);
-			}*/
+			$result['photo'] = D('images')->getTheImageByTypeid('article',$articleItem['itemid']);
+			
+			//if($articleItem['isphoto']){
+			//	$result ['photo'] = ikhtml_img('article', $articleItem['itemid'], $result ['content']);
+			//}
 			//$result ['content'] = nl2br ( ikhtml('article',$id,$result['content'],1));
 			
 			$result ['content'] =  htmlspecialchars_decode($result['content']);

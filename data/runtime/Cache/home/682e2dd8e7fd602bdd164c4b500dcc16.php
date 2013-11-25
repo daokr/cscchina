@@ -41,15 +41,25 @@ __EXTENDS_JS__
     </div>
     <div class="navBar">
     	<ul>
-        	<li><a href="#"><img src="__STATIC__/theme/blue/images/layout/home_6.jpg"></a></li>
-            <li class="on"><a href="<?php echo C('ik_site_url');?>"><img src="__STATIC__/theme/blue/images/layout/home_7.jpg"></a></li>
-            <li><a href="#"><img src="__STATIC__/theme/blue/images/layout/home_8.jpg"></a></li>
-            <li><a href="#"><img src="__STATIC__/theme/blue/images/layout/home_9.jpg"></a></li>
-            <li><a href="#"><img src="__STATIC__/theme/blue/images/layout/home_10.jpg"></a></li>
-            <li><a href="#"><img src="__STATIC__/theme/blue/images/layout/home_11.jpg"></a></li>
-            <li><a href="#"><img src="__STATIC__/theme/blue/images/layout/home_12.jpg"></a></li>
-            <li><a href="#"><img src="__STATIC__/theme/blue/images/layout/home_13.jpg"></a></li>
-            <li><a href="#"><img src="__STATIC__/theme/blue/images/layout/home_14.jpg"></a></li>
+<li><a href="#"><img src="__STATIC__/theme/blue/images/layout/home_6.jpg"></a></li>
+
+<?php if($action_name == 'index'): ?><li class="on"><a href="<?php echo C('ik_site_url');?>"><img src="__STATIC__/theme/blue/images/layout/home_7.jpg"></a></li>
+<?php else: ?>
+<li><a href="<?php echo C('ik_site_url');?>"><img src="__STATIC__/theme/blue/images/layout/home_7.jpg"></a></li><?php endif; ?>
+
+<li><a href="#"><img src="__STATIC__/theme/blue/images/layout/home_8.jpg"></a></li>
+<li><a href="#"><img src="__STATIC__/theme/blue/images/layout/home_9.jpg"></a></li>
+
+<?php if($cateid == 6): ?><li class="on"><a href="<?php echo U('article/category',array('cateid'=>6));?>"><img src="__STATIC__/theme/blue/images/layout/home_10.jpg"></a></li>
+<?php else: ?>
+<li class=""><a href="<?php echo U('article/category',array('cateid'=>6));?>"><img src="__STATIC__/theme/blue/images/layout/home_10.jpg"></a></li><?php endif; ?>
+
+<li><a href="#"><img src="__STATIC__/theme/blue/images/layout/home_11.jpg"></a></li>
+<li><a href="#"><img src="__STATIC__/theme/blue/images/layout/home_12.jpg"></a></li>
+<li><a href="#"><img src="__STATIC__/theme/blue/images/layout/home_13.jpg"></a></li>
+<?php if($action_name == 'contact'): ?><li class="on"><a href="<?php echo U('help/contact');?>"><img src="__STATIC__/theme/blue/images/layout/home_14.jpg"></a></li>
+<?php else: ?>
+<li><a href="<?php echo U('help/contact');?>"><img src="__STATIC__/theme/blue/images/layout/home_14.jpg"></a></li><?php endif; ?>
         </ul>
     </div>
 </div>
@@ -57,9 +67,9 @@ __EXTENDS_JS__
 <div class="midder">
 	<div class="midbd">
 		<div id="hometopbanner">
-	    	<div class="hbt1"><a href="#"><img src="__STATIC__/theme/blue/images/temp/home_15.jpg"></a></div>
-	        <div class="hbt2"><a href="#"><img src="__STATIC__/theme/blue/images/temp/home_16.jpg"></a></div>
-	        <div class="hbt3"><a href="#"><img src="__STATIC__/theme/blue/images/temp/home_17.jpg"></a></div>
+	    	<div class="hbt1"><?php if($adList[0] != null): ?><a href="<?php echo ($adList[0][link]); ?>" target="_blank"><img src="<?php echo ($adList[0][path]); ?>"></a><?php endif; ?></div>
+	        <div class="hbt2"><?php if($adList[1] != null): ?><a href="<?php echo ($adList[1][link]); ?>" target="_blank"><img src="<?php echo ($adList[1][path]); ?>"></a><?php endif; ?></div>
+	        <div class="hbt3"><?php if($adList[2] != null): ?><a href="<?php echo ($adList[2][link]); ?>" target="_blank"><img src="<?php echo ($adList[2][path]); ?>"></a><?php endif; ?></div>
      	</div>
         <div class="inbox">
         	  <div class="inboxbd1">
@@ -67,10 +77,10 @@ __EXTENDS_JS__
                     	<h2><span class="cxrw">创新·人物</span></h2>
                         <div class="bd">
                         	<dl>
-                            <dt><a href="#"><img src="__STATIC__/theme/blue/images/temp/home_20.jpg"></a></dt>
+                            <dt><a href="<?php echo U('article/show',array('id'=>$strcxrw['aid']));?>"><img src="<?php echo ($strcxrw[photo][simg]); ?>"></a></dt>
                             <dd>
-                            	<h3><a href="#">全面深化改革决定</a></h3>
-                                <p>一是主题全面。这次会议确定的主题是全面深化改革，这与十一届三中全会以来的前6次s持全面改革，才能继续深化改革化改革化改革改革化改革化改革</p>
+                            	<h3><a href="<?php echo U('article/show',array('id'=>$strcxrw['aid']));?>"><?php echo ($strcxrw[title]); ?></a></h3>
+                                <p><?php echo getsubstrutf8(t($strcxrw[content]),0,50); ?>...</p>
                             </dd>
                             </dl>
                             <div class="cl"></div>
@@ -79,25 +89,20 @@ __EXTENDS_JS__
                     <div class="inmidbd">
                         <div class="bd">
                         	<dl>
-                            <dt><a href="#"><img src="__STATIC__/theme/blue/images/temp/home_19.jpg"></a></dt>
+                            <dt><a href="<?php echo U('article/show',array('id'=>$cxjd['aid']));?>"><img src="<?php echo ($cxjd[photo][simg]); ?>"></a></dt>
                             <dd>
-                            	<h3><a href="#">全面深化改革决定</a></h3>
-                                <p>一是主题全面。这次会议确定的主题是全面深化改革，这与十一届三中全会以来的前6次s持全面改革，才能继续深化改革化改革化改革改革化改革化改一是主题全面。这次会议确定的主题是全面深化改革，</p>
+                            	<h3><a href="<?php echo U('article/show',array('id'=>$cxjd['aid']));?>"><?php echo ($cxjd[title]); ?></a></h3>
+                                <p><?php echo getsubstrutf8(t($cxjd[content]),0,90); ?>...</p>
                             </dd>
                             </dl>
                             <div class="cl"></div>
                         </div>                    
                     </div>
                     <div class="rightbd">
-                    	<h2><em style="margin-right:30px"><a href="#">more</a></em><span class="cxsj">创新·事件</span><i></i></h2>
+                    	<h2><em style="margin-right:30px"><a href="<?php echo U('article/category',array('cateid'=>7));?>">more</a></em><span class="cxsj">创新·事件</span><i></i></h2>
                         <div class="bd">
                         	<ul>
-                            	<li><a href="#">一是主题全面。这次会议确定的主</a></li>
-                                <li><a href="#">一是主题全面。这次会议确定的主</a></li>
-                                <li><a href="#">一是主题全面。这次会议确定的主</a></li>
-                                <li><a href="#">一是主题全面。这次会议确定的主</a></li>
-                                <li><a href="#">一是主题全面。这次会议确定的主</a></li>
-                                 <li><a href="#">一是主题全面。这次会议确定的主</a></li>
+                            <?php if(is_array($cxsj)): foreach($cxsj as $key=>$item): ?><li><a href="<?php echo U('article/show',array('id'=>$item['aid']));?>" title="<?php echo ($item[title]); ?>"><?php echo ($item[title]); ?></a></li><?php endforeach; endif; ?>
                             </ul>
                         </div>
                     </div>
@@ -107,64 +112,52 @@ __EXTENDS_JS__
               <div class="inboxbd1">
 
               		<div class="itembd">
-                    	<h2><em><a href="#">more</a></em><span class="cxjs">创新·技术</span></h2>
+                    	<h2><em><a href="<?php echo U('article/category',array('cateid'=>4));?>">more</a></em><span class="cxjs">创新·技术</span></h2>
                         <div class="bd">
                         	<dl>
-                            <dt><a href="#"><img src="__STATIC__/theme/blue/images/temp/130x90.jpg"></a></dt>
+                            <dt><a href="<?php echo U('article/show',array('id'=>$item['aid']));?>"><img src="<?php echo ($cxjstop[photo][simg]); ?>"></a></dt>
                             <dd>
-                            	<h3><a href="#">全面深化改革决定</a></h3>
-                                <p>一是主题全面。这次会议确定的主题是全面深化改革，这与十一届三中全会以的的神色</p>
+                            	<h3><a href="<?php echo U('article/show',array('id'=>$item['aid']));?>" title="<?php echo ($cxjstop[title]); ?>"><?php echo ($cxjstop[title]); ?></a></h3>
+                                <p><?php echo getsubstrutf8(t($cxjstop[content]),0,30); ?>...</p>
                             </dd>
                             </dl>
                             <div class="cl"></div>
                             <ul class="defUL">
-                            	<li><a href="#">环保部官员：8年前反映灰霾越来越重 未引起重视</a></li>
-                            	<li><a href="#">国资委深化国企改革方案 央企红利上缴比例或至30%</a></li>
-                            	<li><a href="#">专家：养老双轨制并轨职工或还是吃亏</a></li>
-                            	<li><a href="#">菲灾后救援吃力 政府称不可能每个人都获救援</a></li>
-                            	<li><a href="#">知情人：季建业在上百人面前像骂儿子一样骂下属</a></li>
+                             <?php if(is_array($cxjs)): foreach($cxjs as $ck=>$item): ?><li><a href="<?php echo U('article/show',array('id'=>$item['aid']));?>" title="<?php echo ($item[title]); ?>"><?php echo ($item[title]); ?></a></li><?php endforeach; endif; ?>
                             </ul>
                         </div>
                     </div>
               		<div class="itembd">
-                    	<h2><em><a href="#">more</a></em><span class="cxyy">创新·应用</span></h2>
+                    	<h2><em><a href="<?php echo U('article/category',array('cateid'=>5));?>">more</a></em><span class="cxyy">创新·应用</span></h2>
                         <div class="bd">
                         	<dl>
-                            <dt><a href="#"><img src="__STATIC__/theme/blue/images/temp/130x90.jpg"></a></dt>
+                            <dt><a href="<?php echo U('article/show',array('id'=>$cxyytop['aid']));?>"><img src="<?php echo ($cxyytop[photo][simg]); ?>"></a></dt>
                             <dd>
-                            	<h3><a href="#">全面深化改革决定</a></h3>
-                                 <p>一是主题全面。这次会议确定的主题是全面深化改革，这与十一届三中全会以的的神色</p>
+                            <h3><a href="<?php echo U('article/show',array('id'=>$cxyytop['aid']));?>" title="<?php echo ($cxyytop[title]); ?>"><?php echo ($cxyytop[title]); ?></a></h3>
+                                <p><?php echo getsubstrutf8(t($cxyytop[content]),0,30); ?>...</p>
                             </dd>
                             </dl>
                             <div class="cl"></div>
                             <ul class="defUL">
-                            	<li><a href="#">环保部官员：8年前反映灰霾越来越重 未引起重视</a></li>
-                            	<li><a href="#">国资委深化国企改革方案 央企红利上缴比例或至30%</a></li>
-                            	<li><a href="#">专家：养老双轨制并轨职工或还是吃亏</a></li>
-                            	<li><a href="#">菲灾后救援吃力 政府称不可能每个人都获救援</a></li>
-                            	<li><a href="#">知情人：季建业在上百人面前像骂儿子一样骂下属</a></li>
-                            </ul>                            
+                             <?php if(is_array($cxyy)): foreach($cxyy as $ck=>$item): ?><li><a href="<?php echo U('article/show',array('id'=>$item['aid']));?>" title="<?php echo ($item[title]); ?>"><?php echo ($item[title]); ?></a></li><?php endforeach; endif; ?>
+                            </ul>                           
                         </div>
                     </div>
               		<div class="itembd lastitembd">
-                    	<h2><em><a href="#">more</a></em><span class="cxdg">创新·导购</span></h2>
+                    	<h2><em><a href="<?php echo U('article/category',array('cateid'=>6));?>">more</a></em><span class="cxdg">创新·导购</span></h2>
                         <div class="bd">
                         	<dl>
-                            <dt><a href="#"><img src="__STATIC__/theme/blue/images/temp/130x90.jpg"></a></dt>
+                            <dt><a href="<?php echo U('article/show',array('id'=>$cxdgtop['aid']));?>"><img src="<?php echo ($cxdgtop[photo][simg]); ?>"></a></dt>
                             <dd>
-                            	<h3><a href="#">全面深化改革决定</a></h3>
-                                  <p>一是主题全面。这次会议确定的主题是全面深化改革，这与十一届三中全会以的的神色</p>
+                            	<h3><a href="<?php echo U('article/show',array('id'=>$cxdgtop['aid']));?>" title="<?php echo ($cxdgtop[title]); ?>"><?php echo ($cxdgtop[title]); ?></a></h3>
+                                <p><?php echo getsubstrutf8(t($cxdgtop[content]),0,30); ?>...</p>
                             </dd>
                             </dl>
                             <div class="cl"></div>
                             <ul class="defUL">
-                            	<li><a href="#">环保部官员：8年前反映灰霾越来越重 未引起重视</a></li>
-                            	<li><a href="#">国资委深化国企改革方案 央企红利上缴比例或至30%</a></li>
-                            	<li><a href="#">专家：养老双轨制并轨职工或还是吃亏</a></li>
-                            	<li><a href="#">菲灾后救援吃力 政府称不可能每个人都获救援</a></li>
-                            	<li><a href="#">知情人：季建业在上百人面前像骂儿子一样骂下属</a></li>
+                             <?php if(is_array($cxdg)): foreach($cxdg as $ck=>$item): ?><li><a href="<?php echo U('article/show',array('id'=>$item['aid']));?>" title="<?php echo ($item[title]); ?>"><?php echo ($item[title]); ?></a></li><?php endforeach; endif; ?>
                             </ul>
-                        </div>
+                        </div>                        
                     </div>                                        
        
               </div>
@@ -172,7 +165,7 @@ __EXTENDS_JS__
         <div class="cl"></div>        
     </div>
         <div class="blank15"></div>
-        <div><a href="#"><img src="__STATIC__/theme/blue/images/temp/tit_31.jpg" width="980" height="130" style="display:block"></a></div>
+        <div><?php if($adList[3] != null): ?><a href="<?php echo ($adList[3][link]); ?>" target="_blank"><img src="<?php echo ($adList[3][path]); ?>"></a><?php endif; ?></div>
         <div class="blank10"></div>
         <div id="defSearch">
         	<form action="" target="">
@@ -188,7 +181,7 @@ __EXTENDS_JS__
             </form>
         </div>
         <div class="blank10"></div>
-        <div><a href="#"><img src="__STATIC__/theme/blue/images/temp/tit_33.jpg" width="980" height="130" style="display:block"></a></div>
+        <div><?php if($adList[4] != null): ?><a href="<?php echo ($adList[4][link]); ?>" target="_blank"><img src="<?php echo ($adList[4][path]); ?>"></a><?php endif; ?></div>
         <div class="blank15"></div>
     	<div class="defMenu">
         	<ul>
@@ -237,7 +230,9 @@ __EXTENDS_JS__
                   		<div class="filebox"><img src="__STATIC__/theme/blue/images/temp/file.jpg"/></div>
                         <ul  class="hudongbox"><li>CCBN互换区</li><li>二维码</li></ul>
                     </div>
-                    <div class="modRag"><img src="__STATIC__/theme/blue/images/temp/620x80.jpg" width="620" height="80"></div>
+                    <div class="modRag">
+                    <?php if($adList[5] != null): ?><a href="<?php echo ($adList[5][link]); ?>" target="_blank"><img src="<?php echo ($adList[5][path]); ?>"></a><?php endif; ?>
+                    </div>
                 </div>
                 <div class="blank15"></div>
                 <div class="winningBar">
@@ -252,7 +247,9 @@ __EXTENDS_JS__
                         </ul>
                         <h3>获奖公室</h3>
                     </div>
-					<div style="margin-top:10px"><img src="__STATIC__/theme/blue/images/temp/620x80.jpg" width="630" height="80"></div>
+					<div style="margin-top:10px">
+                    <?php if($adList[6] != null): ?><a href="<?php echo ($adList[6][link]); ?>" target="_blank"><img src="<?php echo ($adList[6][path]); ?>"></a><?php endif; ?>
+                    </div>
                 </div>
                 <div class="mtbdBar">
                 	<div class="mtbdInfo">
@@ -439,8 +436,6 @@ __EXTENDS_JS__
         <span class="fr">
             <a href="<?php echo U('help/about');?>">关于我们</a>
             · <a href="<?php echo U('help/contact');?>">联系我们</a>
-            · <a href="<?php echo U('help/agreement');?>">用户条款</a>
-            · <a href="<?php echo U('help/privacy');?>">隐私申明</a>
         </span> 
     </div>
 </div>

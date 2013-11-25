@@ -18,6 +18,36 @@ CREATE TABLE `ik_admin` (
 INSERT INTO `ik_admin` VALUES ('1', 'admin', '670b14728ad9902aecba32e22fa4f6bd', '1', '127.0.0.1', '1369661202', 'admin@admin.com', '1');
 
 
+DROP TABLE IF EXISTS `ik_home_info`;
+CREATE TABLE `ik_home_info` (
+  `infoid` int(11) NOT NULL AUTO_INCREMENT,
+  `infokey` char(32) NOT NULL DEFAULT '',
+  `infocontent` text NOT NULL,
+  PRIMARY KEY (`infoid`),
+  UNIQUE KEY `infokey` (`infokey`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- 转存表中的数据 `ik_home_info`
+--
+
+INSERT INTO `ik_home_info` (`infoid`, `infokey`, `infocontent`) VALUES
+(1, 'about', '<h2>爱客网（IKPHP.COM）</h2>
+<p  style="margin:5px 0px">爱客网是开放、多元的泛科技兴趣社区，并提供负责任、有智趣的科技内容。你可以在这里：</p> 
+<ul style="margin:5px 0px">
+<li style="list-style: disc inside none;">依兴趣关注不同的小站和小组，阅读有意思的科技内容；</li> 
+<li style="list-style: disc inside none;">在"爱客问答"里提出困惑你的科技问题，或提供靠谱的答案；</li> 
+<li style="list-style: disc inside none;">关注各个门类和领域的爱客达人，加入兴趣小组讨论，分享智趣话题。</li> 
+</ul>      
+<p  style="margin:5px 0px">爱客网的创始人是小麦，他是一位IT爱好者；热衷于PHP和前端开发，经过不懈的努力和追求；他在不断的完善爱客网；为广大爱好互联网科技者提供点点贡献。</p>
+<p  style="margin:5px 0px">爱客网(IKPHH)社区将不断完善社区系统的建设，以简单和高扩展的形式为用户提供各种不同功能的社区应用，爱客网(IKPHH)开源社区将不断满足用户对社区建设和运营等方面的需求。</p>
+<p  style="margin:5px 0px">爱客网是一个非盈利性个人网站， 它是在不违背社会主义道德底线的公益网站！它有着和其他社区同仁一样的激情！</p>
+<p  style="margin:5px 0px">官方网站：<a href="http://www.ikphp.com/">http://www.ikphp.com</a></p>'),
+(2, 'contact', '<p>Email:160780470#qq.com(#换@)</p>\r\n<p>QQ号:160780470</p>\r\n<p>QQ群:141611512 、288584398</p>\r\n<p>Location:北京 朝阳区 </p>'),
+(3, 'agreement', '<p>1、爱客网(IKPHP)开源社区免费开源</p>\r\n<p>2、你可以免费使用爱客网(IKPHP)开源社区</p>\r\n<p>3、你可以在爱客网(IKPHP)开源社区基础上进行二次开发和修改</p>\r\n<p>4、你可以拿爱客网(IKPHP)开源社区建设你的商业运营网站</p>\r\n\r\n<p>5、在爱客网(IKPHP)开源社区未进行商业运作之前，爱客网(IKPHP)开源社区(小麦)将拥有对爱客网(IKPHP)开源社区的所有权，任何个人，公司和组织不得以任何形式和目的侵犯爱客网(IKPHP)开源社区的版权和著作权</p>\r\n<p>6、爱客网(IKPHP)开源社区拥有对此协议的修改和不断完善。</p>'),
+(4, 'privacy', '<p>爱客网(IKPHP)开源社区（ikphp.com）以此声明对本站用户隐私保护的许诺。爱客网(IKPHP)开源社区的隐私声明正在不断改进中，随着本站服务范围的扩大，会随时更新隐私声明。我们欢迎你随时查看隐私声明。</p>');
+
+
 -- ----------------------------
 -- Table structure for `ik_area`
 -- ----------------------------
@@ -375,6 +405,34 @@ CREATE TABLE `ik_article_cate` (
 
 -- --------------------------------------------------------
 
+
+DROP TABLE IF EXISTS `ik_prize`;
+CREATE TABLE `ik_prize` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '文章ID',
+  `userid` int(11) NOT NULL DEFAULT '0' COMMENT '用户id',
+  `catename` char(32) NOT NULL DEFAULT '' COMMENT '分类名称',
+  `title` char(64) NOT NULL DEFAULT '' COMMENT '标题',
+  `content` text NOT NULL COMMENT '内容',
+  `postip` varchar(15) NOT NULL DEFAULT '' COMMENT '发布者ip',
+  `newsauthor` varchar(20) NOT NULL DEFAULT '' COMMENT '作者',
+  `newsfrom` varchar(50) NOT NULL DEFAULT '' COMMENT '来源',
+  `newsfromurl` varchar(150) NOT NULL DEFAULT '' COMMENT '来源连接',  
+  `count_comment` int(11) NOT NULL DEFAULT '0' COMMENT '回复统计',
+  `count_view` int(11) NOT NULL DEFAULT '0' COMMENT '展示数',
+  `photoid` int(11) NOT NULL DEFAULT '0' COMMENT '文章主图id',
+  `orderid` int(11) NOT NULL DEFAULT '0' COMMENT '排序id',  
+  `isphoto` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否有图片',
+  `isvideo` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否有视频',  
+  `istop` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否置顶',
+  `isshow` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否显示',
+  `iscomment` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否允许评论',
+  `isdigest` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否精华帖子',
+  `isaudit` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否审核', 
+  `addtime` int(11) NOT NULL DEFAULT '0' COMMENT '发布时间',
+  `uptime` int(11) NOT NULL DEFAULT '0' COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  KEY `userid` (`userid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 
 DROP TABLE IF EXISTS `ik_images`;

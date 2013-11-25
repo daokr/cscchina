@@ -41,8 +41,8 @@
 <?php if($ik == 'prize'): ?><li class="treemenu_on">
     <a style="outline:none;" hidefocus="true" href="javascript:void(0)" class="actuator">评奖管理</a>
     <ul class="submenu" style="display: block;">
-     <li><a style="outline:none;" hidefocus="true" class="submenuB" href="<?php echo U('prize/news');?>" target="MainIframe">评奖新闻</a></li>
-     <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('prize/reports');?>" target="MainIframe">评奖媒体报道</a></li>
+     <li><a style="outline:none;" hidefocus="true" class="submenuB" href="<?php echo U('prize/manage',array('catename'=>'news'));?>" target="MainIframe">评奖新闻</a></li>
+     <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('prize/manage',array('catename'=>'reports'));?>" target="MainIframe">评奖媒体报道</a></li>
      <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('prize/medias');?>" target="MainIframe">合作媒体LOGO</a></li>
     </ul>
 </li><?php endif; ?>
@@ -70,5 +70,13 @@
     <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('forum/leaders');?>" target="MainIframe">本届论坛嘉宾</a></li>
     <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('forum/companys');?>" target="MainIframe">本届合作企业LOGO</a></li>
     <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('history/hislist');?>" target="MainIframe">往届回顾列表</a></li>
+    </ul>
+</li><?php endif; ?>
+
+<?php if($ik == 'friends'): ?><li class="treemenu_on">
+    <a style="outline:none;" hidefocus="true" href="javascript:void(0)" class="actuator">友情链接管理</a>
+    <ul class="submenu" style="display: block;">
+    <li><a style="outline:none;" hidefocus="true" class="submenuB" href="<?php echo U('friends/hislist');?>" target="MainIframe">友情链接列表</a></li>
+    <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('friends/manage',array('ik'=>'add'));?>" target="MainIframe">添加新链接</a></li>
     </ul>
 </li><?php endif; ?>

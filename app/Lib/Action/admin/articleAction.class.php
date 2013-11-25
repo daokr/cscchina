@@ -45,10 +45,11 @@ class articleAction extends backendAction {
 		$map['cateid'] = $cateid;
 		$map['isaudit'] = $isaudit;
 		//显示列表
-		$pagesize = 20;
+		$pagesize = 20;  
 		$count = $this->item_mod->where($map)->order('addtime desc')->count('itemid');
 		$pager = $this->_pager($count, $pagesize);
 		$arrArticleItem =  $this->item_mod->where($map)->order('addtime desc')->limit($pager->firstRow.','.$pager->listRows)->select();
+		
 		foreach($arrArticleItem as $key=>$item){
 			$arrArticle [] = $item;
 			$arrArticle [$key]['cate'] = $this->cate_mod->getOneCate($item['cateid']);
@@ -57,10 +58,10 @@ class articleAction extends backendAction {
 		}
 		// 未审核数目
 		$count_isaudit = $this->item_mod->where(array('isaudit'=>'1'))->count('itemid');
-		
+	
 		
 		$this->assign('pageUrl', $pager->fshow());
-		$this->assign ( 'arrArticle', $arrArticle );
+		$this->assign ( 'arrArticles', $arrArticle );
 		$this->assign ( 'count_isaudit', $count_isaudit );
 		$this->assign ( 'isaudit', $isaudit );
 		

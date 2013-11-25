@@ -40,8 +40,13 @@ function error(c){$.dialog({icon: 'error',content: '<font  style="font-size:14px
 		<th>广告位置：</th>
 		<td>
         	<select name="posid">
-            	<option value="1">首页位置1</option>
-                <option value="2">首页位置2</option>
+            	<option  value="1" <?php if($strAd[posid] == 1): ?>selected<?php endif; ?> >首页位置1 298x74</option>
+                <option value="2" <?php if($strAd[posid] == 2): ?>selected<?php endif; ?>>首页位置2 298x74</option>
+                <option value="3" <?php if($strAd[posid] == 3): ?>selected<?php endif; ?>>首页位置3 298x74</option>
+                <option value="4" <?php if($strAd[posid] == 4): ?>selected<?php endif; ?>>首页位置4 980x130</option>
+                <option value="5" <?php if($strAd[posid] == 5): ?>selected<?php endif; ?>>首页位置5 980x130</option>
+                <option value="6" <?php if($strAd[posid] == 6): ?>selected<?php endif; ?>>首页位置6 620x80</option>
+                <option value="7" <?php if($strAd[posid] == 7): ?>selected<?php endif; ?>>首页位置7 620x80</option>
             </select>
         </td>
 	</tr>     
