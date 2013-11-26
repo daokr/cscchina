@@ -1,15 +1,25 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE HTML>
 <html>
 <head>
-<title><?php echo C('ik_site_title');?> - <?php echo C('ik_site_subtitle');?></title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="<?php echo C('ik_site_keywords');?>" /> 
-<meta name="description" content="<?php echo C('ik_site_desc');?>" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title><?php echo ($seo["title"]); ?> - <?php echo ($seo["subtitle"]); ?></title>
+<meta name="keywords" content="<?php echo ($seo["keywords"]); ?>" /> 
+<meta name="description" content="<?php echo ($seo["description"]); ?>" /> 
 <link rel="shortcut icon" href="__STATIC__/public/images/fav.ico" type="image/x-icon">
-<meta name="robots" content="all" />
-<meta name="author" content="Powered by <?php echo (IKPHP_SITENAME); ?>" />
-<meta name="Copyright" content="Powered by <?php echo (IKPHP_SITENAME); ?>" />
 <style>__SITE_THEME_CSS__</style>
+<!--[if gte IE 7]><!-->
+    <link href="__STATIC__/public/js/dialog/skins5/idialog.css" rel="stylesheet" />
+<!--<![endif]-->
+<!--[if lt IE 7]>
+    <link href="__STATIC__/public/js/dialog/skins5/idialog.css" rel="stylesheet" />
+<![endif]-->
+<script>var siteUrl = '__SITE_URL__';</script>
+<script src="__STATIC__/public/js/jquery.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="__STATIC__/public/js/html5.js"></script>
+<![endif]-->
+<script src="__STATIC__/public/js/dialog/jquery.artDialog.min5.js" type="text/javascript"></script> 
+__EXTENDS_JS__
 </head>
 
 <body>
@@ -54,28 +64,58 @@
     </div>
 </div>
 </header>
-<div style="margin:150px auto; width:500px;">
-  <img src="__STATIC__/public/images/ik_error.gif" style="float:left;">
-  <ul style="margin-left:10px; list-style-type:none; list-style-image: none; list-style-position:outside;">
-    <li style="font-size:14px; line-height: 32px; padding-left:30px"><?php echo ($error); ?></li>
-    <li style="color:#666;line-height: 10px;">&nbsp;</li>
+<div class="midder">
+	<div class="mc">
+		<aside class="w190 fl">
+			<section class="categories">
+				<div class="hd">
+					<h3>全部分类</h3>
+				</div>
+				<ul class="list categories-list">
+                   
+					<li><a href="<?php echo U('prize/category',array('catename'=>'news'));?>">评奖新闻</a></li>
+                    <li><a href="<?php echo U('prize/category',array('catename'=>'reports'));?>">媒体报道</a></li>
+					
+				</ul>
+			</section>
 
-    <li style="color:#666;"> 
-        &gt; <span id="f3s">3</span>秒后 <a href="<?php echo ($jumpUrl); ?>">点击返回</a>
-        <script type="text/javascript">
-            (function(){
-                var secs=5,si=setInterval(function(){
-                    if(--secs){
-                        document.getElementById('f3s').innerHTML = secs;
-                    }
-                    else{
-                        location.href="<?php echo ($jumpUrl); ?>";clearInterval(si);
-                    }
-            }, 1000)})();
-        </script>
- 	</li>
+		</aside>
+		<article class="w770 fr">
+			<section>
+				<div class="hd tag-heading">
+					<h3 class="the-tag-name"><?php echo ($seo["title"]); ?></h3>
+				</div>
 
-  </ul>
+				<div class="bd">
+					<ul class="list-lined article-list">
+						<?php if(is_array($arrArticle)): foreach($arrArticle as $key=>$item): ?><li class="item">
+							<div class="title">
+								<a href="<?php echo U('prize/show',array('id'=>$item[id]));?>"><?php echo ($item[title]); ?></a>
+							</div>
+                           <?php if($item[photo]): ?><div class="cover">
+                                <a class="pic" href="<?php echo U('article/show',array('id'=>$item[aid]));?>">
+									<img src="<?php echo ($item[photo][simg]); ?>" />
+								</a> 
+							</div><?php endif; ?>                           
+							<div class="info">
+								<div class="article-desc-brief">
+									<?php echo getsubstrutf8(t($item[content]),0,150); ?>...
+                                    <a href="<?php echo U('article/show',array('id'=>$item[aid]));?>">（更多）</a>
+								</div>
+							</div>
+							<a href="<?php echo U('people/index',array('id'=>$item[user][doname]));?>"><?php echo ($item[user][username]); ?></a> <span class="time">发表于 <?php echo date('Y-m-d H:i',$item[addtime]) ?>  | 浏览 <?php echo ($item[count_view]); ?></span> 
+						</li><?php endforeach; endif; ?>
+
+					</ul>
+				</div>
+
+
+			</section>
+            
+             <div class="page"><?php echo ($pageUrl); ?></div>   
+             
+		</article>
+	</div>
 </div>
 <!--footer-->
 <footer>

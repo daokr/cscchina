@@ -184,7 +184,68 @@ class prizeAction extends backendAction {
 		}
 	}	
 	public function medias(){
+		$lists = D('photos')->getPhotos('medias');
+		$this->assign('lists',$lists);
+		$this->title ( 'LOGO列表' );
+		$this->display();
+	}
+	public function addmedias(){
+		$type = $this->_get('type','trim','');
 		
+		if($type == 'n'){
+			if(IS_POST){
+				//上传
+				$arrUpload = D('images')->addPhoto($_FILES['picfile'],'medias');
+				
+				if($arrUpload){
+					$arrData = array(
+							'type' => 'medias',
+							'name' => $arrUpload['filename'],
+							'path' => $arrUpload['path'],
+							'size' => $arrUpload['size'],
+							'addtime' => time(),
+					);
+					
+					if(!false == D('photos')->create ($arrData)){
+						$photoid = D('photos')->add();
+						$this->redirect('prize/medias');
+					}
+				}
+			}
+		}
+		$this->assign('type',$type);
+		$this->title ( '添加LOGO' );
+		$this->display();
+	}
+	public function ajaxupload(){
+		if(IS_POST){
+			$type = $this->_post('type','trim');
+			//上传
+			$arrUpload = D('images')->addPhoto($_FILES['Filedata'],$type);
+			if($arrUpload){
+				$arrData = array(
+						'type' => 'medias',
+						'name' => $arrUpload['filename'],
+						'path' => $arrUpload['path'],
+						'size' => $arrUpload['size'],
+						'addtime' => time(),
+				);
+					
+				if(!false == D('photos')->create ($arrData)){
+					$photoid = D('photos')->add();
+				}
+			}
+			
+		}else{
+			$this->error('非法操作');
+		}
+	}
+	public function deleteimg(){
+		$id = $this->_get ( 'id' , 'intval'); //文章id
+		$type = $this->_get('type','trim');
+		// 执行删除
+		D('photos')->where(array('id'=>$id,'type'=>$type))->delete();
+		$this->success('删除成功！',U('prize/medias'));
 	}
 
 }

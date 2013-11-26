@@ -10,7 +10,19 @@ class prizeModel extends Model {
 			array('title','','标题已经存在',0,'unique',self::MODEL_INSERT),
 			
 	);
-
+	// 获取发表的文章
+	public function getAll($catename,$limit){
+		$where['catename'] = $catename;
+		$strItem = $this->field('id')->where($where)->order('orderid asc')->limit($limit)->select();
+		if(!empty($strItem)){
+			foreach($strItem as $item){
+				$result[] = $this->getOneArticle($item['id']);
+			}
+			return $result;
+		}else{
+			return false;
+		}		
+	}
 	public function getOneArticle($id){
 		$where['id'] = $id;
 		$strArticle = $this->where($where)->find(); 

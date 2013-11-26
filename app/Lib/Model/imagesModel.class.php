@@ -88,5 +88,19 @@ class imagesModel extends Model {
 			return false;
 		}
 	}
+	public function addPhoto($file,$albumid) {
+		$dir = $albumid;
+		$result = savelocalfile($file,$dir,
+				array (
+						'width'=>C('ik_simg.width').','.C('ik_mimg.width').','.C('ik_bimg.width'),
+						'height'=>C('ik_simg.height').','.C('ik_mimg.height').','.C('ik_bimg.height')
+				),
+				array('jpg','jpeg','png','gif'));
+		if (!$result ['error']) {
+			return $result;
+		}else{
+			return false;
+		}
+	}
 
 }

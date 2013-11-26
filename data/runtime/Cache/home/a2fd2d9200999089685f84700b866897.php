@@ -1,15 +1,25 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE HTML>
 <html>
 <head>
-<title><?php echo C('ik_site_title');?> - <?php echo C('ik_site_subtitle');?></title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="<?php echo C('ik_site_keywords');?>" /> 
-<meta name="description" content="<?php echo C('ik_site_desc');?>" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title><?php echo ($seo["title"]); ?> - <?php echo ($seo["subtitle"]); ?></title>
+<meta name="keywords" content="<?php echo ($seo["keywords"]); ?>" /> 
+<meta name="description" content="<?php echo ($seo["description"]); ?>" /> 
 <link rel="shortcut icon" href="__STATIC__/public/images/fav.ico" type="image/x-icon">
-<meta name="robots" content="all" />
-<meta name="author" content="Powered by <?php echo (IKPHP_SITENAME); ?>" />
-<meta name="Copyright" content="Powered by <?php echo (IKPHP_SITENAME); ?>" />
 <style>__SITE_THEME_CSS__</style>
+<!--[if gte IE 7]><!-->
+    <link href="__STATIC__/public/js/dialog/skins5/idialog.css" rel="stylesheet" />
+<!--<![endif]-->
+<!--[if lt IE 7]>
+    <link href="__STATIC__/public/js/dialog/skins5/idialog.css" rel="stylesheet" />
+<![endif]-->
+<script>var siteUrl = '__SITE_URL__';</script>
+<script src="__STATIC__/public/js/jquery.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="__STATIC__/public/js/html5.js"></script>
+<![endif]-->
+<script src="__STATIC__/public/js/dialog/jquery.artDialog.min5.js" type="text/javascript"></script> 
+__EXTENDS_JS__
 </head>
 
 <body>
@@ -54,29 +64,43 @@
     </div>
 </div>
 </header>
-<div style="margin:150px auto; width:500px;">
-  <img src="__STATIC__/public/images/ik_error.gif" style="float:left;">
-  <ul style="margin-left:10px; list-style-type:none; list-style-image: none; list-style-position:outside;">
-    <li style="font-size:14px; line-height: 32px; padding-left:30px"><?php echo ($error); ?></li>
-    <li style="color:#666;line-height: 10px;">&nbsp;</li>
 
-    <li style="color:#666;"> 
-        &gt; <span id="f3s">3</span>秒后 <a href="<?php echo ($jumpUrl); ?>">点击返回</a>
-        <script type="text/javascript">
-            (function(){
-                var secs=5,si=setInterval(function(){
-                    if(--secs){
-                        document.getElementById('f3s').innerHTML = secs;
-                    }
-                    else{
-                        location.href="<?php echo ($jumpUrl); ?>";clearInterval(si);
-                    }
-            }, 1000)})();
-        </script>
- 	</li>
+<div class="midder">
+<div class="mc">
+    <div class="cleft">
+        <div class="art-body">
+            <h1 class="title"><?php echo ($strArticle[title]); ?></h1>
+            <div class="art-info">
+            作者：<?php echo ($strArticle[newsauthor]); ?>&nbsp;&nbsp;<?php echo date('Y-m-d H:i',$strArticle[addtime]) ?>&nbsp;&nbsp; 浏览<?php echo ($strArticle[count_view]); ?>次&nbsp;&nbsp;
+            </div>
+        
+            <div class="art-text">
+                <?php echo ($strArticle[content]); ?>
+            </div>
+            <div class="control-btns">
+            </div>
+            
+      	  <div class="clear"></div>
+          <div class="art-titles"> 
+             <span class="fl"><?php if(!empty($upArticle)): ?>上一篇：<a href="<?php echo U('prize/show',array('id'=>$upArticle['id']));?>"><?php echo ($upArticle['title']); ?></a><?php endif; ?></span>
+             <span class="fr"><?php if(!empty($downArticle)): ?>下一篇：<a href="<?php echo U('prize/show',array('id'=>$downArticle['id']));?>"><?php echo ($downArticle['title']); ?></a><?php endif; ?></span>
+          </div>
+      </div>
+    
+    
+    
+    </div>
 
-  </ul>
+
+    <div class="cright">
+    
+        
+        
+    </div>
+
 </div>
+</div>
+
 <!--footer-->
 <footer>
 <div id="footer">

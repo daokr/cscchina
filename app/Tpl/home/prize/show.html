@@ -24,8 +24,8 @@
             
       	  <div class="clear"></div>
           <div class="art-titles"> 
-             <span class="fl"><if condition="!empty($upArticle)">上一篇：<a href="{:U('article/show',array('id'=>$upArticle['aid']))}">{$upArticle['title']}</a></if></span>
-             <span class="fr"><if condition="!empty($downArticle)">下一篇：<a href="{:U('article/show',array('id'=>$downArticle['aid']))}">{$downArticle['title']}</a></if></span>
+             <span class="fl"><if condition="!empty($upArticle)">上一篇：<a href="{:U('prize/show',array('id'=>$upArticle['id']))}">{$upArticle['title']}</a></if></span>
+             <span class="fr"><if condition="!empty($downArticle)">下一篇：<a href="{:U('prize/show',array('id'=>$downArticle['id']))}">{$downArticle['title']}</a></if></span>
           </div>
       </div>
     

@@ -198,15 +198,10 @@ __EXTENDS_JS__
         </div>
         <div class="mod2Box">
         		<div id="pjxwBar">
-                	<h2><span class="more"><a href="#">more</a></span>评奖新闻</h2>
+                	<h2><span class="more"><a href="<?php echo U('prize/category',array('catename'=>'news'));?>" target="_blank">more</a></span>评奖新闻</h2>
                     <div class="bd">
                     	<ul>
-                            	<li><a href="#">一是主题全面。这次会议确定的主</a></li>
-                                <li><a href="#">一是主题全面。这次会议确定的主</a></li>
-                                <li><a href="#">一是主题全面。这次会议确定的主</a></li>
-                                <li><a href="#">一是主题全面。这次会议确定的主</a></li>
-                                <li><a href="#">一是主题全面。这次会议确定的主</a></li>
-                                 <li><a href="#">一是主题全面。这次会议确定的主</a></li>
+                         <?php if(is_array($pjxw_list)): foreach($pjxw_list as $key=>$item): ?><li><a href="<?php echo U('prize/show',array('id'=>$item['id']));?>" title="<?php echo ($item[title]); ?>"><?php echo ($item[title]); ?></a></li><?php endforeach; endif; ?>
                         </ul>
                     </div>
                     <div class="modLag">
@@ -253,27 +248,15 @@ __EXTENDS_JS__
                 </div>
                 <div class="mtbdBar">
                 	<div class="mtbdInfo">
-                    	<h2><em><a href="#">more</a></em><span class="mtbd">媒体报道</span><i></i></h2>
+                    	<h2><em><a href="<?php echo U('prize/category',array('catename'=>'reports'));?>" target="_blank">more</a></em><span class="mtbd">媒体报道</span><i></i></h2>
                         <ul class="bd">
-                            	<li><a href="#">环保部官员：8年前反映灰霾越来越重 未引起重视</a></li>
-                            	<li><a href="#">国资委深化国企改革方案 央企红利上缴比例或至30%</a></li>
-                            	<li><a href="#">专家：养老双轨制并轨职工或还是吃亏</a></li>
-                            	<li><a href="#">菲灾后救援吃力 政府称不可能每个人都获救援</a></li>
-                            	<li><a href="#">知情人：季建业在上百人面前像骂儿子一样骂下属</a></li>
+                         <?php if(is_array($mtbd_list)): foreach($mtbd_list as $key=>$item): ?><li><a href="<?php echo U('prize/show',array('id'=>$item['id']));?>" title="<?php echo ($item[title]); ?>"><?php echo ($item[title]); ?></a></li><?php endforeach; endif; ?>
                         </ul>
                     </div>
                     <div class="hezuoInfo">
                     		<h2>合作媒体</h2>
                             <div class="bd">
-                            	<a href="#"><img src="__STATIC__/theme/blue/images/mt/1.png"></a>
-                                <a href="#"><img src="__STATIC__/theme/blue/images/mt/2.png"></a>
-                                <a href="#"><img src="__STATIC__/theme/blue/images/mt/3.png"></a>
-								<a href="#"><img src="__STATIC__/theme/blue/images/mt/1.png"></a>
-                                <a href="#"><img src="__STATIC__/theme/blue/images/mt/2.png"></a>
-                                <a href="#"><img src="__STATIC__/theme/blue/images/mt/3.png"></a>
-								<a href="#"><img src="__STATIC__/theme/blue/images/mt/1.png"></a>
-                                <a href="#"><img src="__STATIC__/theme/blue/images/mt/2.png"></a>
-                                <a href="#"><img src="__STATIC__/theme/blue/images/mt/3.png"></a>                                
+                               <?php if(is_array($medias)): foreach($medias as $key=>$item): ?><img src="<?php echo ($item[simg]); ?>" width="80" height="42"><?php endforeach; endif; ?>
                             </div>
                     </div>
                 </div>

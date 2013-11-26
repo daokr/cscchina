@@ -24,9 +24,9 @@
 <foreach name="arrArticles" item="item">
 <tr class="odd">
 <td><input type="checkbox" value="{$item[id]}" name="itemid"></td>
-<td>{$item[itemid]}</td>
+<td>{$item[id]}</td>
 <td><a href="index.php?m=prize&a=show&id={$item[id]}" target="_blank">{$item[title]}</a></td>
-<td>{$item[cate][catename]}</td>
+<td>{$item[catename]}</td>
 <td>{$item[user][username]}</td>
 <td>{$item[addtime]}</td>
 <td>

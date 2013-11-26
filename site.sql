@@ -521,3 +521,16 @@ CREATE TABLE `ik_history` (
   PRIMARY KEY (`id`),
   KEY `cateid` (`cateid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+DROP TABLE IF EXISTS `ik_photos`;
+CREATE TABLE `ik_photos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id',
+  `type` char(64) NOT NULL DEFAULT '0' COMMENT '日记或帖子或其他组件',
+  `name` char(64) NOT NULL DEFAULT '' COMMENT '文件名',
+  `path` char(32) NOT NULL DEFAULT '' COMMENT '源文件路径',
+  `size` char(32) NOT NULL DEFAULT '',
+  `title` char(120) NOT NULL DEFAULT '' COMMENT '图片描述',  
+  `addtime` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `type` (`type`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;

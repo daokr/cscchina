@@ -53,9 +53,9 @@ function error(c){$.dialog({icon: 'error',content: '<font  style="font-size:14px
 </tr>
 <?php if(is_array($arrArticles)): foreach($arrArticles as $key=>$item): ?><tr class="odd">
 <td><input type="checkbox" value="<?php echo ($item[id]); ?>" name="itemid"></td>
-<td><?php echo ($item[itemid]); ?></td>
+<td><?php echo ($item[id]); ?></td>
 <td><a href="index.php?m=prize&a=show&id=<?php echo ($item[id]); ?>" target="_blank"><?php echo ($item[title]); ?></a></td>
-<td><?php echo ($item[cate][catename]); ?></td>
+<td><?php echo ($item[catename]); ?></td>
 <td><?php echo ($item[user][username]); ?></td>
 <td><?php echo ($item[addtime]); ?></td>
 <td>

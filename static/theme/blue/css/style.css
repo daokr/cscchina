@@ -125,8 +125,8 @@ background:url(../images/layout/winning_tit.jpg) no-repeat 0px 0px;}
 .hezuoInfo{ padding-top:2px}
 .hezuoInfo h2{ display:block; width:68px; height:18px; line-height:999px; overflow:hidden; margin:10px auto; background:url(../images/layout/hezuo_tit.png) no-repeat 0px 0px;}
 .hezuoInfo .bd{ height:150px; overflow:hidden}
-.hezuoInfo .bd a{ display:block; float:left; width:90px; height:45px; text-align:center; overflow:hidden; margin:3px 5px;}
-
+.hezuoInfo .bd a{ display:block;  width:90px; height:45px; text-align:center; overflow:hidden;}
+.hezuoInfo .bd img{ display:block; margin:3px 5px; float:left;}
 
 .hezuoqiyeBar{ width:300px; float:left; background:url(../images/layout/mtbd_bg.gif) no-repeat 0px 0px; height:235px;box-shadow: 0px 1px 2px rgba(0,0,0,0.2);}
 .hezuoqiyeBar h2{ display:block; width:68px; height:18px; line-height:999px; overflow:hidden; margin:20px auto; background:url(../images/layout/hezuoqy_tit.png) no-repeat 0px 0px;}

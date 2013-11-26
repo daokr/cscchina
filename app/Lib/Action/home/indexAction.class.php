@@ -8,6 +8,8 @@ class indexAction extends frontendAction {
 		parent::_initialize ();
 		$this->article_mod = D('article');
 		$this->item_mod = D ( 'article_item' );
+		$this->prize_mod = D ( 'prize' );
+		$this->photos_mod = D('photos'); 
 	}
 	public function index() {
 		
@@ -68,6 +70,18 @@ class indexAction extends frontendAction {
 		$adList[5] = D('ad')->where(array('posid'=>6))->find();
 		$adList[6] = D('ad')->where(array('posid'=>7))->find();
 		$this->assign ( 'adList', $adList );	
+		
+		//评奖新闻
+		$pjxw_list = $this->prize_mod->getAll('news',6);
+		$this->assign ( 'pjxw_list', $pjxw_list );
+
+		//媒体报道
+		$mtbd_list = $this->prize_mod->getAll('reports',5);
+		$this->assign ( 'mtbd_list', $mtbd_list );
+
+		//合作logo
+		$medias = $this->photos_mod->getPhotos('medias');
+		$this->assign ( 'medias', $medias );
 		
 		$this->_config_seo ();
 		$this->display();
