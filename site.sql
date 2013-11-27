@@ -534,3 +534,31 @@ CREATE TABLE `ik_photos` (
   PRIMARY KEY (`id`),
   KEY `type` (`type`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+DROP TABLE IF EXISTS `ik_forum`;
+CREATE TABLE `ik_forum` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '文章ID',
+  `userid` int(11) NOT NULL DEFAULT '0' COMMENT '用户id',
+  `catename` char(32) NOT NULL DEFAULT '' COMMENT '分类名称',
+  `title` char(64) NOT NULL DEFAULT '' COMMENT '标题',
+  `content` text NOT NULL COMMENT '内容',
+  `postip` varchar(15) NOT NULL DEFAULT '' COMMENT '发布者ip',
+  `newsauthor` varchar(20) NOT NULL DEFAULT '' COMMENT '作者',
+  `newsfrom` varchar(50) NOT NULL DEFAULT '' COMMENT '来源',
+  `newsfromurl` varchar(150) NOT NULL DEFAULT '' COMMENT '来源连接',  
+  `count_comment` int(11) NOT NULL DEFAULT '0' COMMENT '回复统计',
+  `count_view` int(11) NOT NULL DEFAULT '0' COMMENT '展示数',
+  `photoid` int(11) NOT NULL DEFAULT '0' COMMENT '文章主图id',
+  `orderid` int(11) NOT NULL DEFAULT '0' COMMENT '排序id',  
+  `isphoto` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否有图片',
+  `isvideo` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否有视频',  
+  `istop` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否置顶',
+  `isshow` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否显示',
+  `iscomment` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否允许评论',
+  `isdigest` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否精华帖子',
+  `isaudit` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否审核', 
+  `addtime` int(11) NOT NULL DEFAULT '0' COMMENT '发布时间',
+  `uptime` int(11) NOT NULL DEFAULT '0' COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  KEY `userid` (`userid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;

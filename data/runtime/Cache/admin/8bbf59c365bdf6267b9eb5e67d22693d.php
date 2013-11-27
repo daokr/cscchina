@@ -66,8 +66,8 @@
 <?php if($ik == 'forum'): ?><li class="treemenu_on">
     <a style="outline:none;" hidefocus="true" href="javascript:void(0)" class="actuator">论坛管理</a>
     <ul class="submenu" style="display: block;">
-    <li><a style="outline:none;" hidefocus="true" class="submenuB" href="<?php echo U('forum/leaders');?>" target="MainIframe">本届主题论坛</a></li>
-    <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('forum/leaders');?>" target="MainIframe">本届论坛嘉宾</a></li>
+    <li><a style="outline:none;" hidefocus="true" class="submenuB" href="<?php echo U('forum/manage',array('catename'=>'subject'));?>" target="MainIframe">本届主题论坛</a></li>
+    <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('forum/manage',array('catename'=>'leaders'));?>" target="MainIframe">本届论坛嘉宾</a></li>
     <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('forum/companys');?>" target="MainIframe">本届合作企业LOGO</a></li>
     <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('history/hislist');?>" target="MainIframe">往届回顾列表</a></li>
     </ul>
