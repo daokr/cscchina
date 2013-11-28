@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<include file="public:head" />
+<script src="__STATIC__/public/js/uploadify/jquery.uploadify.v2.1.4.js" type="text/javascript"></script>
+
+<script src="__STATIC__/public/js/uploadify/swfobject.js" type="text/javascript"></script>
+
+<link type="text/css" rel="stylesheet" href="__STATIC__/public/js/uploadify/uploadify2.css" />
+
+<script type="text/javascript">
+	var objdata = {'type': 'company'};
+	var jumpurl = "{:U('forum/medias')}";
+$(document).ready(function()
+{		
+	$("#uploadify").uploadify({
+		'uploader': siteUrl + 'static/public/js/uploadify/uploadify.swf',
+		'expressInstall': siteUrl + 'static/public/js/uploadify/expressInstall.swf',
+		'script': 'index.php?g=admin&m=forum&a=ajaxupload',
+		'scriptData':objdata,
+		'method':'POST', 
+		'cancelImg': siteUrl+'static/public/js/uploadify/cancel2.png',
+		'folder': 'UploadFile',
+		'queueID': 'fileQueue',
+		'auto': false,
+		'multi': true,
+		'buttonText': '',
+		'buttonImg': siteUrl+'static/public/js/uploadify/upload-btns.png',		
+		'fileDesc':'jpg,gif,png图片格式',
+		'fileExt':'*.jpg;*.gif;*.png',
+		'onAllComplete' : function(event,data) {
+			window.location = jumpurl;
+		}
+
+	});
+
+})
+</script>
+</head>
+<body>
+<!--main-->
+<div class="midder">
+<h2>{$title}</h2>
+
+
+	<if condition="$type neq 'n'">
+            <div class="uploadtype">
+                <div id="fileQueue"></div><br>
+                <input type="file" id="uploadify" />
+                <p style="padding:10px 0;">上传文件只支持：jpg，gif，png格式；上传最大支持1M的图片<br>
+                    提示：每次最多可以批量上传二十张照片，按着 "ctrl" 键可以一次选择多张照片
+                </p>
+                <p style="padding:10px 0;">
+
+                <input type="button" value="开始上传" class="submit" onClick="$('#uploadify').uploadifyUpload()">&nbsp;&nbsp;|&nbsp;&nbsp; 
+                <a href="javascript:$('#uploadify').uploadifyClearQueue()" >取消上传</a>
+                </p>
+                <p><br>无法上传？<a href="{:U('forum/addmedias',array('type'=>'n'))}">使用普通方式上传照片&gt;</a></p>
+       		</div>
+        <else/> 
+            <div class="uploadtype">
+                <p class="pl">你可以上传JPG，JPEG， GIF，PNG，每个文件大小可以到1M。</p><br>
+                <form enctype="multipart/form-data" action="{:U('forum/addmedias',array('type'=>'n'))}" method="post" name="album_upload">
+                
+                  <input type="file" name="picfile">
+                  <input type="hidden" name="typeid" value="0">
+                  <input type="hidden" name="type" value="company">
+                <br><br>
+                <span class="bn-flat"><input type="submit" value="开始上传" name="upload" class="submit" ></span>
+                </form>
+                <p><br><a href="{:U('forum/addmedias')}">使用批量上传方式上传照片&gt;</a></p>      
+            </div>   	
+    	</if>
+
+
+</form>
+
+</div>
+</body>
+</html>

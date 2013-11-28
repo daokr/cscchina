@@ -32,7 +32,7 @@ function error(c){$.dialog({icon: 'error',content: '<font  style="font-size:14px
 <div class="Toolbar_inbox">
 
 
-<a class="btn_a" href="<?php echo U('prize/addmedias');?>">
+<a class="btn_a" href="<?php echo U('forum/addmedias');?>">
 <span>+添加</span>
 </a>    
 </div>
@@ -47,7 +47,7 @@ function error(c){$.dialog({icon: 'error',content: '<font  style="font-size:14px
 <td><img src="<?php echo ($item[simg]); ?>" width="50" /></td>
 <td>
 
-<a href="<?php echo U('prize/deleteimg',array('type'=>$item[type],'id'=>$item[id]));?>" onClick="return confirm('确定要执行删除操作吗？')">[删除]</a> 
+<a href="<?php echo U('forum/deleteimg',array('type'=>$item[type],'id'=>$item[id]));?>" onClick="return confirm('确定要执行删除操作吗？')">[删除]</a> 
 </td>
 <tr><?php endforeach; endif; ?>
 </table>

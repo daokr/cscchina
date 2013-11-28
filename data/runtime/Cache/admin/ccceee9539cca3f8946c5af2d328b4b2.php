@@ -28,13 +28,13 @@ function error(c){$.dialog({icon: 'error',content: '<font  style="font-size:14px
 <body>
 <!--main-->
 <div class="midder">
-<h2><span><a href="<?php echo U('prize/add',array('catename'=>$catename));?>">+添加文章</a></span><?php echo ($title); ?></h2>  
+<h2><span><a href="<?php echo U('forum/add',array('catename'=>$catename));?>">+添加文章</a></span><?php echo ($title); ?></h2>  
 <div class="Toolbar_inbox">
-<a class="btn_a" href="javascript:;" data-url="<?php echo U('prize/ajax_delete',array('ik'=>'article','catename'=>$catename));?>" onclick="Delete(this)">
+<a class="btn_a" href="javascript:;" data-url="<?php echo U('forum/ajax_delete',array('ik'=>'article','catename'=>$catename));?>" onclick="Delete(this)">
 <span>删除选中</span>
 </a>
 
-<a class="btn_a" href="<?php echo U('prize/add',array('catename'=>$catename));?>"  onclick="Audit(this)">
+<a class="btn_a" href="<?php echo U('forum/add',array('catename'=>$catename));?>"  onclick="Audit(this)">
 <span>+添加文章</span>
 </a>    
 </div>
@@ -54,7 +54,7 @@ function error(c){$.dialog({icon: 'error',content: '<font  style="font-size:14px
 <?php if(is_array($arrArticles)): foreach($arrArticles as $key=>$item): ?><tr class="odd">
 <td><input type="checkbox" value="<?php echo ($item[id]); ?>" name="itemid"></td>
 <td><?php echo ($item[id]); ?></td>
-<td><a href="index.php?m=prize&a=show&id=<?php echo ($item[id]); ?>" target="_blank"><?php echo ($item[title]); ?></a></td>
+<td><a href="index.php?m=forum&a=show&id=<?php echo ($item[id]); ?>" target="_blank"><?php echo ($item[title]); ?></a></td>
 <td><?php echo ($item[catename]); ?></td>
 <td><?php echo ($item[user][username]); ?></td>
 <td><?php echo ($item[addtime]); ?></td>
@@ -67,17 +67,17 @@ function error(c){$.dialog({icon: 'error',content: '<font  style="font-size:14px
 <?php if($item[istop] == 1): ?><font color="green">顶</font>&nbsp;<?php endif; ?>
 <?php if($item[isdigest] == 1): ?><font color="blue">头</font><?php endif; ?>
 </td>
-<td><span class="tdedit" data-id="<?php echo ($item[id]); ?>" data-field="orderid" data-tdtype="edit" data-action="<?php echo U('prize/ajax_setting',array('ik'=>'order','id'=>$item[id]));?>"><?php echo ($item[orderid]); ?></span></td>
+<td><span class="tdedit" data-id="<?php echo ($item[id]); ?>" data-field="orderid" data-tdtype="edit" data-action="<?php echo U('forum/ajax_setting',array('ik'=>'order','id'=>$item[id]));?>"><?php echo ($item[orderid]); ?></span></td>
 <td>
-<a href="<?php echo U('prize/editarticle',array('catename'=>$item[catename],'id'=>$item[id]));?>">[编辑]</a> 
+<a href="<?php echo U('forum/editarticle',array('catename'=>$item[catename],'id'=>$item[id]));?>">[编辑]</a> 
 
-<a href="<?php echo U('prize/delarticle',array('catename'=>$item[catename],'id'=>$item[id]));?>" onClick="return confirm('确定要执行删除操作吗？')">[删除]</a> 
+<a href="<?php echo U('forum/delarticle',array('catename'=>$item[catename],'id'=>$item[id]));?>" onClick="return confirm('确定要执行删除操作吗？')">[删除]</a> 
 
 
 
-<?php if($item[istop] == 0): ?><a href="<?php echo U('prize/index',array('ik'=>'istop','catename'=>$item[catename],'id'=>$item[id],'istop'=>'1'));?>">[置顶]</a> 
+<?php if($item[istop] == 0): ?><a href="<?php echo U('forum/index',array('ik'=>'istop','catename'=>$item[catename],'id'=>$item[id],'istop'=>'1'));?>">[置顶]</a> 
 <?php else: ?>
-<a href="<?php echo U('prize/index',array('ik'=>'istop','catename'=>$item[catename],'id'=>$item[id],'istop'=>'0'));?>">[取消置顶]</a><?php endif; ?>
+<a href="<?php echo U('forum/index',array('ik'=>'istop','catename'=>$item[catename],'id'=>$item[id],'istop'=>'0'));?>">[取消置顶]</a><?php endif; ?>
 
 
 </td>

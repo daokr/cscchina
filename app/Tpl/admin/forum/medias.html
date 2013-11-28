@@ -10,7 +10,7 @@
 <div class="Toolbar_inbox">
 
 
-<a class="btn_a" href="{:U('prize/addmedias')}">
+<a class="btn_a" href="{:U('forum/addmedias')}">
 <span>+添加</span>
 </a>    
 </div>
@@ -26,7 +26,7 @@
 <td><img src="{$item[simg]}" width="50" /></td>
 <td>
 
-<a href="{:U('prize/deleteimg',array('type'=>$item[type],'id'=>$item[id]))}" onClick="return confirm('确定要执行删除操作吗？')">[删除]</a> 
+<a href="{:U('forum/deleteimg',array('type'=>$item[type],'id'=>$item[id]))}" onClick="return confirm('确定要执行删除操作吗？')">[删除]</a> 
 </td>
 <tr>
 </foreach>

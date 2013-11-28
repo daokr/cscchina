@@ -108,8 +108,8 @@ class historyAction extends backendAction {
 		}else{
 			// 1科技奖回顾 2论坛回顾
 			$arrType = array(
-					'prize' => array('name'=>'科技评奖','value'=>'1'),
-					'forum' => array('name'=>'创新论坛','value'=>'2'),
+					'forum' => array('name'=>'创新论坛','value'=>'1'),
+					'prize' => array('name'=>'科技评奖','value'=>'2'),
 					);
 			$strCate = $this->cate_mod->where(array('cateid'=>$cateid))->find();
 			$this->title ( $strCate['catename'].' - 添加内容' );

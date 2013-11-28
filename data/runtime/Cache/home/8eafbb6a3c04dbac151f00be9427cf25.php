@@ -71,7 +71,7 @@ __EXTENDS_JS__
         <div class="art-body">
             <h1 class="title"><?php echo ($strArticle[title]); ?></h1>
             <div class="art-info">
-            作者：<a href="<?php echo U('people/index',array('id'=>$strArticle[user][doname]));?>"><?php echo ($strArticle[newsauthor]); ?></a>&nbsp;&nbsp;<?php echo date('Y-m-d H:i',$strArticle[addtime]) ?>&nbsp;&nbsp; 浏览<?php echo ($strArticle[count_view]); ?>次&nbsp;&nbsp;
+            作者：<?php echo ($strArticle[newsauthor]); ?>&nbsp;&nbsp;<?php echo date('Y-m-d H:i',$strArticle[addtime]) ?>&nbsp;&nbsp; 浏览<?php echo ($strArticle[count_view]); ?>次&nbsp;&nbsp;
             </div>
         
             <div class="art-text">

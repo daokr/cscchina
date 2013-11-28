@@ -94,7 +94,7 @@ class forumAction extends backendAction {
 			if($userid>0){
 	
 				$data ['userid'] = $userid;
-				$data ['catename'] = $this->_post ( 'catename', 'trim','news');
+				$data ['catename'] = $this->_post ( 'catename', 'trim','subject');
 				$data ['title'] = $this->_post ( 'title', 'trim' );
 				$data ['addtime'] = time ();
 					
@@ -105,7 +105,7 @@ class forumAction extends backendAction {
 
 
 				if (false === $this->forum_mod->create ($data)) {
-					$this->error ( $this->mod->getError () );
+					$this->error ( $this->forum_mod->getError () );
 				}
 				// 保存当前数据对象
 				$id = $this->forum_mod->add ();
@@ -113,7 +113,7 @@ class forumAction extends backendAction {
 					//更新图片
 					$map['typeid'] = $id;
 					D('images')->updateImage($map,array('type'=>$catename,'typeid'=>0));
-					$this->success ( '新增成功!',U('prize/manage',array('catename'=>$data ['catename'])));
+					$this->success ( '新增成功!',U('forum/manage',array('catename'=>$data ['catename'])));
 				} else {
 					// 失败提示
 					$this->error ( '新增失败!' );
@@ -141,7 +141,7 @@ class forumAction extends backendAction {
 
 			//开始更新
 			$this->forum_mod->where(array('id'=>$id))->save($data);
-			$this->success('保存更新成功！', U('prize/manage',array('catename'=>$data ['catename'])));
+			$this->success('保存更新成功！', U('forum/manage',array('catename'=>$data ['catename'])));
 		}else{
 			$id = $this->_get('id','trim,intval');
 			!empty($id) && $strArt = $this->forum_mod->getOneArticle($id);
@@ -161,7 +161,7 @@ class forumAction extends backendAction {
 		$strArticle = $this->forum_mod->getOneArticle($id);
 		// 执行删除
 		$this->forum_mod->delOneArticle($id);
-		$this->success('删除成功！',U('prize/manage',array('catename'=>$catename)));
+		$this->success('删除成功！',U('forum/manage',array('catename'=>$catename)));
 	}
 	//ajax删除数据
 	public function ajax_delete(){
@@ -184,7 +184,7 @@ class forumAction extends backendAction {
 		}
 	}	
 	public function medias(){
-		$lists = D('photos')->getPhotos('medias');
+		$lists = D('photos')->getPhotos('company');
 		$this->assign('lists',$lists);
 		$this->title ( 'LOGO列表' );
 		$this->display();
@@ -195,11 +195,11 @@ class forumAction extends backendAction {
 		if($type == 'n'){
 			if(IS_POST){
 				//上传
-				$arrUpload = D('images')->addPhoto($_FILES['picfile'],'medias');
+				$arrUpload = D('images')->addPhoto($_FILES['picfile'],'company');
 				
 				if($arrUpload){
 					$arrData = array(
-							'type' => 'medias',
+							'type' => 'company',
 							'name' => $arrUpload['filename'],
 							'path' => $arrUpload['path'],
 							'size' => $arrUpload['size'],
@@ -208,7 +208,7 @@ class forumAction extends backendAction {
 					
 					if(!false == D('photos')->create ($arrData)){
 						$photoid = D('photos')->add();
-						$this->redirect('prize/medias');
+						$this->redirect('forum/medias');
 					}
 				}
 			}
@@ -224,7 +224,7 @@ class forumAction extends backendAction {
 			$arrUpload = D('images')->addPhoto($_FILES['Filedata'],$type);
 			if($arrUpload){
 				$arrData = array(
-						'type' => 'medias',
+						'type' => 'company',
 						'name' => $arrUpload['filename'],
 						'path' => $arrUpload['path'],
 						'size' => $arrUpload['size'],
@@ -245,7 +245,7 @@ class forumAction extends backendAction {
 		$type = $this->_get('type','trim');
 		// 执行删除
 		D('photos')->where(array('id'=>$id,'type'=>$type))->delete();
-		$this->success('删除成功！',U('prize/medias'));
+		$this->success('删除成功！',U('forum/medias'));
 	}
 
 }

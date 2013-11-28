@@ -25,7 +25,7 @@
 <tr class="odd">
 <td><input type="checkbox" value="{$item[id]}" name="itemid"></td>
 <td>{$item[id]}</td>
-<td><a href="index.php?m=prize&a=show&id={$item[id]}" target="_blank">{$item[title]}</a></td>
+<td><a href="index.php?m=forum&a=show&id={$item[id]}" target="_blank">{$item[title]}</a></td>
 <td>{$item[catename]}</td>
 <td>{$item[user][username]}</td>
 <td>{$item[addtime]}</td>
@@ -44,18 +44,18 @@
 <font color="blue">头</font>
 </if>
 </td>
-<td><span class="tdedit" data-id="{$item[id]}" data-field="orderid" data-tdtype="edit" data-action="{:U('prize/ajax_setting',array('ik'=>'order','id'=>$item[id]))}">{$item[orderid]}</span></td>
+<td><span class="tdedit" data-id="{$item[id]}" data-field="orderid" data-tdtype="edit" data-action="{:U('forum/ajax_setting',array('ik'=>'order','id'=>$item[id]))}">{$item[orderid]}</span></td>
 <td>
-<a href="{:U('prize/editarticle',array('catename'=>$item[catename],'id'=>$item[id]))}">[编辑]</a> 
+<a href="{:U('forum/editarticle',array('catename'=>$item[catename],'id'=>$item[id]))}">[编辑]</a> 
 
-<a href="{:U('prize/delarticle',array('catename'=>$item[catename],'id'=>$item[id]))}" onClick="return confirm('确定要执行删除操作吗？')">[删除]</a> 
+<a href="{:U('forum/delarticle',array('catename'=>$item[catename],'id'=>$item[id]))}" onClick="return confirm('确定要执行删除操作吗？')">[删除]</a> 
 
 
 
 <if condition="$item[istop] eq 0">
-<a href="{:U('prize/index',array('ik'=>'istop','catename'=>$item[catename],'id'=>$item[id],'istop'=>'1'))}">[置顶]</a> 
+<a href="{:U('forum/index',array('ik'=>'istop','catename'=>$item[catename],'id'=>$item[id],'istop'=>'1'))}">[置顶]</a> 
 <else/>
-<a href="{:U('prize/index',array('ik'=>'istop','catename'=>$item[catename],'id'=>$item[id],'istop'=>'0'))}">[取消置顶]</a> 
+<a href="{:U('forum/index',array('ik'=>'istop','catename'=>$item[catename],'id'=>$item[id],'istop'=>'0'))}">[取消置顶]</a> 
 </if>
 
 

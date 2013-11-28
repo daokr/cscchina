@@ -28,31 +28,45 @@ function error(c){$.dialog({icon: 'error',content: '<font  style="font-size:14px
 <body>
 <!--main-->
 <div class="midder">
-<h2><?php echo ($title); ?></h2>  
-<div class="Toolbar_inbox">
-
-
-<a class="btn_a" href="<?php echo U('prize/addmedias');?>">
-<span>+添加</span>
-</a>    
-</div>
-<table  cellpadding="0" cellspacing="0">
-<tr class="old">
-<td>itemid</td>
-<td>图片</td>
-<td width="280">操作</td>
-</tr>
-<?php if(is_array($lists)): foreach($lists as $key=>$item): ?><tr class="odd">
-<td><?php echo ($item[id]); ?></td>
-<td><img src="<?php echo ($item[simg]); ?>" width="50" /></td>
-<td>
-
-<a href="<?php echo U('prize/deleteimg',array('type'=>$item[type],'id'=>$item[id]));?>" onClick="return confirm('确定要执行删除操作吗？')">[删除]</a> 
-</td>
-<tr><?php endforeach; endif; ?>
+<h2><?php echo ($title); ?></h2>
+<form method="POST" action="<?php echo U('forum/editarticle');?>" id="formMini" onsubmit="return miniSubmit(this)">
+<table cellpadding="0" cellspacing="0">
+	<tr>
+		<th>标题：</th>
+		<td><input name="title" value="<?php echo ($strArt[title]); ?>" style="width:400px"/></td>
+	</tr> 
+	<tr>
+		<th>所属分类：</th>
+		<td><?php echo ($strArt[catename]); ?><input name="catename" value="<?php echo ($strArt[catename]); ?>" type="hidden"/>
+        </td>
+	</tr> 
+	<tr>
+		<th>内容：</th>
+		<td>
+<textarea style="width:100%;" id="editor_mini" name="content" class="txt"   placeholder="请填写内容">
+	<?php echo ($strArt[content]); ?>
+</textarea>        
+        </td>
+	</tr> 
+	<tr>
+		<th>作者：</th>
+		<td><input name="newsauthor" value="<?php echo ($strArt[newsauthor]); ?>" style="width:300px"/></td>
+	</tr>               
 </table>
+<div class="page_btn">
+<input name="id" value="<?php echo ($strArt[id]); ?>" type="hidden"/>
+<input type="submit" value="保存修改" class="submit" />
+</div>
 
-<div class="pagebar"><?php echo ($pageUrl); ?></div>
+</form>
+<!--加载编辑器-->
+<script src="__STATIC__/public/js/editor/xheditor/xheditor.js" type="text/javascript"></script>
+<script src="__STATIC__/public/js/editor/xheditor/loadeditor.js" type="text/javascript"></script>
+<script>
+	var type = 'forum';
+	var typeid = '<?php echo ($strArt[id]); ?>';
+</script>
+
 </div>
 </body>
 </html>
