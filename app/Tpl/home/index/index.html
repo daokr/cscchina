@@ -211,7 +211,7 @@
                     		<h2>合作媒体</h2>
                             <div class="bd">
                                <foreach name="medias" item="item">
-                            	<img src="{$item[simg]}" width="80" height="42">
+                            	<img src="{$item[simg]}" width="90" height="42">
                                 </foreach>
                             </div>
                     </div>
@@ -220,23 +220,21 @@
                 <div class="hezuoqiyeBar">
                 		<h2>合作企业</h2>
                         <div class="bd">
-                            <a href="#"><img src="__STATIC__/theme/blue/images/mt/1.png"></a>
-                            <a href="#"><img src="__STATIC__/theme/blue/images/mt/2.png"></a>
-                            <a href="#"><img src="__STATIC__/theme/blue/images/mt/3.png"></a>
-                            <a href="#"><img src="__STATIC__/theme/blue/images/mt/1.png"></a>
-                            <a href="#"><img src="__STATIC__/theme/blue/images/mt/2.png"></a>
-                            <a href="#"><img src="__STATIC__/theme/blue/images/mt/3.png"></a>
-                            <a href="#"><img src="__STATIC__/theme/blue/images/mt/1.png"></a>
-                            <a href="#"><img src="__STATIC__/theme/blue/images/mt/2.png"></a>
-                            <a href="#"><img src="__STATIC__/theme/blue/images/mt/3.png"></a>                                
+                               <foreach name="companys" item="item">
+                            	<img src="{$item[simg]}" width="90" height="42">
+                               </foreach>                               
                         </div>                        
                 </div>
                 <div class="clubBar">
                 	<dl>
-                    	<dt><a href="#"><img src="__STATIC__/theme/blue/images/temp/315x215.jpg" width="315" height="215"></a></dt>
+                   		  <foreach name="subject_list" item="item">
+                    		<dt><a href="{:U('forum/show',array('id'=>$item['id']))}"><img src="{$item[photo][mimg]}" width="315" height="215"></a></dt>
+                          </foreach>       
                         <dd>
-                        	<h2><a href="#">全面深化改革决定</a></h2>
-                            <p>一是主题全面。这次会议确定的主题是全面深化改革，这与十一届三中全会以来的前这与十一届三中全会以来的前这与十一届三中全会以来的前这与十一届三中全会以来的前这与十一届三中全会以来的前6次s持全面改革，才能继续深化改革化改革化改革改革化改革化改一是主题全面。这次会议确定的主题是全面深化改革...<a href="#" class="red">详情>></a></p>
+                         	<foreach name="subject_list" item="item">
+                        	<h2><a href="{:U('forum/show',array('id'=>$item['id']))}">{$item[title]}</a></h2>
+                            <p><php> echo getsubstrutf8(t($item[content]),0,170);</php>...<a href="{:U('forum/show',array('id'=>$item['id']))}" class="red">详情>></a></p>
+                             </foreach>       
                         </dd>
                     </dl>
                 </div>
@@ -244,84 +242,21 @@
         </div>
 		<div class="clubMembers">
             <div class="mbd">
+            <foreach name="leaders_list" item="item">
             	<div class="mitem">
                     <h2><span class="ltjb">论坛嘉宾</span></h2>
                     <div class="bd">
                         <dl>
-                        <dt><a href="#"><img src="__STATIC__/theme/blue/images/temp/home_20.jpg"></a></dt>
+                        <dt><a href="{:U('forum/show',array('id'=>$item['id']))}"><img src="{$item[photo][simg]}"></a></dt>
                         <dd>
-                            <h3><a href="#">全面深化改革决定</a></h3>
-                            <p>一是主题全面。这次会议确定的主题是全面深化改革，这与十一届三中全会以来的前6次s持全面改革，才能继续深化改革化改革化改革改革化改革化改革</p>
+                            <h3><a href="{:U('forum/show',array('id'=>$item['id']))}">{$item[title]}</a></h3>
+                            <p><php> echo getsubstrutf8(t($item[content]),0,70);</php>...</p>
                         </dd>
                         </dl>
                         <div class="cl"></div>
                     </div>                
                 </div>
-				<div class="mitem">
-                    <h2><span class="ltjb">论坛嘉宾</span></h2>
-                    <div class="bd">
-                        <dl>
-                        <dt><a href="#"><img src="__STATIC__/theme/blue/images/temp/home_20.jpg"></a></dt>
-                        <dd>
-                            <h3><a href="#">全面深化改革决定</a></h3>
-                            <p>一是主题全面。这次会议确定的主题是全面深化改革，这与十一届三中全会以来的前6次s持全面改革，才能继续深化改革化改革化改革改革化改革化改革</p>
-                        </dd>
-                        </dl>
-                        <div class="cl"></div>
-                    </div>                
-                </div>
-				<div class="mitem">
-                    <h2><span class="ltjb">论坛嘉宾</span></h2>
-                    <div class="bd">
-                        <dl>
-                        <dt><a href="#"><img src="__STATIC__/theme/blue/images/temp/home_20.jpg"></a></dt>
-                        <dd>
-                            <h3><a href="#">全面深化改革决定</a></h3>
-                            <p>一是主题全面。这次会议确定的主题是全面深化改革，这与十一届三中全会以来的前6次s持全面改革，才能继续深化改革化改革化改革改革化改革化改革</p>
-                        </dd>
-                        </dl>
-                        <div class="cl"></div>
-                    </div>                
-                </div>
-				<div class="mitem">
-                    <h2><span class="ltjb">论坛嘉宾</span></h2>
-                    <div class="bd">
-                        <dl>
-                        <dt><a href="#"><img src="__STATIC__/theme/blue/images/temp/home_20.jpg"></a></dt>
-                        <dd>
-                            <h3><a href="#">全面深化改革决定</a></h3>
-                            <p>一是主题全面。这次会议确定的主题是全面深化改革，这与十一届三中全会以来的前6次s持全面改革，才能继续深化改革化改革化改革改革化改革化改革</p>
-                        </dd>
-                        </dl>
-                        <div class="cl"></div>
-                    </div>                
-                </div>
-				<div class="mitem">
-                    <h2><span class="ltjb">论坛嘉宾</span></h2>
-                    <div class="bd">
-                        <dl>
-                        <dt><a href="#"><img src="__STATIC__/theme/blue/images/temp/home_20.jpg"></a></dt>
-                        <dd>
-                            <h3><a href="#">全面深化改革决定</a></h3>
-                            <p>一是主题全面。这次会议确定的主题是全面深化改革，这与十一届三中全会以来的前6次s持全面改革，才能继续深化改革化改革化改革改革化改革化改革</p>
-                        </dd>
-                        </dl>
-                        <div class="cl"></div>
-                    </div>                
-                </div>
- 				<div class="mitem">
-                    <h2><span class="ltjb">论坛嘉宾</span></h2>
-                    <div class="bd">
-                        <dl>
-                        <dt><a href="#"><img src="__STATIC__/theme/blue/images/temp/home_20.jpg"></a></dt>
-                        <dd>
-                            <h3><a href="#">全面深化改革决定</a></h3>
-                            <p>一是主题全面。这次会议确定的主题是全面深化改革，这与十一届三中全会以来的前6次s持全面改革，才能继续深化改革化改革化改革改革化改革化改革</p>
-                        </dd>
-                        </dl>
-                        <div class="cl"></div>
-                    </div>                
-                </div>                                                                               
+		    </foreach>                                                                                   
             </div>
         </div>
         

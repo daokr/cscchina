@@ -9,6 +9,7 @@ class indexAction extends frontendAction {
 		$this->article_mod = D('article');
 		$this->item_mod = D ( 'article_item' );
 		$this->prize_mod = D ( 'prize' );
+		$this->forum_mod = D ( 'forum' );
 		$this->photos_mod = D('photos'); 
 	}
 	public function index() {
@@ -82,6 +83,18 @@ class indexAction extends frontendAction {
 		//合作logo
 		$medias = $this->photos_mod->getPhotos('medias');
 		$this->assign ( 'medias', $medias );
+		
+		//合作企业logo
+		$companys = $this->photos_mod->getPhotos('company');
+		$this->assign ( 'companys', $companys );
+
+		//本届论坛主题
+		$subject_list = $this->forum_mod->getAll('subject',1);
+		$this->assign ( 'subject_list', $subject_list );
+		
+		//本届论坛嘉宾
+		$leaders_list = $this->forum_mod->getAll('leaders',6);
+		$this->assign ( 'leaders_list', $leaders_list );
 		
 		$this->_config_seo ();
 		$this->display();

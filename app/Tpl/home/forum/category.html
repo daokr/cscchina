@@ -15,8 +15,8 @@
 				</div>
 				<ul class="list categories-list">
                    
-					<li><a href="{:U('prize/category',array('catename'=>'news'))}">评奖新闻</a></li>
-                    <li><a href="{:U('prize/category',array('catename'=>'reports'))}">媒体报道</a></li>
+					<li><a href="{:U('forum/category',array('catename'=>'subject'))}">创新论坛</a></li>
+                    <li><a href="{:U('forum/category',array('catename'=>'leaders'))}">论坛嘉宾</a></li>
 					
 				</ul>
 			</section>
@@ -33,11 +33,11 @@
 						<foreach name="arrArticle" item="item">
 						<li class="item">
 							<div class="title">
-								<a href="{:U('prize/show',array('id'=>$item[id]))}">{$item[title]}</a>
+								<a href="{:U('forum/show',array('id'=>$item[id]))}">{$item[title]}</a>
 							</div>
                            <if condition="$item[photo]">
 							<div class="cover">
-                                <a class="pic" href="{:U('prize/show',array('id'=>$item[aid]))}">
+                                <a class="pic" href="{:U('forum/show',array('id'=>$item[aid]))}">
 									<img src="{$item[photo][simg]}" />
 								</a> 
 							</div>
@@ -45,7 +45,7 @@
 							<div class="info">
 								<div class="article-desc-brief">
 									<php> echo getsubstrutf8(t($item[content]),0,150);</php>...
-                                    <a href="{:U('prize/show',array('id'=>$item[aid]))}">（更多）</a>
+                                    <a href="{:U('forum/show',array('id'=>$item[aid]))}">（更多）</a>
 								</div>
 							</div>
 							<a href="{:U('people/index',array('id'=>$item[user][doname]))}">{$item[user][username]}</a> <span class="time">发表于 <php>echo date('Y-m-d H:i',$item[addtime])</php>  | 浏览 {$item[count_view]}</span> 

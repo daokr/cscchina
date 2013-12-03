@@ -30,7 +30,7 @@ class prizeModel extends Model {
 		if(is_array($strArticle)){
 			//获取 主图
 			$result = $strArticle;
-			$result['photo'] = D('images')->getTheImageByTypeid($strArticle['catename'],$strArticle['id']);
+			$result['photo'] = D('images')->getTheImageByTypeid('prize',$strArticle['id']);
 			
 			//if($articleItem['isphoto']){
 			//	$result ['photo'] = ikhtml_img('article', $articleItem['itemid'], $result ['content']);

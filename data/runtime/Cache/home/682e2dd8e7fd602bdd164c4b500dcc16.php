@@ -47,15 +47,25 @@ __EXTENDS_JS__
 <?php else: ?>
 <li><a href="<?php echo C('ik_site_url');?>"><img src="__STATIC__/theme/blue/images/layout/home_7.jpg"></a></li><?php endif; ?>
 
-<li><a href="#"><img src="__STATIC__/theme/blue/images/layout/home_8.jpg"></a></li>
-<li><a href="#"><img src="__STATIC__/theme/blue/images/layout/home_9.jpg"></a></li>
+<?php if($catename == 'news'): ?><li class="on"><a href="<?php echo U('prize/category',array('catename'=>'news'));?>"><img src="__STATIC__/theme/blue/images/layout/home_8.jpg"></a></li>
+<?php else: ?>
+<li><a href="<?php echo U('prize/category',array('catename'=>'news'));?>"><img src="__STATIC__/theme/blue/images/layout/home_8.jpg"></a></li><?php endif; ?>
+
+<?php if($catename == 'subject'): ?><li class="on"><a href="<?php echo U('forum/category',array('catename'=>'subject'));?>"><img src="__STATIC__/theme/blue/images/layout/home_9.jpg"></a></li>
+<?php else: ?>
+<li><a href="<?php echo U('forum/category',array('catename'=>'subject'));?>"><img src="__STATIC__/theme/blue/images/layout/home_9.jpg"></a></li><?php endif; ?>
+
 
 <?php if($cateid == 6): ?><li class="on"><a href="<?php echo U('article/category',array('cateid'=>6));?>"><img src="__STATIC__/theme/blue/images/layout/home_10.jpg"></a></li>
 <?php else: ?>
 <li class=""><a href="<?php echo U('article/category',array('cateid'=>6));?>"><img src="__STATIC__/theme/blue/images/layout/home_10.jpg"></a></li><?php endif; ?>
 
 <li><a href="#"><img src="__STATIC__/theme/blue/images/layout/home_11.jpg"></a></li>
-<li><a href="#"><img src="__STATIC__/theme/blue/images/layout/home_12.jpg"></a></li>
+
+<?php if($catename == 'reports'): ?><li class="on"><a href="<?php echo U('prize/category',array('catename'=>'reports'));?>"><img src="__STATIC__/theme/blue/images/layout/home_12.jpg"></a></li>
+<?php else: ?>
+<li class=""><a href="<?php echo U('prize/category',array('catename'=>'reports'));?>"><img src="__STATIC__/theme/blue/images/layout/home_12.jpg"></a></li><?php endif; ?>
+
 <li><a href="#"><img src="__STATIC__/theme/blue/images/layout/home_13.jpg"></a></li>
 <?php if($action_name == 'contact'): ?><li class="on"><a href="<?php echo U('help/contact');?>"><img src="__STATIC__/theme/blue/images/layout/home_14.jpg"></a></li>
 <?php else: ?>
@@ -256,7 +266,7 @@ __EXTENDS_JS__
                     <div class="hezuoInfo">
                     		<h2>合作媒体</h2>
                             <div class="bd">
-                               <?php if(is_array($medias)): foreach($medias as $key=>$item): ?><img src="<?php echo ($item[simg]); ?>" width="80" height="42"><?php endforeach; endif; ?>
+                               <?php if(is_array($medias)): foreach($medias as $key=>$item): ?><img src="<?php echo ($item[simg]); ?>" width="90" height="42"><?php endforeach; endif; ?>
                             </div>
                     </div>
                 </div>
@@ -264,23 +274,15 @@ __EXTENDS_JS__
                 <div class="hezuoqiyeBar">
                 		<h2>合作企业</h2>
                         <div class="bd">
-                            <a href="#"><img src="__STATIC__/theme/blue/images/mt/1.png"></a>
-                            <a href="#"><img src="__STATIC__/theme/blue/images/mt/2.png"></a>
-                            <a href="#"><img src="__STATIC__/theme/blue/images/mt/3.png"></a>
-                            <a href="#"><img src="__STATIC__/theme/blue/images/mt/1.png"></a>
-                            <a href="#"><img src="__STATIC__/theme/blue/images/mt/2.png"></a>
-                            <a href="#"><img src="__STATIC__/theme/blue/images/mt/3.png"></a>
-                            <a href="#"><img src="__STATIC__/theme/blue/images/mt/1.png"></a>
-                            <a href="#"><img src="__STATIC__/theme/blue/images/mt/2.png"></a>
-                            <a href="#"><img src="__STATIC__/theme/blue/images/mt/3.png"></a>                                
+                               <?php if(is_array($companys)): foreach($companys as $key=>$item): ?><img src="<?php echo ($item[simg]); ?>" width="90" height="42"><?php endforeach; endif; ?>                               
                         </div>                        
                 </div>
                 <div class="clubBar">
                 	<dl>
-                    	<dt><a href="#"><img src="__STATIC__/theme/blue/images/temp/315x215.jpg" width="315" height="215"></a></dt>
+                   		  <?php if(is_array($subject_list)): foreach($subject_list as $key=>$item): ?><dt><a href="<?php echo U('forum/show',array('id'=>$item['id']));?>"><img src="<?php echo ($item[photo][mimg]); ?>" width="315" height="215"></a></dt><?php endforeach; endif; ?>       
                         <dd>
-                        	<h2><a href="#">全面深化改革决定</a></h2>
-                            <p>一是主题全面。这次会议确定的主题是全面深化改革，这与十一届三中全会以来的前这与十一届三中全会以来的前这与十一届三中全会以来的前这与十一届三中全会以来的前这与十一届三中全会以来的前6次s持全面改革，才能继续深化改革化改革化改革改革化改革化改一是主题全面。这次会议确定的主题是全面深化改革...<a href="#" class="red">详情>></a></p>
+                         	<?php if(is_array($subject_list)): foreach($subject_list as $key=>$item): ?><h2><a href="<?php echo U('forum/show',array('id'=>$item['id']));?>"><?php echo ($item[title]); ?></a></h2>
+                            <p><?php echo getsubstrutf8(t($item[content]),0,170); ?>...<a href="<?php echo U('forum/show',array('id'=>$item['id']));?>" class="red">详情>></a></p><?php endforeach; endif; ?>       
                         </dd>
                     </dl>
                 </div>
@@ -288,84 +290,19 @@ __EXTENDS_JS__
         </div>
 		<div class="clubMembers">
             <div class="mbd">
-            	<div class="mitem">
+            <?php if(is_array($leaders_list)): foreach($leaders_list as $key=>$item): ?><div class="mitem">
                     <h2><span class="ltjb">论坛嘉宾</span></h2>
                     <div class="bd">
                         <dl>
-                        <dt><a href="#"><img src="__STATIC__/theme/blue/images/temp/home_20.jpg"></a></dt>
+                        <dt><a href="<?php echo U('forum/show',array('id'=>$item['id']));?>"><img src="<?php echo ($item[photo][simg]); ?>"></a></dt>
                         <dd>
-                            <h3><a href="#">全面深化改革决定</a></h3>
-                            <p>一是主题全面。这次会议确定的主题是全面深化改革，这与十一届三中全会以来的前6次s持全面改革，才能继续深化改革化改革化改革改革化改革化改革</p>
+                            <h3><a href="<?php echo U('forum/show',array('id'=>$item['id']));?>"><?php echo ($item[title]); ?></a></h3>
+                            <p><?php echo getsubstrutf8(t($item[content]),0,70); ?>...</p>
                         </dd>
                         </dl>
                         <div class="cl"></div>
                     </div>                
-                </div>
-				<div class="mitem">
-                    <h2><span class="ltjb">论坛嘉宾</span></h2>
-                    <div class="bd">
-                        <dl>
-                        <dt><a href="#"><img src="__STATIC__/theme/blue/images/temp/home_20.jpg"></a></dt>
-                        <dd>
-                            <h3><a href="#">全面深化改革决定</a></h3>
-                            <p>一是主题全面。这次会议确定的主题是全面深化改革，这与十一届三中全会以来的前6次s持全面改革，才能继续深化改革化改革化改革改革化改革化改革</p>
-                        </dd>
-                        </dl>
-                        <div class="cl"></div>
-                    </div>                
-                </div>
-				<div class="mitem">
-                    <h2><span class="ltjb">论坛嘉宾</span></h2>
-                    <div class="bd">
-                        <dl>
-                        <dt><a href="#"><img src="__STATIC__/theme/blue/images/temp/home_20.jpg"></a></dt>
-                        <dd>
-                            <h3><a href="#">全面深化改革决定</a></h3>
-                            <p>一是主题全面。这次会议确定的主题是全面深化改革，这与十一届三中全会以来的前6次s持全面改革，才能继续深化改革化改革化改革改革化改革化改革</p>
-                        </dd>
-                        </dl>
-                        <div class="cl"></div>
-                    </div>                
-                </div>
-				<div class="mitem">
-                    <h2><span class="ltjb">论坛嘉宾</span></h2>
-                    <div class="bd">
-                        <dl>
-                        <dt><a href="#"><img src="__STATIC__/theme/blue/images/temp/home_20.jpg"></a></dt>
-                        <dd>
-                            <h3><a href="#">全面深化改革决定</a></h3>
-                            <p>一是主题全面。这次会议确定的主题是全面深化改革，这与十一届三中全会以来的前6次s持全面改革，才能继续深化改革化改革化改革改革化改革化改革</p>
-                        </dd>
-                        </dl>
-                        <div class="cl"></div>
-                    </div>                
-                </div>
-				<div class="mitem">
-                    <h2><span class="ltjb">论坛嘉宾</span></h2>
-                    <div class="bd">
-                        <dl>
-                        <dt><a href="#"><img src="__STATIC__/theme/blue/images/temp/home_20.jpg"></a></dt>
-                        <dd>
-                            <h3><a href="#">全面深化改革决定</a></h3>
-                            <p>一是主题全面。这次会议确定的主题是全面深化改革，这与十一届三中全会以来的前6次s持全面改革，才能继续深化改革化改革化改革改革化改革化改革</p>
-                        </dd>
-                        </dl>
-                        <div class="cl"></div>
-                    </div>                
-                </div>
- 				<div class="mitem">
-                    <h2><span class="ltjb">论坛嘉宾</span></h2>
-                    <div class="bd">
-                        <dl>
-                        <dt><a href="#"><img src="__STATIC__/theme/blue/images/temp/home_20.jpg"></a></dt>
-                        <dd>
-                            <h3><a href="#">全面深化改革决定</a></h3>
-                            <p>一是主题全面。这次会议确定的主题是全面深化改革，这与十一届三中全会以来的前6次s持全面改革，才能继续深化改革化改革化改革改革化改革化改革</p>
-                        </dd>
-                        </dl>
-                        <div class="cl"></div>
-                    </div>                
-                </div>                                                                               
+                </div><?php endforeach; endif; ?>                                                                                   
             </div>
         </div>
         

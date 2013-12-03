@@ -83,8 +83,8 @@ __EXTENDS_JS__
 				</div>
 				<ul class="list categories-list">
                    
-					<li><a href="<?php echo U('prize/category',array('catename'=>'news'));?>">评奖新闻</a></li>
-                    <li><a href="<?php echo U('prize/category',array('catename'=>'reports'));?>">媒体报道</a></li>
+					<li><a href="<?php echo U('forum/category',array('catename'=>'subject'));?>">创新论坛</a></li>
+                    <li><a href="<?php echo U('forum/category',array('catename'=>'leaders'));?>">论坛嘉宾</a></li>
 					
 				</ul>
 			</section>
@@ -100,17 +100,17 @@ __EXTENDS_JS__
 					<ul class="list-lined article-list">
 						<?php if(is_array($arrArticle)): foreach($arrArticle as $key=>$item): ?><li class="item">
 							<div class="title">
-								<a href="<?php echo U('prize/show',array('id'=>$item[id]));?>"><?php echo ($item[title]); ?></a>
+								<a href="<?php echo U('forum/show',array('id'=>$item[id]));?>"><?php echo ($item[title]); ?></a>
 							</div>
                            <?php if($item[photo]): ?><div class="cover">
-                                <a class="pic" href="<?php echo U('prize/show',array('id'=>$item[aid]));?>">
+                                <a class="pic" href="<?php echo U('forum/show',array('id'=>$item[aid]));?>">
 									<img src="<?php echo ($item[photo][simg]); ?>" />
 								</a> 
 							</div><?php endif; ?>                           
 							<div class="info">
 								<div class="article-desc-brief">
 									<?php echo getsubstrutf8(t($item[content]),0,150); ?>...
-                                    <a href="<?php echo U('prize/show',array('id'=>$item[aid]));?>">（更多）</a>
+                                    <a href="<?php echo U('forum/show',array('id'=>$item[aid]));?>">（更多）</a>
 								</div>
 							</div>
 							<a href="<?php echo U('people/index',array('id'=>$item[user][doname]));?>"><?php echo ($item[user][username]); ?></a> <span class="time">发表于 <?php echo date('Y-m-d H:i',$item[addtime]) ?>  | 浏览 <?php echo ($item[count_view]); ?></span> 

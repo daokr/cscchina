@@ -112,7 +112,7 @@ class prizeAction extends backendAction {
 				if ($id !== false) { // 保存成功
 					//更新图片
 					$map['typeid'] = $id;
-					D('images')->updateImage($map,array('type'=>$catename,'typeid'=>0));
+					D('images')->updateImage($map,array('type'=>'prize','typeid'=>0));
 					$this->success ( '新增成功!',U('prize/manage',array('catename'=>$data ['catename'])));
 				} else {
 					// 失败提示

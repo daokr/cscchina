@@ -30,7 +30,7 @@ class forumAction extends backendAction {
 		$strItem = $this->forum_mod->where(array('id'=>$id))->find();
 		if($strItem){
 			$this->forum_mod->where(array('id'=>$id))->setField(array('istop'=>$istop));
-			$this->redirect ( 'prize/manage',array('catename'=>$catename));
+			$this->redirect ( 'forum/manage',array('catename'=>$catename));
 		}else{
 			$this->error('文章不存在或已被删除！');
 		}
@@ -112,7 +112,7 @@ class forumAction extends backendAction {
 				if ($id !== false) { // 保存成功
 					//更新图片
 					$map['typeid'] = $id;
-					D('images')->updateImage($map,array('type'=>$catename,'typeid'=>0));
+					D('images')->updateImage($map,array('type'=>'forum','typeid'=>0));
 					$this->success ( '新增成功!',U('forum/manage',array('catename'=>$data ['catename'])));
 				} else {
 					// 失败提示

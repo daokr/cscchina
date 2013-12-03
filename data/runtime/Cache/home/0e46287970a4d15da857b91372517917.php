@@ -51,9 +51,9 @@ __EXTENDS_JS__
 <?php else: ?>
 <li><a href="<?php echo U('prize/category',array('catename'=>'news'));?>"><img src="__STATIC__/theme/blue/images/layout/home_8.jpg"></a></li><?php endif; ?>
 
-<?php if($catename == 'subject'): ?><li class="on"><a href="<?php echo U('forum/category',array('catename'=>'subject'));?>"><img src="__STATIC__/theme/blue/images/layout/home_9.jpg"></a></li>
+<?php if($catename == 'news'): ?><li class="on"><a href="<?php echo U('forum/category',array('catename'=>'news'));?>"><img src="__STATIC__/theme/blue/images/layout/home_9.jpg"></a></li>
 <?php else: ?>
-<li><a href="<?php echo U('forum/category',array('catename'=>'subject'));?>"><img src="__STATIC__/theme/blue/images/layout/home_9.jpg"></a></li><?php endif; ?>
+<li><a href="<?php echo U('forum/category',array('catename'=>'news'));?>"><img src="__STATIC__/theme/blue/images/layout/home_9.jpg"></a></li><?php endif; ?>
 
 
 <?php if($cateid == 6): ?><li class="on"><a href="<?php echo U('article/category',array('cateid'=>6));?>"><img src="__STATIC__/theme/blue/images/layout/home_10.jpg"></a></li>
@@ -74,59 +74,43 @@ __EXTENDS_JS__
     </div>
 </div>
 </header>
+
 <div class="midder">
-	<div class="mc">
-		<aside class="w190 fl">
-			<section class="categories">
-				<div class="hd">
-					<h3>全部分类</h3>
-				</div>
-				<ul class="list categories-list">
-                   
-					<li><a href="<?php echo U('prize/category',array('catename'=>'news'));?>">评奖新闻</a></li>
-                    <li><a href="<?php echo U('prize/category',array('catename'=>'reports'));?>">媒体报道</a></li>
-					
-				</ul>
-			</section>
-
-		</aside>
-		<article class="w770 fr">
-			<section>
-				<div class="hd tag-heading">
-					<h3 class="the-tag-name"><?php echo ($seo["title"]); ?></h3>
-				</div>
-
-				<div class="bd">
-					<ul class="list-lined article-list">
-						<?php if(is_array($arrArticle)): foreach($arrArticle as $key=>$item): ?><li class="item">
-							<div class="title">
-								<a href="<?php echo U('prize/show',array('id'=>$item[id]));?>"><?php echo ($item[title]); ?></a>
-							</div>
-                           <?php if($item[photo]): ?><div class="cover">
-                                <a class="pic" href="<?php echo U('prize/show',array('id'=>$item[aid]));?>">
-									<img src="<?php echo ($item[photo][simg]); ?>" />
-								</a> 
-							</div><?php endif; ?>                           
-							<div class="info">
-								<div class="article-desc-brief">
-									<?php echo getsubstrutf8(t($item[content]),0,150); ?>...
-                                    <a href="<?php echo U('prize/show',array('id'=>$item[aid]));?>">（更多）</a>
-								</div>
-							</div>
-							<a href="<?php echo U('people/index',array('id'=>$item[user][doname]));?>"><?php echo ($item[user][username]); ?></a> <span class="time">发表于 <?php echo date('Y-m-d H:i',$item[addtime]) ?>  | 浏览 <?php echo ($item[count_view]); ?></span> 
-						</li><?php endforeach; endif; ?>
-
-					</ul>
-				</div>
-
-
-			</section>
+<div class="mc">
+    <div class="cleft">
+        <div class="art-body">
+            <h1 class="title"><?php echo ($strArticle[title]); ?></h1>
+            <div class="art-info">
+            作者：<?php echo ($strArticle[newsauthor]); ?>&nbsp;&nbsp;<?php echo date('Y-m-d H:i',$strArticle[addtime]) ?>&nbsp;&nbsp; 浏览<?php echo ($strArticle[count_view]); ?>次&nbsp;&nbsp;
+            </div>
+        
+            <div class="art-text">
+                <?php echo ($strArticle[content]); ?>
+            </div>
+            <div class="control-btns">
+            </div>
             
-             <div class="page"><?php echo ($pageUrl); ?></div>   
-             
-		</article>
-	</div>
+      	  <div class="clear"></div>
+          <div class="art-titles"> 
+             <span class="fl"><?php if(!empty($upArticle)): ?>上一篇：<a href="<?php echo U('forum/show',array('id'=>$upArticle['id']));?>"><?php echo ($upArticle['title']); ?></a><?php endif; ?></span>
+             <span class="fr"><?php if(!empty($downArticle)): ?>下一篇：<a href="<?php echo U('forum/show',array('id'=>$downArticle['id']));?>"><?php echo ($downArticle['title']); ?></a><?php endif; ?></span>
+          </div>
+      </div>
+    
+    
+    
+    </div>
+
+
+    <div class="cright">
+    
+        
+        
+    </div>
+
 </div>
+</div>
+
 <!--footer-->
 <footer>
 <div id="footer">

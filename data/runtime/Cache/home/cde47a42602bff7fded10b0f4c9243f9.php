@@ -43,17 +43,29 @@ __EXTENDS_JS__
     	<ul>
 <li><a href="#"><img src="__STATIC__/theme/blue/images/layout/home_6.jpg"></a></li>
 
-<li><a href="<?php echo C('ik_site_url');?>"><img src="__STATIC__/theme/blue/images/layout/home_7.jpg"></a></li>
+<?php if($action_name == 'index'): ?><li class="on"><a href="<?php echo C('ik_site_url');?>"><img src="__STATIC__/theme/blue/images/layout/home_7.jpg"></a></li>
+<?php else: ?>
+<li><a href="<?php echo C('ik_site_url');?>"><img src="__STATIC__/theme/blue/images/layout/home_7.jpg"></a></li><?php endif; ?>
 
-<li><a href="#"><img src="__STATIC__/theme/blue/images/layout/home_8.jpg"></a></li>
-<li><a href="#"><img src="__STATIC__/theme/blue/images/layout/home_9.jpg"></a></li>
+<?php if($catename == 'news'): ?><li class="on"><a href="<?php echo U('prize/category',array('catename'=>'news'));?>"><img src="__STATIC__/theme/blue/images/layout/home_8.jpg"></a></li>
+<?php else: ?>
+<li><a href="<?php echo U('prize/category',array('catename'=>'news'));?>"><img src="__STATIC__/theme/blue/images/layout/home_8.jpg"></a></li><?php endif; ?>
+
+<?php if($catename == 'subject'): ?><li class="on"><a href="<?php echo U('forum/category',array('catename'=>'subject'));?>"><img src="__STATIC__/theme/blue/images/layout/home_9.jpg"></a></li>
+<?php else: ?>
+<li><a href="<?php echo U('forum/category',array('catename'=>'subject'));?>"><img src="__STATIC__/theme/blue/images/layout/home_9.jpg"></a></li><?php endif; ?>
+
 
 <?php if($cateid == 6): ?><li class="on"><a href="<?php echo U('article/category',array('cateid'=>6));?>"><img src="__STATIC__/theme/blue/images/layout/home_10.jpg"></a></li>
 <?php else: ?>
 <li class=""><a href="<?php echo U('article/category',array('cateid'=>6));?>"><img src="__STATIC__/theme/blue/images/layout/home_10.jpg"></a></li><?php endif; ?>
 
 <li><a href="#"><img src="__STATIC__/theme/blue/images/layout/home_11.jpg"></a></li>
-<li><a href="#"><img src="__STATIC__/theme/blue/images/layout/home_12.jpg"></a></li>
+
+<?php if($catename == 'reports'): ?><li class="on"><a href="<?php echo U('prize/category',array('catename'=>'reports'));?>"><img src="__STATIC__/theme/blue/images/layout/home_12.jpg"></a></li>
+<?php else: ?>
+<li class=""><a href="<?php echo U('prize/category',array('catename'=>'reports'));?>"><img src="__STATIC__/theme/blue/images/layout/home_12.jpg"></a></li><?php endif; ?>
+
 <li><a href="#"><img src="__STATIC__/theme/blue/images/layout/home_13.jpg"></a></li>
 <?php if($action_name == 'contact'): ?><li class="on"><a href="<?php echo U('help/contact');?>"><img src="__STATIC__/theme/blue/images/layout/home_14.jpg"></a></li>
 <?php else: ?>

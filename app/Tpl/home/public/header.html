@@ -24,8 +24,18 @@
 <li><a href="{:C('ik_site_url')}"><img src="__STATIC__/theme/blue/images/layout/home_7.jpg"></a></li>
 </if>
 
-<li><a href="#"><img src="__STATIC__/theme/blue/images/layout/home_8.jpg"></a></li>
-<li><a href="#"><img src="__STATIC__/theme/blue/images/layout/home_9.jpg"></a></li>
+<if condition="$catename eq 'news'">
+<li class="on"><a href="{:U('prize/category',array('catename'=>'news'))}"><img src="__STATIC__/theme/blue/images/layout/home_8.jpg"></a></li>
+<else/>
+<li><a href="{:U('prize/category',array('catename'=>'news'))}"><img src="__STATIC__/theme/blue/images/layout/home_8.jpg"></a></li>
+</if>
+
+<if condition="$catename eq 'subject'">
+<li class="on"><a href="{:U('forum/category',array('catename'=>'subject'))}"><img src="__STATIC__/theme/blue/images/layout/home_9.jpg"></a></li>
+<else/>
+<li><a href="{:U('forum/category',array('catename'=>'subject'))}"><img src="__STATIC__/theme/blue/images/layout/home_9.jpg"></a></li>
+</if>
+
 
 <if condition="$cateid eq 6">
 <li class="on"><a href="{:U('article/category',array('cateid'=>6))}"><img src="__STATIC__/theme/blue/images/layout/home_10.jpg"></a></li>
@@ -34,7 +44,13 @@
 </if>
 
 <li><a href="#"><img src="__STATIC__/theme/blue/images/layout/home_11.jpg"></a></li>
-<li><a href="#"><img src="__STATIC__/theme/blue/images/layout/home_12.jpg"></a></li>
+
+<if condition="$catename eq 'reports'">
+<li class="on"><a href="{:U('prize/category',array('catename'=>'reports'))}"><img src="__STATIC__/theme/blue/images/layout/home_12.jpg"></a></li>
+<else/>
+<li class=""><a href="{:U('prize/category',array('catename'=>'reports'))}"><img src="__STATIC__/theme/blue/images/layout/home_12.jpg"></a></li>
+</if>
+
 <li><a href="#"><img src="__STATIC__/theme/blue/images/layout/home_13.jpg"></a></li>
 <if condition="$action_name eq 'contact'">
 <li class="on"><a href="{:U('help/contact')}"><img src="__STATIC__/theme/blue/images/layout/home_14.jpg"></a></li>
