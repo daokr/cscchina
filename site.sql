@@ -562,3 +562,13 @@ CREATE TABLE `ik_forum` (
   PRIMARY KEY (`id`),
   KEY `userid` (`userid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+DROP TABLE IF EXISTS `ik_focus`;
+CREATE TABLE `ik_focus` (
+  `id` smallint(4) unsigned NOT NULL AUTO_INCREMENT,
+  `catename` char(32) NOT NULL DEFAULT '' COMMENT '分类名称',
+  `name` varchar(50) NOT NULL,
+  `link` varchar(255) NOT NULL,
+  `path` char(255) NOT NULL DEFAULT '' COMMENT '图片路径',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8;

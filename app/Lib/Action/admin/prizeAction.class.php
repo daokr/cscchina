@@ -247,5 +247,74 @@ class prizeAction extends backendAction {
 		D('photos')->where(array('id'=>$id,'type'=>$type))->delete();
 		$this->success('删除成功！',U('prize/medias'));
 	}
+	//焦点图
+	public function focus(){
+		$focus_mod = D('focus');
+		$list = $focus_mod->select();
+		$this->assign('list',$list);
+		$this->title ( '焦点图管理' );
+		$this->display();	
+	} 
+	public function addfocus(){
+		$focus_mod = D('focus');
+		//添加
+		if (IS_POST) {
+			$id = $this->_post('id','trim','0');
+			if(empty($id)){
+				if (false === $focus_mod->create ()) {
+					$this->error ( $focus_mod->getError () );
+				}
+				// 保存当前数据对象
+				$aid = $focus_mod->add ();
+				if ($aid !== false) { // 保存成功
+					$this->redirect(U('prize/focus'));
+				}else{
+					$this->error ( '新增失败!' );
+				}
+			}else{
+				//编辑
+				if (false === $focus_mod->create ()) {
+					$this->error ( $focus_mod->getError () );
+				}
+				$focus_mod->where(array('id'=>$id))->save();
+				$this->redirect(U('prize/focus'));
+			}
+				
+		} else {
+			$this->title ( '添加图片' );
+			$this->display();
+		}
+	}
+	public function editfocus(){
+		$id = $this->_get('id');
+		$strAd = D('focus')->where(array('id'=>$id))->find();
+		$this->assign('strAd',$strAd);
+		$this->title ( '编辑图片' );
+		$this->display('addfocus');
+	}
+	public function delfocus(){
+		$id = $this->_get('id');
+		$strNav = D('focus')->where(array('id'=>$id))->delete();
+		$this->redirect(U('prize/focus'));
+	}
+	//上传图片
+	public function ajax_upload_img() {
+		$type = $this->_get('type', 'trim', 'picfile');
+		if (!empty($_FILES[$type]['name'])) {
+			$dir = date('ym/d/');
+			$result = $this->_upload($_FILES[$type], 'focus/'. $dir );
+			if ($result['error']) {
+				$arrJson = array('r'=>0, 'html'=> $result['info']);
+				echo json_encode($arrJson);
+			} else {
+				$savename = 'focus/'.$dir . $result['info'][0]['savename'];
+				$arrJson = array('r'=>1, 'html'=> attach($savename));
+				echo json_encode($arrJson);
+			}
+		} else {
+			$arrJson = array('r'=>0, 'html'=> '上传失败');
+			echo json_encode($arrJson);
+		}
+	}
 
 }

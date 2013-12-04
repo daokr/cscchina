@@ -11,6 +11,7 @@ class indexAction extends frontendAction {
 		$this->prize_mod = D ( 'prize' );
 		$this->forum_mod = D ( 'forum' );
 		$this->photos_mod = D('photos'); 
+		$this->focus_mod = D('focus');
 	}
 	public function index() {
 		
@@ -95,6 +96,10 @@ class indexAction extends frontendAction {
 		//本届论坛嘉宾
 		$leaders_list = $this->forum_mod->getAll('leaders',6);
 		$this->assign ( 'leaders_list', $leaders_list );
+		
+		//评奖新闻焦点图
+		$prizefocus_list =  $this->focus_mod->where(array('catename'=>'prize'))->order('id desc')->limit(5)->select();
+		$this->assign ( 'prizefocus_list', $prizefocus_list );
 		
 		$this->_config_seo ();
 		$this->display();

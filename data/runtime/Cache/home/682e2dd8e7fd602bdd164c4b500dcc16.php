@@ -20,6 +20,17 @@
 <![endif]-->
 <script src="__STATIC__/public/js/dialog/jquery.artDialog.min5.js" type="text/javascript"></script> 
 __EXTENDS_JS__
+<script type="text/javascript" src="__STATIC__/public/js/jquery.KinSlideshow-1.2.1.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#focus-info").KinSlideshow({
+			moveStyle:"right",
+			titleBar:false,
+			titleFont:false,
+			btn:{btn_bgColor:"#8c1914",btn_bgHoverColor:"#0A4C83",btn_fontColor:"#fff",btn_fontHoverColor:"#fff",btn_borderColor:"#cccccc",btn_borderHoverColor:"#1188c0",btn_borderWidth:0}
+	});
+})
+</script>
 </head>
 
 <body>
@@ -220,15 +231,9 @@ __EXTENDS_JS__
                 </div>
                 <div class="modR1">
 	                <div class="mainfocus">
-	                    <ul id="focus-li">
-	                        <li><a href="javascript:;" class="on">1</a></li> <li><a href="javascript:;" >2</a></li>
-	                    </ul>
-	                    <div id="focus-info">
-	                        <ul>
-	                        <li><a href="javascript:;"><img src="__STATIC__/theme/blue/images/temp/365x250.jpg"/></a></li>
-	                        <li><a href="javascript:;"><img src="__STATIC__/theme/blue/images/temp/365x250.jpg"/></a></li>  
-	                        </ul>
-	                    </div>
+	                    <div id="focus-info" class="focus1">
+                        	 <?php if(is_array($prizefocus_list)): foreach($prizefocus_list as $key=>$item): ?><a href="<?php echo ($item[link]); ?>" target="_blank"><img src="<?php echo ($item[path]); ?>"/></a><?php endforeach; endif; ?>
+	                    </div>                        
 	                    <div class="cl"></div>
 	                </div>                        
 	                <div class="zsBox">

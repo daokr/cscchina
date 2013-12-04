@@ -2,6 +2,17 @@
 <html>
 <head>
 <include file="public:head" />
+<script type="text/javascript" src="__STATIC__/public/js/jquery.KinSlideshow-1.2.1.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#focus-info").KinSlideshow({
+			moveStyle:"right",
+			titleBar:false,
+			titleFont:false,
+			btn:{btn_bgColor:"#8c1914",btn_bgHoverColor:"#0A4C83",btn_fontColor:"#fff",btn_fontHoverColor:"#fff",btn_borderColor:"#cccccc",btn_borderHoverColor:"#1188c0",btn_borderWidth:0}
+	});
+})
+</script>
 </head>
 
 <body>
@@ -162,15 +173,11 @@
                 </div>
                 <div class="modR1">
 	                <div class="mainfocus">
-	                    <ul id="focus-li">
-	                        <li><a href="javascript:;" class="on">1</a></li> <li><a href="javascript:;" >2</a></li>
-	                    </ul>
-	                    <div id="focus-info">
-	                        <ul>
-	                        <li><a href="javascript:;"><img src="__STATIC__/theme/blue/images/temp/365x250.jpg"/></a></li>
-	                        <li><a href="javascript:;"><img src="__STATIC__/theme/blue/images/temp/365x250.jpg"/></a></li>  
-	                        </ul>
-	                    </div>
+	                    <div id="focus-info" class="focus1">
+                        	 <foreach name="prizefocus_list" item="item">
+	                        	<a href="{$item[link]}" target="_blank"><img src="{$item[path]}"/></a>
+                             </foreach>
+	                    </div>                        
 	                    <div class="cl"></div>
 	                </div>                        
 	                <div class="zsBox">

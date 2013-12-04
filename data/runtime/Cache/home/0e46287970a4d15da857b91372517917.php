@@ -51,9 +51,9 @@ __EXTENDS_JS__
 <?php else: ?>
 <li><a href="<?php echo U('prize/category',array('catename'=>'news'));?>"><img src="__STATIC__/theme/blue/images/layout/home_8.jpg"></a></li><?php endif; ?>
 
-<?php if($catename == 'news'): ?><li class="on"><a href="<?php echo U('forum/category',array('catename'=>'news'));?>"><img src="__STATIC__/theme/blue/images/layout/home_9.jpg"></a></li>
+<?php if($catename == 'subject'): ?><li class="on"><a href="<?php echo U('forum/category',array('catename'=>'subject'));?>"><img src="__STATIC__/theme/blue/images/layout/home_9.jpg"></a></li>
 <?php else: ?>
-<li><a href="<?php echo U('forum/category',array('catename'=>'news'));?>"><img src="__STATIC__/theme/blue/images/layout/home_9.jpg"></a></li><?php endif; ?>
+<li><a href="<?php echo U('forum/category',array('catename'=>'subject'));?>"><img src="__STATIC__/theme/blue/images/layout/home_9.jpg"></a></li><?php endif; ?>
 
 
 <?php if($cateid == 6): ?><li class="on"><a href="<?php echo U('article/category',array('cateid'=>6));?>"><img src="__STATIC__/theme/blue/images/layout/home_10.jpg"></a></li>

@@ -81,17 +81,11 @@ display:block; background:url(../images/layout/new_icon.png) no-repeat 0px 0px; 
 
 .modR1{ float:right; width:630px; overflow:hidden; padding-top:7px}
 
-.mainfocus{ position:relative; height:250px; float:left; width:365px}
-.mainfocus #focus-li{height:25px; position:absolute; right:20px; bottom:10px; background-image:none}
-.mainfocus #focus-li li{ text-align:center; line-height:20px; height:20px; width:20px; float:left; margin-right:5px; background-image:none}
-.mainfocus #focus-li a{background-color:#0a4c83; color:#fff; display:block; height:20px; width:20px; border-radius:10px}
-.mainfocus #focus-li .on{background-color:#8c1914;font-size:12px}
-.mainfocus #focus-li a:hover{ text-decoration:none}
+.mainfocus{   float:left; width:365px; height:250px;}
+.mainfocus img{ width:365px; height:250px;}
 
-.mainfocus #focus-info{overflow:hidden;width:365px; height:250px;}
-.mainfocus #focus-info ul{ display:block; height:250px; overflow:hidden}
-.mainfocus #focus-info li{ display:block; height:250px;}
-.mainfocus #focus-info li img{ width:365px; height:250px;}
+.KSS_btnBox li{ opacity:1!important; border-radius:10px; height:20px !important; width:20px !important;}
+
 
 .modRag{ display:block; clear:both; padding-top:15px}
 .modLag{ display:block; clear:both; margin-top:10px}

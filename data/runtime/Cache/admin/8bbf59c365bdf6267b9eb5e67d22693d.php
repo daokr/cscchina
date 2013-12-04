@@ -43,6 +43,7 @@
     <ul class="submenu" style="display: block;">
      <li><a style="outline:none;" hidefocus="true" class="submenuB" href="<?php echo U('prize/manage',array('catename'=>'news'));?>" target="MainIframe">评奖新闻</a></li>
      <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('prize/manage',array('catename'=>'reports'));?>" target="MainIframe">评奖媒体报道</a></li>
+     <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('prize/focus');?>" target="MainIframe">焦点图管理</a></li>
      <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('prize/medias');?>" target="MainIframe">合作媒体LOGO</a></li>
     </ul>
 </li><?php endif; ?>
