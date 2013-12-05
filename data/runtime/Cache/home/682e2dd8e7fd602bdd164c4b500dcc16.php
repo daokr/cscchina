@@ -333,18 +333,9 @@ $(function(){
          <div  class="frendlinkBar">
         	<div class="bd">
 			<ul id="frendlinks">
-            	<li><img src="__STATIC__/theme/blue/images/temp/105x85.gif"></li>
-                <li><img src="__STATIC__/theme/blue/images/temp/105x85.gif"></li>
-                <li><img src="__STATIC__/theme/blue/images/temp/105x85.gif"></li>
-                <li><img src="__STATIC__/theme/blue/images/temp/105x85.gif"></li>
-                <li><img src="__STATIC__/theme/blue/images/temp/105x85.gif"></li>
-                <li><img src="__STATIC__/theme/blue/images/temp/105x85.gif"></li>
-            	<li><img src="__STATIC__/theme/blue/images/temp/105x85.gif"></li>
-                <li><img src="__STATIC__/theme/blue/images/temp/105x85.gif"></li>
-                <li><img src="__STATIC__/theme/blue/images/temp/105x85.gif"></li>
-                <li><img src="__STATIC__/theme/blue/images/temp/105x85.gif"></li>
-                <li><img src="__STATIC__/theme/blue/images/temp/105x85.gif"></li>
-                <li><img src="__STATIC__/theme/blue/images/temp/105x85.gif"></li>                
+            	<?php if(is_array($friends_list)): foreach($friends_list as $key=>$item): if($item[link]): ?><li><a href="<?php echo ($item[link]); ?>"><img src="<?php echo ($item[path]); ?>" width="105" height="85"></a></li>
+                    <?php else: ?>
+                     <li><img src="<?php echo ($item[path]); ?>" width="105" height="85"></li><?php endif; endforeach; endif; ?>
             </ul>            
             </div>
         </div>

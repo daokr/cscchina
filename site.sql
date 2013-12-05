@@ -572,3 +572,12 @@ CREATE TABLE `ik_focus` (
   `path` char(255) NOT NULL DEFAULT '' COMMENT '图片路径',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `ik_friends`;
+CREATE TABLE `ik_friends` (
+  `id` smallint(4) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `link` varchar(255) NOT NULL,
+  `path` char(255) NOT NULL DEFAULT '' COMMENT '图片路径',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8;

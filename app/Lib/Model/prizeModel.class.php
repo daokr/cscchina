@@ -32,6 +32,7 @@ class prizeModel extends Model {
 			$result = $strArticle;
 			$result['photo'] = D('images')->getTheImageByTypeid('prize',$strArticle['id']);
 			
+			
 			//if($articleItem['isphoto']){
 			//	$result ['photo'] = ikhtml_img('article', $articleItem['itemid'], $result ['content']);
 			//}

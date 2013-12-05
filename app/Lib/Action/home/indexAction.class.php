@@ -12,6 +12,7 @@ class indexAction extends frontendAction {
 		$this->forum_mod = D ( 'forum' );
 		$this->photos_mod = D('photos'); 
 		$this->focus_mod = D('focus');
+		$this->friends_mod = D('friends');
 	}
 	public function index() {
 		
@@ -100,6 +101,11 @@ class indexAction extends frontendAction {
 		//评奖新闻焦点图
 		$prizefocus_list =  $this->focus_mod->where(array('catename'=>'prize'))->order('id desc')->limit(5)->select();
 		$this->assign ( 'prizefocus_list', $prizefocus_list );
+		
+		//友情链接
+		//评奖新闻焦点图
+		$friends_list =  $this->friends_mod->select();
+		$this->assign ( 'friends_list', $friends_list );
 		
 		$this->_config_seo ();
 		$this->display();

@@ -7,19 +7,13 @@
 <!--main-->
 <div class="midder">
 <h2>{$title}</h2> 
-<form method="POST" action="{:U('prize/addfocus')}" id="formMini" >
+<form method="POST" action="{:U('friends/add')}" id="formMini" >
 <input type="hidden" value="{$strAd[id]}" name="id"/>
 <table cellpadding="0" cellspacing="0">
 	<tr>
 		<th>标题：</th>
 		<td><input name="name" value="{$strAd[name]}" style="width:200px"/></td>
-	</tr> 
-	<tr>
-		<th>所属栏目：</th>
-		<td>
-        	prize<input name="catename" value="prize" type="hidden"/
-        </td>
-	</tr>     
+	</tr>    
 	<tr>
 		<th>链接地址：</th>
 		<td>
@@ -42,7 +36,7 @@
 $(function(){
 	$('input[name=picfile]').bind('change',function(){
 		if($(this).val() !=''){
-			var ajaxurl = '{:U("prize/ajax_upload_img")}'
+			var ajaxurl = '{:U("friends/ajax_upload_img")}'
 		$.ajaxFileUpload(
             {
                 url : ajaxurl,

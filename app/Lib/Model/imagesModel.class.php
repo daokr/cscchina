@@ -62,7 +62,11 @@ class imagesModel extends Model {
 	public function getTheImageByTypeid($type, $typeid){
 		$where = array('type'=>$type, 'typeid'=> $typeid,'ishead'=>1);
 		$resid = $this->where($where)->find();
-		$result = $this->getImageById($resid['id']);
+		if($resid){
+			$result = $this->getImageById($resid['id']);
+		}else{
+			$result = false;
+		}
 		return $result;
 	}	
 	// 更新图片信息

@@ -289,18 +289,13 @@ $(function(){
          <div  class="frendlinkBar">
         	<div class="bd">
 			<ul id="frendlinks">
-            	<li><img src="__STATIC__/theme/blue/images/temp/105x85.gif"></li>
-                <li><img src="__STATIC__/theme/blue/images/temp/105x85.gif"></li>
-                <li><img src="__STATIC__/theme/blue/images/temp/105x85.gif"></li>
-                <li><img src="__STATIC__/theme/blue/images/temp/105x85.gif"></li>
-                <li><img src="__STATIC__/theme/blue/images/temp/105x85.gif"></li>
-                <li><img src="__STATIC__/theme/blue/images/temp/105x85.gif"></li>
-            	<li><img src="__STATIC__/theme/blue/images/temp/105x85.gif"></li>
-                <li><img src="__STATIC__/theme/blue/images/temp/105x85.gif"></li>
-                <li><img src="__STATIC__/theme/blue/images/temp/105x85.gif"></li>
-                <li><img src="__STATIC__/theme/blue/images/temp/105x85.gif"></li>
-                <li><img src="__STATIC__/theme/blue/images/temp/105x85.gif"></li>
-                <li><img src="__STATIC__/theme/blue/images/temp/105x85.gif"></li>                
+            	<foreach name="friends_list" item="item">
+            		<if condition="$item[link]">
+                     <li><a href="{$item[link]}"><img src="{$item[path]}" width="105" height="85"></a></li>
+                    <else/>
+                     <li><img src="{$item[path]}" width="105" height="85"></li>
+                    </if>
+             	</foreach>
             </ul>            
             </div>
         </div>

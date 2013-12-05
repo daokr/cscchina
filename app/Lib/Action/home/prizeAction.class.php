@@ -53,6 +53,7 @@ class prizeAction extends frontendAction {
 		foreach($arrItemid as $key=>$item){
 			$arrArticle [] = $this->mod->getOneArticle($item['id']);
 		}
+		
 		$this->assign('pageUrl', $pager->fshow());
 		$this->assign ( 'arrArticle', $arrArticle );
 		$this->assign ( 'catename', $catename );

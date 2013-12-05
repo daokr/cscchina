@@ -77,7 +77,7 @@
 <?php if($ik == 'friends'): ?><li class="treemenu_on">
     <a style="outline:none;" hidefocus="true" href="javascript:void(0)" class="actuator">友情链接管理</a>
     <ul class="submenu" style="display: block;">
-    <li><a style="outline:none;" hidefocus="true" class="submenuB" href="<?php echo U('friends/hislist');?>" target="MainIframe">友情链接列表</a></li>
-    <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('friends/manage',array('ik'=>'add'));?>" target="MainIframe">添加新链接</a></li>
+    <li><a style="outline:none;" hidefocus="true" class="submenuB" href="<?php echo U('friends/manage');?>" target="MainIframe">友情链接列表</a></li>
+    <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('friends/add');?>" target="MainIframe">添加新链接</a></li>
     </ul>
 </li><?php endif; ?>

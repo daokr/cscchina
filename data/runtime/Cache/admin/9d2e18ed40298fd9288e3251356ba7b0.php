@@ -29,19 +29,13 @@ function error(c){$.dialog({icon: 'error',content: '<font  style="font-size:14px
 <!--main-->
 <div class="midder">
 <h2><?php echo ($title); ?></h2> 
-<form method="POST" action="<?php echo U('prize/addfocus');?>" id="formMini" >
+<form method="POST" action="<?php echo U('friends/add');?>" id="formMini" >
 <input type="hidden" value="<?php echo ($strAd[id]); ?>" name="id"/>
 <table cellpadding="0" cellspacing="0">
 	<tr>
 		<th>标题：</th>
 		<td><input name="name" value="<?php echo ($strAd[name]); ?>" style="width:200px"/></td>
-	</tr> 
-	<tr>
-		<th>所属栏目：</th>
-		<td>
-        	prize<input name="catename" value="prize" type="hidden"/
-        </td>
-	</tr>     
+	</tr>    
 	<tr>
 		<th>链接地址：</th>
 		<td>
@@ -64,7 +58,7 @@ function error(c){$.dialog({icon: 'error',content: '<font  style="font-size:14px
 $(function(){
 	$('input[name=picfile]').bind('change',function(){
 		if($(this).val() !=''){
-			var ajaxurl = '<?php echo U("prize/ajax_upload_img");?>'
+			var ajaxurl = '<?php echo U("friends/ajax_upload_img");?>'
 		$.ajaxFileUpload(
             {
                 url : ajaxurl,
