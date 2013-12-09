@@ -98,6 +98,7 @@ function refresh() {
 <li><a style="outline:none;" hidefocus="true" data-id="forum" href="javascript:;">论坛管理</a></li>
 <li><a style="outline:none;" hidefocus="true" data-id="ad" href="javascript:;">广告管理</a></li>
 <li><a style="outline:none;" hidefocus="true" data-id="friends" href="javascript:;">友情链接管理</a></li>
+<li><a style="outline:none;" hidefocus="true" data-id="singlepage" href="javascript:;">单页管理</a></li>
     </ul>                   
 </div>
 <div class="LeftMenu">

@@ -147,8 +147,8 @@ $(function(){
     	<div class="defMenu">
         	<ul>
             	<li><a href="#"><img src="__STATIC__/theme/blue/images/layout/menu_34.jpg"></a></li>
-                <li><a href="#"><img src="__STATIC__/theme/blue/images/layout/menu_35.jpg"></a></li>
-                <li><a href="#"><img src="__STATIC__/theme/blue/images/layout/menu_36.jpg"></a></li>
+                <li><a href="{:U('singlepage/show',array('catename'=>'page1'))}"><img src="__STATIC__/theme/blue/images/layout/menu_35.jpg"></a></li>
+                <li><a href="{:U('singlepage/show',array('catename'=>'page2'))}"><img src="__STATIC__/theme/blue/images/layout/menu_36.jpg"></a></li>
                 <li><a href="#"><img src="__STATIC__/theme/blue/images/layout/menu_37.jpg"></a></li>
                 <li><a href="#"><img src="__STATIC__/theme/blue/images/layout/menu_38.jpg"></a></li>
                 <li><a href="#"><img src="__STATIC__/theme/blue/images/layout/menu_39.jpg"></a></li>
@@ -213,14 +213,6 @@ $(function(){
                              <li><a href="{:U('prize/show',array('id'=>$item['id']))}" title="{$item[title]}">{$item[title]}</a></li>
                           </foreach>
                         </ul>
-                    </div>
-                    <div class="hezuoInfo">
-                    		<h2>合作媒体</h2>
-                            <div class="bd">
-                               <foreach name="medias" item="item">
-                            	<img src="{$item[simg]}" width="90" height="42">
-                                </foreach>
-                            </div>
                     </div>
                 </div>
                 <div class="blank15"></div>
@@ -289,12 +281,8 @@ $(function(){
          <div  class="frendlinkBar">
         	<div class="bd">
 			<ul id="frendlinks">
-            	<foreach name="friends_list" item="item">
-            		<if condition="$item[link]">
-                     <li><a href="{$item[link]}"><img src="{$item[path]}" width="105" height="85"></a></li>
-                    <else/>
-                     <li><img src="{$item[path]}" width="105" height="85"></li>
-                    </if>
+            	 <foreach name="medias" item="item">
+                     <li><img src="{$item[simg]}" width="130" height="48"></li>
              	</foreach>
             </ul>            
             </div>

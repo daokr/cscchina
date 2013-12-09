@@ -79,10 +79,10 @@ class indexAction extends frontendAction {
 		$this->assign ( 'pjxw_list', $pjxw_list );
 
 		//媒体报道
-		$mtbd_list = $this->prize_mod->getAll('reports',5);
+		$mtbd_list = $this->prize_mod->getAll('reports',11);
 		$this->assign ( 'mtbd_list', $mtbd_list );
 
-		//合作logo
+		//合作媒体logo
 		$medias = $this->photos_mod->getPhotos('medias');
 		$this->assign ( 'medias', $medias );
 		
@@ -104,8 +104,8 @@ class indexAction extends frontendAction {
 		
 		//友情链接
 		//评奖新闻焦点图
-		$friends_list =  $this->friends_mod->select();
-		$this->assign ( 'friends_list', $friends_list );
+		//$friends_list =  $this->friends_mod->select();
+		//$this->assign ( 'friends_list', $friends_list );
 		
 		$this->_config_seo ();
 		$this->display();

@@ -81,3 +81,10 @@
     <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('friends/add');?>" target="MainIframe">添加新链接</a></li>
     </ul>
 </li><?php endif; ?>
+<?php if($ik == 'singlepage'): ?><li class="treemenu_on">
+    <a style="outline:none;" hidefocus="true" href="javascript:void(0)" class="actuator">单页管理</a>
+    <ul class="submenu" style="display: block;">
+    	<li><a style="outline:none;" hidefocus="true" class="submenuB" href="<?php echo U('singlepage/manage',array('catename'=>'page1'));?>" target="MainIframe">评选章程</a></li>
+    	<li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('singlepage/manage',array('catename'=>'page2'));?>" target="MainIframe">评审委员会</a></li>
+    </ul>
+</li><?php endif; ?>

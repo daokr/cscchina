@@ -581,3 +581,15 @@ CREATE TABLE `ik_friends` (
   `path` char(255) NOT NULL DEFAULT '' COMMENT '图片路径',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `ik_singlepage`;
+CREATE TABLE `ik_singlepage` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(50) NOT NULL,  
+  `catename` char(32) NOT NULL DEFAULT '',
+  `content` text NOT NULL,
+  `newsauthor` varchar(20) NOT NULL DEFAULT '' COMMENT '作者',  
+  `uptime` int(11) NOT NULL DEFAULT '0' COMMENT '更新时间',
+  `count_view` int(11) NOT NULL DEFAULT '0' COMMENT '展示数',  
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;

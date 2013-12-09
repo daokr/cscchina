@@ -97,3 +97,12 @@
     </ul>
 </li>    
 </if>
+<if condition="$ik eq 'singlepage'">
+<li class="treemenu_on">
+    <a style="outline:none;" hidefocus="true" href="javascript:void(0)" class="actuator">单页管理</a>
+    <ul class="submenu" style="display: block;">
+    	<li><a style="outline:none;" hidefocus="true" class="submenuB" href="{:U('singlepage/manage',array('catename'=>'page1'))}" target="MainIframe">评选章程</a></li>
+    	<li><a style="outline:none;" hidefocus="true" class="submenuA" href="{:U('singlepage/manage',array('catename'=>'page2'))}" target="MainIframe">评审委员会</a></li>
+    </ul>
+</li>    
+</if>

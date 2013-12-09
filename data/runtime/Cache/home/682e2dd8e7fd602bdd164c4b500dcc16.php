@@ -207,8 +207,8 @@ $(function(){
     	<div class="defMenu">
         	<ul>
             	<li><a href="#"><img src="__STATIC__/theme/blue/images/layout/menu_34.jpg"></a></li>
-                <li><a href="#"><img src="__STATIC__/theme/blue/images/layout/menu_35.jpg"></a></li>
-                <li><a href="#"><img src="__STATIC__/theme/blue/images/layout/menu_36.jpg"></a></li>
+                <li><a href="<?php echo U('singlepage/show',array('catename'=>'page1'));?>"><img src="__STATIC__/theme/blue/images/layout/menu_35.jpg"></a></li>
+                <li><a href="<?php echo U('singlepage/show',array('catename'=>'page2'));?>"><img src="__STATIC__/theme/blue/images/layout/menu_36.jpg"></a></li>
                 <li><a href="#"><img src="__STATIC__/theme/blue/images/layout/menu_37.jpg"></a></li>
                 <li><a href="#"><img src="__STATIC__/theme/blue/images/layout/menu_38.jpg"></a></li>
                 <li><a href="#"><img src="__STATIC__/theme/blue/images/layout/menu_39.jpg"></a></li>
@@ -267,12 +267,6 @@ $(function(){
                         <ul class="bd">
                          <?php if(is_array($mtbd_list)): foreach($mtbd_list as $key=>$item): ?><li><a href="<?php echo U('prize/show',array('id'=>$item['id']));?>" title="<?php echo ($item[title]); ?>"><?php echo ($item[title]); ?></a></li><?php endforeach; endif; ?>
                         </ul>
-                    </div>
-                    <div class="hezuoInfo">
-                    		<h2>合作媒体</h2>
-                            <div class="bd">
-                               <?php if(is_array($medias)): foreach($medias as $key=>$item): ?><img src="<?php echo ($item[simg]); ?>" width="90" height="42"><?php endforeach; endif; ?>
-                            </div>
                     </div>
                 </div>
                 <div class="blank15"></div>
@@ -333,9 +327,7 @@ $(function(){
          <div  class="frendlinkBar">
         	<div class="bd">
 			<ul id="frendlinks">
-            	<?php if(is_array($friends_list)): foreach($friends_list as $key=>$item): if($item[link]): ?><li><a href="<?php echo ($item[link]); ?>"><img src="<?php echo ($item[path]); ?>" width="105" height="85"></a></li>
-                    <?php else: ?>
-                     <li><img src="<?php echo ($item[path]); ?>" width="105" height="85"></li><?php endif; endforeach; endif; ?>
+            	 <?php if(is_array($medias)): foreach($medias as $key=>$item): ?><li><img src="<?php echo ($item[simg]); ?>" width="130" height="48"></li><?php endforeach; endif; ?>
             </ul>            
             </div>
         </div>
