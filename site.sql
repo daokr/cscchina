@@ -593,3 +593,42 @@ CREATE TABLE `ik_singlepage` (
   `count_view` int(11) NOT NULL DEFAULT '0' COMMENT '展示数',  
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
+
+DROP TABLE IF EXISTS `ik_content_year`;
+CREATE TABLE `ik_content_year` (
+  `yearid` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID',
+  `yearname` char(32) NOT NULL DEFAULT '' COMMENT '年名称',
+  PRIMARY KEY (`yearid`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+DROP TABLE IF EXISTS `ik_content_cate`;
+CREATE TABLE `ik_content_cate` (
+  `cateid` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID',
+  `catename` char(32) NOT NULL DEFAULT '' COMMENT '分类名称',
+  PRIMARY KEY (`cateid`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+DROP TABLE IF EXISTS `ik_content`;
+CREATE TABLE `ik_content` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '文章ID',
+  `typename` char(64) NOT NULL DEFAULT '' COMMENT '内容系统别名',
+  `cateid` int(11) NOT NULL DEFAULT '0' COMMENT '分类ID',
+  `yearid` int(11) NOT NULL DEFAULT '0' COMMENT '年份id',
+  `title` char(64) NOT NULL DEFAULT '' COMMENT '标题',
+  `content` text NOT NULL COMMENT '内容',  
+  `count_comment` int(11) NOT NULL DEFAULT '0' COMMENT '回复统计',
+  `count_view` int(11) NOT NULL DEFAULT '0' COMMENT '展示数',
+  `photoid` int(11) NOT NULL DEFAULT '0' COMMENT '文章主图id',
+  `orderid` int(11) NOT NULL DEFAULT '0' COMMENT '排序id',  
+  `isphoto` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否有图片',
+  `isvideo` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否有视频',  
+  `istop` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否置顶',
+  `isshow` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否显示',
+  `iscomment` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否允许评论',
+  `isdigest` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否精华帖子',
+  `isaudit` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否审核', 
+  `addtime` int(11) NOT NULL DEFAULT '0' COMMENT '发布时间',
+  `uptime` int(11) NOT NULL DEFAULT '0' COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  KEY `yearid` (`yearid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;

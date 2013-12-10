@@ -96,7 +96,7 @@ function pageInit()
 
 
 	var fulltools = 'Paste,|,Bold,FontSize,Italic,Underline,Strikethrough,|,FontColor,BackColor,Align,List,Outdent,Indent,|,Link,Unlink,|,tsAttach,tsImg,tsMusic,Flash,tsVideo,Emot,tsCode,|,Fullscreen';
-	var minitools = 'Bold,FontSize,Italic,Underline,Strikethrough,|,FontColor,BackColor,Align,List,Outdent,Indent,|,Link,Unlink,|,tsImg,|,Source,|,Preview,Fullscreen';
+	var minitools = 'Bold,FontSize,Italic,Underline,Strikethrough,|,FontColor,BackColor,Align,List,Outdent,Indent,|,Link,Unlink,|,tsImg,|,Table,|,Source,|,Preview,Fullscreen';
 	
 	
 	

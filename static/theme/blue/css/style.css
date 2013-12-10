@@ -97,13 +97,19 @@ a.comein:hover{ background-position:0px -56px}
 .zsBox .hudongbox{ display:block; margin-top:0px}
 .zsBox .hudongbox li{ display:block; float:left; width:80px; height:80px; float:left;
  border:#2386c3 solid 1px; background-color:#edeeee; margin-left:30px;box-shadow: 0px 1px 2px rgba(0,0,0,0.2);}
-.winningBar{ width:630px; float:left;  display:block;}
-.winningBar .bd{ background-color:#f5f5f4; height:302px; display:block;box-shadow: 0px 1px 2px rgba(0,0,0,0.2);}
-.winningBar .bd .gongsi{ display:block; float:left; width:570px; height:302px; overflow:hidden}
-.winningBar .bd .gongsi li{ display:block; height:45px; line-height:45px;background:url(../images/layout/winning_bg.jpg) no-repeat 0px 0px; margin:10px 0px}
+.winningBar{ width:640px; float:left;  display:block;}
+.winningBar .bd{ background-color:#f5f5f4; display:block;box-shadow: 0px 1px 2px rgba(0,0,0,0.2);}
+
+.winningBar .gongsi_tit{ font-size:14px; line-height:30px; height:30px; font-weight:bold; display:block; padding:0px 10px; background:url(../images/layout/winning_bg.jpg) no-repeat 0px 0px;}
+.winningBar .bd .gongsi_bd{ display:block; overflow:hidden}
+.winningBar .bd .gongsi_bd li{ display:block; float:left; width:90px; height:50px; overflow:hidden; margin:10px 6px;}
+.winningBar .bd .gongsi_bd li img{ width:90px; height:50px}
+
 .winningBar .bd h3{ display:block; width:60px; height:302px; float:right; text-indent:-999px; overflow:hidden;
 background:url(../images/layout/winning_tit.jpg) no-repeat 0px 0px;}
-.mtbdBar{ width:300px; float:right; background:url(../images/layout/mtbd_bg.gif) no-repeat 0px 0px; height:393px;box-shadow: 0px 1px 2px rgba(0,0,0,0.2);}
+
+.mtbox_r{ width:300px; float:right;}
+.mtbdBar{ width:300px; background:url(../images/layout/mtbd_bg.gif) no-repeat 0px 0px; height:393px;box-shadow: 0px 1px 2px rgba(0,0,0,0.2);}
 
 .mtbdInfo{}
 .mtbdInfo  h2{ display:block; height:36px; overflow:hidden;background:url(../images/layout/tit_bg.jpg) repeat-x 0px bottom; padding-right:10px}
@@ -117,12 +123,12 @@ background:url(../images/layout/winning_tit.jpg) no-repeat 0px 0px;}
 .mtbdInfo .bd li a:hover{background-color:#cacaca}
 
 .hezuoInfo{ padding-top:2px}
-.hezuoInfo h2{ display:block; width:68px; height:18px; line-height:999px; overflow:hidden; margin:10px auto; background:url(../images/layout/hezuo_tit.png) no-repeat 0px 0px;}
+.hezuoInfo h2{ display:block; width:68px; height:18px; line-height:999px; overflow:hidden; margin:10px auto; background:url(../images/layout/xbmt_tit.png) no-repeat 0px 0px;}
 .hezuoInfo .bd{ height:150px; overflow:hidden}
 .hezuoInfo .bd a{ display:block;  width:90px; height:45px; text-align:center; overflow:hidden;}
 .hezuoInfo .bd img{ display:block; margin:3px 5px; float:left;}
 
-.hezuoqiyeBar{ width:300px; float:left; background:url(../images/layout/mtbd_bg.gif) no-repeat 0px 0px; height:235px;box-shadow: 0px 1px 2px rgba(0,0,0,0.2);}
+.hezuoqiyeBar{ width:300px; margin-top:10px; float:left; background:url(../images/layout/mtbd_bg.gif) no-repeat 0px 0px; height:235px;box-shadow: 0px 1px 2px rgba(0,0,0,0.2);}
 .hezuoqiyeBar h2{ display:block; width:68px; height:18px; line-height:999px; overflow:hidden; margin:20px auto; background:url(../images/layout/hezuoqy_tit.png) no-repeat 0px 0px;}
 .hezuoqiyeBar .bd{ height:150px; overflow:hidden}
 .hezuoqiyeBar .bd img{ display:block; float:left; width:90px; height:45px; text-align:center; overflow:hidden; margin:3px 5px;}

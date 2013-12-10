@@ -206,15 +206,16 @@ $(function(){
         <div class="blank15"></div>
     	<div class="defMenu">
         	<ul>
-            	<li><a href="#"><img src="__STATIC__/theme/blue/images/layout/menu_34.jpg"></a></li>
-                <li><a href="<?php echo U('singlepage/show',array('catename'=>'page1'));?>"><img src="__STATIC__/theme/blue/images/layout/menu_35.jpg"></a></li>
-                <li><a href="<?php echo U('singlepage/show',array('catename'=>'page2'));?>"><img src="__STATIC__/theme/blue/images/layout/menu_36.jpg"></a></li>
-                <li><a href="#"><img src="__STATIC__/theme/blue/images/layout/menu_37.jpg"></a></li>
-                <li><a href="#"><img src="__STATIC__/theme/blue/images/layout/menu_38.jpg"></a></li>
-                <li><a href="#"><img src="__STATIC__/theme/blue/images/layout/menu_39.jpg"></a></li>
-                <li><a href="#"><img src="__STATIC__/theme/blue/images/layout/menu_40.jpg"></a></li>
-                <li><a href="#"><img src="__STATIC__/theme/blue/images/layout/menu_41.jpg"></a></li>
-                <li><a href="#"><img src="__STATIC__/theme/blue/images/layout/menu_42.jpg"></a></li>
+            	<li><a href="#" title="机构介绍"><img src="__STATIC__/theme/blue/images/layout/menu_34.jpg"></a></li>
+                <li><a href="<?php echo U('singlepage/show',array('catename'=>'page1'));?>" title="评选章程"><img src="__STATIC__/theme/blue/images/layout/menu_35.jpg"></a></li>
+                <li><a href="<?php echo U('singlepage/show',array('catename'=>'page2'));?>" title="评审委员会"><img src="__STATIC__/theme/blue/images/layout/menu_36.jpg"></a></li>
+                <li><a href="#" title="评奖年鉴"><img src="__STATIC__/theme/blue/images/layout/menu_37.jpg"></a></li>
+                <li><a href="<?php echo U('singlepage/show',array('catename'=>'bjdl'));?>" title="颁奖典礼"><img src="__STATIC__/theme/blue/images/layout/menu_40.jpg"></a></li>
+                 <li><a href="<?php echo U('singlepage/show',array('catename'=>'wjhg'));?>" title="往届回顾" ><img src="__STATIC__/theme/blue/images/layout/menu_39.jpg"></a></li>
+                <li><a href="<?php echo U('singlepage/show',array('catename'=>'ltbj'));?>" title="论坛背景"><img src="__STATIC__/theme/blue/images/layout/menu_ltbj.jpg"></a></li>
+                <li><a href="<?php echo U('singlepage/show',array('catename'=>'ltxc'));?>" title="论坛现场"><img src="__STATIC__/theme/blue/images/layout/menu_ltxc.jpg"></a></li>
+               
+                <li><a href="#" title="评奖办公室"><img src="__STATIC__/theme/blue/images/layout/menu_42.jpg"></a></li>
             </ul>
         </div>
         <div class="mod2Box">
@@ -247,35 +248,131 @@ $(function(){
                 <div class="blank15"></div>
                 <div class="winningBar">
                 	<div class="bd">
-                    	<ul class="gongsi">
-                        	<li>获奖公式（图片+文字）</li>
-                            <li>获奖公式（图片+文字）</li>
-                            <li>获奖公式（图片+文字）</li>
-                            <li>获奖公式（图片+文字）</li>
-                            <li>获奖公式（图片+文字）</li>
-                            <li>获奖公式（图片+文字）</li>
-                        </ul>
-                        <h3>获奖公室</h3>
+                    	<div class="item_gongsi">
+                            <h2 class="gongsi_tit">科技创新个人成就奖</h2>
+                            <ul class="gongsi_bd">
+                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
+                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
+                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
+
+                            </ul>
+                        </div>
+                    	<div class="item_gongsi">
+                            <h2 class="gongsi_tit"><span><a href="#">更多&gt;&gt;</a></span>科技创新个人成就奖</h2>
+                            <ul class="gongsi_bd">
+                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
+                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
+
+
+                            </ul>
+                        </div>
+
+                    	<div class="item_gongsi">
+                            <h2 class="gongsi_tit">科技创新个人成就奖</h2>
+                            <ul class="gongsi_bd">
+                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
+                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
+                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
+                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
+
+                            </ul>
+                        </div>
+                    	<div class="item_gongsi">
+                            <h2 class="gongsi_tit">科技创新个人成就奖</h2>
+                            <ul class="gongsi_bd">
+                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
+                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
+                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
+                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
+
+                            </ul>
+                        </div>
+                    	<div class="item_gongsi">
+                            <h2 class="gongsi_tit">科技创新个人成就奖</h2>
+                            <ul class="gongsi_bd">
+                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
+                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
+                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
+                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
+
+                            </ul>
+                        </div>
+                    	<div class="item_gongsi">
+                            <h2 class="gongsi_tit">科技创新个人成就奖</h2>
+                            <ul class="gongsi_bd">
+                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
+                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
+                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
+                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
+
+                            </ul>
+                        </div>
+                    	<div class="item_gongsi">
+                            <h2 class="gongsi_tit">科技创新个人成就奖</h2>
+                            <ul class="gongsi_bd">
+                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
+                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
+                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
+                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
+
+                            </ul>
+                        </div>
+                    	<div class="item_gongsi">
+                            <h2 class="gongsi_tit">科技创新个人成就奖</h2>
+                            <ul class="gongsi_bd">
+                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
+                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
+                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
+                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
+                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
+                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
+                            </ul>
+                        </div>                                                                                                                                                                        
+                        <!--<h3>获奖公式</h3>-->
                     </div>
-					<div style="margin-top:10px">
+					<!--
+                    <div style="margin-top:10px">
                     <?php if($adList[6] != null): ?><a href="<?php echo ($adList[6][link]); ?>" target="_blank"><img src="<?php echo ($adList[6][path]); ?>"></a><?php endif; ?>
                     </div>
+                    -->
                 </div>
-                <div class="mtbdBar">
-                	<div class="mtbdInfo">
-                    	<h2><em><a href="<?php echo U('prize/category',array('catename'=>'reports'));?>" target="_blank">more</a></em><span class="mtbd">媒体报道</span><i></i></h2>
-                        <ul class="bd">
-                         <?php if(is_array($mtbd_list)): foreach($mtbd_list as $key=>$item): ?><li><a href="<?php echo U('prize/show',array('id'=>$item['id']));?>" title="<?php echo ($item[title]); ?>"><?php echo ($item[title]); ?></a></li><?php endforeach; endif; ?>
-                        </ul>
+                <div class="mtbox_r">
+                    <div class="mtbdBar">
+                        <div class="mtbdInfo">
+                            <h2><em><a href="<?php echo U('prize/category',array('catename'=>'reports'));?>" target="_blank">more</a></em><span class="mtbd">媒体报道</span><i></i></h2>
+                            <ul class="bd">
+                             <?php if(is_array($mtbd_list)): foreach($mtbd_list as $key=>$item): ?><li><a href="<?php echo U('prize/show',array('id'=>$item['id']));?>" title="<?php echo ($item[title]); ?>"><?php echo ($item[title]); ?></a></li><?php endforeach; endif; ?>
+                            </ul>
+                        </div>
+                        <div class="hezuoInfo">
+                                <h2>协办媒体</h2>
+                                <div class="bd">
+                                   <?php if(is_array($teams)): foreach($teams as $key=>$item): ?><img src="<?php echo ($item[simg]); ?>" width="90" height="42"><?php endforeach; endif; ?>                                
+                                </div>
+                        </div>                    
                     </div>
-                </div>
-                <div class="blank15"></div>
-                <div class="hezuoqiyeBar">
+                   
+                    <div class="hezuoqiyeBar">
                 		<h2>合作企业</h2>
                         <div class="bd">
-                               <?php if(is_array($companys)): foreach($companys as $key=>$item): ?><img src="<?php echo ($item[simg]); ?>" width="90" height="42"><?php endforeach; endif; ?>                               
+                       		<div id="bd_box" style="overflow:auto;">
+                               <?php if(is_array($companys)): foreach($companys as $key=>$item): ?><img src="<?php echo ($item[simg]); ?>" ><?php endforeach; endif; ?> 
+                            </div>                              
+                        </div>                        
+               		 </div>
+                </div>
+                
+                 <!--
+                 <div class="blank15"></div>
+                 <div class="hezuoqiyeBar">
+                		<h2>合作企业</h2>
+                        <div class="bd">
+                       		<div id="bd_box" style="overflow:auto;">
+                               <?php if(is_array($companys)): foreach($companys as $key=>$item): ?><img src="<?php echo ($item[simg]); ?>" ><?php endforeach; endif; ?> 
+                            </div>                              
                         </div>                        
                 </div>
+               
                 <div class="clubBar">
                 	<dl>
                    		  <?php if(is_array($subject_list)): foreach($subject_list as $key=>$item): ?><dt><a href="<?php echo U('forum/show',array('id'=>$item['id']));?>"><img src="<?php echo ($item[photo][mimg]); ?>" width="315" height="215"></a></dt><?php endforeach; endif; ?>       
@@ -285,6 +382,7 @@ $(function(){
                         </dd>
                     </dl>
                 </div>
+                -->
                 <div class="cl"></div>
         </div>
 		<div class="clubMembers">
@@ -380,6 +478,29 @@ var hScroll = {
 		}else{
 			$(ul).css({'left':left});
 		}
+	}
+}
+
+/**合作企业**/
+	var t = 0;
+$(function(){
+	var vbar = setInterval(function(){ vScroll.start('#bd_box'); t++} , 50);
+	$('#bd_box').hover(function(){
+		clearInterval(vbar);
+	},function(){
+		vbar = setInterval(function(){ vScroll.start('#bd_box'); t++} , 50);
+	});
+});
+var vScroll = {
+	start:function(id){
+		var maxh = $(id).find('img').outerHeight()+6;
+		if(t==maxh){
+			t = 0;
+			$(id).find('img').eq(0).appendTo(id);
+			$(id).find('img').eq(1).appendTo(id);
+			$(id).find('img').eq(2).appendTo(id);
+		}
+		$(id).css({'marginTop':-t});
 	}
 }
 </script>

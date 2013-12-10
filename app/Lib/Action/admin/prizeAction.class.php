@@ -189,6 +189,41 @@ class prizeAction extends backendAction {
 		$this->title ( 'LOGO列表' );
 		$this->display();
 	}
+	//协办媒体
+	public function teams(){
+		$lists = D('photos')->getPhotos('teams');
+		$this->assign('lists',$lists);
+		$this->title ( 'LOGO列表' );
+		$this->display();
+	}
+	public function addteams(){
+		$type = $this->_get('type','trim','');
+	
+		if($type == 'n'){
+			if(IS_POST){
+				//上传
+				$arrUpload = D('images')->addPhoto($_FILES['picfile'],'teams');
+	
+				if($arrUpload){
+					$arrData = array(
+							'type' => 'teams',
+							'name' => $arrUpload['filename'],
+							'path' => $arrUpload['path'],
+							'size' => $arrUpload['size'],
+							'addtime' => time(),
+					);
+						
+					if(!false == D('photos')->create ($arrData)){
+						$photoid = D('photos')->add();
+						$this->redirect('prize/teams');
+					}
+				}
+			}
+		}
+		$this->assign('type',$type);
+		$this->title ( '添加LOGO' );
+		$this->display();
+	}	
 	public function addmedias(){
 		$type = $this->_get('type','trim','');
 		
@@ -245,7 +280,7 @@ class prizeAction extends backendAction {
 		$type = $this->_get('type','trim');
 		// 执行删除
 		D('photos')->where(array('id'=>$id,'type'=>$type))->delete();
-		$this->success('删除成功！',U('prize/medias'));
+		$this->success('删除成功！');
 	}
 	//焦点图
 	public function focus(){

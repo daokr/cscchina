@@ -79,12 +79,16 @@ class indexAction extends frontendAction {
 		$this->assign ( 'pjxw_list', $pjxw_list );
 
 		//媒体报道
-		$mtbd_list = $this->prize_mod->getAll('reports',11);
+		$mtbd_list = $this->prize_mod->getAll('reports',5);
 		$this->assign ( 'mtbd_list', $mtbd_list );
 
 		//合作媒体logo
 		$medias = $this->photos_mod->getPhotos('medias');
 		$this->assign ( 'medias', $medias );
+		
+		//协作媒体logo
+		$teams = $this->photos_mod->getPhotos('teams');
+		$this->assign ( 'teams', $teams );
 		
 		//合作企业logo
 		$companys = $this->photos_mod->getPhotos('company');

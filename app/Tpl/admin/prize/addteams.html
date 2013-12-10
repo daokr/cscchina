@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<include file="public:head" />
+<script src="__STATIC__/public/js/uploadify/jquery.uploadify.v2.1.4.js" type="text/javascript"></script>
+
+<script src="__STATIC__/public/js/uploadify/swfobject.js" type="text/javascript"></script>
+
+<link type="text/css" rel="stylesheet" href="__STATIC__/public/js/uploadify/uploadify2.css" />
+
+<script type="text/javascript">
+	var objdata = {'type': 'teams'};
+	var jumpurl = "{:U('prize/teams')}";
+$(document).ready(function()
+{		
+	$("#uploadify").uploadify({
+		'uploader': siteUrl + 'static/public/js/uploadify/uploadify.swf',
+		'expressInstall': siteUrl + 'static/public/js/uploadify/expressInstall.swf',
+		'script': 'index.php?g=admin&m=prize&a=ajaxupload',
+		'scriptData':objdata,
+		'method':'POST', 
+		'cancelImg': siteUrl+'static/public/js/uploadify/cancel2.png',
+		'folder': 'UploadFile',
+		'queueID': 'fileQueue',
+		'auto': false,
+		'multi': true,
+		'buttonText': '',
+		'buttonImg': siteUrl+'static/public/js/uploadify/upload-btns.png',		
+		'fileDesc':'jpg,gif,png图片格式',
+		'fileExt':'*.jpg;*.gif;*.png',
+		'onAllComplete' : function(event,data) {
+			window.location = jumpurl;
+		}
+
+	});
+
+})
+</script>
+</head>
+<body>
+<!--main-->
+<div class="midder">
+<h2>{$title}</h2>
+
+
+            <div class="uploadtype">
+                <p class="pl">你可以上传JPG，JPEG， GIF，PNG，每个文件大小可以到1M。</p><br>
+                <form enctype="multipart/form-data" action="{:U('prize/addteams',array('type'=>'n'))}" method="post" name="album_upload">
+                
+                  <input type="file" name="picfile">
+                  <input type="hidden" name="typeid" value="0">
+                  <input type="hidden" name="type" value="medias">
+                <br><br>
+                <span class="bn-flat"><input type="submit" value="开始上传" name="upload" class="submit" ></span>
+                </form>
+            
+            </div>   	
+   
+
+
+</form>
+
+</div>
+</body>
+</html>

@@ -44,7 +44,9 @@
      <li><a style="outline:none;" hidefocus="true" class="submenuB" href="<?php echo U('prize/manage',array('catename'=>'news'));?>" target="MainIframe">评奖新闻</a></li>
      <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('prize/manage',array('catename'=>'reports'));?>" target="MainIframe">评奖媒体报道</a></li>
      <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('prize/focus');?>" target="MainIframe">焦点图管理</a></li>
+     <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('content/manage',array('type'=>'award'));?>" target="MainIframe">奖项管理</a></li>
      <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('prize/medias');?>" target="MainIframe">合作媒体LOGO</a></li>
+     <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('prize/teams');?>" target="MainIframe">协办媒体LOGO</a></li>     
     </ul>
 </li><?php endif; ?>
 
@@ -86,5 +88,9 @@
     <ul class="submenu" style="display: block;">
     	<li><a style="outline:none;" hidefocus="true" class="submenuB" href="<?php echo U('singlepage/manage',array('catename'=>'page1'));?>" target="MainIframe">评选章程</a></li>
     	<li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('singlepage/manage',array('catename'=>'page2'));?>" target="MainIframe">评审委员会</a></li>
+        <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('singlepage/manage',array('catename'=>'ltbj'));?>" target="MainIframe">论坛背景</a></li>
+        <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('singlepage/manage',array('catename'=>'bjdl'));?>" target="MainIframe">颁奖典礼</a></li>
+        <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('singlepage/manage',array('catename'=>'wjhg'));?>" target="MainIframe">往届回顾</a></li>
+        <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('singlepage/manage',array('catename'=>'ltxc'));?>" target="MainIframe">论坛现场</a></li>
     </ul>
 </li><?php endif; ?>
