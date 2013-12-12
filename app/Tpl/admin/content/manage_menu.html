@@ -1,15 +1,23 @@
-<h2 style="height:28px;"><span style="float:left"><a href="{:U('content/addyear')}">+添加年份</a></span>{$title}</h2>  
+<h2 style="height:28px;"><span><a href="{:U('content/addarticle',array('yearid'=>$yearid,'cateid'=>$cateid))}">+添加内容</a></span>{$title}</h2>  
 <div class="tabnav">
 <ul>
-
-    <li class="select"><a href="{:U('article/index',array('ik'=>'list','cateid'=>$item[cateid],'isaudit'=>'0'))}">2012</a></li>
-    <li><a href="{:U('content/index',array('ik'=>'list','cateid'=>$item[cateid],'isaudit'=>'0'))}">2012</a></li>
-
+	<foreach name="years" item="item">
+    <if condition="$item[yearid] eq $yearid">
+    	<li class="select"><a href="{:U('content/manage',array('yearid'=>$item[yearid]))}">{$item[yearname]}</a></li>
+    <else/>
+   		<li><a href="{:U('content/manage',array('yearid'=>$item[yearid]))}">{$item[yearname]}</a></li>
+    </if>
+	</foreach>
 </ul>
 </div>
 <div class="tabnav">
 <ul>
-   		 <li class="select"><a href="">科技创新个人成就奖</a></li>
-   		 <li><a href="">科技创新个人成就奖</a></li>
+<foreach name="cates" item="item">
+ <if condition="$item[cateid] eq $cateid">
+   		<li class="select"><a href="{:U('content/manage',array('yearid'=>$yearid,'cateid'=>$item[cateid]))}">{$item[catename]}</a></li>
+ <else/>         
+   		<li><a href="{:U('content/manage',array('yearid'=>$yearid,'cateid'=>$item[cateid]))}">{$item[catename]}</a></li>
+ </if>
+</foreach>          
 </ul>
 </div>

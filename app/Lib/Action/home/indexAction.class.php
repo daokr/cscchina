@@ -13,6 +13,9 @@ class indexAction extends frontendAction {
 		$this->photos_mod = D('photos'); 
 		$this->focus_mod = D('focus');
 		$this->friends_mod = D('friends');
+		$this->content_mod = D('content');
+		$this->content_year_mod = D('content_year');
+		$this->content_cate_mod = D('content_cate');
 	}
 	public function index() {
 		
@@ -110,6 +113,16 @@ class indexAction extends frontendAction {
 		//评奖新闻焦点图
 		//$friends_list =  $this->friends_mod->select();
 		//$this->assign ( 'friends_list', $friends_list );
+		//获奖公式
+		$arr_content_cates =  $this->content_cate_mod->order('cateid desc')->select();
+		$arr_content_year = $this->content_year_mod->order('yearname desc')->select();
+		foreach ($arr_content_cates as $key=>$item){
+			$arr_content_cate[] = $item;
+			$arr_content_cate[$key]['yearid'] = $arr_content_year[0]['yearid'];
+			$arr_content_cate[$key]['arr_content'] = $this->content_mod->getAll($item['cateid'],$arr_content_year[0]['yearid'],5);
+		}
+		$this->assign ( 'arr_content_cate', $arr_content_cate );
+		
 		
 		$this->_config_seo ();
 		$this->display();

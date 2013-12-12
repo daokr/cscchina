@@ -11,13 +11,16 @@
 		<aside class="w190 fl">
 			<section class="categories">
 				<div class="hd">
-					<h3>全部分类</h3>
+					<h3>全部年份</h3>
 				</div>
 				<ul class="list categories-list">
-                   
-					<li><a href="{:U('prize/category',array('catename'=>'news'))}">评奖新闻</a></li>
-                    <li><a href="{:U('prize/category',array('catename'=>'reports'))}">媒体报道</a></li>
-					
+                    <foreach name="years" item="item">
+						<if condition="$item[yearid] eq $yearid">
+                        <li class="on"><a href="{:U('content/category',array('yearid'=>$item[yearid],'cateid'=>$cateid))}">{$item[yearname]} 年</a></li>
+                        <else/>
+                        <li><a href="{:U('content/category',array('yearid'=>$item[yearid],'cateid'=>$cateid))}">{$item[yearname]} 年</a></li>
+                        </if>
+					</foreach>
 				</ul>
 			</section>
 
@@ -33,11 +36,11 @@
 						<foreach name="arrArticle" item="item">
 						<li class="item">
 							<div class="title">
-								<a href="{:U('prize/show',array('id'=>$item[id]))}">{$item[title]}</a>
+								<a href="{:U('content/show',array('id'=>$item[id]))}">{$item[title]}</a>
 							</div>
                            <if condition="$item[photo]">
 							<div class="cover">
-                                <a class="pic" href="{:U('prize/show',array('id'=>$item[aid]))}">
+                                <a class="pic" href="{:U('content/show',array('id'=>$item[id]))}">
 									<img src="{$item[photo][simg]}" />
 								</a> 
 							</div>
@@ -45,7 +48,7 @@
 							<div class="info">
 								<div class="article-desc-brief">
 									<php> echo getsubstrutf8(t($item[content]),0,150);</php>...
-                                    <a href="{:U('prize/show',array('id'=>$item[aid]))}">（更多）</a>
+                                    <a href="{:U('content/show',array('id'=>$item[id]))}">（更多）</a>
 								</div>
 							</div>
 							<span class="time">发表于 <php>echo date('Y-m-d H:i',$item[addtime])</php>  | 浏览 {$item[count_view]}</span> 

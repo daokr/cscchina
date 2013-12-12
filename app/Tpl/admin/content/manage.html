@@ -25,7 +25,7 @@
 <tr class="odd">
 <td><input type="checkbox" value="{$item[id]}" name="itemid"></td>
 <td>{$item[itemid]}</td>
-<td><a href="index.php?m=content&a=show&id={$item[itemid]}" target="_blank">{$item[title]}</a></td>
+<td>{$item[title]}</td>
 <td>{$item[cate][catename]}</td>
 <td>{$item[user][username]}</td>
 <td>{$item[addtime]}</td>
@@ -44,11 +44,11 @@
 <font color="blue">头</font>
 </if>
 </td>
-<td><span class="tdedit" data-id="{$item[itemid]}" data-field="orderid" data-tdtype="edit" data-action="{:U('content/ajax_setting',array('ik'=>'order','id'=>$item[id]))}">{$item[orderid]}</span></td>
+<td><span class="tdedit" data-id="{$item[id]}" data-field="orderid" data-tdtype="edit" data-action="{:U('content/ajax_setting',array('ik'=>'order','id'=>$item[id]))}">{$item[orderid]}</span></td>
 <td>
-<a href="{:U('article/editarticle',array('id'=>$item[id]))}">[编辑]</a> 
+<a href="{:U('content/editarticle',array('id'=>$item[id]))}">[编辑]</a> 
 
-<a href="{:U('article/delarticle',array('id'=>$item[id]))}" onClick="return confirm('确定要执行删除操作吗？')">[删除]</a> 
+<a href="{:U('content/delarticle',array('id'=>$item[id]))}" onClick="return confirm('确定要执行删除操作吗？')">[删除]</a> 
 
 </td>
 <tr>

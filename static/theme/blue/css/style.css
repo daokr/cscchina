@@ -7,12 +7,14 @@
 .hbt3{ width:300px; height:75px; float:left; padding-left:12px}
 
 .inboxbd1{}
-.inboxbd1 .leftbd{ width:270px; float:left;box-shadow: 0px 1px 2px rgba(0,0,0,0.2);}
+.inboxbd1 .leftbd{ width:270px; float:left;}
 .inboxbd1  h2{ display:block; height:36px; overflow:hidden;background:url(../images/layout/tit_bg.jpg) repeat-x 0px bottom; padding-left:10px; padding-right:10px}
 .inboxbd1  h2 span{display:inline-block; height:36px; overflow:hidden; line-height:999px;}
 .inboxbd1  h2 em{ background:url(../images/layout/more1.jpg) no-repeat 0px bottom; width:37px; height:36px; display:block; float:right; overflow:hidden}
 .inboxbd1  h2 em a{ display:block; line-height:900px;}
-.inboxbd1  .bd{ padding:10px;background-color:#f5f5f4;}
+/*
+.inboxbd1  .bd{ padding:10px;background-color:#f5f5f4;}*/
+.inboxbd1  .bd{ padding:10px;}
 .inboxbd1 .leftbd dl{ display:block;}
 .inboxbd1 .leftbd dl dt{ display:block; float:left; width:95px; padding-top:5px}
 .inboxbd1 .leftbd dl dt img{ width:90px; height:127px}
@@ -37,13 +39,17 @@
 .inboxbd1 .inmidbd dl dd h3 a{ color:#813722}
 .inboxbd1 .inmidbd dl dd p{ color:#5c5c5c}
 
-.inboxbd1 .rightbd{ display:block; float:right; width:190px;box-shadow: 0px 1px 2px rgba(0,0,0,0.2);}
+/*.inboxbd1 .rightbd{ display:block; float:right; width:190px;box-shadow: 0px 1px 2px rgba(0,0,0,0.2);}
+*/
+.inboxbd1 .rightbd{ display:block; float:right; width:190px;}
+
 .inboxbd1 .rightbd h2{ position:relative; overflow:visible}
 .inboxbd1 .rightbd h2 i{ position:absolute; right:-15px; top:-3px; width:52px; height:68px; 
 display:block; background:url(../images/layout/new_icon.png) no-repeat 0px 0px;  }
 .inboxbd1 .rightbd .bd li{ display:block; line-height:22px; height:22px; overflow:hidden; white-space:nowrap;}
 
-.inboxbd1 .itembd{ width:305px; float:left; margin-right:15px; display:block; box-shadow: 0px 1px 2px rgba(0,0,0,0.2);}
+.inboxbd1 .itembd{ width:305px; float:left; margin-right:15px; display:block;}
+
 .inboxbd1 .lastitembd{ width:310px; margin-right:0px}
 .inboxbd1 .itembd dl{ display:block;}
 .inboxbd1 .itembd dl dt{ display:block; float:left; width:130px; padding-top:5px; overflow:hidden}
@@ -76,7 +82,7 @@ display:block; background:url(../images/layout/new_icon.png) no-repeat 0px 0px; 
 #pjxwBar h2{ display:block; height:55px; line-height:999px; overflow:hidden}
 #pjxwBar h2 span{ float:right; overflow:hidden; display:block; width:65px; height:25px; margin-right:75px; margin-top:27px}
 #pjxwBar h2 span a{ display:block; }
-#pjxwBar .bd{ padding-top:11px;}
+#pjxwBar .bd{ padding-top:11px; height:220px;}
 #pjxwBar .bd li{ line-height:37px; height:37px; white-space:nowrap; text-overflow:ellipsis; word-spacing:normal; width:290px; overflow:hidden; font-size:14px; display:block; background:url(../images/layout/pjxw_li_bg.gif) no-repeat 0px center; padding:0px 8px}
 
 .modR1{ float:right; width:630px; overflow:hidden; padding-top:7px}
@@ -101,6 +107,7 @@ a.comein:hover{ background-position:0px -56px}
 .winningBar .bd{ background-color:#f5f5f4; display:block;box-shadow: 0px 1px 2px rgba(0,0,0,0.2);}
 
 .winningBar .gongsi_tit{ font-size:14px; line-height:30px; height:30px; font-weight:bold; display:block; padding:0px 10px; background:url(../images/layout/winning_bg.jpg) no-repeat 0px 0px;}
+.winningBar .gongsi_tit span{ float:right; font-weight:normal}
 .winningBar .bd .gongsi_bd{ display:block; overflow:hidden}
 .winningBar .bd .gongsi_bd li{ display:block; float:left; width:90px; height:50px; overflow:hidden; margin:10px 6px;}
 .winningBar .bd .gongsi_bd li img{ width:90px; height:50px}
@@ -208,7 +215,7 @@ section .hd{padding-bottom:5px;border-bottom:1px solid #ddd;margin-bottom:9px}
 .categories .hd{margin-bottom:0}
 .categories-list li{padding:0;margin:0;border-bottom:1px solid #eee;zoom:1}
 .categories-list a{height:36px;line-height:36px;padding:0 5px;margin:1px 0;display:block;font-size:14px;}
-.categories-list a:hover{background:#fff;color:#6e3939}
+.categories-list a:hover,.categories-list li.on a{background:#fff;color:#6e3939}
 
 
 .personal-publish .bd{padding-bottom:6px;}

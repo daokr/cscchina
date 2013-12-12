@@ -74,40 +74,58 @@ __EXTENDS_JS__
     </div>
 </div>
 </header>
-
 <div class="midder">
-<div class="mc">
-    <div class="cleft">
-        <div class="art-body">
-            <h1 class="title"><?php echo ($strArticle[title]); ?></h1>
-            <div class="art-info">
-            作者：<?php echo ($strArticle[newsauthor]); ?>&nbsp;&nbsp;<?php echo date('Y-m-d H:i',$strArticle[uptime]) ?>&nbsp;&nbsp; 浏览<?php echo ($strArticle[count_view]); ?>次&nbsp;&nbsp;
-            </div>
-        
-            <div class="art-text">
-                <?php echo ($strArticle[content]); ?>
-            </div>
-            <div class="control-btns">
-            </div>
+	<div class="mc">
+		<aside class="w190 fl">
+			<section class="categories">
+				<div class="hd">
+					<h3>全部年份</h3>
+				</div>
+				<ul class="list categories-list">
+                    <?php if(is_array($years)): foreach($years as $key=>$item): if($item[yearid] == $yearid): ?><li class="on"><a href="<?php echo U('content/category',array('yearid'=>$item[yearid],'cateid'=>$cateid));?>"><?php echo ($item[yearname]); ?> 年</a></li>
+                        <?php else: ?>
+                        <li><a href="<?php echo U('content/category',array('yearid'=>$item[yearid],'cateid'=>$cateid));?>"><?php echo ($item[yearname]); ?> 年</a></li><?php endif; endforeach; endif; ?>
+				</ul>
+			</section>
+
+		</aside>
+		<article class="w770 fr">
+			<section>
+				<div class="hd tag-heading">
+					<h3 class="the-tag-name"><?php echo ($seo["title"]); ?></h3>
+				</div>
+
+				<div class="bd">
+					<ul class="list-lined article-list">
+						<?php if(is_array($arrArticle)): foreach($arrArticle as $key=>$item): ?><li class="item">
+							<div class="title">
+								<a href="<?php echo U('content/show',array('id'=>$item[id]));?>"><?php echo ($item[title]); ?></a>
+							</div>
+                           <?php if($item[photo]): ?><div class="cover">
+                                <a class="pic" href="<?php echo U('content/show',array('id'=>$item[id]));?>">
+									<img src="<?php echo ($item[photo][simg]); ?>" />
+								</a> 
+							</div><?php endif; ?>                           
+							<div class="info">
+								<div class="article-desc-brief">
+									<?php echo getsubstrutf8(t($item[content]),0,150); ?>...
+                                    <a href="<?php echo U('content/show',array('id'=>$item[id]));?>">（更多）</a>
+								</div>
+							</div>
+							<span class="time">发表于 <?php echo date('Y-m-d H:i',$item[addtime]) ?>  | 浏览 <?php echo ($item[count_view]); ?></span> 
+						</li><?php endforeach; endif; ?>
+
+					</ul>
+				</div>
+
+
+			</section>
             
-      	  <div class="clear"></div>
-
-      </div>
-    
-    
-    
-    </div>
-
-
-    <div class="cright">
-    
-        
-        
-    </div>
-
+             <div class="page"><?php echo ($pageUrl); ?></div>   
+             
+		</article>
+	</div>
 </div>
-</div>
-
 <!--footer-->
 <footer>
 <div id="footer">

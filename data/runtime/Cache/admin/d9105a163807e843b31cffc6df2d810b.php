@@ -28,19 +28,19 @@ function error(c){$.dialog({icon: 'error',content: '<font  style="font-size:14px
 <body>
 <!--main-->
 <div class="midder">
-<h2 style="height:28px;"><span style="float:left"><a href="<?php echo U('content/addyear');?>">+添加年份</a></span><?php echo ($title); ?></h2>  
+<h2 style="height:28px;"><span><a href="<?php echo U('content/addarticle',array('yearid'=>$yearid,'cateid'=>$cateid));?>">+添加内容</a></span><?php echo ($title); ?></h2>  
 <div class="tabnav">
 <ul>
-
-    <li class="select"><a href="<?php echo U('article/index',array('ik'=>'list','cateid'=>$item[cateid],'isaudit'=>'0'));?>">2012</a></li>
-    <li><a href="<?php echo U('content/index',array('ik'=>'list','cateid'=>$item[cateid],'isaudit'=>'0'));?>">2012</a></li>
-
+	<?php if(is_array($years)): foreach($years as $key=>$item): if($item[yearid] == $yearid): ?><li class="select"><a href="<?php echo U('content/manage',array('yearid'=>$item[yearid]));?>"><?php echo ($item[yearname]); ?></a></li>
+    <?php else: ?>
+   		<li><a href="<?php echo U('content/manage',array('yearid'=>$item[yearid]));?>"><?php echo ($item[yearname]); ?></a></li><?php endif; endforeach; endif; ?>
 </ul>
 </div>
 <div class="tabnav">
 <ul>
-   		 <li class="select"><a href="">科技创新个人成就奖</a></li>
-   		 <li><a href="">科技创新个人成就奖</a></li>
+<?php if(is_array($cates)): foreach($cates as $key=>$item): if($item[cateid] == $cateid): ?><li class="select"><a href="<?php echo U('content/manage',array('yearid'=>$yearid,'cateid'=>$item[cateid]));?>"><?php echo ($item[catename]); ?></a></li>
+ <?php else: ?>         
+   		<li><a href="<?php echo U('content/manage',array('yearid'=>$yearid,'cateid'=>$item[cateid]));?>"><?php echo ($item[catename]); ?></a></li><?php endif; endforeach; endif; ?>          
 </ul>
 </div>
 
@@ -60,7 +60,7 @@ function error(c){$.dialog({icon: 'error',content: '<font  style="font-size:14px
 <?php if(is_array($arrArticles)): foreach($arrArticles as $key=>$item): ?><tr class="odd">
 <td><input type="checkbox" value="<?php echo ($item[id]); ?>" name="itemid"></td>
 <td><?php echo ($item[itemid]); ?></td>
-<td><a href="index.php?m=content&a=show&id=<?php echo ($item[itemid]); ?>" target="_blank"><?php echo ($item[title]); ?></a></td>
+<td><?php echo ($item[title]); ?></td>
 <td><?php echo ($item[cate][catename]); ?></td>
 <td><?php echo ($item[user][username]); ?></td>
 <td><?php echo ($item[addtime]); ?></td>
@@ -73,11 +73,11 @@ function error(c){$.dialog({icon: 'error',content: '<font  style="font-size:14px
 <?php if($item[istop] == 1): ?><font color="green">顶</font>&nbsp;<?php endif; ?>
 <?php if($item[isdigest] == 1): ?><font color="blue">头</font><?php endif; ?>
 </td>
-<td><span class="tdedit" data-id="<?php echo ($item[itemid]); ?>" data-field="orderid" data-tdtype="edit" data-action="<?php echo U('content/ajax_setting',array('ik'=>'order','id'=>$item[id]));?>"><?php echo ($item[orderid]); ?></span></td>
+<td><span class="tdedit" data-id="<?php echo ($item[id]); ?>" data-field="orderid" data-tdtype="edit" data-action="<?php echo U('content/ajax_setting',array('ik'=>'order','id'=>$item[id]));?>"><?php echo ($item[orderid]); ?></span></td>
 <td>
-<a href="<?php echo U('article/editarticle',array('id'=>$item[id]));?>">[编辑]</a> 
+<a href="<?php echo U('content/editarticle',array('id'=>$item[id]));?>">[编辑]</a> 
 
-<a href="<?php echo U('article/delarticle',array('id'=>$item[id]));?>" onClick="return confirm('确定要执行删除操作吗？')">[删除]</a> 
+<a href="<?php echo U('content/delarticle',array('id'=>$item[id]));?>" onClick="return confirm('确定要执行删除操作吗？')">[删除]</a> 
 
 </td>
 <tr><?php endforeach; endif; ?>

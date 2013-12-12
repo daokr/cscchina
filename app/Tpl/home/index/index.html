@@ -192,86 +192,16 @@ $(function(){
                 <div class="blank15"></div>
                 <div class="winningBar">
                 	<div class="bd">
+                     <foreach name="arr_content_cate" item="item">
                     	<div class="item_gongsi">
-                            <h2 class="gongsi_tit">科技创新个人成就奖</h2>
+                            <h2 class="gongsi_tit"><span><a href="{:U('content/category',array('yearid'=>$item[yearid],'cateid'=>$item[cateid]))}">更多&gt;&gt;</a></span>{$item[catename]}</h2>
                             <ul class="gongsi_bd">
-                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
-                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
-                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
-
+                           	  <foreach name="item[arr_content]" item="citem">
+                                <li><a href="{:U('content/show',array('id'=>$citem[id]))}"><img src="{$citem[photo][simg]}"/></a></li>
+                             </foreach>
                             </ul>
                         </div>
-                    	<div class="item_gongsi">
-                            <h2 class="gongsi_tit"><span><a href="#">更多&gt;&gt;</a></span>科技创新个人成就奖</h2>
-                            <ul class="gongsi_bd">
-                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
-                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
-
-
-                            </ul>
-                        </div>
-
-                    	<div class="item_gongsi">
-                            <h2 class="gongsi_tit">科技创新个人成就奖</h2>
-                            <ul class="gongsi_bd">
-                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
-                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
-                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
-                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
-
-                            </ul>
-                        </div>
-                    	<div class="item_gongsi">
-                            <h2 class="gongsi_tit">科技创新个人成就奖</h2>
-                            <ul class="gongsi_bd">
-                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
-                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
-                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
-                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
-
-                            </ul>
-                        </div>
-                    	<div class="item_gongsi">
-                            <h2 class="gongsi_tit">科技创新个人成就奖</h2>
-                            <ul class="gongsi_bd">
-                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
-                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
-                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
-                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
-
-                            </ul>
-                        </div>
-                    	<div class="item_gongsi">
-                            <h2 class="gongsi_tit">科技创新个人成就奖</h2>
-                            <ul class="gongsi_bd">
-                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
-                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
-                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
-                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
-
-                            </ul>
-                        </div>
-                    	<div class="item_gongsi">
-                            <h2 class="gongsi_tit">科技创新个人成就奖</h2>
-                            <ul class="gongsi_bd">
-                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
-                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
-                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
-                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
-
-                            </ul>
-                        </div>
-                    	<div class="item_gongsi">
-                            <h2 class="gongsi_tit">科技创新个人成就奖</h2>
-                            <ul class="gongsi_bd">
-                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
-                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
-                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
-                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
-                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
-                                <li><img src="/cscchina/static/theme/blue/images/temp/210x145.jpg"/></li>
-                            </ul>
-                        </div>                                                                                                                                                                        
+                     </foreach>	                                                                                                                                                                        
                         <!--<h3>获奖公式</h3>-->
                     </div>
 					<!--

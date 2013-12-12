@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<include file="public:head" />
+</head>
+<body>
+<!--main-->
+<div class="midder">
+<h2 style="height:28px;"><span><a href="{:U('content/addyear')}">+添加年份</a></span>{$title}</h2>  
+
+<table  cellpadding="0" cellspacing="0">
+<tr class="old">
+<td>ID</td>
+<td>年份</td>
+<td width="280">操作</td>
+</tr>
+<foreach name="years" item="item">
+<tr class="odd">
+<td>{$item[yearid]}</td>
+<td>{$item[yearname]}</td>
+<td><a href="{:U('content/edityear',array('yearid'=>$item[yearid]))}">[编辑]</a> </td>
+<tr>
+</foreach>
+</table>
+
+<div class="pagebar">{$pageUrl}</div>
+</div>
+</body>
+</html>

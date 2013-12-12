@@ -81,7 +81,7 @@ __EXTENDS_JS__
         <div class="art-body">
             <h1 class="title"><?php echo ($strArticle[title]); ?></h1>
             <div class="art-info">
-            作者：<?php echo ($strArticle[newsauthor]); ?>&nbsp;&nbsp;<?php echo date('Y-m-d H:i',$strArticle[uptime]) ?>&nbsp;&nbsp; 浏览<?php echo ($strArticle[count_view]); ?>次&nbsp;&nbsp;
+            作者：<?php echo ($strArticle[newsauthor]); ?>&nbsp;&nbsp;<?php echo date('Y-m-d H:i',$strArticle[addtime]) ?>&nbsp;&nbsp; 浏览<?php echo ($strArticle[count_view]); ?>次&nbsp;&nbsp;
             </div>
         
             <div class="art-text">
@@ -91,7 +91,10 @@ __EXTENDS_JS__
             </div>
             
       	  <div class="clear"></div>
-
+          <div class="art-titles"> 
+             <span class="fl"><?php if(!empty($upArticle)): ?>上一篇：<a href="<?php echo U('content/show',array('id'=>$upArticle['id']));?>"><?php echo ($upArticle['title']); ?></a><?php endif; ?></span>
+             <span class="fr"><?php if(!empty($downArticle)): ?>下一篇：<a href="<?php echo U('content/show',array('id'=>$downArticle['id']));?>"><?php echo ($downArticle['title']); ?></a><?php endif; ?></span>
+          </div>
       </div>
     
     

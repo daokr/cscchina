@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<include file="public:head" />
+</head>
+<body>
+<!--main-->
+<div class="midder">
+<h2 style="height:28px;"><span><a href="{:U('content/addcate')}">+添加奖项名</a></span>{$title}</h2>  
+
+<table  cellpadding="0" cellspacing="0">
+<tr class="old">
+<td>ID</td>
+<td>名称</td>
+<td width="280">操作</td>
+</tr>
+<foreach name="cates" item="item">
+<tr class="odd">
+<td>{$item[cateid]}</td>
+<td>{$item[catename]}</td>
+<td><a href="{:U('content/editcate',array('cateid'=>$item[cateid]))}">[编辑]</a> </td>
+<tr>
+</foreach>
+</table>
+
+<div class="pagebar">{$pageUrl}</div>
+</div>
+</body>
+</html>
