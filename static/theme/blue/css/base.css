@@ -204,6 +204,7 @@ a.bn-post:hover span{background-color:#63AB1A; border: 1px solid #50950E;}
 .midder .mc{overflow:hidden;display: block; padding:10px}
 .midder .mc .cleft{float: left;width: 640px;background-color:#F5F5F4;box-shadow: 0px 1px 2px rgba(0,0,0,0.2); }
 .midder .mc .cright{float: right;width: 310px;background-color:#F5F5F4;box-shadow: 0px 2px 2px rgba(0,0,0,0.2); }
+.midder .mc .widthauto{ width:auto; float:none}
 .w190{width:160px; background-color:#F5F5F4;box-shadow: 0px 1px 2px rgba(0,0,0,0.2); padding:10px;}
 .w770{width:740px; background-color:#F5F5F4;box-shadow: 0px 1px 2px rgba(0,0,0,0.2); padding:10px; }
 .midder .mc .w250{ width:250px}

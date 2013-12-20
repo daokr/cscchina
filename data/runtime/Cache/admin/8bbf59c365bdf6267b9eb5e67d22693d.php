@@ -80,7 +80,7 @@
     <li><a style="outline:none;" hidefocus="true" class="submenuB" href="<?php echo U('forum/manage',array('catename'=>'subject'));?>" target="MainIframe">本届主题论坛</a></li>
     <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('forum/manage',array('catename'=>'leaders'));?>" target="MainIframe">本届论坛嘉宾</a></li>
     <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('forum/medias');?>" target="MainIframe">本届合作企业LOGO</a></li>
-    <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('history/hislist');?>" target="MainIframe">往届回顾列表</a></li>
+    <li><a style="outline:none;" hidefocus="true" class="submenuA" href="<?php echo U('singlepage/manage',array('catename'=>'wjlthg'));?>" target="MainIframe">往届论坛回顾列表</a></li>
     </ul>
 </li><?php endif; ?>
 

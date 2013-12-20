@@ -16,6 +16,7 @@ class indexAction extends frontendAction {
 		$this->content_mod = D('content');
 		$this->content_year_mod = D('content_year');
 		$this->content_cate_mod = D('content_cate');
+		$this->singlepage_mod = D ( 'singlepage' );
 	}
 	public function index() {
 		
@@ -119,10 +120,18 @@ class indexAction extends frontendAction {
 		foreach ($arr_content_cates as $key=>$item){
 			$arr_content_cate[] = $item;
 			$arr_content_cate[$key]['yearid'] = $arr_content_year[0]['yearid'];
-			$arr_content_cate[$key]['arr_content'] = $this->content_mod->getAll($item['cateid'],$arr_content_year[0]['yearid'],5);
+			$arr_content_cate[$key]['arr_content0'] = $this->content_mod->getAll($item['cateid'],$arr_content_year[0]['yearid'],4);
+			$arr_content_cate[$key]['arr_content1'] = $this->content_mod->getAll($item['cateid'],$arr_content_year[1]['yearid'],4);
+			$arr_content_cate[$key]['arr_content2'] = $this->content_mod->getAll($item['cateid'],$arr_content_year[2]['yearid'],4);
 		}
 		$this->assign ( 'arr_content_cate', $arr_content_cate );
+		$this->assign ( 'arr_content_year', $arr_content_year );
 		
+		
+		//往届论坛回顾 单页
+		$str_wjlthg = $this->singlepage_mod->where(array('catename'=>'wjlthg'))->find();
+		$arr_wjlthg_img = D('images')->getImagesByTypeid('singlepage',$str_wjlthg['id']);
+		$this->assign ( 'arr_wjlthg_img', $arr_wjlthg_img );
 		
 		$this->_config_seo ();
 		$this->display();

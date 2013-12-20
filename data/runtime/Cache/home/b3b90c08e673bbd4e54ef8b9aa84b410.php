@@ -77,7 +77,7 @@ __EXTENDS_JS__
 
 <div class="midder">
 <div class="mc">
-    <div class="cleft">
+    <div class="cleft widthauto">
         <div class="art-body">
             <h1 class="title"><?php echo ($strArticle[title]); ?></h1>
             <div class="art-info">
@@ -99,11 +99,6 @@ __EXTENDS_JS__
     </div>
 
 
-    <div class="cright">
-    
-        
-        
-    </div>
 
 </div>
 </div>

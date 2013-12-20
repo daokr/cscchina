@@ -191,19 +191,49 @@ $(function(){
                 </div>
                 <div class="blank15"></div>
                 <div class="winningBar">
+                	<div class="winning-head">
+                    	<ul id="winningUL">
+                        	<li class="on"><a href="javascript:;">{$arr_content_year[0][yearname]}</a></li>
+                            <li><a href="javascript:;">{$arr_content_year[1][yearname]}</a></li>
+                             <li><a href="javascript:;">{$arr_content_year[2][yearname]}</a></li>
+                        </ul>
+                    </div>
                 	<div class="bd">
                      <foreach name="arr_content_cate" item="item">
                     	<div class="item_gongsi">
-                            <h2 class="gongsi_tit"><span><a href="{:U('content/category',array('yearid'=>$item[yearid],'cateid'=>$item[cateid]))}">更多&gt;&gt;</a></span>{$item[catename]}</h2>
+                            <h2 class="gongsi_tit"><a href="{:U('content/category',array('yearid'=>$item[yearid],'cateid'=>$item[cateid]))}">{$item[catename]}</a></h2>
                             <ul class="gongsi_bd">
-                           	  <foreach name="item[arr_content]" item="citem">
+                           	  <foreach name="item[arr_content0]" item="citem">
                                 <li><a href="{:U('content/show',array('id'=>$citem[id]))}"><img src="{$citem[photo][simg]}"/></a></li>
                              </foreach>
                             </ul>
                         </div>
-                     </foreach>	                                                                                                                                                                        
-                        <!--<h3>获奖公式</h3>-->
+                     </foreach>	
                     </div>
+                	<div class="bd" style="display:none">
+                     <foreach name="arr_content_cate" item="item">
+                    	<div class="item_gongsi">
+                            <h2 class="gongsi_tit"><a href="{:U('content/category',array('yearid'=>$item[yearid],'cateid'=>$item[cateid]))}">{$item[catename]}</a></h2>
+                            <ul class="gongsi_bd">
+                           	  <foreach name="item[arr_content1]" item="citem">
+                                <li><a href="{:U('content/show',array('id'=>$citem[id]))}"><img src="{$citem[photo][simg]}"/></a></li>
+                             </foreach>
+                            </ul>
+                        </div>
+                     </foreach>	
+                    </div> 
+                	<div class="bd" style="display:none">
+                     <foreach name="arr_content_cate" item="item">
+                    	<div class="item_gongsi">
+                            <h2 class="gongsi_tit"><a href="{:U('content/category',array('yearid'=>$item[yearid],'cateid'=>$item[cateid]))}">{$item[catename]}</a></h2>
+                            <ul class="gongsi_bd">
+                           	  <foreach name="item[arr_content2]" item="citem">
+                                <li><a href="{:U('content/show',array('id'=>$citem[id]))}"><img src="{$citem[photo][simg]}"/></a></li>
+                             </foreach>
+                            </ul>
+                        </div>
+                     </foreach>	
+                    </div>                                        
 					<!--
                     <div style="margin-top:10px">
                     <if condition="$adList[6] neq null"><a href="{$adList[6][link]}" target="_blank"><img src="{$adList[6][path]}"></a></if>
@@ -294,18 +324,9 @@ $(function(){
         <div  class="historyBar">
         	<div class="bd">
 			<ul id="hisbar">
-            	<li><img src="__STATIC__/theme/blue/images/temp/210x145.jpg"></li>
-                <li><img src="__STATIC__/theme/blue/images/temp/210x145.jpg"></li>
-                <li><img src="__STATIC__/theme/blue/images/temp/210x145.jpg"></li>
-                <li><img src="__STATIC__/theme/blue/images/temp/210x145.jpg"></li>
-                <li><img src="__STATIC__/theme/blue/images/temp/210x145.jpg"></li>
-                <li><img src="__STATIC__/theme/blue/images/temp/210x145.jpg"></li>
-            	<li><img src="__STATIC__/theme/blue/images/temp/210x145.jpg"></li>
-                <li><img src="__STATIC__/theme/blue/images/temp/210x145.jpg"></li>
-                <li><img src="__STATIC__/theme/blue/images/temp/210x145.jpg"></li>
-                <li><img src="__STATIC__/theme/blue/images/temp/210x145.jpg"></li>
-                <li><img src="__STATIC__/theme/blue/images/temp/210x145.jpg"></li>
-                <li><img src="__STATIC__/theme/blue/images/temp/210x145.jpg"></li>                
+            	<foreach name="arr_wjlthg_img" item="item">
+            		<li><a href="{:U('singlepage/show',array('catename'=>'wjlthg'))}"><img src="{$item[simg]}" width="210" height="143"></a></li>  
+                </foreach>             
             </ul>            
             </div>
         </div>
@@ -379,6 +400,15 @@ var vScroll = {
 		$(id).css({'marginTop':-t});
 	}
 }
+//获奖公司切换
+$(function(){
+	$('#winningUL li').bind('click',function(){
+		var p = $(this).parents('.winningBar'), index = $('#winningUL li').index(this), bd = p.find('.bd');
+		$(this).addClass('on').siblings().removeClass('on');
+		bd.hide();
+		bd.eq(index).show();
+	});
+})
 </script>
 </body>
 </html>
