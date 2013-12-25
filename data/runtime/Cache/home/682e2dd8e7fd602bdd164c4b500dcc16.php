@@ -258,7 +258,7 @@ $(function(){
                      <?php if(is_array($arr_content_cate)): foreach($arr_content_cate as $key=>$item): ?><div class="item_gongsi">
                             <h2 class="gongsi_tit"><a href="<?php echo U('content/category',array('yearid'=>$item[yearid],'cateid'=>$item[cateid]));?>"><?php echo ($item[catename]); ?></a></h2>
                             <ul class="gongsi_bd">
-                           	  <?php if(is_array($item[arr_content0])): foreach($item[arr_content0] as $key=>$citem): ?><li><a href="<?php echo U('content/show',array('id'=>$citem[id]));?>"><img src="<?php echo ($citem[photo][simg]); ?>"/></a></li><?php endforeach; endif; ?>
+                           	  <?php if(is_array($item[arr_content0])): foreach($item[arr_content0] as $key=>$citem): ?><li><a href="<?php echo U('content/show',array('id'=>$citem[id]));?>"><img src="<?php echo ($citem[photo][mimg]); ?>"/></a></li><?php endforeach; endif; ?>
                             </ul>
                         </div><?php endforeach; endif; ?>	
                     </div>
@@ -266,7 +266,7 @@ $(function(){
                      <?php if(is_array($arr_content_cate)): foreach($arr_content_cate as $key=>$item): ?><div class="item_gongsi">
                             <h2 class="gongsi_tit"><a href="<?php echo U('content/category',array('yearid'=>$item[yearid],'cateid'=>$item[cateid]));?>"><?php echo ($item[catename]); ?></a></h2>
                             <ul class="gongsi_bd">
-                           	  <?php if(is_array($item[arr_content1])): foreach($item[arr_content1] as $key=>$citem): ?><li><a href="<?php echo U('content/show',array('id'=>$citem[id]));?>"><img src="<?php echo ($citem[photo][simg]); ?>"/></a></li><?php endforeach; endif; ?>
+                           	  <?php if(is_array($item[arr_content1])): foreach($item[arr_content1] as $key=>$citem): ?><li><a href="<?php echo U('content/show',array('id'=>$citem[id]));?>"><img src="<?php echo ($citem[photo][mimg]); ?>"/></a></li><?php endforeach; endif; ?>
                             </ul>
                         </div><?php endforeach; endif; ?>	
                     </div> 
@@ -274,7 +274,7 @@ $(function(){
                      <?php if(is_array($arr_content_cate)): foreach($arr_content_cate as $key=>$item): ?><div class="item_gongsi">
                             <h2 class="gongsi_tit"><a href="<?php echo U('content/category',array('yearid'=>$item[yearid],'cateid'=>$item[cateid]));?>"><?php echo ($item[catename]); ?></a></h2>
                             <ul class="gongsi_bd">
-                           	  <?php if(is_array($item[arr_content2])): foreach($item[arr_content2] as $key=>$citem): ?><li><a href="<?php echo U('content/show',array('id'=>$citem[id]));?>"><img src="<?php echo ($citem[photo][simg]); ?>"/></a></li><?php endforeach; endif; ?>
+                           	  <?php if(is_array($item[arr_content2])): foreach($item[arr_content2] as $key=>$citem): ?><li><a href="<?php echo U('content/show',array('id'=>$citem[id]));?>"><img src="<?php echo ($citem[photo][mimg]); ?>"/></a></li><?php endforeach; endif; ?>
                             </ul>
                         </div><?php endforeach; endif; ?>	
                     </div>                                        
@@ -354,7 +354,7 @@ $(function(){
         <div  class="historyBar">
         	<div class="bd">
 			<ul id="hisbar">
-            	<?php if(is_array($arr_wjlthg_img)): foreach($arr_wjlthg_img as $key=>$item): ?><li><a href="<?php echo U('singlepage/show',array('catename'=>'wjlthg'));?>"><img src="<?php echo ($item[simg]); ?>" width="210" height="143"></a></li><?php endforeach; endif; ?>             
+            	<?php if(is_array($arr_wjlthg_img)): foreach($arr_wjlthg_img as $key=>$item): ?><li><a href="<?php echo U('singlepage/show',array('catename'=>'wjlthg'));?>"><img src="<?php echo ($item[mimg]); ?>" width="210" height="143"></a></li><?php endforeach; endif; ?>             
             </ul>            
             </div>
         </div>
@@ -362,7 +362,7 @@ $(function(){
          <div  class="frendlinkBar">
         	<div class="bd">
 			<ul id="frendlinks">
-            	 <?php if(is_array($medias)): foreach($medias as $key=>$item): ?><li><img src="<?php echo ($item[simg]); ?>" width="130" height="48"></li><?php endforeach; endif; ?>
+            	 <?php if(is_array($medias)): foreach($medias as $key=>$item): ?><li><img src="<?php echo ($item[bimg]); ?>" width="130" height="48"></li><?php endforeach; endif; ?>
             </ul>            
             </div>
         </div>
@@ -448,6 +448,17 @@ $(function(){
 		bd.hide();
 		bd.eq(index).show();
 	});
+})
+//第一屏获奖公司居中对齐
+$(function(){
+	$('.gongsi_bd').eq(0).css({'padding-left':'160px'})
+	$('.gongsi_bd').eq(1).css({'padding-left':'100px'})
+	
+	$('.gongsi_bd').eq(8).css({'padding-left':'160px'})
+	$('.gongsi_bd').eq(9).css({'padding-left':'100px'})
+	
+	$('.gongsi_bd').eq(16).css({'padding-left':'160px'})
+	$('.gongsi_bd').eq(17).css({'padding-left':'100px'})
 })
 </script>
 </body>

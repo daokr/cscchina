@@ -16,7 +16,7 @@ function pageInit()
 			 _this.saveBookmark(); 
 			 _this.showIframeModal('选择图片',siteUrl+'index.php?g=admin&m=images&a=imgupload&type='+type+'&typeid='+typeid,function(v){
 				  v = '<img src="'+v+'" />'
-				  _this.pasteHTML(v,false); },520,400);
+				  _this.pasteHTML(v,false); },600,500);
 		}},
 		
 		

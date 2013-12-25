@@ -61,11 +61,9 @@ class imagesAction extends backendAction {
 	// 删除图片
 	public function delete(){
 		$id = $this->_post('id','intval');
-		$seqid = $this->_post('seq_id','intval');
 		if($id>0){
 			$this->_mod->delImage($id);
-			$arrJson = array('r'=>0, 'html'=> '删除成功');
-			echo json_encode($arrJson);
+			$this->ajaxReturn(1);
 		}
 	}
 	public function imgupload(){
@@ -74,7 +72,6 @@ class imagesAction extends backendAction {
 		
 		$list = D('images')->getImagesByTypeid($type,$typeid);
 		$this->assign('list' ,$list);
-				
 		$this->assign('typeid',$typeid);
 		$this->assign('type',$type);
 		$this->display();

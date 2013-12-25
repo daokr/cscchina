@@ -204,7 +204,7 @@ $(function(){
                             <h2 class="gongsi_tit"><a href="{:U('content/category',array('yearid'=>$item[yearid],'cateid'=>$item[cateid]))}">{$item[catename]}</a></h2>
                             <ul class="gongsi_bd">
                            	  <foreach name="item[arr_content0]" item="citem">
-                                <li><a href="{:U('content/show',array('id'=>$citem[id]))}"><img src="{$citem[photo][simg]}"/></a></li>
+                                <li><a href="{:U('content/show',array('id'=>$citem[id]))}"><img src="{$citem[photo][mimg]}"/></a></li>
                              </foreach>
                             </ul>
                         </div>
@@ -216,7 +216,7 @@ $(function(){
                             <h2 class="gongsi_tit"><a href="{:U('content/category',array('yearid'=>$item[yearid],'cateid'=>$item[cateid]))}">{$item[catename]}</a></h2>
                             <ul class="gongsi_bd">
                            	  <foreach name="item[arr_content1]" item="citem">
-                                <li><a href="{:U('content/show',array('id'=>$citem[id]))}"><img src="{$citem[photo][simg]}"/></a></li>
+                                <li><a href="{:U('content/show',array('id'=>$citem[id]))}"><img src="{$citem[photo][mimg]}"/></a></li>
                              </foreach>
                             </ul>
                         </div>
@@ -228,7 +228,7 @@ $(function(){
                             <h2 class="gongsi_tit"><a href="{:U('content/category',array('yearid'=>$item[yearid],'cateid'=>$item[cateid]))}">{$item[catename]}</a></h2>
                             <ul class="gongsi_bd">
                            	  <foreach name="item[arr_content2]" item="citem">
-                                <li><a href="{:U('content/show',array('id'=>$citem[id]))}"><img src="{$citem[photo][simg]}"/></a></li>
+                                <li><a href="{:U('content/show',array('id'=>$citem[id]))}"><img src="{$citem[photo][mimg]}"/></a></li>
                              </foreach>
                             </ul>
                         </div>
@@ -325,7 +325,7 @@ $(function(){
         	<div class="bd">
 			<ul id="hisbar">
             	<foreach name="arr_wjlthg_img" item="item">
-            		<li><a href="{:U('singlepage/show',array('catename'=>'wjlthg'))}"><img src="{$item[simg]}" width="210" height="143"></a></li>  
+            		<li><a href="{:U('singlepage/show',array('catename'=>'wjlthg'))}"><img src="{$item[mimg]}" width="210" height="143"></a></li>  
                 </foreach>             
             </ul>            
             </div>
@@ -335,7 +335,7 @@ $(function(){
         	<div class="bd">
 			<ul id="frendlinks">
             	 <foreach name="medias" item="item">
-                     <li><img src="{$item[simg]}" width="130" height="48"></li>
+                     <li><img src="{$item[bimg]}" width="130" height="48"></li>
              	</foreach>
             </ul>            
             </div>
@@ -408,6 +408,17 @@ $(function(){
 		bd.hide();
 		bd.eq(index).show();
 	});
+})
+//第一屏获奖公司居中对齐
+$(function(){
+	$('.gongsi_bd').eq(0).css({'padding-left':'160px'})
+	$('.gongsi_bd').eq(1).css({'padding-left':'100px'})
+	
+	$('.gongsi_bd').eq(8).css({'padding-left':'160px'})
+	$('.gongsi_bd').eq(9).css({'padding-left':'100px'})
+	
+	$('.gongsi_bd').eq(16).css({'padding-left':'160px'})
+	$('.gongsi_bd').eq(17).css({'padding-left':'100px'})
 })
 </script>
 </body>
